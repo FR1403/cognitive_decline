@@ -1,6 +1,4 @@
-from HealtXAI.utils.util_functions import *
-from HealtXAI.script_test_omission import activity_list
-from HealtXAI.script_test_omission import patients
+from utils.util_functions import *
 import os
 
 output_dir = "test_creati_cingo"
@@ -12,5 +10,4 @@ JOIN task_types AS tt ON tt.activity_id = aty.activity_id"""
 
 query_patients = '''SELECT patient_id FROM patients'''
 
-print(patients)
-print(activity_list)
+
