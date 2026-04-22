@@ -7,7 +7,7 @@ import sys
 from utils.util_functions import *
 
 
-output_dir = "test_creati_clingo"
+output_dir = "test_omission_creati_clingo"
 os.makedirs(output_dir, exist_ok=True)
 
 
