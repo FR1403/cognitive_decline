@@ -11,6 +11,24 @@ db_params = {
     "port" : "5432"
 }
 
+livello_A = '''
+% ========================
+% Level A - Activity model
+% ========================
+'''
+
+livello_B = '''
+% ===============================
+% Level B - Execution observation
+% ===============================
+'''
+
+livello_C = '''
+% ===========================
+% Level C - Anomaly detection
+% ===========================
+'''
+
 def print_data(dati) :
     if dati != None :   
         for i in range(len(dati)) :

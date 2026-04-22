@@ -1,10 +1,10 @@
 import glob
 import re
 import os
+import sys
+
 
 from utils.util_functions import *
-
-
 
 
 output_dir = "test_creati_clingo"
@@ -16,27 +16,6 @@ JOIN task_types AS tt ON tt.activity_id = aty.activity_id"""
 
 
 query_patients = '''SELECT patient_id FROM patients'''
-
-
-
-
-livello_A = '''
-% ========================
-% Level A - Activity model
-% ========================
-'''
-
-livello_B = '''
-% ===============================
-% Level B - Execution observation
-% ===============================
-'''
-
-livello_C = '''
-% ===========================
-% Level C - Anomaly detection
-% ===========================
-'''
 
 
 
