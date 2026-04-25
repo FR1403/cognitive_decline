@@ -3,41 +3,56 @@ import re
 import os
 import sys
 
-
+# Importazione di funzioni helper per accesso al database e scrittura file 
 from utils.util_functions import *
 
-
+# Configurazione della cartella di output per i file Logic Programming (.lp)
 output_dir = "test_omission_creati_clingo"
 os.makedirs(output_dir, exist_ok=True)
 
-
+# Query per ottenere la gerarchia attività -> tasks (azioni) dal database 
 query_activities_actions = """SELECT aty.activity_id, aty.description AS activity_description, tt.task_id, tt.description AS task_description FROM activity_types AS aty
 JOIN task_types AS tt ON tt.activity_id = aty.activity_id"""
 
-
+# Query per ottenere l'elenco dei pazienti
 query_patients = '''SELECT patient_id FROM patients'''
 
+# tabella database anomalie_riscontrate(patient_id, omissions, diagnosis)
+# --- CREAZIONE TABELLA ANOMALIE --- 
+query_create = '''CREATE TABLE tracked_anomalies(
+                        patient_id INTEGER REFERENCES patients(patient_id),
+                        activity_id INTEGER,
+                        omission_number SMALLINT,
+                        diagnosis_types SMALLINT REFERENCES diagnosis_types(diagnosis_id),
+                        PRIMARY KEY(patient_id, activity_id)
+                        );
+                        '''
+
+print("Creazione tabella in corso...")
+insert_data(query_create)
 
 
-# recuperiamo i dati delle attività e relative azioni dal database e dei pazienti
+# Recupero dei dati delle attività e relative azioni dal database e dei pazienti con la funzione take_data
 activities = take_data(query_activities_actions)
 patients = take_data(query_patients)
 
 
-#inizializzazioni liste e dizionari 
-patients_list = []
-activity_list = {}
+# Inizializzazioni strutture dati per la manipolazione dei risultati
+patients_list = [] 
+activity_list = {} # Mappa: {attività_pulita: [lista_task_puliti]} con puliti si intende la sintassi dei test
+activity_list_not_clean = [] # Lista descrizioni originali delle attività
+task_mapping = {} # Mappa: {task_pulito: task_originale_db} per query sucessive
+info_patient_list = {} # Mappa: {paziente: [attività_svolte]}
+tasks_performed_list = {} # Mappa: {paziente: [task_effettivamente_eseguiti]} (performed)
+patient_anomalies = {}
 
-activity_list_not_clean = []
-task_mapping = {} 
-info_patient_list = {}
-        
-tasks_performed_list = {}
 
-# popolo la lista con l'ID dei pazienti 
+# Popolamento lista ID pazienti
 for i in range(len(patients)) :
     patients_list.append((patients[i])["patient_id"])
 
+# --- ELABORAZIONE E PULIZIA DATI PER CLINGO ---
+# Clingo richiede nomi minuscoli e senza spazi (costanti simboliche)
 # estrapoliamo dai risultati della query le informazioni sulle attività che ci servono 
 # e popoliamo un dizionario in cui abbiamo come 'keys' le attività e come 'item' una lista di azioni
 for i in range(len(activities)) :
@@ -70,9 +85,6 @@ for i in range(len(activities)) :
         activity_list[activity].append(task)
             
 tests = []
-      
-
-
 
 
 for i in range(len(patients)):
@@ -107,7 +119,9 @@ for patient in info_patient_list :
         file_path = os.path.join(output_dir, file_name)
 
 
-        write_file(file_path, f"% =================================================================================================\n% Paziente {patient}\n% Attività: {activity}\n% =================================================================================================", "w")
+        write_file(file_path, f'''% =================================================================================================\n
+                                  % Paziente {patient}\n% Attività: {activity}\n
+                                  % =================================================================================================''', "w")
         write_file(file_path, livello_A, "a")
 
         activity_patient = activity
@@ -118,7 +132,7 @@ for patient in info_patient_list :
         write_file(file_path, f"activity({activity_patient}).", "a")
         write_file(file_path, "", "a")
         cont += 1
-        i = 0
+        
         # --- PRIMO CICLO TASK ---
         for task_fact in activity_list[activity_patient]:
             # 1. Recuperiamo il nome originale corretto per la query SQL
@@ -199,8 +213,35 @@ else:
 
 # avvio analisi dei test 
 for file_path in file_lp :
+    # Cerchiamo i numeri preceduti da "patient_"
+    pat = re.search(r'patient_(\d+)', file_path)
+    act = re.search(r'activity_(\d+)', file_path)
+    if pat:
+        patient_id = pat.group(1)
+    if act:
+        activity_id = act.group(1)
+
+
     nome_file = os.path.basename(file_path)
     print(f"\nAnalizzando il file: {nome_file}")
 
     # 2. Passiamo l'intero 'file_path' a Clingo, non solo il nome!
-    run_clingo_test(file_path)
+    anomalie = run_clingo_test(file_path)
+    
+
+    if patient_id not in patient_anomalies :
+        patient_anomalies[patient_id, activity_id] = 0
+    omission_number = patient_anomalies[patient_id, activity_id] = anomalie
+
+    
+    query_diagnosis = f'''SELECT diagnosis FROM patients
+                          WHERE patient_id = {patient_id}'''
+    
+    diagnosis = take_data(query_diagnosis)
+    diagnosis = (diagnosis[0])["diagnosis"]
+    
+    query_insert = f'''INSERT INTO tracked_anomalies VALUES({patient_id}, {activity_id}, {omission_number}, {diagnosis})'''
+
+
+    insert_data(query_insert)
+

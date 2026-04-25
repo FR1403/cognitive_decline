@@ -54,6 +54,29 @@ def take_data(query) :
         print (f"Errore all'accesso al database: {e}")
         return None
     
+def insert_data(query):
+    """
+    Inserisce dati nel database.
+    :param query: Stringa SQL con i segnaposti (es. "INSERT INTO tabella (col1) VALUES (%s)")
+    :param data_tuple: Tupla contenente i valori da inserire (es. (valore1,))
+    """
+    try: 
+        with psycopg2.connect(**db_params) as conn:
+            with conn.cursor() as cur:
+                # Eseguiamo il comando passando i dati separatamente dalla query
+                cur.execute(query)
+                
+                # Opzionale: recuperare l'ID appena inserito se la query ha "RETURNING id"
+                # id_inserito = cur.fetchone()[0]
+                
+                # Nota: Il commit è automatico all'uscita dal blocco 'with conn'
+                print("Inserimento completato con successo.")
+                return True
+            
+    except Exception as e:
+        print(f"Errore durante l'inserimento nel database: {e}")
+        return False
+    
 
 def write_file (file_name, string, type_acess) :
 
@@ -74,19 +97,24 @@ def run_clingo_test (file_path) :
             text = True
         )
 
+        cont_anomalies = 0
         lines = result.stdout.split('\n')
         for i, line in enumerate(lines) :
             if line.startswith("Answer:") :
                 anomalies = lines[i+1].split()
+                
+
                 if anomalies != [] :
                     print("Anomalie riscontrate:")
                     for a in anomalies:
+                        cont_anomalies += 1
                         print(f"  [!] {a}")
 
         if "SATISFIABLE" in result.stdout:
             print("\nEsito: Il modello è coerente (SATISFIABLE).")
         else :
             print("\nEsito: Errore nel modello o nessuna soluzione trovata.")
-
+        
+        return cont_anomalies
     except Exception as e :
         print(f"Errore nell'esecuzione del file : {e}")
