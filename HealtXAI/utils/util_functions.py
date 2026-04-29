@@ -4,11 +4,12 @@ import subprocess
 
 
 db_params = {
+    #"host": "169.254.188.21",
     "host" : "localhost",
-    "database" : "CASAS400",
-    "user" : "postgres",
-    "password" : "sandro",
-    "port" : "5432"
+    "database": "CASAS400",
+    "user": "postgres",
+    "password": "sandro",
+    "port": "5432"
 }
 
 livello_A = '''
@@ -86,7 +87,7 @@ def write_file (file_name, string, type_acess) :
 
 
 def run_clingo_test (file_path) :
-    print(f"--- Avvio Analisi Logica su: {file_path} ---")
+    # print(f"--- Avvio Analisi Logica su: {file_path} ---")
 
     try :
         # Esegue il comando clingo nel terminale
@@ -105,15 +106,15 @@ def run_clingo_test (file_path) :
                 
 
                 if anomalies != [] :
-                    print("Anomalie riscontrate:")
+                    # print("Anomalie riscontrate:")
                     for a in anomalies:
                         cont_anomalies += 1
-                        print(f"  [!] {a}")
+                        # print(f"  [!] {a}")
 
-        if "SATISFIABLE" in result.stdout:
-            print("\nEsito: Il modello è coerente (SATISFIABLE).")
-        else :
-            print("\nEsito: Errore nel modello o nessuna soluzione trovata.")
+        # if "SATISFIABLE" in result.stdout:
+        #     print("\nEsito: Il modello è coerente (SATISFIABLE).")
+        # else :
+        #     print("\nEsito: Errore nel modello o nessuna soluzione trovata.")
         
         return cont_anomalies
     except Exception as e :

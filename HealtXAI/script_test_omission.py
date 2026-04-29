@@ -45,6 +45,7 @@ task_mapping = {} # Mappa: {task_pulito: task_originale_db} per query sucessive
 info_patient_list = {} # Mappa: {paziente: [attività_svolte]}
 tasks_performed_list = {} # Mappa: {paziente: [task_effettivamente_eseguiti]} (performed)
 patient_anomalies = {}
+tests = []
 
 
 # Popolamento lista ID pazienti
@@ -84,10 +85,10 @@ for i in range(len(activities)) :
     if task not in activity_list[activity] :
         activity_list[activity].append(task)
             
-tests = []
 
 
-for i in range(len(patients)):
+
+for i in range(10):
     for j in range(len(activity_list_not_clean)) :
         patient = patients_list[i]
         description = activity_list_not_clean[j].replace("'", "''")
@@ -98,7 +99,6 @@ for i in range(len(patients)):
             and description = '{description}' '''
         
 
-        
         info_patient = take_data(query)
 
         
@@ -107,7 +107,7 @@ for i in range(len(patients)):
             if patient not in info_patient_list :
                 info_patient_list[patient] = []
             single_info = (info_patient[0])["description"]
-            # print(info_patient)
+            
             (info_patient_list[patient]).append(single_info)
 
 
@@ -118,10 +118,8 @@ for patient in info_patient_list :
         file_name = f"patient_{patient}_activity_{cont}.lp"
         file_path = os.path.join(output_dir, file_name)
 
-
-        write_file(file_path, f'''% =================================================================================================\n
-                                  % Paziente {patient}\n% Attività: {activity}\n
-                                  % =================================================================================================''', "w")
+        patient_activity = f'''% =================================================================================================\n% Paziente {patient}\n% Attività: {activity}\n% =================================================================================================\n'''
+        write_file(file_path, patient_activity, "w")
         write_file(file_path, livello_A, "a")
 
         activity_patient = activity
@@ -156,8 +154,8 @@ for patient in info_patient_list :
                 tasks_performed_list[patient].append(task_fact)
             
             # 3. Scriviamo il fatto action()
-            task_fatto = f"action({task_fact})."
-            write_file(file_path, task_fatto, "a")
+            task_aspettato = f"action({task_fact})."
+            write_file(file_path, task_aspettato, "a")
 
         write_file(file_path, "", "a")
 
@@ -206,10 +204,10 @@ percorso_glob = os.path.join(cartella_risultati, "*.lp")
 file_lp = glob.glob(percorso_glob)
 
 # Piccolo controllo di sicurezza per capire se sta leggendo qualcosa
-if not file_lp:
-    print(f"\n[ATTENZIONE] Nessun file .lp trovato nella cartella '{output_dir}'.")
-else:
-    print(f"\nTrovati {len(file_lp)} file da analizzare.")
+# if not file_lp:
+#     print(f"\n[ATTENZIONE] Nessun file .lp trovato nella cartella '{output_dir}'.")
+# else:
+#     print(f"\nTrovati {len(file_lp)} file da analizzare.")
 
 # avvio analisi dei test 
 for file_path in file_lp :
@@ -223,7 +221,7 @@ for file_path in file_lp :
 
 
     nome_file = os.path.basename(file_path)
-    print(f"\nAnalizzando il file: {nome_file}")
+    # print(f"\nAnalizzando il file: {nome_file}")
 
     # 2. Passiamo l'intero 'file_path' a Clingo, non solo il nome!
     anomalie = run_clingo_test(file_path)
