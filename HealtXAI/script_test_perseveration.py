@@ -77,7 +77,7 @@ for i in range(len(activities)) :
         activity_list[activity].append(task)
             
 
-for i in range(20):
+for i in range(len(patients)):
     for j in range(len(activity_list_not_clean)):
         patient = patients_list[i]
         description = activity_list_not_clean[j].replace("'", "''")
@@ -330,6 +330,6 @@ for file_path in file_lp :
     
     query_insert = f'''UPDATE tracked_anomalies
     SET perseveration_number = {perseveration_number}
-    WHERE patient_id = {patient} AND activity_id = {cont}'''
+    WHERE patient_id = {patient_id} AND activity_id = {activity_id}'''
 
     insert_data(query_insert)
