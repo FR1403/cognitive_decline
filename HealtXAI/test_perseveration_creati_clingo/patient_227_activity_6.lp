@@ -1,0 +1,131 @@
+% ======================================================================
+% Paziente 227
+% Attività: Answer the phone and respond to questions pertaining to the video from task 4.
+% ======================================================================
+
+
+% ========================
+% Level A - Activity model
+% ========================
+
+activity(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4).
+
+action(participant_answers_the_phone).
+action(participant_answers_questions_over_the_phone).
+action(participant_sits_down_during_conversation).
+action(participant_stands_in_one_place).
+action(participant_walks_around_during_phone_call).
+action(participant_hangs_up_the_phone).
+
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 11).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 11).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 8).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 7).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 7).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 12).
+
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 1).
+
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 240000).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 240000).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 240000).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 240000).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 240000).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 18000).
+
+
+% ===============================
+% Level B - Execution observation
+% ===============================
+
+instance(i_p227_a7, answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4).
+
+% raw_performed(Instance, Action, Order, TimeMs)
+
+raw_performed(i_p227_a7, participant_retrieves_materials_from_cupboard_a, 1, 50703384).
+raw_performed(i_p227_a7, participant_fills_measuring_cup_with_water, 2, 50734672).
+raw_performed(i_p227_a7, participant_fills_measuring_cup_with_water, 3, 50734689).
+raw_performed(i_p227_a7, participant_fills_measuring_cup_with_water, 4, 50737147).
+raw_performed(i_p227_a7, participant_boils_water_in_microwave, 5, 50749392).
+raw_performed(i_p227_a7, participant_boils_water_in_microwave, 6, 50753054).
+raw_performed(i_p227_a7, participant_boils_water_in_microwave, 7, 50766464).
+raw_performed(i_p227_a7, participant_retrieves_materials_from_cupboard_a, 8, 50776396).
+raw_performed(i_p227_a7, participant_boils_water_in_microwave, 9, 50776396).
+raw_performed(i_p227_a7, participant_boils_water_in_microwave, 10, 50797099).
+raw_performed(i_p227_a7, participant_boils_water_in_microwave, 11, 50805364).
+raw_performed(i_p227_a7, participant_boils_water_in_microwave, 12, 50841140).
+raw_performed(i_p227_a7, participant_boils_water_in_microwave, 13, 50843190).
+raw_performed(i_p227_a7, participant_boils_water_in_microwave, 14, 50855469).
+raw_performed(i_p227_a7, participant_boils_water_in_microwave, 15, 50855488).
+raw_performed(i_p227_a7, participant_boils_water_in_microwave, 16, 50877012).
+raw_performed(i_p227_a7, participant_pours_water_into_cup_of_noodles, 17, 50901601).
+raw_performed(i_p227_a7, participant_pours_water_into_cup_of_noodles, 18, 50906440).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 19, 50923999).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 20, 50927607).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 21, 50960499).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 22, 50965660).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 23, 50970362).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 24, 50984582).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 25, 50994947).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 26, 50999133).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 27, 51008928).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 28, 51029931).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 29, 51050125).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 30, 51072319).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 31, 51089662).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 32, 51100034).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 33, 51103219).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 34, 51111573).
+raw_performed(i_p227_a7, participant_waits_for_water_to_simmer_in_cup_of_noodles, 35, 51128528).
+raw_performed(i_p227_a7, participant_brings_all_items_to_dining_room_table, 36, 51133515).
+
+prev_same(I,X,T1,T2) :-
+    raw_performed(I,X,_,T1),
+    raw_performed(I,X,_,T2),
+    T1 < T2,
+    not between_same_time(I,X,T1,T2).
+
+between_same_time(I,X,T1,T2) :-
+    raw_performed(I,X,_,T1),
+    raw_performed(I,X,_,T2),
+    raw_performed(I,X,_,Tm),
+    T1 < Tm,
+    Tm < T2.
+
+episode_start(I,X,T) :-
+    raw_performed(I,X,_,T),
+    not prev_same(I,X,_,T).
+
+episode_start(I,X,T2) :-
+    prev_same(I,X,T1,T2),
+    instance(I,A),
+    action_gap(A,X,G),
+    T2 - T1 > G.
+
+performed(I,X,Tstart) :-
+    episode_start(I,X,Tstart).
+
+
+% ===========================
+% Level C - Anomaly detection
+% ===========================
+
+
+performed_count(I,X,M) :-
+    instance(I,_),
+    action(X),
+    M = #count { T : performed(I,X,T) }.
+
+perseveration(I,X) :-
+    instance(I,A),
+    expected_count(A,X,N),
+    performed_count(I,X,M),
+    M > N.
+
+#show perseveration/2.
+

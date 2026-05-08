@@ -20,5 +20,4 @@ Una volta creati i file, lo script:
     2. Invoca il solver Clingo su ogni file.
     3. Cattura l'output del terminale, estrae i predicati omission/2 e stampa a video le anomalie riscontrate per ogni paziente 
 
-## Omission Analysis
 
