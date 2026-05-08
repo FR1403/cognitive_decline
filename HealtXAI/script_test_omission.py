@@ -15,7 +15,8 @@ query_activities_actions = """SELECT aty.activity_id, aty.description AS activit
 JOIN task_types AS tt ON tt.activity_id = aty.activity_id"""
 
 # Query per ottenere l'elenco dei pazienti
-query_patients = '''SELECT patient_id FROM patients'''
+query_patients = '''SELECT DISTINCT patient_id FROM patients
+                    JOIN activities ON patient_id = patient'''
 
 # tabella database anomalie_riscontrate(patient_id, omissions, diagnosis)
 # --- CREAZIONE TABELLA ANOMALIE --- 
