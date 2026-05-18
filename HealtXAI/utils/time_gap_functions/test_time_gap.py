@@ -14,6 +14,7 @@ if str(BASE_DIR) not in sys.path:
 from utils.time_gap_functions.take_data_control_patients import (
     load_control_patients_activity_data,
 )
+from utils.time_gap_functions.prompt_builder import apply_variation
 from utils.time_gap_functions.time_gap import run_time_gap_pipeline
 from utils.util_functions import take_data
 
@@ -44,6 +45,8 @@ CANDIDATE_TASK_LIMIT = 50
 
 
 def main() -> None:
+    _run_zero_clamp_example()
+
     # Recuperiamo il catalogo completo delle activity e task dal database.
     activity_tasks_catalog = take_data(QUERY_ACTIVITIES_ACTIONS) or []
     if not activity_tasks_catalog:
@@ -73,11 +76,17 @@ def main() -> None:
         empirical_gap_ms = int(item["empirical_gap_ms"])
 
         try:
+            target_action_type = _resolve_action_type(
+                activity_tasks_catalog=activity_tasks_catalog,
+                activity_id=activity_id,
+                task_id=task_id,
+            )
             llm_gap_ms = run_time_gap_pipeline(
                 activity_id=activity_id,
                 take_data_fn=take_data,
                 activity_tasks_catalog=activity_tasks_catalog,
                 target_task_id=task_id,
+                target_action_type=target_action_type,
             )
         except Exception as error:
             print(
@@ -102,6 +111,22 @@ def main() -> None:
         print(
             f"Verifiche completate con successo: {successful_checks}/{MAX_TASKS_TO_TEST}"
         )
+
+
+# Verifica esplicita del clamp a zero quando una variazione negativa porterebbe
+# il gap finale sotto lo zero.
+def _run_zero_clamp_example() -> None:
+    base_gap_ms = 10
+    variation_percent = -250
+    final_gap_ms = apply_variation(base_gap_ms, variation_percent)
+
+    print(
+        "zero_clamp_example "
+        f"base_gap_ms={base_gap_ms} "
+        f"variation_percent={variation_percent} "
+        f"final_gap_ms={final_gap_ms} "
+        f"result={final_gap_ms == 0}"
+    )
 
 
 # Seleziona le prime task, in ordine activity/task, che abbiano almeno un gap
@@ -183,6 +208,23 @@ def _compute_empirical_max_gap_for_task(
         return None
 
     return max(empirical_gaps_ms)
+
+
+# Recupera l'action_type della task target dal catalogo activity-task.
+def _resolve_action_type(
+    activity_tasks_catalog: List[Dict[str, object]],
+    activity_id: int,
+    task_id: int,
+) -> Optional[int]:
+    for row in activity_tasks_catalog:
+        if int(row["activity_id"]) != int(activity_id):
+            continue
+        if int(row["task_id"]) != int(task_id):
+            continue
+
+        return int(row["action_type"])
+
+    return None
 
 
 # Converte la stringa oraria del database in datetime.

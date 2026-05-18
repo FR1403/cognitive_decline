@@ -68,6 +68,7 @@ def build_llm_time_gap_context_stats(
 
     # Prepariamo le statistiche ricavate dalla sequenza di task osservate.
     task_stats = _build_task_level_stats(control_rows)
+    action_type_stats = _build_action_type_level_stats(control_rows)
     activity_stats = _build_activity_level_stats(control_rows, expected_tasks)
 
     # Prepariamo le statistiche ricavate dagli eventi grezzi e dai sensori.
@@ -80,6 +81,7 @@ def build_llm_time_gap_context_stats(
         "expected_task_count": len(expected_tasks),
         "activity_stats": activity_stats,
         "task_stats": task_stats,
+        "action_type_stats": action_type_stats,
         "spatial_stats": spatial_stats,
     }
 
@@ -180,6 +182,47 @@ def _build_task_level_stats(
                 )
                 if control_rows
                 else None,
+            }
+        )
+
+    return stats
+
+
+# Costruisce statistiche di fallback per action_type. Vengono usate solo se la
+# task target non compare nei controlli sani e quindi manca del tutto il ramo
+# task-based.
+def _build_action_type_level_stats(
+    control_rows: List[Dict[str, object]],
+) -> List[Dict[str, object]]:
+    grouped_rows: Dict[int, List[Dict[str, object]]] = defaultdict(list)
+    patient_sets: Dict[int, set[int]] = defaultdict(set)
+
+    for row in control_rows:
+        action_type = int(row["action_type"])
+        grouped_rows[action_type].append(row)
+        patient_sets[action_type].add(int(row["patient_id"]))
+
+    stats = []
+    for action_type in sorted(grouped_rows):
+        rows = grouped_rows[action_type]
+        rows_by_patient = _group_rows_by_patient(rows)
+        gap_ms_between_observations = []
+
+        for patient_rows in rows_by_patient.values():
+            ordered_rows = _sort_rows_by_task_time(patient_rows)
+            patient_times = [_parse_time(str(row["task_time"])) for row in ordered_rows]
+            gap_ms_between_observations.extend(
+                _compute_consecutive_deltas_ms(patient_times)
+            )
+
+        stats.append(
+            {
+                "action_type": action_type,
+                "control_patient_count": len(patient_sets[action_type]),
+                "observation_count": len(rows),
+                "gap_ms_between_observations": _describe_numbers(
+                    gap_ms_between_observations
+                ),
             }
         )
 
