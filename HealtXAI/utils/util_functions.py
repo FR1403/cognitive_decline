@@ -1,6 +1,10 @@
 import psycopg2
 from psycopg2.extras import RealDictCursor
 import subprocess
+# pyrefly: ignore [missing-import]
+from llama_cpp import Llama
+import json
+import os
 
 
 db_params = {
@@ -11,6 +15,58 @@ db_params = {
     "password": "psw",
     "port": "5432"
 }
+
+gap_cache = {}
+
+MODEL_PATH = "models/Mistral-7B-Instruct-v0.3-Q5_K_M.gguf"
+
+try:
+    #n_gpu_layers=-1 scarica il modello sulla GPU
+    llm = Llama(model_path=MODEL_PATH, n_ctx=2048, n_gpu_layers=-1, n_threads=4, verbose=False)
+    print("Mistral-7B caricato con successo")
+except Exception as e:
+    print(f"Impossibile caricare l'LLM sulla GPU {e}")
+    llm = None
+
+
+    # Chiede a Mistral-7B il gap temporale ottimale basandosi sulla baseline dei sani.
+    # Sfrutta una cache interna per rispondere istantaneamente se il task è già stato visto.
+    
+def get_dynamic_gap_from_llm(task_description, avg_time_healthy, max_time_healthy):
+    global gap_cache
+
+    if task_description in gap_cache:
+        return gap_cache[task_description]
+
+    prompt = f"""[INST] Sei un assistente medico esperto di domotica assistenziale e declino cognitivo.
+Dobbiamo calcolare una soglia di tempo (Gap) in millisecondi per l'azione: "{task_description}".
+I pazienti sani eseguono questa azione con una media di {avg_time_healthy} ms e un picco massimo di {max_time_healthy} ms di distanza tra ripetizioni normali.
+
+Se due letture dello stesso sensore avvengono a una distanza SUPERIORE al Gap che deciderai, allora è una PERSEVERAZIONE (patologica). Se avvengono entro il Gap, fa parte dello stesso episodio normale.
+
+Rispondi ESCLUSIVAMENTE con un oggetto JSON contenente la chiave "gap_ms" e il valore numerico stimato. Non aggiungere testo prima o dopo. [/INST]
+{{"gap_ms":"""
+
+    try:
+        response = llm(prompt, max_tokens=30, temperature=0.1)
+        text_response = response['choices'][0]['text'].strip()
+
+        full_json = '{"gap_ms":' + text_response
+        if '}' not in full_json:
+            full_json += '}'
+
+        data = json.loads(full_json)
+        calculated_gap = int(data["gap_ms"])
+
+        gap_cache[task_description] = calculated_gap
+        return calculated_gap
+
+    except Exception as e:
+        print(f"⚠️ Errore parsing LLM per '{task_description}' ({e}). Uso valore di default.")
+        return max_time_healthy
+
+
+
 
 livello_A = '''
 % ========================

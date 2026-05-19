@@ -151,6 +151,66 @@ for i in range(len(patients)):
             (info_patient_list[patient]).append(single_info)
 
 
+# =====================================================================
+# FASE DI GENERAZIONE STATICA DEI GAP CON LLM (A PRIORI)
+# =====================================================================
+print("\n[AI] Estrazione baseline sani dal database...")
+
+# 1. Query reale per estrarre le medie e i massimi dei sani dal DB
+# NOTA: Adatta i nomi delle tabelle (tracked_tasks, patient_id, ecc.) a quelli reali del tuo DB!
+query_baseline_sani = """
+WITH AzioniConsecutive AS (
+    SELECT 
+        t.patient, 
+        tt.description AS task, 
+        (extract(epoch from t.time) * 1000)::bigint as time_ms,
+        LAG(
+            (extract(epoch from t.time) * 1000)::bigint
+        ) OVER (PARTITION BY t.patient, t.activity, t.task ORDER BY t.time) as tempo_precedente
+    FROM tasks t
+    JOIN task_types tt ON tt.activity_id = t.activity AND tt.task_id = t.task
+    -- Selezioniamo le diagnosi che corrispondono ai gruppi di controllo sani (escludiamo MCI=2)
+    WHERE t.patient IN (SELECT patient_id FROM patients WHERE diagnosis IN (3, 4, 5, 8))
+),
+Distanze AS (
+    SELECT task, (time_ms - tempo_precedente) as diff 
+    FROM AzioniConsecutive 
+    WHERE tempo_precedente IS NOT NULL
+)
+SELECT task, ROUND(AVG(diff)) as avg_h, MAX(diff) as max_h 
+FROM Distanze 
+WHERE diff > 0
+GROUP BY task;
+"""
+
+# Eseguiamo la query e trasformiamo il risultato in un dizionario Python facile da leggere
+dati_sani = take_data(query_baseline_sani)
+baseline_sani_map = {r["task"]: (r["avg_h"], r["max_h"]) for r in dati_sani} if dati_sani else {}
+
+print("[AI] Avvio della generazione dei gap con Mistral-7B usando dati reali...")
+gap_static_map = {}
+tipi_di_task_unici = list(task_mapping.keys())
+
+for task_pulito in tipi_di_task_unici:
+    task_originale = task_mapping[task_pulito]
+    
+    # 2. Recuperiamo avg_h e max_h reali dal dizionario calcolato dal DB. 
+    # Se un task non ha dati nei sani, usiamo i vecchi valori di sicurezza (fallback).
+    if task_originale in baseline_sani_map:
+        avg_h, max_h = baseline_sani_map[task_originale]
+    else:
+        # Fallback rigido se il task è "nuovo" o non ha letture nel gruppo dei sani
+        avg_h, max_h = 8000, 18000 
+        
+    print(f" -> Generazione gap per: {task_originale} (Media Sani: {avg_h}ms, Max Sani: {max_h}ms)...")
+    
+    # Chiamata a Mistral sulla GPU passandogli i DATI REALI del database!
+    gap_calcolato = get_dynamic_gap_from_llm(task_originale, avg_h, max_h)
+    gap_static_map[task_pulito] = gap_calcolato
+
+print("[AI] Generazione completata! Tutti i gap biologici reali sono in memoria.\n")
+# =====================================================================
+
 for patient in info_patient_list:
     cont = 1 
     for activity in info_patient_list[patient]:
@@ -227,16 +287,19 @@ for patient in info_patient_list:
 
         # --- ACTION GAP ---
         for task_fact in activity_list[activity_patient]: 
-            print(
-                f"debug : entriamo nel calcolo del time gap per activity={activity_patient} task={task_fact}"
-            )
-            gap = run_time_gap_pipeline(
-                activity_id=int(activity_id_mapping[activity_patient]),
-                take_data_fn=take_data,
-                activity_tasks_catalog=activities,
-                target_task_id=int(task_id_mapping[task_fact]),
-                target_action_type=int(task_action_type_mapping[task_fact]),
-            )
+
+            # task_description = task_mapping[task_fact].replace("'", "''")
+
+            # query_action_type = f'''SELECT action_id FROM action_types
+            # JOIN task_types ON action_type = action_id 
+            # WHERE description = '{task_description}' '''
+
+            # action_type = take_data(query_action_type)
+            # action_type_id = (action_type[0])["action_id"]
+
+            # Non interroghiamo più l'LLM e non facciamo query qui dentro!
+            # Leggiamo il gap pre-calcolato all'inizio dello script
+            gap = gap_static_map.get(task_fact, 18000)
 
             action_gap = f"action_gap({activity_patient}, {task_fact}, {gap})."
 
