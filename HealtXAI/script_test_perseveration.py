@@ -3,6 +3,7 @@ import glob
 import re
 import os
 import sys
+from utils.time_gap_functions.time_gap import run_time_gap_pipeline
 
 # Importazione di funzioni helper per accesso al database e scrittura file 
 from utils.util_functions import *
@@ -12,22 +13,67 @@ output_dir = "test_perseveration_creati_clingo"
 os.makedirs(output_dir, exist_ok=True)
 
 # Query per ottenere la gerarchia attività -> tasks (azioni) dal database 
-query_activities_actions = """SELECT aty.activity_id, aty.description AS activity_description, tt.task_id, tt.description AS task_description FROM activity_types AS aty
+query_activities_actions = """SELECT aty.activity_id, aty.description AS activity_description, tt.task_id, tt.description AS task_description, tt.action_type FROM activity_types AS aty
 JOIN task_types AS tt ON tt.activity_id = aty.activity_id"""
 
 # Query per ottenere l'elenco dei pazienti
 query_patients = '''SELECT DISTINCT patient_id FROM patients
                     JOIN activities ON patient_id = patient'''
 
+# Query di controllo per capire se la tabella delle anomalie esiste gia'.
+query_check_tracked_anomalies = """SELECT EXISTS (
+    SELECT 1
+    FROM information_schema.tables
+    WHERE table_name = 'tracked_anomalies'
+) AS table_exists;"""
+
+# Se la tabella non esiste ancora, la creiamo con lo stesso schema usato per
+# le omissioni e aggiungiamo gia' anche la colonna per le perseverazioni.
+query_create_tracked_anomalies = '''CREATE TABLE tracked_anomalies(
+                        patient_id INTEGER REFERENCES patients(patient_id),
+                        activity_id INTEGER,
+                        omission_number SMALLINT,
+                        diagnosis_types SMALLINT REFERENCES diagnosis_types(diagnosis_id),
+                        perseveration_number SMALLINT,
+                        PRIMARY KEY(patient_id, activity_id)
+                        );
+                        '''
+
+# Query di controllo per verificare se la colonna perseveration_number e'
+# gia' presente nella tabella esistente.
+query_check_perseveration_column = """SELECT EXISTS (
+    SELECT 1
+    FROM information_schema.columns
+    WHERE table_name = 'tracked_anomalies'
+      AND column_name = 'perseveration_number'
+) AS column_exists;"""
+
 query_add_column = '''ALTER TABLE tracked_anomalies
 ADD perseveration_number SMALLINT;'''
 
-print("Aggiunta della colonna in corso...")
-insert_data(query_add_column)
+tracked_anomalies_table = take_data(query_check_tracked_anomalies)
+table_exists = bool(
+    tracked_anomalies_table and tracked_anomalies_table[0]["table_exists"]
+)
+
+if not table_exists:
+    print("Creazione tabella tracked_anomalies in corso...")
+    insert_data(query_create_tracked_anomalies)
+else:
+    tracked_anomalies_column = take_data(query_check_perseveration_column)
+    column_exists = bool(
+        tracked_anomalies_column and tracked_anomalies_column[0]["column_exists"]
+    )
+
+    if not column_exists:
+        print("Aggiunta della colonna perseveration_number in corso...")
+        insert_data(query_add_column)
 
 # Recupero dei dati delle attività e relative azioni dal database e dei pazienti con la funzione take_data
 activities = take_data(query_activities_actions)
 patients = take_data(query_patients)
+
+print("debug : entriamo nella fase di preparazione delle strutture dati iniziali")
 
 
 # Inizializzazioni strutture dati per la manipolazione dei risultati
@@ -35,10 +81,14 @@ patients_list = []
 activity_list = {} # Mappa: {attività_pulita: [lista_task_puliti]} con puliti si intende la sintassi dei test
 activity_list_not_clean = [] # Lista descrizioni originali delle attività
 task_mapping = {} # Mappa: {task_pulito: task_originale_db} per query sucessive
+task_id_mapping = {} # Mappa: {task_pulito: task_id_db} per la pipeline time gap
+task_action_type_mapping = {} # Mappa: {task_pulito: action_type_db} per fallback time gap
+activity_id_mapping = {} # Mappa: {attivita_pulita: activity_id_db}
 info_patient_list = {} # Mappa: {paziente: [attività_svolte]}
 tasks_performed_list = {} # Mappa: {paziente: [task_effettivamente_eseguiti]} (performed)
 patient_anomalies = {}
 tests = []
+print("debug : Entra in popolamento lista id pazienti")
 
 # Popolamento lista ID pazienti
 for i in range(len(patients)) :
@@ -67,6 +117,9 @@ for i in range(len(activities)) :
     
     # Collega il nome pulito a quello originale in un dizionario 
     task_mapping[task] = task_not_clean
+    task_id_mapping[task] = (activities[i])["task_id"]
+    task_action_type_mapping[task] = (activities[i])["action_type"]
+    activity_id_mapping[activity] = (activities[i])["activity_id"]
 
     # se un'attività non è presente nel dizionario viene aggiunta con associata una lista inizializzata (vuota)
     if activity not in activity_list :
@@ -101,6 +154,9 @@ for i in range(len(patients)):
 for patient in info_patient_list:
     cont = 1 
     for activity in info_patient_list[patient]:
+        print(
+            f"debug : entriamo nella creazione del file lp per patient={patient} activity='{activity}'"
+        )
         file_name = f"patient_{patient}_activity_{cont}.lp"
         file_path = os.path.join(output_dir, file_name)
 
@@ -171,20 +227,16 @@ for patient in info_patient_list:
 
         # --- ACTION GAP ---
         for task_fact in activity_list[activity_patient]: 
-
-            task_description = task_mapping[task_fact].replace("'", "''")
-
-            query_action_type = f'''SELECT action_id FROM action_types
-            JOIN task_types ON action_type = action_id 
-            WHERE description = '{task_description}' '''
-
-            action_type = take_data(query_action_type)
-            action_type_id = (action_type[0])["action_id"]
-            
-            if action_type_id in (5,6,7,8,9,11):
-                gap = 240000
-            else:
-                gap = 18000
+            print(
+                f"debug : entriamo nel calcolo del time gap per activity={activity_patient} task={task_fact}"
+            )
+            gap = run_time_gap_pipeline(
+                activity_id=int(activity_id_mapping[activity_patient]),
+                take_data_fn=take_data,
+                activity_tasks_catalog=activities,
+                target_task_id=int(task_id_mapping[task_fact]),
+                target_action_type=int(task_action_type_mapping[task_fact]),
+            )
 
             action_gap = f"action_gap({activity_patient}, {task_fact}, {gap})."
 
@@ -224,6 +276,9 @@ for patient in info_patient_list:
             order by t.time::time, t.task;'''
 
         raw_data = take_data(query_raw_performed)
+        print(
+            f"debug : entriamo nella scrittura delle osservazioni raw per patient={patient} activity_index={cont}"
+        )
         
         if raw_data:
             write_file(file_path, '% raw_performed(Instance, Action, Order, TimeMs)\n', "a")
@@ -307,6 +362,7 @@ file_lp = glob.glob(percorso_glob)
 
 
 # avvio analisi dei test 
+print("debug : entriamo nella fase finale di analisi dei file lp con clingo")
 for file_path in file_lp :
     # Cerchiamo i numeri preceduti da "patient_"
     pat = re.search(r'patient_(\d+)', file_path)
