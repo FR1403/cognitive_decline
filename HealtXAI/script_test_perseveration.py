@@ -19,11 +19,54 @@ JOIN task_types AS tt ON tt.activity_id = aty.activity_id"""
 query_patients = '''SELECT DISTINCT patient_id FROM patients
                     JOIN activities ON patient_id = patient'''
 
+# Query di controllo per capire se la tabella delle anomalie esiste gia'.
+query_check_tracked_anomalies = """SELECT EXISTS (
+    SELECT 1
+    FROM information_schema.tables
+    WHERE table_name = 'tracked_anomalies'
+) AS table_exists;"""
+
+# Se la tabella non esiste ancora, la creiamo con lo stesso schema usato per
+# le omissioni e aggiungiamo gia' anche la colonna per le perseverazioni.
+query_create_tracked_anomalies = '''CREATE TABLE tracked_anomalies(
+                        patient_id INTEGER REFERENCES patients(patient_id),
+                        activity_id INTEGER,
+                        omission_number SMALLINT,
+                        diagnosis_types SMALLINT REFERENCES diagnosis_types(diagnosis_id),
+                        perseveration_number SMALLINT,
+                        PRIMARY KEY(patient_id, activity_id)
+                        );
+                        '''
+
+# Query di controllo per verificare se la colonna perseveration_number e'
+# gia' presente nella tabella esistente.
+query_check_perseveration_column = """SELECT EXISTS (
+    SELECT 1
+    FROM information_schema.columns
+    WHERE table_name = 'tracked_anomalies'
+      AND column_name = 'perseveration_number'
+) AS column_exists;"""
+
 query_add_column = '''ALTER TABLE tracked_anomalies
 ADD perseveration_number SMALLINT;'''
 
-print("Aggiunta della colonna in corso...")
-insert_data(query_add_column)
+tracked_anomalies_table = take_data(query_check_tracked_anomalies)
+table_exists = bool(
+    tracked_anomalies_table and tracked_anomalies_table[0]["table_exists"]
+)
+
+if not table_exists:
+    print("Creazione tabella tracked_anomalies in corso...")
+    insert_data(query_create_tracked_anomalies)
+else:
+    tracked_anomalies_column = take_data(query_check_perseveration_column)
+    column_exists = bool(
+        tracked_anomalies_column and tracked_anomalies_column[0]["column_exists"]
+    )
+
+    if not column_exists:
+        print("Aggiunta della colonna perseveration_number in corso...")
+        insert_data(query_add_column)
 
 # Recupero dei dati delle attività e relative azioni dal database e dei pazienti con la funzione take_data
 activities = take_data(query_activities_actions)
@@ -97,6 +140,66 @@ for i in range(len(patients)):
             single_info = (info_patient[0])["description"]
             (info_patient_list[patient]).append(single_info)
 
+
+# =====================================================================
+# FASE DI GENERAZIONE STATICA DEI GAP CON LLM (A PRIORI)
+# =====================================================================
+print("\n[AI] Estrazione baseline sani dal database...")
+
+# 1. Query reale per estrarre le medie e i massimi dei sani dal DB
+# NOTA: Adatta i nomi delle tabelle (tracked_tasks, patient_id, ecc.) a quelli reali del tuo DB!
+query_baseline_sani = """
+WITH AzioniConsecutive AS (
+    SELECT 
+        t.patient, 
+        tt.description AS task, 
+        (extract(epoch from t.time) * 1000)::bigint as time_ms,
+        LAG(
+            (extract(epoch from t.time) * 1000)::bigint
+        ) OVER (PARTITION BY t.patient, t.activity, t.task ORDER BY t.time) as tempo_precedente
+    FROM tasks t
+    JOIN task_types tt ON tt.activity_id = t.activity AND tt.task_id = t.task
+    -- Selezioniamo le diagnosi che corrispondono ai gruppi di controllo sani (escludiamo MCI=2)
+    WHERE t.patient IN (SELECT patient_id FROM patients WHERE diagnosis IN (3, 4, 5, 8))
+),
+Distanze AS (
+    SELECT task, (time_ms - tempo_precedente) as diff 
+    FROM AzioniConsecutive 
+    WHERE tempo_precedente IS NOT NULL
+)
+SELECT task, ROUND(AVG(diff)) as avg_h, MAX(diff) as max_h 
+FROM Distanze 
+WHERE diff > 0
+GROUP BY task;
+"""
+
+# Eseguiamo la query e trasformiamo il risultato in un dizionario Python facile da leggere
+dati_sani = take_data(query_baseline_sani)
+baseline_sani_map = {r["task"]: (r["avg_h"], r["max_h"]) for r in dati_sani} if dati_sani else {}
+
+print("[AI] Avvio della generazione dei gap con Mistral-7B usando dati reali...")
+gap_static_map = {}
+tipi_di_task_unici = list(task_mapping.keys())
+
+for task_pulito in tipi_di_task_unici:
+    task_originale = task_mapping[task_pulito]
+    
+    # 2. Recuperiamo avg_h e max_h reali dal dizionario calcolato dal DB. 
+    # Se un task non ha dati nei sani, usiamo i vecchi valori di sicurezza (fallback).
+    if task_originale in baseline_sani_map:
+        avg_h, max_h = baseline_sani_map[task_originale]
+    else:
+        # Fallback rigido se il task è "nuovo" o non ha letture nel gruppo dei sani
+        avg_h, max_h = 8000, 18000 
+        
+    print(f" -> Generazione gap per: {task_originale} (Media Sani: {avg_h}ms, Max Sani: {max_h}ms)...")
+    
+    # Chiamata a Mistral sulla GPU passandogli i DATI REALI del database!
+    gap_calcolato = get_dynamic_gap_from_llm(task_originale, avg_h, max_h)
+    gap_static_map[task_pulito] = gap_calcolato
+
+print("[AI] Generazione completata! Tutti i gap biologici reali sono in memoria.\n")
+# =====================================================================
 
 for patient in info_patient_list:
     cont = 1 
@@ -172,19 +275,18 @@ for patient in info_patient_list:
         # --- ACTION GAP ---
         for task_fact in activity_list[activity_patient]: 
 
-            task_description = task_mapping[task_fact].replace("'", "''")
+            # task_description = task_mapping[task_fact].replace("'", "''")
 
-            query_action_type = f'''SELECT action_id FROM action_types
-            JOIN task_types ON action_type = action_id 
-            WHERE description = '{task_description}' '''
+            # query_action_type = f'''SELECT action_id FROM action_types
+            # JOIN task_types ON action_type = action_id 
+            # WHERE description = '{task_description}' '''
 
-            action_type = take_data(query_action_type)
-            action_type_id = (action_type[0])["action_id"]
-            
-            if action_type_id in (5,6,7,8,9,11):
-                gap = 240000
-            else:
-                gap = 18000
+            # action_type = take_data(query_action_type)
+            # action_type_id = (action_type[0])["action_id"]
+
+            # Non interroghiamo più l'LLM e non facciamo query qui dentro!
+            # Leggiamo il gap pre-calcolato all'inizio dello script
+            gap = gap_static_map.get(task_fact, 18000)
 
             action_gap = f"action_gap({activity_patient}, {task_fact}, {gap})."
 
