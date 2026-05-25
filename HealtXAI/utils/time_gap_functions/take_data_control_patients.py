@@ -26,8 +26,6 @@ def load_control_patients_activity_data(
     # - prende tutte le task osservate della stessa activity;
     # - aggiunge i metadati della task e della finestra temporale
     #   dell'attivita';
-    # - esclude i controlli che presentano almeno una perseveration
-    #   nell'activity richiesta;
     # - ordina i risultati per paziente e tempo.
     query = f"""
         SELECT
@@ -54,13 +52,6 @@ def load_control_patients_activity_data(
             AND tt.task_id = t.task
         WHERE p.diagnosis IN ({",".join(str(value) for value in healthy_ids)})
           AND a.activity_type = {int(activity_id)}
-          AND NOT EXISTS (
-              SELECT 1
-              FROM participants_activity_anomalies AS paa
-              WHERE paa.patient_id = p.patient_id
-                AND paa.activity_type = a.activity_type
-                AND paa."Perseverations" > 0
-          )
         ORDER BY p.patient_id, t.time::time, t.task;
     """
 

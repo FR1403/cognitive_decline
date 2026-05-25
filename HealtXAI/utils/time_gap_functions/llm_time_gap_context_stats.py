@@ -8,7 +8,7 @@ from math import dist
 from statistics import StatisticsError, mean, median, multimode, pstdev
 from typing import Callable, Dict, List, Optional, Tuple
 
-from .spatial_time_context import load_spatial_time_context
+from .take_data_spatial_time import load_spatial_time_context
 from .take_data_control_patients import load_control_patients_activity_data
 
 

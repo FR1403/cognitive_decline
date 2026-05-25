@@ -39,7 +39,7 @@ def run_time_gap_pipeline(
 
     # Recuperiamo e comprimiamo tutto il contesto statistico utile ai
     # controlli sani. Questo modulo interno coordina gia' i passaggi su
-    # take_data_control_patients e spatial_time_context.
+    # take_data_control_patients e take_data_spatial_time.
     print("debug : entriamo nella raccolta del contesto statistico del time gap")
     stats_context = collect_llm_time_gap_context_stats(
         activity_id=activity_id,
