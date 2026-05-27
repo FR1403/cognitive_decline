@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Callable, Dict, List, Optional
+from typing import Callable, Dict, List, Optional, Tuple
 
 from .llm_time_gap_context_stats import collect_llm_time_gap_context_stats
 from .llm_interrogation import ask_time_gap_llm
@@ -27,59 +27,69 @@ TakeDataFn = Callable[[str], Optional[List[Dict[str, object]]]]
 # 4. costruisce il prompt;
 # 5. interroga l'LLM.
 def run_time_gap_pipeline(
-    activity_id: int,
     take_data_fn: TakeDataFn,
     activity_tasks_catalog: List[Dict[str, object]],
-    target_task_id: Optional[int] = None,
-    target_action_type: Optional[int] = None,
-) -> int:
-    print(
-        f"debug : entriamo in run_time_gap_pipeline per activity_id={activity_id} target_task_id={target_task_id}"
-    )
+) -> Dict[Tuple[int, int], int]:
+    print("debug : entriamo in run_time_gap_pipeline per costruire la cache completa")
 
-    # Recuperiamo e comprimiamo tutto il contesto statistico utile ai
-    # controlli sani. Questo modulo interno coordina gia' i passaggi su
-    # take_data_control_patients e take_data_spatial_time.
-    print("debug : entriamo nella raccolta del contesto statistico del time gap")
-    stats_context = collect_llm_time_gap_context_stats(
-        activity_id=activity_id,
-        take_data_fn=take_data_fn,
-        activity_tasks_catalog=activity_tasks_catalog,
-    )
+    # La struttura finale contiene un solo numero per ogni coppia
+    # (activity_id, task_id), pronto da riusare nello script principale.
+    time_gap_cache: Dict[Tuple[int, int], int] = {}
 
-    target_task_description = _resolve_target_task_description(
-        activity_tasks_catalog=activity_tasks_catalog,
-        activity_id=activity_id,
-        target_task_id=target_task_id,
-    )
+    # Raggruppiamo il catalogo per activity per raccogliere il contesto dei
+    # controlli sani una sola volta per activity.
+    activity_catalog_map: Dict[int, List[Dict[str, object]]] = {}
+    for row in activity_tasks_catalog:
+        activity_id = int(row["activity_id"])
+        if activity_id not in activity_catalog_map:
+            activity_catalog_map[activity_id] = []
+        activity_catalog_map[activity_id].append(row)
 
-    # Costruiamo il prompt con il contesto statistico e con gli eventuali
-    # identificativi del target su cui vogliamo stimare il time gap.
-    prompt = build_time_gap_prompt(
-        stats_context=stats_context,
-        target_task_id=target_task_id,
-        target_action_type=target_action_type,
-        target_task_description=target_task_description,
-    )
+    for activity_id, activity_rows in activity_catalog_map.items():
+        print(
+            f"debug : entriamo nella raccolta del contesto statistico del time gap per activity_id={activity_id}"
+        )
+        stats_context = collect_llm_time_gap_context_stats(
+            activity_id=activity_id,
+            take_data_fn=take_data_fn,
+            activity_tasks_catalog=activity_tasks_catalog,
+        )
 
-    # Il modello restituisce solo una variazione percentuale; il codice applica
-    # la variazione a un valore base empirico ricavato dai controlli sani.
-    print("debug : entriamo nell'interrogazione dell llm per il time gap")
-    variation_percent = ask_time_gap_llm(prompt)
-    policy = build_time_gap_policy(
-        stats_context=stats_context,
-        target_task_id=target_task_id,
-        target_action_type=target_action_type,
-        target_task_description=target_task_description,
-    )
-    min_variation_percent = policy["allowed_variation_percent"]["min"]
-    max_variation_percent = policy["allowed_variation_percent"]["max"]
-    clamped_variation_percent = max(
-        min(variation_percent, max_variation_percent),
-        min_variation_percent,
-    )
+        for row in activity_rows:
+            target_task_id = int(row["task_id"])
+            target_action_type = int(row["action_type"])
+            target_task_description = str(row["task_description"])
 
-    return apply_variation(policy["base_gap_ms"], clamped_variation_percent)
+            prompt = build_time_gap_prompt(
+                stats_context=stats_context,
+                target_task_id=target_task_id,
+                target_action_type=target_action_type,
+                target_task_description=target_task_description,
+            )
+
+            print(
+                f"debug : entriamo nell'interrogazione dell llm per il time gap activity_id={activity_id} target_task_id={target_task_id}"
+            )
+            variation_percent = ask_time_gap_llm(prompt)
+            policy = build_time_gap_policy(
+                stats_context=stats_context,
+                target_task_id=target_task_id,
+                target_action_type=target_action_type,
+                target_task_description=target_task_description,
+            )
+            min_variation_percent = policy["allowed_variation_percent"]["min"]
+            max_variation_percent = policy["allowed_variation_percent"]["max"]
+            clamped_variation_percent = max(
+                min(variation_percent, max_variation_percent),
+                min_variation_percent,
+            )
+
+            time_gap_cache[(activity_id, target_task_id)] = apply_variation(
+                policy["base_gap_ms"],
+                clamped_variation_percent,
+            )
+
+    return time_gap_cache
 
 
 # Recupera la descrizione della task target dal catalogo activity-task gia'

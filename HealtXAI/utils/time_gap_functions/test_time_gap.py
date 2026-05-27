@@ -64,9 +64,20 @@ def main() -> None:
         print("Nessuna task valida trovata per il confronto empirico.")
         return
 
+    # Costruiamo una sola volta la cache completa dei gap, cosi' il test
+    # legge poi direttamente i valori gia' stimati per ogni (activity_id, task_id).
+    try:
+        time_gap_cache = run_time_gap_pipeline(
+            take_data_fn=take_data,
+            activity_tasks_catalog=activity_tasks_catalog,
+        )
+    except Exception as error:
+        print(f"Errore nella costruzione della cache dei time gap: {error}")
+        return
+
     # Per ogni task selezionata:
     # - calcoliamo il massimo gap empirico dai controlli sani;
-    # - chiediamo il time gap alla pipeline LLM;
+    # - leggiamo il time gap gia' presente nella cache;
     # - verifichiamo la condizione richiesta.
     successful_checks = 0
 
@@ -76,18 +87,7 @@ def main() -> None:
         empirical_gap_ms = int(item["empirical_gap_ms"])
 
         try:
-            target_action_type = _resolve_action_type(
-                activity_tasks_catalog=activity_tasks_catalog,
-                activity_id=activity_id,
-                task_id=task_id,
-            )
-            llm_gap_ms = run_time_gap_pipeline(
-                activity_id=activity_id,
-                take_data_fn=take_data,
-                activity_tasks_catalog=activity_tasks_catalog,
-                target_task_id=task_id,
-                target_action_type=target_action_type,
-            )
+            llm_gap_ms = int(time_gap_cache[(activity_id, task_id)])
         except Exception as error:
             print(
                 f"activity={activity_id} task={task_id} "
@@ -208,23 +208,6 @@ def _compute_empirical_max_gap_for_task(
         return None
 
     return max(empirical_gaps_ms)
-
-
-# Recupera l'action_type della task target dal catalogo activity-task.
-def _resolve_action_type(
-    activity_tasks_catalog: List[Dict[str, object]],
-    activity_id: int,
-    task_id: int,
-) -> Optional[int]:
-    for row in activity_tasks_catalog:
-        if int(row["activity_id"]) != int(activity_id):
-            continue
-        if int(row["task_id"]) != int(task_id):
-            continue
-
-        return int(row["action_type"])
-
-    return None
 
 
 # Converte la stringa oraria del database in datetime.

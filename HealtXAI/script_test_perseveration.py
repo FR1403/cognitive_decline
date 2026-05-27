@@ -4,14 +4,14 @@ import re
 import os
 import sys
 
-# Importazione di funzioni helper per accesso al database e scrittura file 
+# Importazione di funzioni helper per accesso al database e scrittura file
 from utils.util_functions import *
 
 # Configurazione della cartella di output per i file Logic Programming (.lp)
 output_dir = "test_perseveration_creati_clingo"
 os.makedirs(output_dir, exist_ok=True)
 
-# Query per ottenere la gerarchia attività -> tasks (azioni) dal database 
+# Query per ottenere la gerarchia attivita -> tasks (azioni) dal database
 query_activities_actions = """SELECT aty.activity_id, aty.description AS activity_description, tt.task_id, tt.description AS task_description, tt.action_type FROM activity_types AS aty
 JOIN task_types AS tt ON tt.activity_id = aty.activity_id"""
 
@@ -38,7 +38,7 @@ query_check_tracked_anomalies = """SELECT EXISTS (
 ) AS table_exists;"""
 
 # Se la tabella non esiste ancora, la creiamo con lo stesso schema usato per
-# le omissioni e aggiungiamo gia' anche la colonna per le perseverazioni.
+# le omissioni e aggiungiamo gia anche la colonna per le perseverazioni.
 query_create_tracked_anomalies = '''CREATE TABLE tracked_anomalies(
                         patient_id INTEGER REFERENCES patients(patient_id),
                         activity_id INTEGER,
@@ -50,7 +50,7 @@ query_create_tracked_anomalies = '''CREATE TABLE tracked_anomalies(
                         '''
 
 # Query di controllo per verificare se la colonna perseveration_number e'
-# gia' presente nella tabella esistente.
+# gia presente nella tabella esistente.
 query_check_perseveration_column = """SELECT EXISTS (
     SELECT 1
     FROM information_schema.columns
@@ -79,7 +79,7 @@ else:
         print("Aggiunta della colonna perseveration_number in corso...")
         insert_data(query_add_column)
 
-# Recupero dei dati delle attività e relative azioni dal database e dei pazienti con la funzione take_data
+# Recupero dei dati delle attivita e relative azioni dal database e dei pazienti con la funzione take_data
 activities = take_data(query_activities_actions)
 patients = take_data(query_patients)
 
@@ -87,18 +87,29 @@ patients = take_data(query_patients)
 
 
 # Inizializzazioni strutture dati per la manipolazione dei risultati
-patients_list = [] 
-activity_list = {} # Mappa: {attività_pulita: [lista_task_puliti]} con puliti si intende la sintassi dei test
-activity_list_not_clean = [] # Lista descrizioni originali delle attività
+patients_list = []
+activity_list = {} # Mappa: {attivita_pulita: [lista_task_puliti]} con puliti si intende la sintassi dei test
+activity_task_details = {} # Mappa: {attivita_pulita: [record task con task_fact, task_id, descrizione, action_type]}
+activity_list_not_clean = [] # Lista descrizioni originali delle attivita
 task_mapping = {} # Mappa: {task_pulito: task_originale_db} per query sucessive
 task_id_mapping = {} # Mappa: {task_pulito: task_id_db} per la pipeline time gap
 task_action_type_mapping = {} # Mappa: {task_pulito: action_type_db} per fallback time gap
 activity_id_mapping = {} # Mappa: {attivita_pulita: activity_id_db}
-info_patient_list = {} # Mappa: {paziente: [attività_svolte]}
+info_patient_list = {} # Mappa: {paziente: [attivita_svolte]}
 tasks_performed_list = {} # Mappa: {paziente: [task_effettivamente_eseguiti]} (performed)
 patient_anomalies = {}
 tests = []
 
+# La cache finale dei gap viene costruita direttamente dalla funzione
+# principale del modulo time_gap, prima di entrare in qualsiasi ciclo
+# sui pazienti.
+print("debug : entriamo nella costruzione iniziale della cache dei time gap")
+time_gap_cache = run_time_gap_pipeline(
+    take_data_fn=take_data,
+    activity_tasks_catalog=activities,
+)
+
+print("debug : Entra in popolamento lista id pazienti")
 
 # Popolamento lista ID pazienti
 for i in range(len(patients)) :
@@ -106,47 +117,56 @@ for i in range(len(patients)) :
 
 # --- ELABORAZIONE E PULIZIA DATI PER CLINGO ---
 # Clingo richiede nomi minuscoli e senza spazi (costanti simboliche)
-# estrapoliamo dai risultati della query le informazioni sulle attività che ci servono 
-# e popoliamo un dizionario in cui abbiamo come 'keys' le attività e come 'item' una lista di azioni
+# estrapoliamo dai risultati della query le informazioni sulle attivita che ci servono
+# e popoliamo un dizionario in cui abbiamo come 'keys' le attivita e come 'item' una lista di azioni
 for i in range(len(activities)) :
 
-    #salviamo le descrizioni delle attività esattamente come sono scritte nel database
+    # salviamo le descrizioni delle attivita esattamente come sono scritte nel database
     activity_not_clean = str((activities[i])["activity_description"])
     activity = activity_not_clean.replace(' ', '_') # rimpiazziamo spazi con underscore per adeguare alla sintassi di clingo
-    # di ogni attività ci salviamo la descrizione in minuscolo, eliminando caratteri di punteggiatura
+    # di ogni attivita ci salviamo la descrizione in minuscolo, eliminando caratteri di punteggiatura
     activity = re.sub(r'[^\w]+', '', (activity.lower()))
 
 
-    # salviamo il task dell'attività i-esima esattamente com'è scritto nel database 
+    # salviamo il task dell'attivita i-esima esattamente com'e scritto nel database
     task_not_clean = str((activities[i])["task_description"])
-    
-    task = task_not_clean.replace(' ', '_') #rimpiazziamo spazi con underscore per la sintassi di clingo
-    # di ogni azione salviamo la descrizione in minuscolo rimuovendo caratteri di punteggiatura 
+
+    task = task_not_clean.replace(' ', '_') # rimpiazziamo spazi con underscore per la sintassi di clingo
+    # di ogni azione salviamo la descrizione in minuscolo rimuovendo caratteri di punteggiatura
     task = re.sub(r'[^\w]+', '', (task.lower()))
 
-    
-    # Collega il nome pulito a quello originale in un dizionario 
+
+    # Collega il nome pulito a quello originale in un dizionario
     task_mapping[task] = task_not_clean
     task_id_mapping[task] = (activities[i])["task_id"]
     task_action_type_mapping[task] = (activities[i])["action_type"]
     activity_id_mapping[activity] = (activities[i])["activity_id"]
 
-    # se un'attività non è presente nel dizionario viene aggiunta con associata una lista inizializzata (vuota)
+    # se un'attivita non e presente nel dizionario viene aggiunta con associata una lista inizializzata (vuota)
     if activity not in activity_list :
         activity_list[activity] = []
+        activity_task_details[activity] = []
         activity_list_not_clean.append(activity_not_clean)
 
-    # se un task non è presente nel dizionario associato alla sua attività viene aggiunto alla lista relativa all'attività di cui fa parte  
+    # se un task non e presente nel dizionario associato alla sua attivita viene aggiunto alla lista relativa all'attivita di cui fa parte
     if task not in activity_list[activity] :
         activity_list[activity].append(task)
-            
+        activity_task_details[activity].append(
+            {
+                "task_fact": task,
+                "task_id": int((activities[i])["task_id"]),
+                "task_description": task_not_clean,
+                "action_type": int((activities[i])["action_type"]),
+            }
+        )
+
 
 for i in range(len(patients)):
     for j in range(len(activity_list_not_clean)):
         patient = patients_list[i]
         description = activity_list_not_clean[j].replace("'", "''")
-        
-        query = f'''select description from activities 
+
+        query = f'''select description from activities
             join activity_types
             on activity_type=activity_id
             where patient = {patient}
@@ -160,75 +180,14 @@ for i in range(len(patients)):
             single_info = (info_patient[0])["description"]
             (info_patient_list[patient]).append(single_info)
 
-
-# =====================================================================
-# FASE DI GENERAZIONE STATICA DEI GAP CON LLM (A PRIORI)
-# =====================================================================
-print("\n[AI] Estrazione baseline sani dal database...")
-
-# 1. Query reale per estrarre le medie e i massimi dei sani dal DB
-# NOTA: Adatta i nomi delle tabelle (tracked_tasks, patient_id, ecc.) a quelli reali del tuo DB!
-query_baseline_sani = """
-WITH AzioniConsecutive AS (
-    SELECT 
-        t.patient, 
-        tt.description AS task, 
-        (extract(epoch from t.time) * 1000)::bigint as time_ms,
-        LAG(
-            (extract(epoch from t.time) * 1000)::bigint
-        ) OVER (PARTITION BY t.patient, t.activity, t.task ORDER BY t.time) as tempo_precedente
-    FROM tasks t
-    JOIN task_types tt ON tt.activity_id = t.activity AND tt.task_id = t.task
-    -- Selezioniamo le diagnosi che corrispondono ai gruppi di controllo sani (escludiamo MCI=2)
-    WHERE t.patient IN (SELECT patient_id FROM patients WHERE diagnosis IN (3, 4, 5, 8))
-),
-Distanze AS (
-    SELECT task, (time_ms - tempo_precedente) as diff 
-    FROM AzioniConsecutive 
-    WHERE tempo_precedente IS NOT NULL
-)
-SELECT task, ROUND(AVG(diff)) as avg_h, MAX(diff) as max_h 
-FROM Distanze 
-WHERE diff > 0
-GROUP BY task;
-"""
-
-# Eseguiamo la query e trasformiamo il risultato in un dizionario Python facile da leggere
-dati_sani = take_data(query_baseline_sani)
-baseline_sani_map = {r["task"]: (r["avg_h"], r["max_h"]) for r in dati_sani} if dati_sani else {}
-
-print("[AI] Avvio della generazione dei gap con Mistral-7B usando dati reali...")
-gap_static_map = {}
-tipi_di_task_unici = list(task_mapping.keys())
-
-for task_pulito in tipi_di_task_unici:
-    task_originale = task_mapping[task_pulito]
-    
-    # 2. Recuperiamo avg_h e max_h reali dal dizionario calcolato dal DB. 
-    # Se un task non ha dati nei sani, usiamo i vecchi valori di sicurezza (fallback).
-    if task_originale in baseline_sani_map:
-        avg_h, max_h = baseline_sani_map[task_originale]
-    else:
-        # Fallback rigido se il task è "nuovo" o non ha letture nel gruppo dei sani
-        avg_h, max_h = 8000, 18000 
-        
-    print(f" -> Generazione gap per: {task_originale} (Media Sani: {avg_h}ms, Max Sani: {max_h}ms)...")
-    
-    # Chiamata a Mistral sulla GPU passandogli i DATI REALI del database!
-    gap_calcolato = get_dynamic_gap_from_llm(task_originale, avg_h, max_h)
-    gap_static_map[task_pulito] = gap_calcolato
-
-print("[AI] Generazione completata! Tutti i gap biologici reali sono in memoria.\n")
-# =====================================================================
-
 for patient in info_patient_list:
-    cont = 1 
+    cont = 1
     for activity in info_patient_list[patient]:
         
         file_name = f"patient_{patient}_activity_{cont}.lp"
         file_path = os.path.join(output_dir, file_name)
 
-        patient_activity = f'''% ======================================================================\n% Paziente {patient}\n% Attività: {activity}\n% ======================================================================\n'''
+        patient_activity = f'''% ======================================================================\n% Paziente {patient}\n% Attivita: {activity}\n% ======================================================================\n'''
         write_file(file_path, patient_activity, "w")
         write_file(file_path, livello_A, "a")
 
@@ -240,9 +199,10 @@ for patient in info_patient_list:
         write_file(file_path, "", "a")
         cont += 1
 
-        for task_fact in activity_list[activity_patient]:
+        for task_info in activity_task_details[activity_patient]:
+            task_fact = task_info["task_fact"]
             # 1. Recuperiamo il nome originale corretto per la query SQL
-            task_description = task_mapping[task_fact].replace("'", "''")
+            task_description = str(task_info["task_description"]).replace("'", "''")
 
             query_actions_performed = f'''select t.description from task_types as t
             join tasks
@@ -258,20 +218,21 @@ for patient in info_patient_list:
 
                 # SALVIAMO LA VERSIONE PULITA, NON QUELLA SPORCA!
                 tasks_performed_list[patient].append(task_fact)
-            
+
             # 3. Scriviamo il fatto action()
             task_aspettato = f"action({task_fact})."
             write_file(file_path, task_aspettato, "a")
 
         write_file(file_path, "", "a")
-        
-        # --- ACTION TYPES ---
-        for task_fact in activity_list[activity_patient]:
 
-            task_description = task_mapping[task_fact].replace("'", "''")
+        # --- ACTION TYPES ---
+        for task_info in activity_task_details[activity_patient]:
+            task_fact = task_info["task_fact"]
+
+            task_description = str(task_info["task_description"]).replace("'", "''")
 
             query_action_type = f'''SELECT action_id FROM action_types
-            JOIN task_types ON action_type = action_id 
+            JOIN task_types ON action_type = action_id
             WHERE description = '{task_description}' '''
 
             action_type = take_data(query_action_type)
@@ -280,11 +241,12 @@ for patient in info_patient_list:
             # action_type(activity, task, action_type)
             action_type = f"action_type({activity_patient}, {task_fact}, {action_type_id})."
             write_file(file_path, action_type, "a")
-        
+
         write_file(file_path, "", "a")
 
         # --- EXPECTED COUNT ---
-        for task_fact in activity_list[activity_patient]:
+        for task_info in activity_task_details[activity_patient]:
+            task_fact = task_info["task_fact"]
 
             expected_count = f"expected_count({activity_patient}, {task_fact}, 1)."
 
@@ -294,25 +256,23 @@ for patient in info_patient_list:
 
 
         # --- ACTION GAP ---
-        for task_fact in activity_list[activity_patient]: 
+        for task_info in activity_task_details[activity_patient]:
+            task_fact = task_info["task_fact"]
+            task_id = int(task_info["task_id"])
 
-            # task_description = task_mapping[task_fact].replace("'", "''")
-
-            # query_action_type = f'''SELECT action_id FROM action_types
-            # JOIN task_types ON action_type = action_id 
-            # WHERE description = '{task_description}' '''
-
-            # action_type = take_data(query_action_type)
-            # action_type_id = (action_type[0])["action_id"]
-
-            # Non interroghiamo più l'LLM e non facciamo query qui dentro!
-            # Leggiamo il gap pre-calcolato all'inizio dello script
-            gap = gap_static_map.get(task_fact, 18000)
+            # Leggiamo il valore gia calcolato dalla cache condivisa per
+            # (activity_id, task_id), senza richiamare di nuovo la pipeline.
+            gap = time_gap_cache[
+                (
+                    int(activity_id_mapping[activity_patient]),
+                    int(task_id),
+                )
+            ]
 
             action_gap = f"action_gap({activity_patient}, {task_fact}, {gap})."
 
             write_file(file_path, action_gap, "a")
-        
+
         write_file(file_path, "", "a")
 
         # ---- LIVELLO B: ESTRAZIONE OSSERVAZIONI RAW ----
@@ -320,7 +280,7 @@ for patient in info_patient_list:
         write_file(file_path, livello_B, "a")
 
         inst_value = f"i_p{patient}_a{cont}"
-        
+
         instance = f"instance({inst_value}, {activity_patient}).\n"
 
         write_file(file_path, instance, "a")
@@ -347,8 +307,9 @@ for patient in info_patient_list:
             order by t.time::time, t.task;'''
 
         raw_data = take_data(query_raw_performed)
-        
-        
+        print(
+            f"debug : entriamo nella scrittura delle osservazioni raw per patient={patient} activity_index={cont}"
+        )
         if raw_data:
             write_file(file_path, '% raw_performed(Instance, Action, Order, TimeMs)\n', "a")
             for row in raw_data:
@@ -391,7 +352,7 @@ episode_start(I,X,T2) :-
 
 performed(I,X,Tstart) :-
     episode_start(I,X,Tstart).\n'''
-        
+
         write_file(file_path, rules, "a")
 
         write_file(file_path, livello_C + "\n", "a")
@@ -417,9 +378,9 @@ perseveration(I,X) :-
 
 cartella_corrente = os.path.dirname(os.path.abspath(__file__))
 # 1. Diciamo a Python di cercare DENTRO la cartella dei risultati
-cartella_risultati = os.path.join(cartella_corrente, output_dir) 
+cartella_risultati = os.path.join(cartella_corrente, output_dir)
 
-# salviamo il percorso di ogni file con estensione .lp presente nella cartella creata 
+# salviamo il percorso di ogni file con estensione .lp presente nella cartella creata
 percorso_glob = os.path.join(cartella_risultati, "*.lp")
 file_lp = glob.glob(percorso_glob)
 
@@ -430,8 +391,8 @@ file_lp = glob.glob(percorso_glob)
 #     print(f"\nTrovati {len(file_lp)} file da analizzare.")
 
 
-# avvio analisi dei test 
-
+# avvio analisi dei test
+print("debug : entriamo nella fase finale di analisi dei file lp con clingo")
 for file_path in file_lp :
     # Cerchiamo i numeri preceduti da "patient_"
     pat = re.search(r'patient_(\d+)', file_path)
@@ -447,13 +408,13 @@ for file_path in file_lp :
 
     # 2. Passiamo l'intero 'file_path' a Clingo, non solo il nome!
     anomalie = run_clingo_test(file_path)
-    
+
 
     if patient_id not in patient_anomalies :
         patient_anomalies[patient_id, activity_id] = 0
     perseveration_number = patient_anomalies[patient_id, activity_id] = anomalie
     print(perseveration_number)
-    
+
     query_insert = f'''UPDATE tracked_anomalies
     SET perseveration_number = {perseveration_number}
     WHERE patient_id = {patient_id} AND activity_id = {activity_id}'''
