@@ -41,13 +41,13 @@ try:
     dati_paziente_omission['stato_cognitivo'] = dati_paziente_omission['diagnosis'].apply(mappa_stato_cognitivo)
 
     # -------------------------------------------------------------------------
-    # NORMALIZZAZIONE Z-SCORE (Migliora l'affidabilità di Pearson)
+    # NORMALIZZAZIONE MIN-MAX (Mappa i dati nell'intervallo [0, 1])
     # -------------------------------------------------------------------------
-    media_global = dati_paziente_omission['avg_omissions'].mean()
-    dev_standard_global = dati_paziente_omission['avg_omissions'].std()
+    val_min = dati_paziente_omission['avg_omissions'].min()
+    val_max = dati_paziente_omission['avg_omissions'].max()
     
-    # Z-score = (Valore - Media) / Deviazione Standard
-    dati_paziente_omission['avg_omissions_norm'] = (dati_paziente_omission['avg_omissions'] - media_global) / dev_standard_global
+    # Min-Max = (Valore - Minimo) / (Massimo - Minimo)
+    dati_paziente_omission['avg_omissions_norm'] = (dati_paziente_omission['avg_omissions'] - val_min) / (val_max - val_min)
     # -------------------------------------------------------------------------
 
     # Servono almeno 3 pazienti per dare senso statistico 
@@ -69,7 +69,7 @@ try:
 
         # Creiamo la tabella finale dei risultati
         df_risultati = pd.DataFrame([{
-            'Tipo di Analisi': 'Omissioni (Z-Score) vs Diagnosi Cognitiva',
+            'Tipo di Analisi': 'Omissioni (Min-Max) vs Diagnosi Cognitiva',
             'Pearson r': round(r_coeff, 4),
             'Significatività (p-value)': round(p_value, 4),
             'Numero Pazienti': len(dati_paziente_omission),
