@@ -12,13 +12,15 @@ db_params = {
     "host" : "localhost",
     "database": "CASAS400",
     "user": "postgres",
-    "password": "psw",
+    "password": "sandro",
     "port": "5432"
 }
 
 gap_cache = {}
 
 MODEL_PATH = "models/Mistral-7B-Instruct-v0.3-Q5_K_M.gguf"
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# MODEL_PATH = os.path.join(BASE_DIR, "models", "Mistral-7B-Instruct-v0.3-Q5_K_M.gguf")
 
 try:
     #n_gpu_layers=-1 scarica il modello sulla GPU

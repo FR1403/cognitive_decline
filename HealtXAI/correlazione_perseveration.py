@@ -70,7 +70,7 @@ try:
 
         
         df_risultati = pd.DataFrame([{
-            'Tipo di Analisi': 'Media Omissioni (SQL) vs Diagnosi',
+            'Tipo di Analisi': 'Media Perseveration (SQL) vs Diagnosi',
             'Pearson r': round(r_coeff, 4),
             'Significatività (p-value)': round(p_value, 4),
             'Numero di Pazienti': len(dati_paziente_perseveration),

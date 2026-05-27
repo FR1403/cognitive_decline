@@ -90,8 +90,8 @@ try:
         print("="*80)
 
         # Salviamo il report in Excel per il professore
-        df_risultati.to_excel("correlazione_globale_media_SQL.xlsx", index=False)
-        print("\nRisultati salvati in 'correlazione_globale_media_SQL.xlsx'!")
+        # df_risultati.to_excel("correlazione_globale_media_SQL.xlsx", index=False)
+        # print("\nRisultati salvati in 'correlazione_globale_media_SQL.xlsx'!")
     else:
         print("\nNon ci sono abbastanza pazienti (minimo 3) per calcolare la correlazione.")
 

@@ -3,7 +3,6 @@ import glob
 import re
 import os
 import sys
-from utils.time_gap_functions.time_gap import run_time_gap_pipeline
 
 # Importazione di funzioni helper per accesso al database e scrittura file 
 from utils.util_functions import *
@@ -18,7 +17,18 @@ JOIN task_types AS tt ON tt.activity_id = aty.activity_id"""
 
 # Query per ottenere l'elenco dei pazienti
 query_patients = '''SELECT DISTINCT patient_id FROM patients
-                    JOIN activities ON patient_id = patient'''
+JOIN activities ON patient_id = patient
+WHERE patient_id IN (38, 102, 104, 135, 136, 137, 154, 183, 188, 212, 214, 218, 232, 
+242, 244, 276, 384, 385, 388, 6, 18, 40, 54, 71, 72, 76, 77, 82, 83, 89, 99, 101, 107, 
+111, 114, 117, 122, 127, 128, 130, 138, 144, 167, 173, 181, 186, 191, 193, 194, 208, 
+215, 255, 257, 259, 262, 274, 280, 289, 295, 298, 312, 315, 316, 318, 324, 327, 329, 
+334, 346, 356, 370, 375, 389, 7, 11, 13, 17, 20, 22, 24, 43, 53, 56, 81, 84, 85, 87, 
+88, 91, 98, 103, 105, 108, 113, 115, 120, 123, 124, 132, 141, 143, 146, 147, 149, 156,
+158, 163, 164, 171, 178, 180, 184, 187, 189, 201, 216, 220, 222, 225, 233, 235, 236, 
+247, 250, 256, 263, 264, 269, 281, 283, 285, 293, 305, 307, 314, 317, 335, 340, 341, 
+344, 345, 347, 350, 354, 355, 357, 367, 377, 382, 393, 394, 395, 400, 5, 25, 28, 33, 
+37, 47, 70, 100, 129, 134, 140, 153, 160, 161, 165, 169, 196, 200, 202, 211, 223, 
+229, 241, 245, 251, 253, 275, 288, 294, 300, 308, 321, 328, 351, 352, 371, 376, 381, 387)'''
 
 # Query di controllo per capire se la tabella delle anomalie esiste gia'.
 query_check_tracked_anomalies = """SELECT EXISTS (
@@ -73,7 +83,7 @@ else:
 activities = take_data(query_activities_actions)
 patients = take_data(query_patients)
 
-print("debug : entriamo nella fase di preparazione delle strutture dati iniziali")
+
 
 
 # Inizializzazioni strutture dati per la manipolazione dei risultati
@@ -88,7 +98,7 @@ info_patient_list = {} # Mappa: {paziente: [attività_svolte]}
 tasks_performed_list = {} # Mappa: {paziente: [task_effettivamente_eseguiti]} (performed)
 patient_anomalies = {}
 tests = []
-print("debug : Entra in popolamento lista id pazienti")
+
 
 # Popolamento lista ID pazienti
 for i in range(len(patients)) :
@@ -214,9 +224,7 @@ print("[AI] Generazione completata! Tutti i gap biologici reali sono in memoria.
 for patient in info_patient_list:
     cont = 1 
     for activity in info_patient_list[patient]:
-        print(
-            f"debug : entriamo nella creazione del file lp per patient={patient} activity='{activity}'"
-        )
+        
         file_name = f"patient_{patient}_activity_{cont}.lp"
         file_path = os.path.join(output_dir, file_name)
 
@@ -339,9 +347,7 @@ for patient in info_patient_list:
             order by t.time::time, t.task;'''
 
         raw_data = take_data(query_raw_performed)
-        print(
-            f"debug : entriamo nella scrittura delle osservazioni raw per patient={patient} activity_index={cont}"
-        )
+        
         
         if raw_data:
             write_file(file_path, '% raw_performed(Instance, Action, Order, TimeMs)\n', "a")
@@ -425,7 +431,7 @@ file_lp = glob.glob(percorso_glob)
 
 
 # avvio analisi dei test 
-print("debug : entriamo nella fase finale di analisi dei file lp con clingo")
+
 for file_path in file_lp :
     # Cerchiamo i numeri preceduti da "patient_"
     pat = re.search(r'patient_(\d+)', file_path)
