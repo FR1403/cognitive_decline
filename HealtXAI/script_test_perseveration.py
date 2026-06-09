@@ -3,6 +3,7 @@ import glob
 import re
 import os
 import sys
+from utils.time_gap_functions.time_gap import run_time_gap_pipeline
 
 # Importazione di funzioni helper per accesso al database e scrittura file
 from utils.util_functions import *
@@ -10,6 +11,13 @@ from utils.util_functions import *
 # Configurazione della cartella di output per i file Logic Programming (.lp)
 output_dir = "test_perseveration_creati_clingo"
 os.makedirs(output_dir, exist_ok=True)
+time_gap_export_path = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "utils",
+    "time_gap_functions",
+    "controlGapList",
+    "time_gap_activity_task_gap.json",
+)
 
 # Query per ottenere la gerarchia attivita -> tasks (azioni) dal database
 query_activities_actions = """SELECT aty.activity_id, aty.description AS activity_description, tt.task_id, tt.description AS task_description, tt.action_type FROM activity_types AS aty
@@ -107,6 +115,7 @@ print("debug : entriamo nella costruzione iniziale della cache dei time gap")
 time_gap_cache = run_time_gap_pipeline(
     take_data_fn=take_data,
     activity_tasks_catalog=activities,
+    export_json_path=time_gap_export_path,
 )
 
 print("debug : Entra in popolamento lista id pazienti")

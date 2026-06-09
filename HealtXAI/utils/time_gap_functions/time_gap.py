@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import json
+from pathlib import Path
 from typing import Callable, Dict, List, Optional, Tuple
 
 from .llm_time_gap_context_stats import collect_llm_time_gap_context_stats
@@ -18,6 +20,30 @@ from .prompt_builder import (
 TakeDataFn = Callable[[str], Optional[List[Dict[str, object]]]]
 
 
+def _load_time_gap_cache_from_json(json_path: str) -> Dict[Tuple[int, int], int]:
+    payload = json.loads(Path(json_path).read_text(encoding="utf-8"))
+
+    if not isinstance(payload, list):
+        raise ValueError("Il file JSON dei time gap deve contenere una lista di record.")
+
+    cache: Dict[Tuple[int, int], int] = {}
+    for row in payload:
+        if not isinstance(row, dict):
+            raise ValueError("Ogni record del JSON dei time gap deve essere un oggetto.")
+
+        if "activity" not in row or "task" not in row or "gap" not in row:
+            raise ValueError(
+                "Ogni record del JSON dei time gap deve contenere activity, task e gap."
+            )
+
+        activity_id = int(row["activity"])
+        task_id = int(row["task"])
+        gap = int(row["gap"])
+        cache[(activity_id, task_id)] = gap
+
+    return cache
+
+
 # Funzione principale del flusso time gap.
 #
 # Ordine dei passaggi:
@@ -29,12 +55,20 @@ TakeDataFn = Callable[[str], Optional[List[Dict[str, object]]]]
 def run_time_gap_pipeline(
     take_data_fn: TakeDataFn,
     activity_tasks_catalog: List[Dict[str, object]],
+    export_json_path: Optional[str] = None,
 ) -> Dict[Tuple[int, int], int]:
     print("debug : entriamo in run_time_gap_pipeline per costruire la cache completa")
+
+    if export_json_path and Path(export_json_path).exists():
+        print(
+            f"debug : time gap caricati dal json esistente {export_json_path}"
+        )
+        return _load_time_gap_cache_from_json(export_json_path)
 
     # La struttura finale contiene un solo numero per ogni coppia
     # (activity_id, task_id), pronto da riusare nello script principale.
     time_gap_cache: Dict[Tuple[int, int], int] = {}
+    exported_rows: List[Dict[str, object]] = []
 
     # Raggruppiamo il catalogo per activity per raccogliere il contesto dei
     # controlli sani una sola volta per activity.
@@ -84,10 +118,29 @@ def run_time_gap_pipeline(
                 min_variation_percent,
             )
 
-            time_gap_cache[(activity_id, target_task_id)] = apply_variation(
+            final_gap = apply_variation(
                 policy["base_gap_ms"],
                 clamped_variation_percent,
             )
+            time_gap_cache[(activity_id, target_task_id)] = final_gap
+            exported_rows.append(
+                {
+                    "activity": activity_id,
+                    "task": target_task_id,
+                    "activity_description": str(row["activity_description"]),
+                    "task_description": target_task_description,
+                    "action_type": target_action_type,
+                    "gap": final_gap,
+                }
+            )
+
+    if export_json_path:
+        export_path = Path(export_json_path)
+        export_path.parent.mkdir(parents=True, exist_ok=True)
+        export_path.write_text(
+            json.dumps(exported_rows, indent=2),
+            encoding="utf-8",
+        )
 
     return time_gap_cache
 

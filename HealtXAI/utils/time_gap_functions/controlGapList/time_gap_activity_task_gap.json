@@ -1,0 +1,874 @@
+[
+  {
+    "activity": 1,
+    "task": 1,
+    "activity_description": "Sweep the kitchen and dust the living room.",
+    "task_description": "Participant retrieves broom from supply closet",
+    "action_type": 1,
+    "gap": 9166
+  },
+  {
+    "activity": 1,
+    "task": 2,
+    "activity_description": "Sweep the kitchen and dust the living room.",
+    "task_description": "Participant retrieves duster from supply closet",
+    "action_type": 1,
+    "gap": 63001
+  },
+  {
+    "activity": 1,
+    "task": 3,
+    "activity_description": "Sweep the kitchen and dust the living room.",
+    "task_description": "Participant retrieves dust pan and brush from closet",
+    "action_type": 1,
+    "gap": 39128
+  },
+  {
+    "activity": 1,
+    "task": 4,
+    "activity_description": "Sweep the kitchen and dust the living room.",
+    "task_description": "Participant sweeps kitchen floor",
+    "action_type": 5,
+    "gap": 321564
+  },
+  {
+    "activity": 1,
+    "task": 5,
+    "activity_description": "Sweep the kitchen and dust the living room.",
+    "task_description": "Participant uses dust pan and brush",
+    "action_type": 5,
+    "gap": 139595
+  },
+  {
+    "activity": 1,
+    "task": 6,
+    "activity_description": "Sweep the kitchen and dust the living room.",
+    "task_description": "Participant dusts living room",
+    "action_type": 5,
+    "gap": 158515
+  },
+  {
+    "activity": 1,
+    "task": 7,
+    "activity_description": "Sweep the kitchen and dust the living room.",
+    "task_description": "Participant dusts dining room",
+    "action_type": 5,
+    "gap": 504519
+  },
+  {
+    "activity": 1,
+    "task": 8,
+    "activity_description": "Sweep the kitchen and dust the living room.",
+    "task_description": "Participant returns broom to supply closet",
+    "action_type": 12,
+    "gap": 26492
+  },
+  {
+    "activity": 1,
+    "task": 9,
+    "activity_description": "Sweep the kitchen and dust the living room.",
+    "task_description": "Participant returns duster to supply closet",
+    "action_type": 12,
+    "gap": 22029
+  },
+  {
+    "activity": 1,
+    "task": 10,
+    "activity_description": "Sweep the kitchen and dust the living room.",
+    "task_description": "Participants returns dust pan and brush to supply closet",
+    "action_type": 12,
+    "gap": 205511
+  },
+  {
+    "activity": 2,
+    "task": 1,
+    "activity_description": "Obtain a set of medicines and a weekly medicine dispenser, fill as per directions.",
+    "task_description": "Participant retrieves materials from cupboard A",
+    "action_type": 1,
+    "gap": 159721
+  },
+  {
+    "activity": 2,
+    "task": 2,
+    "activity_description": "Obtain a set of medicines and a weekly medicine dispenser, fill as per directions.",
+    "task_description": "Participant reads instructions",
+    "action_type": 6,
+    "gap": 283242
+  },
+  {
+    "activity": 2,
+    "task": 3,
+    "activity_description": "Obtain a set of medicines and a weekly medicine dispenser, fill as per directions.",
+    "task_description": "Participant fills dispenser with medication",
+    "action_type": 5,
+    "gap": 145173
+  },
+  {
+    "activity": 3,
+    "task": 1,
+    "activity_description": "Write a birthday card, enclose a check and address an envelope.",
+    "task_description": "Participant sits at dining room table",
+    "action_type": 8,
+    "gap": 10202
+  },
+  {
+    "activity": 3,
+    "task": 2,
+    "activity_description": "Write a birthday card, enclose a check and address an envelope.",
+    "task_description": "Participant retrieves birthday card",
+    "action_type": 1,
+    "gap": 10
+  },
+  {
+    "activity": 3,
+    "task": 3,
+    "activity_description": "Write a birthday card, enclose a check and address an envelope.",
+    "task_description": "Participant writes birthday wish inside the card: Happy Birthday Name Wish",
+    "action_type": 5,
+    "gap": 10
+  },
+  {
+    "activity": 3,
+    "task": 4,
+    "activity_description": "Write a birthday card, enclose a check and address an envelope.",
+    "task_description": "Participant retrieves check",
+    "action_type": 1,
+    "gap": 12
+  },
+  {
+    "activity": 3,
+    "task": 5,
+    "activity_description": "Write a birthday card, enclose a check and address an envelope.",
+    "task_description": "Participant writes check for birthday card",
+    "action_type": 5,
+    "gap": 12
+  },
+  {
+    "activity": 3,
+    "task": 6,
+    "activity_description": "Write a birthday card, enclose a check and address an envelope.",
+    "task_description": "Participant puts birthday card and check in envelope",
+    "action_type": 5,
+    "gap": 12
+  },
+  {
+    "activity": 3,
+    "task": 7,
+    "activity_description": "Write a birthday card, enclose a check and address an envelope.",
+    "task_description": "Participant addresses the envelope",
+    "action_type": 5,
+    "gap": 10
+  },
+  {
+    "activity": 3,
+    "task": 8,
+    "activity_description": "Write a birthday card, enclose a check and address an envelope.",
+    "task_description": "Participant places envelope in the mail organizer",
+    "action_type": 12,
+    "gap": 10
+  },
+  {
+    "activity": 4,
+    "task": 1,
+    "activity_description": "Find the appropriate DVD and watch the corresponding news clip.",
+    "task_description": "Participant moves to the living room",
+    "action_type": 7,
+    "gap": 27059
+  },
+  {
+    "activity": 4,
+    "task": 2,
+    "activity_description": "Find the appropriate DVD and watch the corresponding news clip.",
+    "task_description": "Participant selects correct DVD",
+    "action_type": 5,
+    "gap": 39776
+  },
+  {
+    "activity": 4,
+    "task": 3,
+    "activity_description": "Find the appropriate DVD and watch the corresponding news clip.",
+    "task_description": "Participant reads instructions next to the T.V.",
+    "action_type": 6,
+    "gap": 408166
+  },
+  {
+    "activity": 4,
+    "task": 4,
+    "activity_description": "Find the appropriate DVD and watch the corresponding news clip.",
+    "task_description": "Participants uses remote to turn on TV",
+    "action_type": 5,
+    "gap": 72894
+  },
+  {
+    "activity": 4,
+    "task": 5,
+    "activity_description": "Find the appropriate DVD and watch the corresponding news clip.",
+    "task_description": "Participant selects correct channel",
+    "action_type": 5,
+    "gap": 72894
+  },
+  {
+    "activity": 4,
+    "task": 6,
+    "activity_description": "Find the appropriate DVD and watch the corresponding news clip.",
+    "task_description": "Participant watches news clip",
+    "action_type": 9,
+    "gap": 396941
+  },
+  {
+    "activity": 4,
+    "task": 7,
+    "activity_description": "Find the appropriate DVD and watch the corresponding news clip.",
+    "task_description": "Participant turns off T.V.",
+    "action_type": 5,
+    "gap": 79570
+  },
+  {
+    "activity": 4,
+    "task": 8,
+    "activity_description": "Find the appropriate DVD and watch the corresponding news clip.",
+    "task_description": "Participant returns DVD to pile",
+    "action_type": 12,
+    "gap": 27096
+  },
+  {
+    "activity": 5,
+    "task": 1,
+    "activity_description": "Obtain a watering can and water all plants in the living space.",
+    "task_description": "Participant retrieves watering can from supply closet",
+    "action_type": 1,
+    "gap": 549693
+  },
+  {
+    "activity": 5,
+    "task": 2,
+    "activity_description": "Obtain a watering can and water all plants in the living space.",
+    "task_description": "Participant fills watering can",
+    "action_type": 5,
+    "gap": 40960
+  },
+  {
+    "activity": 5,
+    "task": 3,
+    "activity_description": "Obtain a watering can and water all plants in the living space.",
+    "task_description": "Participant waters plants (windowsill",
+    "action_type": 5,
+    "gap": 38159
+  },
+  {
+    "activity": 5,
+    "task": 4,
+    "activity_description": "Obtain a watering can and water all plants in the living space.",
+    "task_description": "Participant waters plants (coffee table",
+    "action_type": 5,
+    "gap": 96987
+  },
+  {
+    "activity": 5,
+    "task": 5,
+    "activity_description": "Obtain a watering can and water all plants in the living space.",
+    "task_description": "Participant empties extra water into sink",
+    "action_type": 5,
+    "gap": 19134
+  },
+  {
+    "activity": 5,
+    "task": 6,
+    "activity_description": "Obtain a watering can and water all plants in the living space.",
+    "task_description": "Participant returns watering can to supply closet",
+    "action_type": 12,
+    "gap": 25812
+  },
+  {
+    "activity": 6,
+    "task": 1,
+    "activity_description": "Answer the phone and respond to questions pertaining to the video from task 4.",
+    "task_description": "Participant answers the phone",
+    "action_type": 11,
+    "gap": 10
+  },
+  {
+    "activity": 6,
+    "task": 2,
+    "activity_description": "Answer the phone and respond to questions pertaining to the video from task 4.",
+    "task_description": "Participant answers questions over the phone",
+    "action_type": 11,
+    "gap": 10
+  },
+  {
+    "activity": 6,
+    "task": 3,
+    "activity_description": "Answer the phone and respond to questions pertaining to the video from task 4.",
+    "task_description": "Participant sits down during conversation",
+    "action_type": 8,
+    "gap": 254985
+  },
+  {
+    "activity": 6,
+    "task": 4,
+    "activity_description": "Answer the phone and respond to questions pertaining to the video from task 4.",
+    "task_description": "Participant stands in one place",
+    "action_type": 7,
+    "gap": 211069
+  },
+  {
+    "activity": 6,
+    "task": 5,
+    "activity_description": "Answer the phone and respond to questions pertaining to the video from task 4.",
+    "task_description": "Participant walks around during phone call",
+    "action_type": 7,
+    "gap": 255139
+  },
+  {
+    "activity": 6,
+    "task": 6,
+    "activity_description": "Answer the phone and respond to questions pertaining to the video from task 4.",
+    "task_description": "Participant hangs up the phone",
+    "action_type": 12,
+    "gap": 3301
+  },
+  {
+    "activity": 7,
+    "task": 1,
+    "activity_description": "Prepare a cup of soup using the microwave.",
+    "task_description": "Participant retrieves materials from cupboard A",
+    "action_type": 1,
+    "gap": 437605
+  },
+  {
+    "activity": 7,
+    "task": 2,
+    "activity_description": "Prepare a cup of soup using the microwave.",
+    "task_description": "Participant fills measuring cup with water",
+    "action_type": 5,
+    "gap": 2749284
+  },
+  {
+    "activity": 7,
+    "task": 3,
+    "activity_description": "Prepare a cup of soup using the microwave.",
+    "task_description": "Participant boils water in microwave",
+    "action_type": 5,
+    "gap": 328296
+  },
+  {
+    "activity": 7,
+    "task": 4,
+    "activity_description": "Prepare a cup of soup using the microwave.",
+    "task_description": "Participant pours water into cup of noodles",
+    "action_type": 5,
+    "gap": 211864
+  },
+  {
+    "activity": 7,
+    "task": 5,
+    "activity_description": "Prepare a cup of soup using the microwave.",
+    "task_description": "Participant retrieves pitcher of water from refrigerator",
+    "action_type": 1,
+    "gap": 302796
+  },
+  {
+    "activity": 7,
+    "task": 6,
+    "activity_description": "Prepare a cup of soup using the microwave.",
+    "task_description": "Participant pours glass of water",
+    "action_type": 5,
+    "gap": 308012
+  },
+  {
+    "activity": 7,
+    "task": 7,
+    "activity_description": "Prepare a cup of soup using the microwave.",
+    "task_description": "Participant returns pitcher of water",
+    "action_type": 12,
+    "gap": 301246
+  },
+  {
+    "activity": 7,
+    "task": 8,
+    "activity_description": "Prepare a cup of soup using the microwave.",
+    "task_description": "Participant waits for water to simmer in cup of noodles",
+    "action_type": 8,
+    "gap": 212877
+  },
+  {
+    "activity": 7,
+    "task": 9,
+    "activity_description": "Prepare a cup of soup using the microwave.",
+    "task_description": "Participant brings all items to dining room table",
+    "action_type": 7,
+    "gap": 410938
+  },
+  {
+    "activity": 8,
+    "task": 1,
+    "activity_description": "Pick a complete outfit for an interview from a selection of clothing.",
+    "task_description": "Participant moves to hallway closet",
+    "action_type": 7,
+    "gap": 133523
+  },
+  {
+    "activity": 8,
+    "task": 2,
+    "activity_description": "Pick a complete outfit for an interview from a selection of clothing.",
+    "task_description": "Participant chooses correct outfit from closet:",
+    "action_type": 5,
+    "gap": 137222
+  },
+  {
+    "activity": 8,
+    "task": 3,
+    "activity_description": "Pick a complete outfit for an interview from a selection of clothing.",
+    "task_description": "Participant lays out clothes on living room couch",
+    "action_type": 5,
+    "gap": 216006
+  },
+  {
+    "activity": 9,
+    "task": 1,
+    "activity_description": "Check the wattage of a desk lamp and replace the bulb.",
+    "task_description": "Participant checks wattage",
+    "action_type": 6,
+    "gap": 107620
+  },
+  {
+    "activity": 9,
+    "task": 2,
+    "activity_description": "Check the wattage of a desk lamp and replace the bulb.",
+    "task_description": "Participant moves to the kitchen",
+    "action_type": 7,
+    "gap": 181205
+  },
+  {
+    "activity": 9,
+    "task": 3,
+    "activity_description": "Check the wattage of a desk lamp and replace the bulb.",
+    "task_description": "Participant retrieves light bulbs from cabinet B",
+    "action_type": 1,
+    "gap": 103499
+  },
+  {
+    "activity": 9,
+    "task": 4,
+    "activity_description": "Check the wattage of a desk lamp and replace the bulb.",
+    "task_description": "Participant moves to the dining room",
+    "action_type": 7,
+    "gap": 119069
+  },
+  {
+    "activity": 9,
+    "task": 5,
+    "activity_description": "Check the wattage of a desk lamp and replace the bulb.",
+    "task_description": "Participant removes old light bulb",
+    "action_type": 5,
+    "gap": 62259
+  },
+  {
+    "activity": 9,
+    "task": 6,
+    "activity_description": "Check the wattage of a desk lamp and replace the bulb.",
+    "task_description": "Participant throws away old light bulb",
+    "action_type": 12,
+    "gap": 13572
+  },
+  {
+    "activity": 9,
+    "task": 7,
+    "activity_description": "Check the wattage of a desk lamp and replace the bulb.",
+    "task_description": "Participant replaces the bulb",
+    "action_type": 5,
+    "gap": 216342
+  },
+  {
+    "activity": 10,
+    "task": 1,
+    "activity_description": "Wash hands with soap at the kitchen sink.",
+    "task_description": "Participant moves to the kitchen",
+    "action_type": 7,
+    "gap": 3254
+  },
+  {
+    "activity": 10,
+    "task": 2,
+    "activity_description": "Wash hands with soap at the kitchen sink.",
+    "task_description": "Participant turns on water",
+    "action_type": 5,
+    "gap": 29119
+  },
+  {
+    "activity": 10,
+    "task": 3,
+    "activity_description": "Wash hands with soap at the kitchen sink.",
+    "task_description": "Participant uses hand soap",
+    "action_type": 5,
+    "gap": 32474
+  },
+  {
+    "activity": 10,
+    "task": 4,
+    "activity_description": "Wash hands with soap at the kitchen sink.",
+    "task_description": "Participant washes hands",
+    "action_type": 5,
+    "gap": 53326
+  },
+  {
+    "activity": 10,
+    "task": 5,
+    "activity_description": "Wash hands with soap at the kitchen sink.",
+    "task_description": "Participant dries hands",
+    "action_type": 5,
+    "gap": 63317
+  },
+  {
+    "activity": 11,
+    "task": 1,
+    "activity_description": "Wash and dry all kitchen countertop surfaces.",
+    "task_description": "Participant locates the sponge",
+    "action_type": 10,
+    "gap": 17266
+  },
+  {
+    "activity": 11,
+    "task": 2,
+    "activity_description": "Wash and dry all kitchen countertop surfaces.",
+    "task_description": "Participant locates the dish detergent",
+    "action_type": 10,
+    "gap": 91
+  },
+  {
+    "activity": 11,
+    "task": 3,
+    "activity_description": "Wash and dry all kitchen countertop surfaces.",
+    "task_description": "Participant wets the sponge",
+    "action_type": 5,
+    "gap": 276069
+  },
+  {
+    "activity": 11,
+    "task": 4,
+    "activity_description": "Wash and dry all kitchen countertop surfaces.",
+    "task_description": "Participant lathers the sponge with the detergent",
+    "action_type": 5,
+    "gap": 97785
+  },
+  {
+    "activity": 11,
+    "task": 5,
+    "activity_description": "Wash and dry all kitchen countertop surfaces.",
+    "task_description": "Participant washes the countertops",
+    "action_type": 5,
+    "gap": 155619
+  },
+  {
+    "activity": 11,
+    "task": 6,
+    "activity_description": "Wash and dry all kitchen countertop surfaces.",
+    "task_description": "Participant rinses out the sponge",
+    "action_type": 5,
+    "gap": 123438
+  },
+  {
+    "activity": 11,
+    "task": 7,
+    "activity_description": "Wash and dry all kitchen countertop surfaces.",
+    "task_description": "Participant dries the countertops",
+    "action_type": 5,
+    "gap": 114979
+  },
+  {
+    "activity": 11,
+    "task": 8,
+    "activity_description": "Wash and dry all kitchen countertop surfaces.",
+    "task_description": "Participant returns the sponge to the sponge drying dish",
+    "action_type": 12,
+    "gap": 4392
+  },
+  {
+    "activity": 12,
+    "task": 1,
+    "activity_description": "Place a phone call to a recording and write down the recipe heard.",
+    "task_description": "Participant moves to the dining room table",
+    "action_type": 7,
+    "gap": 2133
+  },
+  {
+    "activity": 12,
+    "task": 2,
+    "activity_description": "Place a phone call to a recording and write down the recipe heard.",
+    "task_description": "Participant sits at dining room table",
+    "action_type": 8,
+    "gap": 5983
+  },
+  {
+    "activity": 12,
+    "task": 3,
+    "activity_description": "Place a phone call to a recording and write down the recipe heard.",
+    "task_description": "Participant locates the phone book",
+    "action_type": 10,
+    "gap": 10
+  },
+  {
+    "activity": 12,
+    "task": 4,
+    "activity_description": "Place a phone call to a recording and write down the recipe heard.",
+    "task_description": "Participant locates the phone number for Safeway Food and Drugs",
+    "action_type": 10,
+    "gap": 10
+  },
+  {
+    "activity": 12,
+    "task": 5,
+    "activity_description": "Place a phone call to a recording and write down the recipe heard.",
+    "task_description": "Participant dials the number and listens to the recording",
+    "action_type": 5,
+    "gap": 10
+  },
+  {
+    "activity": 12,
+    "task": 6,
+    "activity_description": "Place a phone call to a recording and write down the recipe heard.",
+    "task_description": "Participant records the recipe",
+    "action_type": 5,
+    "gap": 10
+  },
+  {
+    "activity": 12,
+    "task": 7,
+    "activity_description": "Place a phone call to a recording and write down the recipe heard.",
+    "task_description": "Participant hangs up the phone",
+    "action_type": 12,
+    "gap": 10
+  },
+  {
+    "activity": 13,
+    "task": 1,
+    "activity_description": "Sort and fold a basketful of clothing containing men's, women's and children's articles.",
+    "task_description": "Participant moves to the hallway closet",
+    "action_type": 7,
+    "gap": 284479
+  },
+  {
+    "activity": 13,
+    "task": 2,
+    "activity_description": "Sort and fold a basketful of clothing containing men's, women's and children's articles.",
+    "task_description": "Participant locates the laundry basket",
+    "action_type": 10,
+    "gap": 260783
+  },
+  {
+    "activity": 13,
+    "task": 3,
+    "activity_description": "Sort and fold a basketful of clothing containing men's, women's and children's articles.",
+    "task_description": "Participant moves to the couch",
+    "action_type": 7,
+    "gap": 302470
+  },
+  {
+    "activity": 13,
+    "task": 4,
+    "activity_description": "Sort and fold a basketful of clothing containing men's, women's and children's articles.",
+    "task_description": "Participant sorts/folds the laundry",
+    "action_type": 5,
+    "gap": 253947
+  },
+  {
+    "activity": 14,
+    "task": 1,
+    "activity_description": "Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.",
+    "task_description": "Participant moves to the kitchen",
+    "action_type": 7,
+    "gap": 368896
+  },
+  {
+    "activity": 14,
+    "task": 2,
+    "activity_description": "Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.",
+    "task_description": "Participant removes materials from cupboard",
+    "action_type": 5,
+    "gap": 404709
+  },
+  {
+    "activity": 14,
+    "task": 3,
+    "activity_description": "Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.",
+    "task_description": "Participant locates pot",
+    "action_type": 10,
+    "gap": 10
+  },
+  {
+    "activity": 14,
+    "task": 4,
+    "activity_description": "Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.",
+    "task_description": "Participant turns on stove",
+    "action_type": 5,
+    "gap": 424528
+  },
+  {
+    "activity": 14,
+    "task": 5,
+    "activity_description": "Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.",
+    "task_description": "Participant fills pot with water:",
+    "action_type": 5,
+    "gap": 324385
+  },
+  {
+    "activity": 14,
+    "task": 6,
+    "activity_description": "Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.",
+    "task_description": "Participant puts oatmeal into pot:",
+    "action_type": 5,
+    "gap": 209693
+  },
+  {
+    "activity": 14,
+    "task": 7,
+    "activity_description": "Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.",
+    "task_description": "Participants times one minute",
+    "action_type": 8,
+    "gap": 10
+  },
+  {
+    "activity": 14,
+    "task": 8,
+    "activity_description": "Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.",
+    "task_description": "Participant stirs oatmeal",
+    "action_type": 5,
+    "gap": 24686
+  },
+  {
+    "activity": 14,
+    "task": 9,
+    "activity_description": "Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.",
+    "task_description": "Participant puts oatmeal into bowl",
+    "action_type": 5,
+    "gap": 625811
+  },
+  {
+    "activity": 14,
+    "task": 10,
+    "activity_description": "Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.",
+    "task_description": "Participant turns stove off",
+    "action_type": 5,
+    "gap": 298434
+  },
+  {
+    "activity": 14,
+    "task": 11,
+    "activity_description": "Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.",
+    "task_description": "Participant puts sugar in oatmeal",
+    "action_type": 5,
+    "gap": 112978
+  },
+  {
+    "activity": 14,
+    "task": 12,
+    "activity_description": "Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.",
+    "task_description": "Participant puts raisin in oatmeal",
+    "action_type": 5,
+    "gap": 137705
+  },
+  {
+    "activity": 14,
+    "task": 13,
+    "activity_description": "Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.",
+    "task_description": "Participant throws raisin box in trashcan",
+    "action_type": 12,
+    "gap": 3514
+  },
+  {
+    "activity": 15,
+    "task": 1,
+    "activity_description": "Sort and file a small collection of billing statements.",
+    "task_description": "Participant moves to the living room",
+    "action_type": 7,
+    "gap": 58997
+  },
+  {
+    "activity": 15,
+    "task": 2,
+    "activity_description": "Sort and file a small collection of billing statements.",
+    "task_description": "Participant gathers statements from bookshelf",
+    "action_type": 5,
+    "gap": 98761
+  },
+  {
+    "activity": 15,
+    "task": 3,
+    "activity_description": "Sort and file a small collection of billing statements.",
+    "task_description": "Participant moves to the dining room table",
+    "action_type": 7,
+    "gap": 108461
+  },
+  {
+    "activity": 15,
+    "task": 4,
+    "activity_description": "Sort and file a small collection of billing statements.",
+    "task_description": "Participant sits down at the dining room table",
+    "action_type": 8,
+    "gap": 62051
+  },
+  {
+    "activity": 15,
+    "task": 5,
+    "activity_description": "Sort and file a small collection of billing statements.",
+    "task_description": "Participant sorts pile of statements into the organizer",
+    "action_type": 5,
+    "gap": 145147
+  },
+  {
+    "activity": 16,
+    "task": 1,
+    "activity_description": "Setup hands for a card game, answer the phone and describe the rules of the game.",
+    "task_description": "Participant moves to the kitchen",
+    "action_type": 7,
+    "gap": 11662
+  },
+  {
+    "activity": 16,
+    "task": 2,
+    "activity_description": "Setup hands for a card game, answer the phone and describe the rules of the game.",
+    "task_description": "Participant locates deck of cards from kitchen cabinet B",
+    "action_type": 10,
+    "gap": 44672
+  },
+  {
+    "activity": 16,
+    "task": 3,
+    "activity_description": "Setup hands for a card game, answer the phone and describe the rules of the game.",
+    "task_description": "Participant brings deck of cards to the dining room table",
+    "action_type": 5,
+    "gap": 12533
+  },
+  {
+    "activity": 16,
+    "task": 4,
+    "activity_description": "Setup hands for a card game, answer the phone and describe the rules of the game.",
+    "task_description": "Participant sets up card game",
+    "action_type": 5,
+    "gap": 4072
+  },
+  {
+    "activity": 16,
+    "task": 5,
+    "activity_description": "Setup hands for a card game, answer the phone and describe the rules of the game.",
+    "task_description": "Participant answers the telephone",
+    "action_type": 11,
+    "gap": 10
+  },
+  {
+    "activity": 16,
+    "task": 6,
+    "activity_description": "Setup hands for a card game, answer the phone and describe the rules of the game.",
+    "task_description": "Participant explains the rules of the game over the phone",
+    "action_type": 5,
+    "gap": 40852
+  },
+  {
+    "activity": 16,
+    "task": 7,
+    "activity_description": "Setup hands for a card game, answer the phone and describe the rules of the game.",
+    "task_description": "Participant hangs up the phone",
+    "action_type": 12,
+    "gap": 10
+  }
+]

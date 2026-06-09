@@ -13,6 +13,8 @@ db_params = {
     "port": "5432"
 }
 
+CLINGO_PATH = r"C:\Users\8flor\miniconda3\envs\potassco\Library\bin\clingo.exe"
+
 livello_A = '''
 % ========================
 % Level A - Activity model
@@ -94,7 +96,7 @@ def run_clingo_test (file_path) :
         # Esegue il comando clingo nel terminale
         # Il parametro "0" dice a clingo di trovare tutti i modelli possibili
         result = subprocess.run (
-            ['clingo', file_path, '0'],
+            [CLINGO_PATH, file_path, '0'],
             capture_output = True,
             text = True
         )
