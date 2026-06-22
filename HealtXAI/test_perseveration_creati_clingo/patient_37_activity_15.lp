@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 37
-% Attività: Sort and file a small collection of billing statements.
+% Attivita: Sort and file a small collection of billing statements.
 % ======================================================================
 
 
@@ -28,30 +28,37 @@ expected_count(sort_and_file_a_small_collection_of_billing_statements, participa
 expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 1).
 expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 1).
 
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 240000).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 68402).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 98761).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 108552).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 49733).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 145097).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p37_a16, sort_and_file_a_small_collection_of_billing_statements).
+instance(i_p37_a15, sort_and_file_a_small_collection_of_billing_statements).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p37_a16, participant_moves_to_the_kitchen, 1, 57440001).
-raw_performed(i_p37_a16, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 2, 57440062).
-raw_performed(i_p37_a16, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 3, 57444037).
-raw_performed(i_p37_a16, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 4, 57449076).
-raw_performed(i_p37_a16, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 5, 57459007).
-raw_performed(i_p37_a16, participant_brings_deck_of_cards_to_the_dining_room_table, 6, 57460077).
-raw_performed(i_p37_a16, participant_brings_deck_of_cards_to_the_dining_room_table, 7, 57462064).
-raw_performed(i_p37_a16, participant_brings_deck_of_cards_to_the_dining_room_table, 8, 57473043).
-raw_performed(i_p37_a16, participant_brings_deck_of_cards_to_the_dining_room_table, 9, 57475054).
+raw_performed(i_p37_a15, participant_moves_to_the_living_room, 1, 57261029).
+raw_performed(i_p37_a15, participant_gathers_statements_from_bookshelf, 2, 57265053).
+raw_performed(i_p37_a15, participant_gathers_statements_from_bookshelf, 3, 57280009).
+raw_performed(i_p37_a15, participant_gathers_statements_from_bookshelf, 4, 57291013).
+raw_performed(i_p37_a15, participant_moves_to_the_dining_room_table, 5, 57298004).
+raw_performed(i_p37_a15, participant_sits_down_at_the_dining_room_table, 6, 57301076).
+raw_performed(i_p37_a15, participant_sorts_pile_of_statements_into_the_organizer, 7, 57314012).
+raw_performed(i_p37_a15, participant_sorts_pile_of_statements_into_the_organizer, 8, 57322091).
+raw_performed(i_p37_a15, participant_sorts_pile_of_statements_into_the_organizer, 9, 57329001).
+raw_performed(i_p37_a15, participant_sorts_pile_of_statements_into_the_organizer, 10, 57348033).
+raw_performed(i_p37_a15, participant_sorts_pile_of_statements_into_the_organizer, 11, 57355044).
+raw_performed(i_p37_a15, participant_sorts_pile_of_statements_into_the_organizer, 12, 57363014).
+raw_performed(i_p37_a15, participant_sorts_pile_of_statements_into_the_organizer, 13, 57369002).
+raw_performed(i_p37_a15, participant_sorts_pile_of_statements_into_the_organizer, 14, 57376010).
+raw_performed(i_p37_a15, participant_sorts_pile_of_statements_into_the_organizer, 15, 57381013).
+raw_performed(i_p37_a15, participant_sorts_pile_of_statements_into_the_organizer, 16, 57387033).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

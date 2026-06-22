@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 38
-% Attività: Check the wattage of a desk lamp and replace the bulb.
+% Attivita: Obtain a watering can and water all plants in the living space.
 % ======================================================================
 
 
@@ -8,53 +8,52 @@
 % Level A - Activity model
 % ========================
 
-activity(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
+activity(obtain_a_watering_can_and_water_all_plants_in_the_living_space).
 
-action(participant_checks_wattage).
-action(participant_moves_to_the_kitchen).
-action(participant_retrieves_light_bulbs_from_cabinet_b).
-action(participant_moves_to_the_dining_room).
-action(participant_removes_old_light_bulb).
-action(participant_throws_away_old_light_bulb).
-action(participant_replaces_the_bulb).
+action(participant_retrieves_watering_can_from_supply_closet).
+action(participant_fills_watering_can).
+action(participant_waters_plants_windowsill).
+action(participant_waters_plants_coffee_table).
+action(participant_empties_extra_water_into_sink).
+action(participant_returns_watering_can_to_supply_closet).
 
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 6).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 7).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 1).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 7).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 5).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 12).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 1).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 12).
 
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 1).
 
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 18000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 18000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 240000).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 549693).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 40960).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 38159).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 96987).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 19134).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 25812).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p38_a6, check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
+instance(i_p38_a5, obtain_a_watering_can_and_water_all_plants_in_the_living_space).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p38_a6, participant_answers_the_phone, 1, 36910045).
-raw_performed(i_p38_a6, participant_sits_down_during_conversation, 2, 36945244).
-raw_performed(i_p38_a6, participant_sits_down_during_conversation, 3, 36959823).
-raw_performed(i_p38_a6, participant_sits_down_during_conversation, 4, 37078682).
+raw_performed(i_p38_a5, participant_retrieves_watering_can_from_supply_closet, 1, 36754406).
+raw_performed(i_p38_a5, participant_fills_watering_can, 2, 36763997).
+raw_performed(i_p38_a5, participant_waters_plants_windowsill, 3, 36794174).
+raw_performed(i_p38_a5, participant_waters_plants_coffee_table, 4, 36825800).
+raw_performed(i_p38_a5, participant_waters_plants_coffee_table, 5, 36838794).
+raw_performed(i_p38_a5, participant_empties_extra_water_into_sink, 6, 36843336).
+raw_performed(i_p38_a5, participant_empties_extra_water_into_sink, 7, 36851963).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

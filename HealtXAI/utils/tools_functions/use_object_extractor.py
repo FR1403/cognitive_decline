@@ -7,6 +7,7 @@ import os
 import re
 import urllib.error
 import urllib.request
+from pathlib import Path
 from typing import Callable, Optional
 
 
@@ -15,7 +16,7 @@ DEFAULT_MODEL = "mistral-7b-instruct-v0.3"
 DEFAULT_TIMEOUT_SECONDS = 60
 DEFAULT_FALLBACK_OBJECT = ""
 
-
+#consulta LLM per estrarre l'oggetto di un'azione 
 def extract_use_object(
     action_description: str,
     *,
@@ -57,6 +58,74 @@ def extract_use_object(
         return fallback_object
 
 
+def load_object_cache(cache_path: str) -> dict[str, str]:
+    path = Path(cache_path)
+    if not path.exists():
+        return {}
+
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    return {str(key): str(value) for key, value in payload.items()}
+
+
+def save_object_cache(cache_path: str, cache_payload: dict[str, str]) -> None:
+    path = Path(cache_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps(cache_payload, indent=2, ensure_ascii=True),
+        encoding="utf-8",
+    )
+
+
+def load_or_build_object_cache(
+    action_descriptions: list[str],
+    cache_path: str,
+    *,
+    force_rebuild: bool = False,
+    endpoint: str = DEFAULT_LM_STUDIO_URL,
+    model: str = DEFAULT_MODEL,
+    timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS,
+    fallback_object: str = DEFAULT_FALLBACK_OBJECT,
+    completion_fn: Optional[Callable[[dict, str, int], str]] = None,
+) -> dict[str, str]:
+    path = Path(cache_path)
+    if force_rebuild and path.exists():
+        print(f"debug : eliminiamo la cache oggetti esistente {cache_path}")
+        path.unlink()
+
+    if path.exists():
+        print(f"debug : cache oggetti trovata, saltiamo LM Studio -> {cache_path}")
+        return load_object_cache(cache_path)
+
+    unique_descriptions = []
+    seen_descriptions = set()
+    for raw_description in action_descriptions:
+        normalized_description = str(raw_description).strip()
+        if not normalized_description or normalized_description in seen_descriptions:
+            continue
+        seen_descriptions.add(normalized_description)
+        unique_descriptions.append(normalized_description)
+
+    print(
+        "debug : cache oggetti assente, estraiamo gli oggetti usati con LM Studio "
+        f"per {len(unique_descriptions)} task"
+    )
+
+    cache_payload: dict[str, str] = {}
+    for description in unique_descriptions:
+        cache_payload[description] = extract_use_object(
+            description,
+            endpoint=endpoint,
+            model=model,
+            timeout_seconds=timeout_seconds,
+            fallback_object=fallback_object,
+            completion_fn=completion_fn,
+        )
+
+    save_object_cache(cache_path, cache_payload)
+    print(f"debug : cache oggetti salvata in {cache_path}")
+    return cache_payload
+
+#costruisce il prompt
 def _build_payload(prompt: str, model: str) -> dict:
     return {
         "model": model,

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Callable, Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
 from .llm_time_gap_context_stats import collect_llm_time_gap_context_stats
 from .llm_interrogation import ask_time_gap_llm
@@ -15,16 +15,24 @@ from .prompt_builder import (
 )
 
 
-# Alias di tipo per rendere piu' leggibile la firma della funzione passata
-# dall'esterno per l'accesso al database.
-TakeDataFn = Callable[[str], Optional[List[Dict[str, object]]]]
+DEFAULT_TIME_GAP_JSON_NAME = "time_gap_activity_task_gap.json"
 
 
 def _load_time_gap_cache_from_json(json_path: str) -> Dict[Tuple[int, int], int]:
     payload = json.loads(Path(json_path).read_text(encoding="utf-8"))
 
+    if isinstance(payload, dict):
+        records = payload.get("records")
+        if not isinstance(records, list):
+            raise ValueError(
+                "Il file JSON dei time gap con metadati deve contenere una chiave 'records' con una lista."
+            )
+        payload = records
+
     if not isinstance(payload, list):
-        raise ValueError("Il file JSON dei time gap deve contenere una lista di record.")
+        raise ValueError(
+            "Il file JSON dei time gap deve contenere una lista di record oppure un oggetto con chiave 'records'."
+        )
 
     cache: Dict[Tuple[int, int], int] = {}
     for row in payload:
@@ -53,11 +61,16 @@ def _load_time_gap_cache_from_json(json_path: str) -> Dict[Tuple[int, int], int]
 # 4. costruisce il prompt;
 # 5. interroga l'LLM.
 def run_time_gap_pipeline(
-    take_data_fn: TakeDataFn,
+    snapshot_data: Dict[str, object],
     activity_tasks_catalog: List[Dict[str, object]],
     export_json_path: Optional[str] = None,
+    force_rebuild: bool = False,
 ) -> Dict[Tuple[int, int], int]:
     print("debug : entriamo in run_time_gap_pipeline per costruire la cache completa")
+
+    if export_json_path and force_rebuild and Path(export_json_path).exists():
+        print(f"debug : eliminiamo il json time gap esistente {export_json_path}")
+        Path(export_json_path).unlink()
 
     if export_json_path and Path(export_json_path).exists():
         print(
@@ -85,7 +98,7 @@ def run_time_gap_pipeline(
         )
         stats_context = collect_llm_time_gap_context_stats(
             activity_id=activity_id,
-            take_data_fn=take_data_fn,
+            snapshot_data=snapshot_data,
             activity_tasks_catalog=activity_tasks_catalog,
         )
 

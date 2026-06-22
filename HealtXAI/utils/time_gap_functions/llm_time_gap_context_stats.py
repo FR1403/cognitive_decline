@@ -6,7 +6,7 @@ from collections import defaultdict
 from datetime import datetime
 from math import dist
 from statistics import StatisticsError, mean, median, multimode, pstdev
-from typing import Callable, Dict, List, Optional, Tuple
+from typing import Dict, List, Tuple
 
 from .take_data_spatial_time import load_spatial_time_context
 from .take_data_control_patients import load_control_patients_activity_data
@@ -21,13 +21,13 @@ TIME_FORMATS = ("%H:%M:%S.%f", "%H:%M:%S")
 # i risultati in un riassunto statistico unico.
 def collect_llm_time_gap_context_stats(
     activity_id: int,
-    take_data_fn: Callable[[str], Optional[List[Dict[str, object]]]],
+    snapshot_data: Dict[str, object],
     activity_tasks_catalog: List[Dict[str, object]],
 ) -> Dict[str, object]:
     # Recuperiamo prima le osservazioni delle task dei controlli sani.
     control_patients_data = load_control_patients_activity_data(
         activity_id=activity_id,
-        take_data_fn=take_data_fn,
+        snapshot_data=snapshot_data,
         activity_tasks_catalog=activity_tasks_catalog,
     )
 
@@ -40,7 +40,7 @@ def collect_llm_time_gap_context_stats(
     spatial_time_data = load_spatial_time_context(
         activity_id=activity_id,
         control_patient_ids=control_patient_ids,
-        take_data_fn=take_data_fn,
+        snapshot_data=snapshot_data,
     )
 
     # A questo punto deleghiamo a una funzione dedicata la costruzione delle

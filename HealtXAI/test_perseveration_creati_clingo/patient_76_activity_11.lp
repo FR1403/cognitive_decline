@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 76
-% Attività: Place a phone call to a recording and write down the recipe heard.
+% Attivita: Wash and dry all kitchen countertop surfaces.
 % ======================================================================
 
 
@@ -8,51 +8,95 @@
 % Level A - Activity model
 % ========================
 
-activity(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard).
+activity(wash_and_dry_all_kitchen_countertop_surfaces).
 
-action(participant_moves_to_the_dining_room_table).
-action(participant_sits_at_dining_room_table).
-action(participant_locates_the_phone_book).
-action(participant_locates_the_phone_number_for_safeway_food_and_drugs).
-action(participant_dials_the_number_and_listens_to_the_recording).
-action(participant_records_the_recipe).
-action(participant_hangs_up_the_phone).
+action(participant_locates_the_sponge).
+action(participant_locates_the_dish_detergent).
+action(participant_wets_the_sponge).
+action(participant_lathers_the_sponge_with_the_detergent).
+action(participant_washes_the_countertops).
+action(participant_rinses_out_the_sponge).
+action(participant_dries_the_countertops).
+action(participant_returns_the_sponge_to_the_sponge_drying_dish).
 
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 7).
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 8).
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 10).
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 10).
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 5).
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 5).
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 12).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_sponge, 10).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_dish_detergent, 10).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, 5).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, 5).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, 5).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, 5).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 5).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 12).
 
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 1).
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 1).
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 1).
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 1).
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 1).
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 1).
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_sponge, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_dish_detergent, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 1).
 
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 240000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 240000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 18000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 18000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 240000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 240000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 18000).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_sponge, 17266).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_dish_detergent, 91).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, 276069).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, 97785).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, 155619).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, 123649).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 101880).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 4392).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p76_a12, place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard).
+instance(i_p76_a11, wash_and_dry_all_kitchen_countertop_surfaces).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p76_a12, participant_moves_to_the_dining_room_table, 1, 38982049).
-raw_performed(i_p76_a12, participant_sits_at_dining_room_table, 2, 38991018).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 1, 37974095).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 2, 38054027).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 3, 38095092).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 4, 38108026).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 5, 38113030).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 6, 38114068).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 7, 38120002).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 8, 38126014).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 9, 38133023).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 10, 38137006).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 11, 38140068).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 12, 38147005).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 13, 38158091).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 14, 38161002).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 15, 38166000).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 16, 38169064).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 17, 38174050).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 18, 38176016).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 19, 38178001).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 20, 38186020).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 21, 38190012).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 22, 38194003).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 23, 38194075).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 24, 38201023).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 25, 38206004).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 26, 38242043).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 27, 38252040).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 28, 38263061).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 29, 38264051).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 30, 38269090).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 31, 38271027).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 32, 38286093).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 33, 38297021).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 34, 38313044).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 35, 38317064).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 36, 38322014).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 37, 38327083).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 38, 38332030).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 39, 38346079).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 40, 38357098).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 41, 38362081).
+raw_performed(i_p76_a11, participant_washes_the_countertops, 42, 38366044).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

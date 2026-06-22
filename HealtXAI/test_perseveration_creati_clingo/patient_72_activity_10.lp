@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 72
-% Attività: Wash hands with soap at the kitchen sink.
+% Attivita: Wash hands with soap at the kitchen sink.
 % ======================================================================
 
 
@@ -28,37 +28,31 @@ expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_s
 expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 1).
 expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 1).
 
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 240000).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 3254).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 29127).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 32474).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 53341).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 63317).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p72_a11, wash_hands_with_soap_at_the_kitchen_sink).
+instance(i_p72_a10, wash_hands_with_soap_at_the_kitchen_sink).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p72_a11, participant_wets_the_sponge, 1, 38591480).
-raw_performed(i_p72_a11, participant_wets_the_sponge, 2, 38591506).
-raw_performed(i_p72_a11, participant_washes_the_countertops, 3, 38606904).
-raw_performed(i_p72_a11, participant_washes_the_countertops, 4, 38611263).
-raw_performed(i_p72_a11, participant_washes_the_countertops, 5, 38612543).
-raw_performed(i_p72_a11, participant_wets_the_sponge, 6, 38627386).
-raw_performed(i_p72_a11, participant_washes_the_countertops, 7, 38627976).
-raw_performed(i_p72_a11, participant_wets_the_sponge, 8, 38631125).
-raw_performed(i_p72_a11, participant_washes_the_countertops, 9, 38636550).
-raw_performed(i_p72_a11, participant_washes_the_countertops, 10, 38643571).
-raw_performed(i_p72_a11, participant_washes_the_countertops, 11, 38647182).
-raw_performed(i_p72_a11, participant_washes_the_countertops, 12, 38654720).
-raw_performed(i_p72_a11, participant_rinses_out_the_sponge, 13, 38661954).
-raw_performed(i_p72_a11, participant_dries_the_countertops, 14, 38664446).
-raw_performed(i_p72_a11, participant_dries_the_countertops, 15, 38670803).
-raw_performed(i_p72_a11, participant_dries_the_countertops, 16, 38675325).
+raw_performed(i_p72_a10, participant_moves_to_the_kitchen, 1, 38516985).
+raw_performed(i_p72_a10, participant_turns_on_water, 2, 38522680).
+raw_performed(i_p72_a10, participant_washes_hands, 3, 38522709).
+raw_performed(i_p72_a10, participant_washes_hands, 4, 38526396).
+raw_performed(i_p72_a10, participant_washes_hands, 5, 38530260).
+raw_performed(i_p72_a10, participant_washes_hands, 6, 38533935).
+raw_performed(i_p72_a10, participant_washes_hands, 7, 38541562).
+raw_performed(i_p72_a10, participant_washes_hands, 8, 38545243).
+raw_performed(i_p72_a10, participant_washes_hands, 9, 38545271).
+raw_performed(i_p72_a10, participant_dries_hands, 10, 38545640).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

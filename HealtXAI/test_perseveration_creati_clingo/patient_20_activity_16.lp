@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 20
-% Attività: Setup hands for a card game, answer the phone and describe the rules of the game.
+% Attivita: Setup hands for a card game, answer the phone and describe the rules of the game.
 % ======================================================================
 
 
@@ -34,21 +34,27 @@ expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rul
 expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_explains_the_rules_of_the_game_over_the_phone, 1).
 expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_hangs_up_the_phone, 1).
 
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_moves_to_the_kitchen, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 18000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_brings_deck_of_cards_to_the_dining_room_table, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_sets_up_card_game, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_answers_the_telephone, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_explains_the_rules_of_the_game_over_the_phone, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_hangs_up_the_phone, 18000).
+action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_moves_to_the_kitchen, 11662).
+action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 39721).
+action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_brings_deck_of_cards_to_the_dining_room_table, 12533).
+action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_sets_up_card_game, 4072).
+action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_answers_the_telephone, 10).
+action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_explains_the_rules_of_the_game_over_the_phone, 40852).
+action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_hangs_up_the_phone, 10).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p20_a17, setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game).
+instance(i_p20_a16, setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game).
 
+% raw_performed(Instance, Action, Order, TimeMs)
+
+raw_performed(i_p20_a16, participant_moves_to_the_kitchen, 1, 38034034).
+raw_performed(i_p20_a16, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 2, 38034056).
+raw_performed(i_p20_a16, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 3, 38038005).
+raw_performed(i_p20_a16, participant_brings_deck_of_cards_to_the_dining_room_table, 4, 38043020).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

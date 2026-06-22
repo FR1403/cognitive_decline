@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 28
-% Attività: Obtain a watering can and water all plants in the living space.
+% Attivita: Find the appropriate DVD and watch the corresponding news clip.
 % ======================================================================
 
 
@@ -8,55 +8,73 @@
 % Level A - Activity model
 % ========================
 
-activity(obtain_a_watering_can_and_water_all_plants_in_the_living_space).
+activity(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip).
 
-action(participant_retrieves_watering_can_from_supply_closet).
-action(participant_fills_watering_can).
-action(participant_waters_plants_windowsill).
-action(participant_waters_plants_coffee_table).
-action(participant_empties_extra_water_into_sink).
-action(participant_returns_watering_can_to_supply_closet).
+action(participant_moves_to_the_living_room).
+action(participant_selects_correct_dvd).
+action(participant_reads_instructions_next_to_the_tv).
+action(participants_uses_remote_to_turn_on_tv).
+action(participant_selects_correct_channel).
+action(participant_watches_news_clip).
+action(participant_turns_off_tv).
+action(participant_returns_dvd_to_pile).
 
-action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 1).
-action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 5).
-action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 5).
-action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 5).
-action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 5).
-action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 12).
+action_type(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_moves_to_the_living_room, 7).
+action_type(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_dvd, 5).
+action_type(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_reads_instructions_next_to_the_tv, 6).
+action_type(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participants_uses_remote_to_turn_on_tv, 5).
+action_type(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_channel, 5).
+action_type(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_watches_news_clip, 9).
+action_type(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_turns_off_tv, 5).
+action_type(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_returns_dvd_to_pile, 12).
 
-expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 1).
-expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 1).
-expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 1).
-expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 1).
-expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 1).
-expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 1).
+expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_moves_to_the_living_room, 1).
+expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_dvd, 1).
+expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_reads_instructions_next_to_the_tv, 1).
+expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participants_uses_remote_to_turn_on_tv, 1).
+expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_channel, 1).
+expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_watches_news_clip, 1).
+expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_turns_off_tv, 1).
+expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_returns_dvd_to_pile, 1).
 
-action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 18000).
-action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 240000).
-action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 240000).
-action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 240000).
-action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 240000).
-action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 18000).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_moves_to_the_living_room, 27059).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_dvd, 39776).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_reads_instructions_next_to_the_tv, 407536).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participants_uses_remote_to_turn_on_tv, 72894).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_channel, 72894).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_watches_news_clip, 396941).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_turns_off_tv, 79570).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_returns_dvd_to_pile, 27096).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p28_a5, obtain_a_watering_can_and_water_all_plants_in_the_living_space).
+instance(i_p28_a4, find_the_appropriate_dvd_and_watch_the_corresponding_news_clip).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p28_a5, participant_retrieves_watering_can_from_supply_closet, 1, 37148221).
-raw_performed(i_p28_a5, participant_fills_watering_can, 2, 37167683).
-raw_performed(i_p28_a5, participant_fills_watering_can, 3, 37167724).
-raw_performed(i_p28_a5, participant_waters_plants_windowsill, 4, 37169088).
-raw_performed(i_p28_a5, participant_waters_plants_coffee_table, 5, 37192702).
-raw_performed(i_p28_a5, participant_waters_plants_coffee_table, 6, 37195439).
-raw_performed(i_p28_a5, participant_waters_plants_coffee_table, 7, 37199439).
-raw_performed(i_p28_a5, participant_empties_extra_water_into_sink, 8, 37208727).
-raw_performed(i_p28_a5, participant_empties_extra_water_into_sink, 9, 37212172).
-raw_performed(i_p28_a5, participant_returns_watering_can_to_supply_closet, 10, 37213683).
+raw_performed(i_p28_a4, participant_moves_to_the_living_room, 1, 36338338).
+raw_performed(i_p28_a4, participant_reads_instructions_next_to_the_tv, 2, 36418169).
+raw_performed(i_p28_a4, participant_reads_instructions_next_to_the_tv, 3, 36442219).
+raw_performed(i_p28_a4, participant_reads_instructions_next_to_the_tv, 4, 36456579).
+raw_performed(i_p28_a4, participant_reads_instructions_next_to_the_tv, 5, 36462714).
+raw_performed(i_p28_a4, participant_reads_instructions_next_to_the_tv, 6, 36474006).
+raw_performed(i_p28_a4, participant_reads_instructions_next_to_the_tv, 7, 36485469).
+raw_performed(i_p28_a4, participant_reads_instructions_next_to_the_tv, 8, 36510390).
+raw_performed(i_p28_a4, participant_watches_news_clip, 9, 36517809).
+raw_performed(i_p28_a4, participant_watches_news_clip, 10, 36523013).
+raw_performed(i_p28_a4, participant_watches_news_clip, 11, 36550853).
+raw_performed(i_p28_a4, participant_watches_news_clip, 12, 36555833).
+raw_performed(i_p28_a4, participant_watches_news_clip, 13, 36566422).
+raw_performed(i_p28_a4, participant_watches_news_clip, 14, 36572129).
+raw_performed(i_p28_a4, participant_watches_news_clip, 15, 36595329).
+raw_performed(i_p28_a4, participant_watches_news_clip, 16, 36614284).
+raw_performed(i_p28_a4, participant_watches_news_clip, 17, 36643669).
+raw_performed(i_p28_a4, participant_watches_news_clip, 18, 36658249).
+raw_performed(i_p28_a4, participant_watches_news_clip, 19, 36673561).
+raw_performed(i_p28_a4, participant_watches_news_clip, 20, 36684941).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

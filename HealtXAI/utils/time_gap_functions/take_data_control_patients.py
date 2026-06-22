@@ -1,63 +1,32 @@
-"""Funzioni di supporto per recuperare i dati dei pazienti di controllo."""
+"""Funzioni di supporto per recuperare i dati dei controlli dallo snapshot."""
 
 from __future__ import annotations
 
 import re
-from typing import Callable, Dict, List, Optional
+from typing import Dict, List
 
 
 # Insieme di default delle diagnosi che consideriamo come controlli sani.
 HEALTHY_DIAGNOSIS_IDS = {3, 4, 5, 8}
 
 # Recupera i dati dei pazienti di controllo per una singola activity.
-# Prende in ingresso l'id della activity e una funzione (in questo caso sara'
-# take_data) che esegue la query sul database.
 def load_control_patients_activity_data(
     activity_id: int,
-    take_data_fn: Callable[[str], Optional[List[Dict[str, object]]]],
+    snapshot_data: Dict[str, object],
     activity_tasks_catalog: List[Dict[str, object]],
 ) -> Dict[str, object]:
-    # Insieme hardcoded delle diagnosi sane 
-    healthy_ids = sorted(HEALTHY_DIAGNOSIS_IDS)
-
-    # Query principale:
-    # - seleziona solo i pazienti di controllo;
-    # - aggiunge la descrizione testuale della activity;
-    # - prende tutte le task osservate della stessa activity;
-    # - aggiunge i metadati della task e della finestra temporale
-    #   dell'attivita';
-    # - ordina i risultati per paziente e tempo.
-    query = f"""
-        SELECT
-            p.patient_id,
-            p.diagnosis,
-            a.activity_type AS activity_id,
-            aty.description AS activity_description,
-            a.start AS activity_start,
-            a."end" AS activity_end,
-            t.time AS task_time,
-            t.task AS task_id,
-            tt.description AS task_description,
-            tt.action_type
-        FROM patients AS p
-        JOIN activities AS a
-            ON a.patient = p.patient_id
-        JOIN activity_types AS aty
-            ON aty.activity_id = a.activity_type
-        JOIN tasks AS t
-            ON t.patient = p.patient_id
-            AND t.activity = a.activity_type
-        JOIN task_types AS tt
-            ON tt.activity_id = t.activity
-            AND tt.task_id = t.task
-        WHERE p.diagnosis IN ({",".join(str(value) for value in healthy_ids)})
-          AND a.activity_type = {int(activity_id)}
-        ORDER BY p.patient_id, t.time::time, t.task;
-    """
-
-    # Recuperiamo i dati, e se non sono presenti, restituiamo una lista vuota
-    # se i dati son presenti, restituiamo una lista di dizionari
-    rows = take_data_fn(query) or []
+    healthy_ids = sorted(
+        int(value)
+        for value in (
+            snapshot_data.get("meta", {}).get("healthy_diagnosis_ids")
+            or HEALTHY_DIAGNOSIS_IDS
+        )
+    )
+    rows = [
+        row
+        for row in (snapshot_data.get("time_gap_control_tasks") or [])
+        if int(row["activity_id"]) == int(activity_id)
+    ]
 
     # Normalizziamo l'elenco teorico completo delle task attese ricevuto dallo
     # script principale. In questo modo evitiamo una seconda query e riusiamo
@@ -76,12 +45,11 @@ def load_control_patients_activity_data(
             }
         )
 
-    # Restituiamo la query costruita, le righe ottenute e il catalogo teorico
-    # delle task attese per l'activity.
+    # Restituiamo le righe ottenute e il catalogo teorico delle task attese.
     return {
         "activity_id": int(activity_id),
         "healthy_diagnosis_ids": healthy_ids,
-        "query": query,
+        "query": "snapshot_json",
         "expected_tasks": expected_tasks,
         "rows": rows,
     }

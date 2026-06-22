@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 28
-% Attività: Answer the phone and respond to questions pertaining to the video from task 4.
+% Attivita: Obtain a watering can and water all plants in the living space.
 % ======================================================================
 
 
@@ -8,52 +8,55 @@
 % Level A - Activity model
 % ========================
 
-activity(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4).
+activity(obtain_a_watering_can_and_water_all_plants_in_the_living_space).
 
-action(participant_answers_the_phone).
-action(participant_answers_questions_over_the_phone).
-action(participant_sits_down_during_conversation).
-action(participant_stands_in_one_place).
-action(participant_walks_around_during_phone_call).
-action(participant_hangs_up_the_phone).
+action(participant_retrieves_watering_can_from_supply_closet).
+action(participant_fills_watering_can).
+action(participant_waters_plants_windowsill).
+action(participant_waters_plants_coffee_table).
+action(participant_empties_extra_water_into_sink).
+action(participant_returns_watering_can_to_supply_closet).
 
-action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 11).
-action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 11).
-action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 8).
-action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 7).
-action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 7).
-action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 12).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 1).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 12).
 
-expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 1).
-expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 1).
-expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 1).
-expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 1).
-expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 1).
-expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 1).
 
-action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 240000).
-action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 240000).
-action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 240000).
-action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 240000).
-action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 240000).
-action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 18000).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 549693).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 40960).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 38159).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 96987).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 19134).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 25812).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p28_a6, answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4).
+instance(i_p28_a5, obtain_a_watering_can_and_water_all_plants_in_the_living_space).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p28_a6, participant_answers_the_phone, 1, 37295769).
-raw_performed(i_p28_a6, participant_walks_around_during_phone_call, 2, 37299448).
-raw_performed(i_p28_a6, participant_walks_around_during_phone_call, 3, 37307587).
-raw_performed(i_p28_a6, participant_walks_around_during_phone_call, 4, 37307612).
-raw_performed(i_p28_a6, participant_walks_around_during_phone_call, 5, 37308669).
-raw_performed(i_p28_a6, participant_walks_around_during_phone_call, 6, 37395118).
-raw_performed(i_p28_a6, participant_hangs_up_the_phone, 7, 37396061).
+raw_performed(i_p28_a5, participant_retrieves_watering_can_from_supply_closet, 1, 37148221).
+raw_performed(i_p28_a5, participant_fills_watering_can, 2, 37167683).
+raw_performed(i_p28_a5, participant_fills_watering_can, 3, 37167724).
+raw_performed(i_p28_a5, participant_waters_plants_windowsill, 4, 37169088).
+raw_performed(i_p28_a5, participant_waters_plants_coffee_table, 5, 37192702).
+raw_performed(i_p28_a5, participant_waters_plants_coffee_table, 6, 37195439).
+raw_performed(i_p28_a5, participant_waters_plants_coffee_table, 7, 37199439).
+raw_performed(i_p28_a5, participant_empties_extra_water_into_sink, 8, 37208727).
+raw_performed(i_p28_a5, participant_empties_extra_water_into_sink, 9, 37212172).
+raw_performed(i_p28_a5, participant_returns_watering_can_to_supply_closet, 10, 37213683).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),
