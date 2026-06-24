@@ -36,7 +36,6 @@ query_create = '''CREATE TABLE tracked_anomalies(
                         patient_id INTEGER REFERENCES patients(patient_id),
                         activity_id INTEGER,
                         omission_number SMALLINT,
-                        diagnosis_types SMALLINT REFERENCES diagnosis_types(diagnosis_id),
                         PRIMARY KEY(patient_id, activity_id)
                         );
                         '''
@@ -251,7 +250,7 @@ for file_path in file_lp :
     diagnosis = take_data(query_diagnosis)
     diagnosis = (diagnosis[0])["diagnosis"]
     
-    query_insert = f'''INSERT INTO tracked_anomalies VALUES({patient_id}, {activity_id}, {omission_number}, {diagnosis})'''
+    query_insert = f'''INSERT INTO tracked_anomalies VALUES({patient_id}, {activity_id}, {omission_number})'''
 
 
     insert_data(query_insert)

@@ -9,7 +9,7 @@ db_params = {
     "host" : "localhost",
     "database": "CASAS400",
     "user": "postgres",
-    "password": "psw",
+    "password": "sandro",
     "port": "5432"
 }
 
@@ -87,8 +87,6 @@ def write_file (file_name, string, type_acess) :
     with open (file_name, type_acess) as file :
         file.writelines(string + "\n")
 
-
-
 def run_clingo_test (file_path) :
     # print(f"--- Avvio Analisi Logica su: {file_path} ---")
 
@@ -96,7 +94,7 @@ def run_clingo_test (file_path) :
         # Esegue il comando clingo nel terminale
         # Il parametro "0" dice a clingo di trovare tutti i modelli possibili
         result = subprocess.run (
-            [CLINGO_PATH, file_path, '0'],
+            ['clingo', file_path, '0'],
             capture_output = True,
             text = True
         )
@@ -106,7 +104,7 @@ def run_clingo_test (file_path) :
         for i, line in enumerate(lines) :
             if line.startswith("Answer:") :
                 anomalies = lines[i+1].split()
-
+                
 
                 if anomalies != [] :
                     # print("Anomalie riscontrate:")
@@ -118,7 +116,42 @@ def run_clingo_test (file_path) :
         #     print("\nEsito: Il modello è coerente (SATISFIABLE).")
         # else :
         #     print("\nEsito: Errore nel modello o nessuna soluzione trovata.")
-
+        
         return cont_anomalies
     except Exception as e :
         print(f"Errore nell'esecuzione del file : {e}")
+
+
+# def run_clingo_test (file_path) :
+#     # print(f"--- Avvio Analisi Logica su: {file_path} ---")
+
+#     try :
+#         # Esegue il comando clingo nel terminale
+#         # Il parametro "0" dice a clingo di trovare tutti i modelli possibili
+#         result = subprocess.run (
+#             [CLINGO_PATH, file_path, '0'],
+#             capture_output = True,
+#             text = True
+#         )
+
+#         cont_anomalies = 0
+#         lines = result.stdout.split('\n')
+#         for i, line in enumerate(lines) :
+#             if line.startswith("Answer:") :
+#                 anomalies = lines[i+1].split()
+
+
+#                 if anomalies != [] :
+#                     # print("Anomalie riscontrate:")
+#                     for a in anomalies:
+#                         cont_anomalies += 1
+#                         # print(f"  [!] {a}")
+
+#         # if "SATISFIABLE" in result.stdout:
+#         #     print("\nEsito: Il modello è coerente (SATISFIABLE).")
+#         # else :
+#         #     print("\nEsito: Errore nel modello o nessuna soluzione trovata.")
+
+#         return cont_anomalies
+#     except Exception as e :
+#         print(f"Errore nell'esecuzione del file : {e}")
