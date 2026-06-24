@@ -1,7 +1,8 @@
+import os
+import subprocess
+
 import psycopg2
 from psycopg2.extras import RealDictCursor
-import subprocess
-import os
 
 
 db_params = {
@@ -13,7 +14,8 @@ db_params = {
     "port": "5432"
 }
 
-CLINGO_PATH = r"C:\Users\8flor\miniconda3\envs\potassco\Library\bin\clingo.exe"
+CLINGO_CMD = os.getenv("CLINGO_CMD", "clingo")
+CLINGO_SUCCESS_CODES = {0, 10, 20, 30}
 
 livello_A = '''
 % ========================
@@ -94,17 +96,25 @@ def run_clingo_test (file_path) :
         # Esegue il comando clingo nel terminale
         # Il parametro "0" dice a clingo di trovare tutti i modelli possibili
         result = subprocess.run (
-            ['clingo', file_path, '0'],
+            [CLINGO_CMD, file_path, '0'],
             capture_output = True,
             text = True
         )
+
+        if result.returncode not in CLINGO_SUCCESS_CODES:
+            error_details = result.stderr.strip() or result.stdout.strip() or (
+                f"clingo exited with code {result.returncode}"
+            )
+            raise RuntimeError(
+                f"Errore durante l'esecuzione di clingo su {file_path}: "
+                f"{error_details}"
+            )
 
         cont_anomalies = 0
         lines = result.stdout.split('\n')
         for i, line in enumerate(lines) :
             if line.startswith("Answer:") :
                 anomalies = lines[i+1].split()
-                
 
                 if anomalies != [] :
                     # print("Anomalie riscontrate:")
@@ -116,42 +126,7 @@ def run_clingo_test (file_path) :
         #     print("\nEsito: Il modello è coerente (SATISFIABLE).")
         # else :
         #     print("\nEsito: Errore nel modello o nessuna soluzione trovata.")
-        
+
         return cont_anomalies
     except Exception as e :
-        print(f"Errore nell'esecuzione del file : {e}")
-
-
-# def run_clingo_test (file_path) :
-#     # print(f"--- Avvio Analisi Logica su: {file_path} ---")
-
-#     try :
-#         # Esegue il comando clingo nel terminale
-#         # Il parametro "0" dice a clingo di trovare tutti i modelli possibili
-#         result = subprocess.run (
-#             [CLINGO_PATH, file_path, '0'],
-#             capture_output = True,
-#             text = True
-#         )
-
-#         cont_anomalies = 0
-#         lines = result.stdout.split('\n')
-#         for i, line in enumerate(lines) :
-#             if line.startswith("Answer:") :
-#                 anomalies = lines[i+1].split()
-
-
-#                 if anomalies != [] :
-#                     # print("Anomalie riscontrate:")
-#                     for a in anomalies:
-#                         cont_anomalies += 1
-#                         # print(f"  [!] {a}")
-
-#         # if "SATISFIABLE" in result.stdout:
-#         #     print("\nEsito: Il modello è coerente (SATISFIABLE).")
-#         # else :
-#         #     print("\nEsito: Errore nel modello o nessuna soluzione trovata.")
-
-#         return cont_anomalies
-#     except Exception as e :
-#         print(f"Errore nell'esecuzione del file : {e}")
+        raise RuntimeError(f"Errore nell'esecuzione del file {file_path}: {e}") from e

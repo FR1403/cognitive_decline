@@ -1,0 +1,2917 @@
+patient_id,activity_id,tool_omission_count,tool_omission_actions
+100,1,1,participant_dusts_dining_room
+100,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+100,11,2,participant_washes_the_countertops; participant_wets_the_sponge
+100,12,0,
+100,13,1,participant_sortsfolds_the_laundry
+100,14,4,participant_fills_pot_with_water; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+100,15,1,participant_sorts_pile_of_statements_into_the_organizer
+100,16,0,
+100,2,1,participant_fills_dispenser_with_medication
+100,3,0,
+100,4,0,
+100,5,1,participant_empties_extra_water_into_sink
+100,6,0,
+100,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+100,8,1,participant_lays_out_clothes_on_living_room_couch
+100,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+101,1,1,participant_dusts_dining_room
+101,10,1,participant_dries_hands
+101,11,1,participant_washes_the_countertops
+101,12,0,
+101,13,1,participant_sortsfolds_the_laundry
+101,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+101,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+101,16,0,
+101,2,1,participant_fills_dispenser_with_medication
+101,3,0,
+101,4,0,
+101,5,1,participant_empties_extra_water_into_sink
+101,6,0,
+101,7,0,
+101,8,1,participant_lays_out_clothes_on_living_room_couch
+101,9,0,
+102,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+102,11,1,participant_washes_the_countertops
+102,12,0,
+102,13,1,participant_sortsfolds_the_laundry
+102,15,0,
+102,9,1,participant_removes_old_light_bulb
+103,1,1,participant_dusts_dining_room
+103,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+103,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+103,12,0,
+103,13,1,participant_sortsfolds_the_laundry
+103,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+103,15,1,participant_sorts_pile_of_statements_into_the_organizer
+103,16,0,
+103,2,1,participant_fills_dispenser_with_medication
+103,3,0,
+103,4,0,
+103,5,1,participant_empties_extra_water_into_sink
+103,6,0,
+103,7,1,participant_fills_measuring_cup_with_water
+103,8,1,participant_lays_out_clothes_on_living_room_couch
+103,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+104,1,0,
+104,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+104,11,0,
+104,13,1,participant_sortsfolds_the_laundry
+104,15,1,participant_sorts_pile_of_statements_into_the_organizer
+104,2,0,
+104,3,0,
+104,4,0,
+104,5,1,participant_empties_extra_water_into_sink
+104,6,0,
+104,7,1,participant_fills_measuring_cup_with_water
+104,8,0,
+104,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+105,1,1,participant_dusts_dining_room
+105,10,2,participant_turns_on_water; participant_washes_hands
+105,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+105,12,0,
+105,13,1,participant_sortsfolds_the_laundry
+105,14,6,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+105,15,1,participant_sorts_pile_of_statements_into_the_organizer
+105,16,0,
+105,2,1,participant_fills_dispenser_with_medication
+105,3,0,
+105,4,0,
+105,5,1,participant_empties_extra_water_into_sink
+105,6,0,
+105,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+105,8,1,participant_lays_out_clothes_on_living_room_couch
+105,9,0,
+107,1,1,participant_dusts_dining_room
+107,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+107,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+107,12,0,
+107,13,1,participant_sortsfolds_the_laundry
+107,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+107,15,1,participant_sorts_pile_of_statements_into_the_organizer
+107,16,0,
+107,2,1,participant_fills_dispenser_with_medication
+107,3,0,
+107,4,0,
+107,5,1,participant_empties_extra_water_into_sink
+107,6,0,
+107,7,1,participant_boils_water_in_microwave
+107,8,1,participant_lays_out_clothes_on_living_room_couch
+107,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+108,1,1,participant_dusts_dining_room
+108,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+108,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+108,12,0,
+108,13,1,participant_sortsfolds_the_laundry
+108,14,5,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+108,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+108,16,0,
+108,2,1,participant_fills_dispenser_with_medication
+108,3,0,
+108,4,0,
+108,5,1,participant_empties_extra_water_into_sink
+108,6,0,
+108,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+108,8,1,participant_lays_out_clothes_on_living_room_couch
+108,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+111,1,1,participant_dusts_dining_room
+111,10,0,
+111,11,0,
+111,12,0,
+111,13,1,participant_sortsfolds_the_laundry
+111,14,2,participant_puts_oatmeal_into_pot; participant_removes_materials_from_cupboard
+111,15,1,participant_sorts_pile_of_statements_into_the_organizer
+111,16,0,
+111,2,0,
+111,3,0,
+111,4,0,
+111,5,0,
+111,6,0,
+111,7,0,
+111,8,1,participant_lays_out_clothes_on_living_room_couch
+111,9,0,
+113,1,1,participant_dusts_dining_room
+113,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+113,11,2,participant_rinses_out_the_sponge; participant_wets_the_sponge
+113,12,0,
+113,13,1,participant_sortsfolds_the_laundry
+113,14,2,participant_fills_pot_with_water; participant_removes_materials_from_cupboard
+113,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+113,16,0,
+113,2,1,participant_fills_dispenser_with_medication
+113,3,0,
+113,4,0,
+113,5,1,participant_empties_extra_water_into_sink
+113,6,0,
+113,7,1,participant_boils_water_in_microwave
+113,8,1,participant_lays_out_clothes_on_living_room_couch
+113,9,1,participant_replaces_the_bulb
+114,1,1,participant_dusts_dining_room
+114,10,1,participant_washes_hands
+114,11,1,participant_washes_the_countertops
+114,12,0,
+114,13,1,participant_sortsfolds_the_laundry
+114,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+114,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+114,2,1,participant_fills_dispenser_with_medication
+114,3,0,
+114,4,0,
+114,5,1,participant_empties_extra_water_into_sink
+114,6,0,
+114,7,0,
+114,8,1,participant_lays_out_clothes_on_living_room_couch
+114,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+115,1,0,
+115,10,1,participant_dries_hands
+115,11,0,
+115,12,0,
+115,13,1,participant_sortsfolds_the_laundry
+115,14,1,participant_removes_materials_from_cupboard
+115,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+115,16,0,
+115,2,1,participant_fills_dispenser_with_medication
+115,3,0,
+115,4,0,
+115,5,0,
+115,6,0,
+115,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+115,8,1,participant_lays_out_clothes_on_living_room_couch
+115,9,0,
+117,1,0,
+117,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+117,11,0,
+117,12,0,
+117,13,1,participant_sortsfolds_the_laundry
+117,14,5,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove
+117,15,1,participant_gathers_statements_from_bookshelf
+117,16,0,
+117,2,1,participant_fills_dispenser_with_medication
+117,3,0,
+117,4,0,
+117,5,1,participant_empties_extra_water_into_sink
+117,6,0,
+117,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+117,8,1,participant_lays_out_clothes_on_living_room_couch
+117,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+11,1,1,participant_dusts_dining_room
+11,10,1,participant_washes_hands
+11,11,1,participant_washes_the_countertops
+11,12,0,
+11,13,1,participant_sortsfolds_the_laundry
+11,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+11,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+11,16,0,
+11,2,1,participant_fills_dispenser_with_medication
+11,3,0,
+11,4,0,
+11,5,1,participant_empties_extra_water_into_sink
+11,7,0,
+11,8,1,participant_lays_out_clothes_on_living_room_couch
+11,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+120,1,1,participant_dusts_dining_room
+120,10,0,
+120,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+120,12,0,
+120,13,1,participant_sortsfolds_the_laundry
+120,14,4,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+120,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+120,16,0,
+120,2,1,participant_fills_dispenser_with_medication
+120,3,0,
+120,4,0,
+120,5,1,participant_empties_extra_water_into_sink
+120,6,0,
+120,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+120,8,1,participant_lays_out_clothes_on_living_room_couch
+120,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+122,1,0,
+122,10,0,
+122,12,0,
+122,13,1,participant_sortsfolds_the_laundry
+122,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+122,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+122,16,0,
+122,2,1,participant_fills_dispenser_with_medication
+122,3,0,
+122,4,0,
+122,5,1,participant_empties_extra_water_into_sink
+122,7,1,participant_boils_water_in_microwave
+122,8,1,participant_lays_out_clothes_on_living_room_couch
+122,9,0,
+123,1,1,participant_dusts_dining_room
+123,10,2,participant_turns_on_water; participant_washes_hands
+123,11,1,participant_washes_the_countertops
+123,12,0,
+123,13,1,participant_sortsfolds_the_laundry
+123,14,2,participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+123,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+123,16,0,
+123,2,1,participant_fills_dispenser_with_medication
+123,3,0,
+123,4,0,
+123,5,1,participant_empties_extra_water_into_sink
+123,6,0,
+123,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+123,8,1,participant_lays_out_clothes_on_living_room_couch
+123,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+124,1,1,participant_dusts_dining_room
+124,10,0,
+124,11,2,participant_dries_the_countertops; participant_washes_the_countertops
+124,12,0,
+124,13,1,participant_sortsfolds_the_laundry
+124,14,2,participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+124,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+124,16,0,
+124,2,1,participant_fills_dispenser_with_medication
+124,3,0,
+124,4,0,
+124,5,1,participant_empties_extra_water_into_sink
+124,6,0,
+124,7,0,
+124,8,1,participant_lays_out_clothes_on_living_room_couch
+124,9,1,participant_replaces_the_bulb
+127,1,2,participant_dusts_dining_room; participant_dusts_living_room
+127,10,2,participant_turns_on_water; participant_washes_hands
+127,11,2,participant_washes_the_countertops; participant_wets_the_sponge
+127,12,0,
+127,13,1,participant_sortsfolds_the_laundry
+127,14,5,participant_fills_pot_with_water; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+127,15,1,participant_sorts_pile_of_statements_into_the_organizer
+127,16,0,
+127,2,1,participant_fills_dispenser_with_medication
+127,3,0,
+127,4,0,
+127,5,1,participant_empties_extra_water_into_sink
+127,6,0,
+127,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+127,8,1,participant_lays_out_clothes_on_living_room_couch
+127,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+128,1,1,participant_dusts_dining_room
+128,10,1,participant_washes_hands
+128,11,1,participant_washes_the_countertops
+128,12,0,
+128,13,1,participant_sortsfolds_the_laundry
+128,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+128,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+128,16,0,
+128,2,1,participant_fills_dispenser_with_medication
+128,3,0,
+128,4,0,
+128,5,1,participant_empties_extra_water_into_sink
+128,7,2,participant_boils_water_in_microwave; participant_pours_water_into_cup_of_noodles
+128,8,1,participant_lays_out_clothes_on_living_room_couch
+128,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+129,1,0,
+129,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+129,11,0,
+129,12,0,
+129,13,1,participant_sortsfolds_the_laundry
+129,14,4,participant_fills_pot_with_water; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+129,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+129,16,0,
+129,2,1,participant_fills_dispenser_with_medication
+129,3,0,
+129,4,0,
+129,5,1,participant_empties_extra_water_into_sink
+129,6,0,
+129,7,2,participant_boils_water_in_microwave; participant_pours_water_into_cup_of_noodles
+129,8,1,participant_lays_out_clothes_on_living_room_couch
+129,9,0,
+130,1,1,participant_dusts_dining_room
+130,10,1,participant_washes_hands
+130,11,1,participant_washes_the_countertops
+130,12,0,
+130,13,1,participant_sortsfolds_the_laundry
+130,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+130,15,1,participant_sorts_pile_of_statements_into_the_organizer
+130,16,0,
+130,2,1,participant_fills_dispenser_with_medication
+130,3,0,
+130,4,0,
+130,5,1,participant_empties_extra_water_into_sink
+130,6,0,
+130,7,0,
+130,8,1,participant_lays_out_clothes_on_living_room_couch
+130,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+132,1,1,participant_dusts_dining_room
+132,10,0,
+132,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+132,12,0,
+132,13,1,participant_sortsfolds_the_laundry
+132,14,1,participant_puts_oatmeal_into_pot
+132,15,1,participant_sorts_pile_of_statements_into_the_organizer
+132,16,0,
+132,2,0,
+132,3,0,
+132,4,0,
+132,5,1,participant_empties_extra_water_into_sink
+132,6,0,
+132,7,0,
+132,8,1,participant_lays_out_clothes_on_living_room_couch
+132,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+134,1,1,participant_dusts_dining_room
+134,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+134,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+134,12,0,
+134,13,1,participant_sortsfolds_the_laundry
+134,14,6,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+134,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+134,16,0,
+134,2,1,participant_fills_dispenser_with_medication
+134,3,0,
+134,4,0,
+134,5,1,participant_empties_extra_water_into_sink
+134,6,0,
+134,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+134,8,1,participant_lays_out_clothes_on_living_room_couch
+134,9,1,participant_removes_old_light_bulb
+135,1,1,participant_dusts_dining_room
+135,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+135,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+135,13,1,participant_sortsfolds_the_laundry
+135,15,1,participant_gathers_statements_from_bookshelf
+135,2,0,
+135,3,0,
+135,5,1,participant_empties_extra_water_into_sink
+135,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+135,8,1,participant_lays_out_clothes_on_living_room_couch
+135,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+136,1,1,participant_dusts_dining_room
+136,10,1,participant_washes_hands
+136,11,1,participant_washes_the_countertops
+136,12,0,
+136,13,1,participant_sortsfolds_the_laundry
+136,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+136,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+136,16,0,
+136,2,1,participant_fills_dispenser_with_medication
+136,3,0,
+136,4,0,
+136,5,1,participant_empties_extra_water_into_sink
+136,6,0,
+136,7,0,
+136,8,1,participant_lays_out_clothes_on_living_room_couch
+136,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+137,1,0,
+137,10,1,participant_washes_hands
+137,11,1,participant_washes_the_countertops
+137,12,0,
+137,13,1,participant_sortsfolds_the_laundry
+137,14,2,participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+137,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+137,2,1,participant_fills_dispenser_with_medication
+137,3,0,
+137,4,0,
+137,5,1,participant_empties_extra_water_into_sink
+137,6,0,
+137,7,0,
+137,8,1,participant_lays_out_clothes_on_living_room_couch
+137,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+138,1,1,participant_dusts_dining_room
+138,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+138,11,2,participant_washes_the_countertops; participant_wets_the_sponge
+138,12,0,
+138,13,1,participant_sortsfolds_the_laundry
+138,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+138,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+138,16,0,
+138,2,1,participant_fills_dispenser_with_medication
+138,3,0,
+138,4,0,
+138,5,1,participant_empties_extra_water_into_sink
+138,6,0,
+138,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+138,8,1,participant_lays_out_clothes_on_living_room_couch
+138,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+13,1,0,
+13,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+13,11,2,participant_washes_the_countertops; participant_wets_the_sponge
+13,12,0,
+13,13,1,participant_sortsfolds_the_laundry
+13,14,5,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove
+13,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+13,16,0,
+13,2,1,participant_fills_dispenser_with_medication
+13,3,0,
+13,4,1,participant_turns_off_tv
+13,5,1,participant_empties_extra_water_into_sink
+13,6,0,
+13,7,1,participant_boils_water_in_microwave
+13,8,1,participant_lays_out_clothes_on_living_room_couch
+140,1,2,participant_dusts_dining_room; participant_dusts_living_room
+140,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+140,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+140,12,0,
+140,13,1,participant_sortsfolds_the_laundry
+140,14,3,participant_fills_pot_with_water; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+140,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+140,16,0,
+140,2,1,participant_fills_dispenser_with_medication
+140,3,0,
+140,4,0,
+140,5,1,participant_empties_extra_water_into_sink
+140,6,0,
+140,7,1,participant_boils_water_in_microwave
+140,8,1,participant_lays_out_clothes_on_living_room_couch
+140,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+141,1,0,
+141,10,0,
+141,11,0,
+141,12,0,
+141,13,1,participant_sortsfolds_the_laundry
+141,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+141,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+141,16,0,
+141,2,1,participant_fills_dispenser_with_medication
+141,3,0,
+141,4,0,
+141,5,1,participant_empties_extra_water_into_sink
+141,7,0,
+141,8,1,participant_lays_out_clothes_on_living_room_couch
+141,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+143,1,0,
+143,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+143,11,2,participant_washes_the_countertops; participant_wets_the_sponge
+143,12,0,
+143,13,1,participant_sortsfolds_the_laundry
+143,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+143,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+143,16,0,
+143,2,1,participant_fills_dispenser_with_medication
+143,3,0,
+143,4,0,
+143,5,1,participant_empties_extra_water_into_sink
+143,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+143,8,1,participant_lays_out_clothes_on_living_room_couch
+143,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+144,1,1,participant_dusts_dining_room
+144,10,0,
+144,11,2,participant_dries_the_countertops; participant_washes_the_countertops
+144,12,0,
+144,13,1,participant_sortsfolds_the_laundry
+144,14,1,participant_removes_materials_from_cupboard
+144,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+144,16,0,
+144,2,1,participant_fills_dispenser_with_medication
+144,3,0,
+144,4,0,
+144,5,1,participant_empties_extra_water_into_sink
+144,6,0,
+144,7,0,
+144,8,1,participant_lays_out_clothes_on_living_room_couch
+144,9,1,participant_replaces_the_bulb
+146,1,1,participant_dusts_dining_room
+146,10,1,participant_washes_hands
+146,11,1,participant_washes_the_countertops
+146,12,0,
+146,13,1,participant_sortsfolds_the_laundry
+146,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+146,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+146,16,0,
+146,2,1,participant_fills_dispenser_with_medication
+146,3,0,
+146,4,0,
+146,5,1,participant_empties_extra_water_into_sink
+146,6,0,
+146,7,0,
+146,8,1,participant_lays_out_clothes_on_living_room_couch
+146,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+147,1,1,participant_dusts_dining_room
+147,10,3,participant_dries_hands; participant_turns_on_water; participant_uses_hand_soap
+147,11,3,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_wets_the_sponge
+147,12,0,
+147,13,1,participant_sortsfolds_the_laundry
+147,14,4,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+147,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+147,16,0,
+147,2,1,participant_fills_dispenser_with_medication
+147,3,0,
+147,4,0,
+147,5,1,participant_empties_extra_water_into_sink
+147,6,0,
+147,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+147,8,1,participant_lays_out_clothes_on_living_room_couch
+147,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+149,1,1,participant_dusts_dining_room
+149,10,0,
+149,11,2,participant_dries_the_countertops; participant_washes_the_countertops
+149,12,0,
+149,13,1,participant_sortsfolds_the_laundry
+149,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+149,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+149,16,0,
+149,2,1,participant_fills_dispenser_with_medication
+149,3,0,
+149,4,0,
+149,5,1,participant_empties_extra_water_into_sink
+149,6,0,
+149,7,0,
+149,8,1,participant_lays_out_clothes_on_living_room_couch
+149,9,1,participant_replaces_the_bulb
+153,1,1,participant_dusts_dining_room
+153,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+153,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+153,12,0,
+153,13,1,participant_sortsfolds_the_laundry
+153,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+153,16,0,
+153,2,1,participant_fills_dispenser_with_medication
+153,3,0,
+153,4,0,
+153,5,1,participant_empties_extra_water_into_sink
+153,7,2,participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+153,8,1,participant_lays_out_clothes_on_living_room_couch
+154,1,0,
+154,10,4,participant_dries_hands; participant_turns_on_water; participant_uses_hand_soap; participant_washes_hands
+154,11,2,participant_washes_the_countertops; participant_wets_the_sponge
+154,13,1,participant_sortsfolds_the_laundry
+154,15,1,participant_sorts_pile_of_statements_into_the_organizer
+154,16,0,
+154,2,1,participant_fills_dispenser_with_medication
+154,3,0,
+154,4,0,
+154,5,2,participant_empties_extra_water_into_sink; participant_waters_plants_coffee_table
+154,7,0,
+154,8,1,participant_lays_out_clothes_on_living_room_couch
+154,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+156,1,1,participant_dusts_dining_room
+156,10,1,participant_dries_hands
+156,11,1,participant_washes_the_countertops
+156,12,0,
+156,13,1,participant_sortsfolds_the_laundry
+156,14,2,participant_puts_raisin_in_oatmeal; participant_removes_materials_from_cupboard
+156,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+156,16,0,
+156,2,1,participant_fills_dispenser_with_medication
+156,3,0,
+156,4,0,
+156,5,1,participant_empties_extra_water_into_sink
+156,7,0,
+156,8,1,participant_lays_out_clothes_on_living_room_couch
+156,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+158,1,1,participant_dusts_dining_room
+158,10,2,participant_dries_hands; participant_washes_hands
+158,11,1,participant_washes_the_countertops
+158,12,0,
+158,13,1,participant_sortsfolds_the_laundry
+158,14,1,participant_puts_sugar_in_oatmeal
+158,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+158,16,0,
+158,2,1,participant_fills_dispenser_with_medication
+158,3,0,
+158,4,0,
+158,5,1,participant_empties_extra_water_into_sink
+158,6,0,
+158,7,0,
+158,8,1,participant_lays_out_clothes_on_living_room_couch
+158,9,1,participant_removes_old_light_bulb
+160,1,1,participant_dusts_dining_room
+160,10,1,participant_washes_hands
+160,11,1,participant_washes_the_countertops
+160,12,0,
+160,13,1,participant_sortsfolds_the_laundry
+160,14,1,participant_removes_materials_from_cupboard
+160,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+160,16,0,
+160,2,1,participant_fills_dispenser_with_medication
+160,3,0,
+160,4,0,
+160,5,1,participant_empties_extra_water_into_sink
+160,6,0,
+160,7,0,
+160,8,1,participant_lays_out_clothes_on_living_room_couch
+160,9,1,participant_removes_old_light_bulb
+161,1,1,participant_dusts_dining_room
+161,10,0,
+161,11,1,participant_washes_the_countertops
+161,12,0,
+161,13,1,participant_sortsfolds_the_laundry
+161,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+161,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+161,16,0,
+161,2,1,participant_fills_dispenser_with_medication
+161,3,0,
+161,4,0,
+161,5,1,participant_empties_extra_water_into_sink
+161,7,0,
+161,8,1,participant_lays_out_clothes_on_living_room_couch
+161,9,0,
+163,1,1,participant_dusts_dining_room
+163,10,1,participant_dries_hands
+163,11,1,participant_washes_the_countertops
+163,13,1,participant_sortsfolds_the_laundry
+163,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+163,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+163,16,0,
+163,2,1,participant_fills_dispenser_with_medication
+163,3,0,
+163,4,0,
+163,5,1,participant_empties_extra_water_into_sink
+163,6,0,
+163,7,0,
+163,8,1,participant_lays_out_clothes_on_living_room_couch
+163,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+164,1,1,participant_dusts_dining_room
+164,10,1,participant_washes_hands
+164,11,1,participant_washes_the_countertops
+164,12,0,
+164,13,1,participant_sortsfolds_the_laundry
+164,14,2,participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+164,15,1,participant_sorts_pile_of_statements_into_the_organizer
+164,16,0,
+164,2,1,participant_fills_dispenser_with_medication
+164,3,0,
+164,4,0,
+164,5,1,participant_empties_extra_water_into_sink
+164,6,0,
+164,7,0,
+164,8,1,participant_lays_out_clothes_on_living_room_couch
+164,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+165,1,1,participant_dusts_dining_room
+165,10,0,
+165,11,0,
+165,13,1,participant_sortsfolds_the_laundry
+165,14,2,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal
+165,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+165,16,0,
+165,2,1,participant_fills_dispenser_with_medication
+165,3,0,
+165,4,0,
+165,5,1,participant_empties_extra_water_into_sink
+165,6,0,
+165,7,1,participant_boils_water_in_microwave
+165,8,1,participant_lays_out_clothes_on_living_room_couch
+165,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+167,1,2,participant_dusts_dining_room; participant_dusts_living_room
+167,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+167,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+167,12,0,
+167,13,1,participant_sortsfolds_the_laundry
+167,14,5,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+167,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+167,16,0,
+167,2,1,participant_fills_dispenser_with_medication
+167,3,0,
+167,4,0,
+167,5,1,participant_empties_extra_water_into_sink
+167,6,0,
+167,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+167,8,1,participant_lays_out_clothes_on_living_room_couch
+167,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+169,1,1,participant_dusts_dining_room
+169,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+169,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+169,12,0,
+169,13,1,participant_sortsfolds_the_laundry
+169,14,5,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_stove_off
+169,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+169,16,0,
+169,2,1,participant_fills_dispenser_with_medication
+169,3,0,
+169,4,0,
+169,5,1,participant_empties_extra_water_into_sink
+169,6,0,
+169,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+169,8,1,participant_lays_out_clothes_on_living_room_couch
+169,9,0,
+171,1,1,participant_dusts_dining_room
+171,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+171,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+171,12,0,
+171,2,1,participant_fills_dispenser_with_medication
+171,3,0,
+171,4,0,
+171,5,1,participant_empties_extra_water_into_sink
+171,6,0,
+171,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+171,8,1,participant_lays_out_clothes_on_living_room_couch
+171,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+173,1,1,participant_dusts_dining_room
+173,10,0,
+173,11,0,
+173,12,0,
+173,13,1,participant_sortsfolds_the_laundry
+173,14,2,participant_puts_oatmeal_into_pot; participant_removes_materials_from_cupboard
+173,15,1,participant_sorts_pile_of_statements_into_the_organizer
+173,16,0,
+173,2,0,
+173,3,0,
+173,4,0,
+173,5,1,participant_empties_extra_water_into_sink
+173,6,0,
+173,7,0,
+173,8,1,participant_lays_out_clothes_on_living_room_couch
+173,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+178,1,1,participant_dusts_dining_room
+178,10,1,participant_washes_hands
+178,11,1,participant_washes_the_countertops
+178,12,0,
+178,13,1,participant_sortsfolds_the_laundry
+178,14,2,participant_puts_raisin_in_oatmeal; participant_removes_materials_from_cupboard
+178,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+178,16,0,
+178,2,1,participant_fills_dispenser_with_medication
+178,3,0,
+178,4,0,
+178,5,1,participant_empties_extra_water_into_sink
+178,6,0,
+178,7,0,
+178,8,1,participant_lays_out_clothes_on_living_room_couch
+178,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+17,1,1,participant_dusts_dining_room
+17,10,2,participant_dries_hands; participant_turns_on_water
+17,11,1,participant_rinses_out_the_sponge
+17,12,0,
+17,13,1,participant_sortsfolds_the_laundry
+17,14,3,participant_fills_pot_with_water; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+17,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+17,16,0,
+17,2,1,participant_fills_dispenser_with_medication
+17,3,0,
+17,4,0,
+17,5,1,participant_empties_extra_water_into_sink
+17,6,0,
+17,7,1,participant_fills_measuring_cup_with_water
+17,8,1,participant_lays_out_clothes_on_living_room_couch
+17,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+180,1,1,participant_dusts_dining_room
+180,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+180,11,5,participant_dries_the_countertops; participant_lathers_the_sponge_with_the_detergent; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+180,12,0,
+180,13,1,participant_sortsfolds_the_laundry
+180,14,5,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove
+180,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+180,16,0,
+180,2,1,participant_fills_dispenser_with_medication
+180,3,0,
+180,4,1,participant_selects_correct_dvd
+180,5,1,participant_empties_extra_water_into_sink
+180,6,0,
+180,7,1,participant_boils_water_in_microwave
+180,8,1,participant_lays_out_clothes_on_living_room_couch
+180,9,1,participant_removes_old_light_bulb
+181,1,1,participant_dusts_dining_room
+181,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+181,12,0,
+181,13,1,participant_sortsfolds_the_laundry
+181,14,2,participant_puts_raisin_in_oatmeal; participant_removes_materials_from_cupboard
+181,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+181,16,0,
+181,2,1,participant_fills_dispenser_with_medication
+181,3,0,
+181,4,0,
+181,5,1,participant_empties_extra_water_into_sink
+181,6,0,
+181,7,2,participant_boils_water_in_microwave; participant_pours_water_into_cup_of_noodles
+181,8,1,participant_lays_out_clothes_on_living_room_couch
+181,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+183,1,0,
+183,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+183,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+183,2,0,
+183,3,0,
+183,5,1,participant_empties_extra_water_into_sink
+183,8,1,participant_lays_out_clothes_on_living_room_couch
+184,1,1,participant_dusts_dining_room
+184,10,0,
+184,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+184,12,0,
+184,13,1,participant_sortsfolds_the_laundry
+184,14,2,participant_puts_oatmeal_into_pot; participant_removes_materials_from_cupboard
+184,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+184,16,0,
+184,2,0,
+184,3,0,
+184,4,0,
+184,5,1,participant_empties_extra_water_into_sink
+184,6,0,
+184,7,0,
+184,8,1,participant_lays_out_clothes_on_living_room_couch
+184,9,0,
+186,1,1,participant_dusts_dining_room
+186,10,1,participant_washes_hands
+186,11,1,participant_washes_the_countertops
+186,12,0,
+186,13,1,participant_sortsfolds_the_laundry
+186,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+186,15,1,participant_sorts_pile_of_statements_into_the_organizer
+186,16,0,
+186,2,1,participant_fills_dispenser_with_medication
+186,3,0,
+186,4,0,
+186,5,1,participant_empties_extra_water_into_sink
+186,6,0,
+186,7,0,
+186,8,1,participant_lays_out_clothes_on_living_room_couch
+186,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+187,1,1,participant_dusts_dining_room
+187,10,1,participant_washes_hands
+187,11,0,
+187,12,0,
+187,13,1,participant_sortsfolds_the_laundry
+187,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+187,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+187,16,0,
+187,2,1,participant_fills_dispenser_with_medication
+187,3,0,
+187,4,0,
+187,5,0,
+187,6,0,
+187,7,0,
+187,8,1,participant_lays_out_clothes_on_living_room_couch
+187,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+188,1,0,
+188,10,2,participant_dries_hands; participant_washes_hands
+188,11,0,
+188,12,0,
+188,13,1,participant_sortsfolds_the_laundry
+188,14,2,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal
+188,15,1,participant_sorts_pile_of_statements_into_the_organizer
+188,16,0,
+188,2,0,
+188,3,0,
+188,4,0,
+188,5,2,participant_waters_plants_coffee_table; participant_waters_plants_windowsill
+188,7,0,
+188,8,1,participant_lays_out_clothes_on_living_room_couch
+188,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+189,1,1,participant_dusts_dining_room
+189,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+189,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+189,12,0,
+189,13,1,participant_sortsfolds_the_laundry
+189,14,3,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_removes_materials_from_cupboard
+189,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+189,16,0,
+189,2,1,participant_fills_dispenser_with_medication
+189,3,0,
+189,4,0,
+189,5,1,participant_empties_extra_water_into_sink
+189,6,0,
+189,7,1,participant_boils_water_in_microwave
+189,8,1,participant_lays_out_clothes_on_living_room_couch
+189,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+18,1,1,participant_dusts_dining_room
+18,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+18,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+18,12,0,
+18,13,1,participant_sortsfolds_the_laundry
+18,14,2,participant_fills_pot_with_water; participant_removes_materials_from_cupboard
+18,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+18,16,0,
+18,2,1,participant_fills_dispenser_with_medication
+18,3,0,
+18,4,0,
+18,5,1,participant_empties_extra_water_into_sink
+18,6,0,
+18,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+18,8,1,participant_lays_out_clothes_on_living_room_couch
+18,9,1,participant_replaces_the_bulb
+191,1,0,
+191,10,2,participant_turns_on_water; participant_washes_hands
+191,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+191,12,0,
+191,13,1,participant_sortsfolds_the_laundry
+191,14,7,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+191,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+191,16,0,
+191,2,1,participant_fills_dispenser_with_medication
+191,3,0,
+191,4,0,
+191,5,1,participant_empties_extra_water_into_sink
+191,6,0,
+191,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+191,8,0,
+191,9,0,
+193,1,1,participant_dusts_dining_room
+193,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+193,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+193,12,0,
+193,13,1,participant_sortsfolds_the_laundry
+193,14,4,participant_fills_pot_with_water; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+193,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+193,16,0,
+193,2,1,participant_fills_dispenser_with_medication
+193,3,0,
+193,4,0,
+193,5,1,participant_empties_extra_water_into_sink
+193,6,0,
+193,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+193,8,1,participant_lays_out_clothes_on_living_room_couch
+193,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+194,1,1,participant_dusts_dining_room
+194,10,1,participant_washes_hands
+194,11,1,participant_washes_the_countertops
+194,12,0,
+194,13,1,participant_sortsfolds_the_laundry
+194,14,2,participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+194,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+194,16,0,
+194,2,1,participant_fills_dispenser_with_medication
+194,3,0,
+194,4,0,
+194,5,1,participant_empties_extra_water_into_sink
+194,6,0,
+194,7,1,participant_boils_water_in_microwave
+194,8,0,
+194,9,0,
+196,1,0,
+196,10,1,participant_washes_hands
+196,11,1,participant_washes_the_countertops
+196,12,0,
+196,13,1,participant_sortsfolds_the_laundry
+196,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+196,15,1,participant_sorts_pile_of_statements_into_the_organizer
+196,16,0,
+196,2,1,participant_fills_dispenser_with_medication
+196,3,0,
+196,4,0,
+196,5,1,participant_empties_extra_water_into_sink
+196,6,0,
+196,7,0,
+196,8,1,participant_lays_out_clothes_on_living_room_couch
+196,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+200,1,1,participant_dusts_dining_room
+200,10,1,participant_washes_hands
+200,11,1,participant_washes_the_countertops
+200,12,0,
+200,13,1,participant_sortsfolds_the_laundry
+200,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+200,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+200,16,0,
+200,2,1,participant_fills_dispenser_with_medication
+200,3,0,
+200,4,0,
+200,5,1,participant_empties_extra_water_into_sink
+200,6,0,
+200,7,0,
+200,8,1,participant_lays_out_clothes_on_living_room_couch
+200,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+201,1,1,participant_dusts_dining_room
+201,10,0,
+201,11,1,participant_washes_the_countertops
+201,12,0,
+201,13,1,participant_sortsfolds_the_laundry
+201,14,2,participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+201,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+201,16,0,
+201,2,1,participant_fills_dispenser_with_medication
+201,3,0,
+201,4,0,
+201,5,1,participant_empties_extra_water_into_sink
+201,6,0,
+201,7,0,
+201,8,1,participant_lays_out_clothes_on_living_room_couch
+201,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+202,1,1,participant_dusts_dining_room
+202,10,1,participant_washes_hands
+202,11,1,participant_washes_the_countertops
+202,12,0,
+202,13,1,participant_sortsfolds_the_laundry
+202,14,2,participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+202,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+202,16,0,
+202,2,1,participant_fills_dispenser_with_medication
+202,3,0,
+202,4,0,
+202,5,1,participant_empties_extra_water_into_sink
+202,6,0,
+202,7,0,
+202,8,1,participant_lays_out_clothes_on_living_room_couch
+202,9,0,
+208,1,1,participant_dusts_dining_room
+208,10,2,participant_turns_on_water; participant_washes_hands
+208,11,1,participant_wets_the_sponge
+208,12,0,
+208,13,1,participant_sortsfolds_the_laundry
+208,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+208,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+208,16,0,
+208,2,1,participant_fills_dispenser_with_medication
+208,3,0,
+208,4,0,
+208,5,1,participant_empties_extra_water_into_sink
+208,6,0,
+208,7,1,participant_boils_water_in_microwave
+208,8,1,participant_lays_out_clothes_on_living_room_couch
+208,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+20,1,1,participant_dusts_dining_room
+20,10,1,participant_washes_hands
+20,11,1,participant_washes_the_countertops
+20,12,0,
+20,13,1,participant_sortsfolds_the_laundry
+20,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+20,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+20,16,0,
+20,2,1,participant_fills_dispenser_with_medication
+20,3,0,
+20,4,0,
+20,5,1,participant_empties_extra_water_into_sink
+20,6,0,
+20,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+20,8,1,participant_lays_out_clothes_on_living_room_couch
+20,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+211,1,1,participant_dusts_dining_room
+211,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+211,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+211,12,0,
+211,13,1,participant_sortsfolds_the_laundry
+211,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+211,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+211,16,0,
+211,2,1,participant_fills_dispenser_with_medication
+211,3,0,
+211,4,0,
+211,5,1,participant_empties_extra_water_into_sink
+211,6,0,
+211,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+211,8,1,participant_lays_out_clothes_on_living_room_couch
+211,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+212,1,0,
+212,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+212,11,2,participant_washes_the_countertops; participant_wets_the_sponge
+212,13,0,
+212,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+212,2,0,
+212,3,0,
+212,5,1,participant_empties_extra_water_into_sink
+212,8,0,
+214,1,0,
+214,10,1,participant_dries_hands
+214,11,1,participant_washes_the_countertops
+214,12,0,
+214,2,1,participant_fills_dispenser_with_medication
+214,3,0,
+214,4,0,
+214,5,0,
+214,6,0,
+214,7,0,
+214,8,1,participant_lays_out_clothes_on_living_room_couch
+214,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+215,1,2,participant_dusts_dining_room; participant_sweeps_kitchen_floor
+215,10,0,
+215,11,0,
+215,12,0,
+215,13,1,participant_sortsfolds_the_laundry
+215,14,4,participant_puts_oatmeal_into_pot; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+215,15,1,participant_sorts_pile_of_statements_into_the_organizer
+215,2,1,participant_fills_dispenser_with_medication
+215,3,0,
+215,4,0,
+215,5,0,
+215,6,0,
+215,7,1,participant_boils_water_in_microwave
+215,8,1,participant_lays_out_clothes_on_living_room_couch
+215,9,0,
+216,1,1,participant_dusts_dining_room
+216,10,1,participant_washes_hands
+216,11,1,participant_washes_the_countertops
+216,12,0,
+216,13,1,participant_sortsfolds_the_laundry
+216,14,2,participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+216,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+216,16,0,
+216,2,1,participant_fills_dispenser_with_medication
+216,3,0,
+216,4,0,
+216,5,1,participant_empties_extra_water_into_sink
+216,6,0,
+216,7,0,
+216,8,1,participant_lays_out_clothes_on_living_room_couch
+216,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+218,1,0,
+218,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+218,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+218,12,0,
+218,13,1,participant_sortsfolds_the_laundry
+218,14,4,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+218,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+218,16,0,
+218,2,0,
+218,3,0,
+218,4,0,
+218,5,0,
+218,6,0,
+218,7,0,
+218,8,1,participant_lays_out_clothes_on_living_room_couch
+218,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+220,1,1,participant_dusts_dining_room
+220,10,0,
+220,11,0,
+220,12,0,
+220,13,1,participant_sortsfolds_the_laundry
+220,14,2,participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+220,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+220,16,0,
+220,2,1,participant_fills_dispenser_with_medication
+220,3,0,
+220,4,0,
+220,5,1,participant_empties_extra_water_into_sink
+220,6,0,
+220,7,0,
+220,8,1,participant_lays_out_clothes_on_living_room_couch
+220,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+222,1,1,participant_dusts_dining_room
+222,10,2,participant_turns_on_water; participant_washes_hands
+222,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+222,12,0,
+222,13,1,participant_sortsfolds_the_laundry
+222,14,4,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+222,15,1,participant_sorts_pile_of_statements_into_the_organizer
+222,16,0,
+222,2,1,participant_fills_dispenser_with_medication
+222,3,0,
+222,4,0,
+222,5,1,participant_empties_extra_water_into_sink
+222,6,0,
+222,7,1,participant_boils_water_in_microwave
+222,8,1,participant_lays_out_clothes_on_living_room_couch
+222,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+223,1,0,
+223,10,1,participant_washes_hands
+223,11,1,participant_washes_the_countertops
+223,12,0,
+223,13,1,participant_sortsfolds_the_laundry
+223,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+223,16,0,
+223,2,0,
+223,3,0,
+223,4,0,
+223,7,0,
+223,8,2,participant_chooses_correct_outfit_from_closet; participant_lays_out_clothes_on_living_room_couch
+223,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+225,1,1,participant_dusts_dining_room
+225,2,1,participant_fills_dispenser_with_medication
+225,3,0,
+225,4,0,
+225,5,1,participant_empties_extra_water_into_sink
+225,6,0,
+225,7,1,participant_fills_measuring_cup_with_water
+225,8,1,participant_lays_out_clothes_on_living_room_couch
+229,1,1,participant_dusts_dining_room
+229,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+229,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+229,12,0,
+229,13,1,participant_sortsfolds_the_laundry
+229,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+229,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+229,16,0,
+229,2,1,participant_fills_dispenser_with_medication
+229,3,0,
+229,4,0,
+229,5,1,participant_empties_extra_water_into_sink
+229,6,0,
+229,7,1,participant_pours_water_into_cup_of_noodles
+229,8,1,participant_lays_out_clothes_on_living_room_couch
+229,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+22,1,1,participant_dusts_dining_room
+22,10,1,participant_washes_hands
+22,11,2,participant_dries_the_countertops; participant_washes_the_countertops
+22,12,0,
+22,13,1,participant_sortsfolds_the_laundry
+22,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+22,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+22,16,0,
+22,2,1,participant_fills_dispenser_with_medication
+22,3,0,
+22,4,0,
+22,5,1,participant_empties_extra_water_into_sink
+22,6,0,
+22,7,1,participant_boils_water_in_microwave
+22,8,1,participant_lays_out_clothes_on_living_room_couch
+22,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+232,1,1,participant_dusts_dining_room
+232,10,1,participant_dries_hands
+232,11,1,participant_washes_the_countertops
+232,12,0,
+232,13,1,participant_sortsfolds_the_laundry
+232,15,1,participant_sorts_pile_of_statements_into_the_organizer
+232,16,0,
+232,2,1,participant_fills_dispenser_with_medication
+232,3,1,participant_writes_check_for_birthday_card
+232,4,0,
+232,5,1,participant_empties_extra_water_into_sink
+232,7,0,
+232,8,1,participant_lays_out_clothes_on_living_room_couch
+232,9,1,participant_replaces_the_bulb
+233,1,2,participant_dusts_dining_room; participant_dusts_living_room
+233,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+233,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+233,12,0,
+233,13,1,participant_sortsfolds_the_laundry
+233,14,4,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+233,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+233,16,0,
+233,2,1,participant_fills_dispenser_with_medication
+233,3,0,
+233,4,0,
+233,5,1,participant_empties_extra_water_into_sink
+233,6,0,
+233,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+233,8,1,participant_lays_out_clothes_on_living_room_couch
+233,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+235,1,1,participant_dusts_dining_room
+235,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+235,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+235,12,0,
+235,13,1,participant_sortsfolds_the_laundry
+235,14,4,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+235,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+235,16,0,
+235,2,1,participant_fills_dispenser_with_medication
+235,3,0,
+235,4,0,
+235,5,1,participant_empties_extra_water_into_sink
+235,6,0,
+235,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+235,8,1,participant_lays_out_clothes_on_living_room_couch
+235,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+236,1,1,participant_dusts_dining_room
+236,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+236,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+236,12,0,
+236,13,1,participant_sortsfolds_the_laundry
+236,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+236,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+236,16,0,
+236,2,1,participant_fills_dispenser_with_medication
+236,3,0,
+236,4,0,
+236,5,1,participant_empties_extra_water_into_sink
+236,6,0,
+236,7,2,participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+236,8,1,participant_lays_out_clothes_on_living_room_couch
+236,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+241,1,2,participant_dusts_dining_room; participant_dusts_living_room
+241,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+241,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+241,12,0,
+241,13,1,participant_sortsfolds_the_laundry
+241,14,0,
+241,15,1,participant_sorts_pile_of_statements_into_the_organizer
+241,16,0,
+241,3,0,
+241,5,1,participant_empties_extra_water_into_sink
+241,6,0,
+241,7,0,
+241,8,0,
+241,9,0,
+242,1,1,participant_uses_dust_pan_and_brush
+242,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+242,11,0,
+242,12,0,
+242,13,1,participant_sortsfolds_the_laundry
+242,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+242,16,0,
+242,2,1,participant_fills_dispenser_with_medication
+242,3,0,
+242,4,0,
+242,5,1,participant_empties_extra_water_into_sink
+242,6,0,
+242,7,0,
+242,8,1,participant_lays_out_clothes_on_living_room_couch
+242,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+244,1,1,participant_dusts_dining_room
+244,10,1,participant_dries_hands
+244,11,1,participant_washes_the_countertops
+244,12,0,
+244,13,1,participant_sortsfolds_the_laundry
+244,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+244,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+244,16,0,
+244,2,1,participant_fills_dispenser_with_medication
+244,3,0,
+244,4,1,participant_turns_off_tv
+244,5,1,participant_empties_extra_water_into_sink
+244,6,0,
+244,7,0,
+244,8,1,participant_lays_out_clothes_on_living_room_couch
+244,9,1,participant_removes_old_light_bulb
+245,1,1,participant_dusts_dining_room
+245,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+245,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+245,12,0,
+245,13,1,participant_sortsfolds_the_laundry
+245,14,4,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+245,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+245,16,0,
+245,2,1,participant_fills_dispenser_with_medication
+245,3,0,
+245,4,0,
+245,5,1,participant_empties_extra_water_into_sink
+245,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+245,8,1,participant_lays_out_clothes_on_living_room_couch
+245,9,1,participant_removes_old_light_bulb
+247,1,1,participant_sweeps_kitchen_floor
+247,10,2,participant_dries_hands; participant_washes_hands
+247,12,0,
+247,13,1,participant_sortsfolds_the_laundry
+247,14,4,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+247,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+247,16,0,
+247,2,1,participant_fills_dispenser_with_medication
+247,3,0,
+247,4,0,
+247,5,1,participant_empties_extra_water_into_sink
+247,6,0,
+247,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+247,8,1,participant_lays_out_clothes_on_living_room_couch
+24,1,1,participant_dusts_dining_room
+24,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+24,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+24,12,0,
+24,13,1,participant_sortsfolds_the_laundry
+24,14,5,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+24,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+24,16,0,
+24,2,1,participant_fills_dispenser_with_medication
+24,3,0,
+24,4,0,
+24,5,1,participant_empties_extra_water_into_sink
+24,6,0,
+24,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+24,8,1,participant_lays_out_clothes_on_living_room_couch
+24,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+250,1,1,participant_dusts_dining_room
+250,10,1,participant_washes_hands
+250,11,1,participant_washes_the_countertops
+250,12,0,
+250,13,1,participant_sortsfolds_the_laundry
+250,14,1,participant_removes_materials_from_cupboard
+250,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+250,16,0,
+250,2,1,participant_fills_dispenser_with_medication
+250,3,0,
+250,4,0,
+250,5,1,participant_empties_extra_water_into_sink
+250,6,0,
+250,7,0,
+250,8,1,participant_lays_out_clothes_on_living_room_couch
+250,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+251,1,1,participant_dusts_dining_room
+251,10,1,participant_washes_hands
+251,11,1,participant_washes_the_countertops
+251,12,0,
+251,13,1,participant_sortsfolds_the_laundry
+251,14,1,participant_removes_materials_from_cupboard
+251,15,1,participant_sorts_pile_of_statements_into_the_organizer
+251,16,0,
+251,2,1,participant_fills_dispenser_with_medication
+251,3,0,
+251,4,0,
+251,5,1,participant_empties_extra_water_into_sink
+251,6,0,
+251,7,0,
+251,8,1,participant_lays_out_clothes_on_living_room_couch
+251,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+253,1,0,
+253,10,0,
+253,11,0,
+253,12,0,
+253,13,1,participant_sortsfolds_the_laundry
+253,14,1,participant_removes_materials_from_cupboard
+253,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+253,16,0,
+253,2,1,participant_fills_dispenser_with_medication
+253,3,0,
+253,4,0,
+253,5,1,participant_empties_extra_water_into_sink
+253,6,0,
+253,7,1,participant_fills_measuring_cup_with_water
+253,8,1,participant_lays_out_clothes_on_living_room_couch
+253,9,0,
+255,1,1,participant_dusts_dining_room
+255,10,0,
+255,11,2,participant_washes_the_countertops; participant_wets_the_sponge
+255,12,0,
+255,13,1,participant_sortsfolds_the_laundry
+255,14,2,participant_puts_oatmeal_into_pot; participant_removes_materials_from_cupboard
+255,15,1,participant_sorts_pile_of_statements_into_the_organizer
+255,16,0,
+255,2,0,
+255,3,0,
+255,4,0,
+255,5,1,participant_empties_extra_water_into_sink
+255,6,0,
+255,7,0,
+255,8,1,participant_lays_out_clothes_on_living_room_couch
+255,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+256,1,1,participant_dusts_dining_room
+256,10,0,
+256,11,0,
+256,12,0,
+256,13,1,participant_sortsfolds_the_laundry
+256,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+256,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+256,16,0,
+256,2,1,participant_fills_dispenser_with_medication
+256,3,0,
+256,4,0,
+256,5,1,participant_empties_extra_water_into_sink
+256,6,0,
+256,7,2,participant_boils_water_in_microwave; participant_pours_water_into_cup_of_noodles
+256,8,1,participant_lays_out_clothes_on_living_room_couch
+256,9,0,
+257,1,0,
+257,10,0,
+257,11,0,
+257,12,0,
+257,13,0,
+257,14,0,
+257,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+257,16,0,
+257,3,0,
+257,5,0,
+257,6,0,
+257,7,0,
+257,8,1,participant_lays_out_clothes_on_living_room_couch
+257,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+259,1,0,
+259,10,0,
+259,11,1,participant_washes_the_countertops
+259,12,0,
+259,13,1,participant_sortsfolds_the_laundry
+259,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+259,15,1,participant_sorts_pile_of_statements_into_the_organizer
+259,16,0,
+259,2,1,participant_fills_dispenser_with_medication
+259,3,0,
+259,4,0,
+259,5,1,participant_empties_extra_water_into_sink
+259,7,0,
+259,8,1,participant_lays_out_clothes_on_living_room_couch
+259,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+25,1,1,participant_dusts_dining_room
+25,10,2,participant_turns_on_water; participant_washes_hands
+25,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+25,12,0,
+25,14,3,participant_puts_oatmeal_into_pot; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+25,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+25,16,0,
+25,2,1,participant_fills_dispenser_with_medication
+25,3,0,
+25,4,0,
+25,5,1,participant_empties_extra_water_into_sink
+25,6,0,
+25,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+25,8,1,participant_lays_out_clothes_on_living_room_couch
+25,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+262,1,1,participant_dusts_dining_room
+262,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+262,11,1,participant_rinses_out_the_sponge
+262,12,0,
+262,13,1,participant_sortsfolds_the_laundry
+262,14,4,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+262,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+262,16,0,
+262,2,1,participant_fills_dispenser_with_medication
+262,3,0,
+262,4,0,
+262,5,1,participant_empties_extra_water_into_sink
+262,6,0,
+262,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+262,8,1,participant_lays_out_clothes_on_living_room_couch
+262,9,1,participant_replaces_the_bulb
+263,1,1,participant_dusts_dining_room
+263,10,1,participant_washes_hands
+263,11,1,participant_washes_the_countertops
+263,12,0,
+263,13,1,participant_sortsfolds_the_laundry
+263,14,1,participant_removes_materials_from_cupboard
+263,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+263,16,0,
+263,2,1,participant_fills_dispenser_with_medication
+263,3,0,
+263,4,0,
+263,5,1,participant_empties_extra_water_into_sink
+263,6,0,
+263,7,0,
+263,8,1,participant_lays_out_clothes_on_living_room_couch
+263,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+264,1,1,participant_dusts_dining_room
+264,10,0,
+264,11,2,participant_dries_the_countertops; participant_washes_the_countertops
+264,12,0,
+264,13,1,participant_sortsfolds_the_laundry
+264,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+264,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+264,16,0,
+264,2,1,participant_fills_dispenser_with_medication
+264,3,0,
+264,4,0,
+264,5,1,participant_empties_extra_water_into_sink
+264,6,0,
+264,7,0,
+264,8,1,participant_lays_out_clothes_on_living_room_couch
+264,9,1,participant_removes_old_light_bulb
+269,1,1,participant_dusts_dining_room
+269,10,1,participant_washes_hands
+269,11,1,participant_washes_the_countertops
+269,12,0,
+269,13,1,participant_sortsfolds_the_laundry
+269,14,1,participant_removes_materials_from_cupboard
+269,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+269,16,0,
+269,2,1,participant_fills_dispenser_with_medication
+269,3,0,
+269,4,0,
+269,5,1,participant_empties_extra_water_into_sink
+269,6,0,
+269,7,0,
+269,8,1,participant_lays_out_clothes_on_living_room_couch
+269,9,0,
+274,1,1,participant_dusts_dining_room
+274,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+274,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+274,12,0,
+274,13,1,participant_sortsfolds_the_laundry
+274,14,4,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+274,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+274,16,0,
+274,2,1,participant_fills_dispenser_with_medication
+274,3,0,
+274,4,0,
+274,5,1,participant_empties_extra_water_into_sink
+274,6,0,
+274,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+274,8,1,participant_lays_out_clothes_on_living_room_couch
+274,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+275,1,1,participant_dusts_dining_room
+275,10,0,
+275,11,0,
+275,12,0,
+275,13,1,participant_sortsfolds_the_laundry
+275,14,4,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove
+275,15,0,
+275,16,0,
+275,2,1,participant_fills_dispenser_with_medication
+275,3,0,
+275,5,1,participant_empties_extra_water_into_sink
+275,6,0,
+275,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+275,8,0,
+276,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+276,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+276,13,0,
+276,15,1,participant_gathers_statements_from_bookshelf
+276,16,0,
+276,2,1,participant_fills_dispenser_with_medication
+276,3,0,
+276,5,1,participant_empties_extra_water_into_sink
+276,8,0,
+280,1,1,participant_dusts_dining_room
+280,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+280,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+280,12,0,
+280,13,1,participant_sortsfolds_the_laundry
+280,14,4,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+280,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+280,16,0,
+280,2,1,participant_fills_dispenser_with_medication
+280,3,0,
+280,4,0,
+280,5,1,participant_empties_extra_water_into_sink
+280,6,0,
+280,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+280,8,1,participant_lays_out_clothes_on_living_room_couch
+280,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+281,1,1,participant_dusts_dining_room
+281,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+281,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+281,12,0,
+281,13,1,participant_sortsfolds_the_laundry
+281,14,5,participant_fills_pot_with_water; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+281,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+281,16,0,
+281,2,1,participant_fills_dispenser_with_medication
+281,3,0,
+281,4,0,
+281,5,1,participant_empties_extra_water_into_sink
+281,6,0,
+281,7,4,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_glass_of_water; participant_pours_water_into_cup_of_noodles
+281,8,1,participant_lays_out_clothes_on_living_room_couch
+281,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+283,1,1,participant_dusts_dining_room
+283,10,0,
+283,11,0,
+283,12,0,
+283,13,1,participant_sortsfolds_the_laundry
+283,14,2,participant_puts_oatmeal_into_pot; participant_removes_materials_from_cupboard
+283,15,1,participant_sorts_pile_of_statements_into_the_organizer
+283,16,0,
+283,2,0,
+283,3,0,
+283,4,0,
+283,5,0,
+283,6,0,
+283,7,0,
+283,8,0,
+283,9,0,
+285,1,1,participant_dusts_dining_room
+285,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+285,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+285,12,0,
+285,13,1,participant_sortsfolds_the_laundry
+285,14,6,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+285,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+285,16,0,
+285,2,1,participant_fills_dispenser_with_medication
+285,3,0,
+285,4,0,
+285,5,1,participant_empties_extra_water_into_sink
+285,6,0,
+285,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+285,8,1,participant_lays_out_clothes_on_living_room_couch
+285,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+288,1,1,participant_dusts_dining_room
+288,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+288,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+288,12,0,
+288,13,1,participant_sortsfolds_the_laundry
+288,14,7,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+288,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+288,16,0,
+288,2,1,participant_fills_dispenser_with_medication
+288,3,0,
+288,4,0,
+288,5,1,participant_empties_extra_water_into_sink
+288,6,0,
+288,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+288,8,1,participant_lays_out_clothes_on_living_room_couch
+288,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+289,1,1,participant_dusts_dining_room
+289,2,0,
+289,3,0,
+289,4,0,
+289,5,1,participant_empties_extra_water_into_sink
+289,6,0,
+289,7,2,participant_boils_water_in_microwave; participant_pours_water_into_cup_of_noodles
+289,8,1,participant_lays_out_clothes_on_living_room_couch
+28,1,1,participant_dusts_dining_room
+28,2,1,participant_fills_dispenser_with_medication
+28,4,0,
+28,5,1,participant_empties_extra_water_into_sink
+28,6,0,
+28,7,1,participant_boils_water_in_microwave
+28,8,1,participant_lays_out_clothes_on_living_room_couch
+293,1,1,participant_dusts_dining_room
+293,10,2,participant_turns_on_water; participant_washes_hands
+293,11,2,participant_washes_the_countertops; participant_wets_the_sponge
+293,12,0,
+293,13,1,participant_sortsfolds_the_laundry
+293,14,2,participant_puts_oatmeal_into_pot; participant_removes_materials_from_cupboard
+293,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+293,16,0,
+293,2,0,
+293,3,0,
+293,4,0,
+293,5,1,participant_empties_extra_water_into_sink
+293,6,0,
+293,7,0,
+293,8,1,participant_lays_out_clothes_on_living_room_couch
+293,9,1,participant_removes_old_light_bulb
+294,1,1,participant_dusts_dining_room
+294,10,0,
+294,11,0,
+294,12,0,
+294,13,1,participant_sortsfolds_the_laundry
+294,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+294,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+294,16,0,
+294,2,1,participant_fills_dispenser_with_medication
+294,3,0,
+294,4,0,
+294,5,1,participant_empties_extra_water_into_sink
+294,6,0,
+294,7,2,participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+294,8,1,participant_lays_out_clothes_on_living_room_couch
+294,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+295,1,1,participant_dusts_dining_room
+295,10,0,
+295,11,0,
+295,12,0,
+295,13,1,participant_sortsfolds_the_laundry
+295,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+295,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+295,16,0,
+295,2,1,participant_fills_dispenser_with_medication
+295,3,0,
+295,4,0,
+295,5,1,participant_empties_extra_water_into_sink
+295,7,0,
+295,8,1,participant_lays_out_clothes_on_living_room_couch
+295,9,0,
+298,1,1,participant_dusts_dining_room
+298,10,2,participant_turns_on_water; participant_washes_hands
+298,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+298,12,0,
+298,13,1,participant_sortsfolds_the_laundry
+298,14,7,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+298,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+298,16,0,
+298,2,1,participant_fills_dispenser_with_medication
+298,3,0,
+298,4,0,
+298,5,1,participant_empties_extra_water_into_sink
+298,6,0,
+298,7,1,participant_boils_water_in_microwave
+298,8,1,participant_lays_out_clothes_on_living_room_couch
+298,9,0,
+300,1,1,participant_dusts_dining_room
+300,10,1,participant_dries_hands
+300,11,1,participant_washes_the_countertops
+300,12,0,
+300,13,1,participant_sortsfolds_the_laundry
+300,14,2,participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+300,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+300,16,0,
+300,2,1,participant_fills_dispenser_with_medication
+300,3,0,
+300,4,0,
+300,5,1,participant_empties_extra_water_into_sink
+300,7,0,
+300,8,1,participant_lays_out_clothes_on_living_room_couch
+300,9,0,
+305,1,1,participant_dusts_dining_room
+305,10,0,
+305,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+305,12,0,
+305,13,1,participant_sortsfolds_the_laundry
+305,14,2,participant_puts_oatmeal_into_pot; participant_removes_materials_from_cupboard
+305,15,1,participant_sorts_pile_of_statements_into_the_organizer
+305,16,0,
+305,2,0,
+305,3,0,
+305,4,0,
+305,5,1,participant_empties_extra_water_into_sink
+305,6,0,
+305,7,0,
+305,8,1,participant_lays_out_clothes_on_living_room_couch
+305,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+307,1,1,participant_dusts_dining_room
+307,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+307,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+307,12,0,
+307,13,1,participant_sortsfolds_the_laundry
+307,14,3,participant_fills_pot_with_water; participant_removes_materials_from_cupboard; participant_turns_on_stove
+307,15,1,participant_gathers_statements_from_bookshelf
+307,16,0,
+307,2,1,participant_fills_dispenser_with_medication
+307,3,0,
+307,4,0,
+307,5,1,participant_empties_extra_water_into_sink
+307,6,0,
+307,7,4,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_glass_of_water; participant_pours_water_into_cup_of_noodles
+307,8,1,participant_lays_out_clothes_on_living_room_couch
+307,9,1,participant_replaces_the_bulb
+308,1,1,participant_dusts_dining_room
+308,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+308,11,0,
+308,12,0,
+308,13,1,participant_sortsfolds_the_laundry
+308,14,4,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+308,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+308,16,0,
+308,2,0,
+308,3,0,
+308,4,0,
+308,5,1,participant_empties_extra_water_into_sink
+308,6,0,
+308,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+308,8,1,participant_lays_out_clothes_on_living_room_couch
+308,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+312,1,1,participant_dusts_dining_room
+312,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+312,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+312,12,0,
+312,13,1,participant_sortsfolds_the_laundry
+312,14,3,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_removes_materials_from_cupboard
+312,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+312,16,0,
+312,2,1,participant_fills_dispenser_with_medication
+312,3,0,
+312,4,0,
+312,5,1,participant_empties_extra_water_into_sink
+312,6,0,
+312,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+312,8,1,participant_lays_out_clothes_on_living_room_couch
+312,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+314,1,1,participant_dusts_dining_room
+314,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+314,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+314,12,0,
+314,13,1,participant_sortsfolds_the_laundry
+314,14,5,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+314,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+314,16,0,
+314,2,1,participant_fills_dispenser_with_medication
+314,3,0,
+314,4,0,
+314,5,1,participant_empties_extra_water_into_sink
+314,6,0,
+314,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+314,8,1,participant_lays_out_clothes_on_living_room_couch
+314,9,0,
+315,1,1,participant_dusts_dining_room
+315,10,0,
+315,11,1,participant_washes_the_countertops
+315,12,0,
+315,13,1,participant_sortsfolds_the_laundry
+315,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+315,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+315,16,0,
+315,2,1,participant_fills_dispenser_with_medication
+315,3,0,
+315,4,0,
+315,5,1,participant_empties_extra_water_into_sink
+315,7,0,
+315,8,1,participant_lays_out_clothes_on_living_room_couch
+315,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+316,1,1,participant_dusts_dining_room
+316,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+316,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+316,12,0,
+316,13,1,participant_sortsfolds_the_laundry
+316,14,4,participant_fills_pot_with_water; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+316,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+316,16,0,
+316,2,1,participant_fills_dispenser_with_medication
+316,4,0,
+316,5,1,participant_empties_extra_water_into_sink
+316,7,1,participant_fills_measuring_cup_with_water
+316,8,1,participant_lays_out_clothes_on_living_room_couch
+316,9,1,participant_removes_old_light_bulb
+317,1,1,participant_dusts_dining_room
+317,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+317,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+317,12,0,
+317,13,1,participant_sortsfolds_the_laundry
+317,14,5,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove
+317,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+317,16,0,
+317,2,1,participant_fills_dispenser_with_medication
+317,3,0,
+317,4,0,
+317,5,1,participant_empties_extra_water_into_sink
+317,6,0,
+317,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+317,8,1,participant_lays_out_clothes_on_living_room_couch
+318,1,0,
+318,10,1,participant_dries_hands
+318,12,0,
+318,13,1,participant_sortsfolds_the_laundry
+318,14,2,participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+318,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+318,16,0,
+318,2,1,participant_fills_dispenser_with_medication
+318,3,0,
+318,4,0,
+318,5,1,participant_empties_extra_water_into_sink
+318,7,0,
+318,8,1,participant_lays_out_clothes_on_living_room_couch
+318,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+321,1,1,participant_dusts_dining_room
+321,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+321,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+321,12,0,
+321,14,4,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+321,16,0,
+321,2,0,
+321,3,0,
+321,5,1,participant_empties_extra_water_into_sink
+321,6,0,
+321,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+321,8,1,participant_lays_out_clothes_on_living_room_couch
+321,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+324,1,1,participant_dusts_dining_room
+324,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+324,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+324,12,0,
+324,13,1,participant_sortsfolds_the_laundry
+324,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+324,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+324,16,0,
+324,2,1,participant_fills_dispenser_with_medication
+324,3,0,
+324,4,0,
+324,5,1,participant_empties_extra_water_into_sink
+324,6,0,
+324,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+324,8,1,participant_lays_out_clothes_on_living_room_couch
+324,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+327,1,1,participant_dusts_dining_room
+327,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+327,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+327,12,0,
+327,13,1,participant_sortsfolds_the_laundry
+327,14,6,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+327,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+327,16,0,
+327,2,1,participant_fills_dispenser_with_medication
+327,3,0,
+327,5,1,participant_empties_extra_water_into_sink
+327,6,0,
+327,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+327,8,1,participant_lays_out_clothes_on_living_room_couch
+327,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+328,1,0,
+328,10,0,
+328,11,2,participant_dries_the_countertops; participant_washes_the_countertops
+328,12,0,
+328,13,1,participant_sortsfolds_the_laundry
+328,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+328,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+328,16,0,
+328,2,1,participant_fills_dispenser_with_medication
+328,3,0,
+328,4,0,
+328,5,1,participant_empties_extra_water_into_sink
+328,6,0,
+328,7,0,
+328,8,1,participant_lays_out_clothes_on_living_room_couch
+328,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+329,1,1,participant_dusts_dining_room
+329,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+329,11,5,participant_dries_the_countertops; participant_lathers_the_sponge_with_the_detergent; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+329,12,0,
+329,13,1,participant_sortsfolds_the_laundry
+329,14,5,participant_fills_pot_with_water; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+329,15,1,participant_sorts_pile_of_statements_into_the_organizer
+329,2,1,participant_fills_dispenser_with_medication
+329,3,0,
+329,4,0,
+329,5,1,participant_empties_extra_water_into_sink
+329,6,0,
+329,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+329,8,1,participant_lays_out_clothes_on_living_room_couch
+329,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+334,1,1,participant_dusts_dining_room
+334,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+334,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+334,12,0,
+334,13,1,participant_sortsfolds_the_laundry
+334,14,7,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+334,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+334,16,0,
+334,2,1,participant_fills_dispenser_with_medication
+334,3,0,
+334,4,0,
+334,5,1,participant_empties_extra_water_into_sink
+334,6,0,
+334,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+334,8,1,participant_lays_out_clothes_on_living_room_couch
+334,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+335,1,0,
+335,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+335,11,0,
+335,13,1,participant_sortsfolds_the_laundry
+335,15,1,participant_sorts_pile_of_statements_into_the_organizer
+335,2,0,
+335,3,0,
+335,4,0,
+335,5,1,participant_empties_extra_water_into_sink
+335,6,0,
+335,7,1,participant_fills_measuring_cup_with_water
+335,8,0,
+335,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+33,1,0,
+33,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+33,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+33,12,0,
+33,13,1,participant_sortsfolds_the_laundry
+33,14,3,participant_fills_pot_with_water; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+33,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+33,16,0,
+33,2,1,participant_fills_dispenser_with_medication
+33,3,0,
+33,4,0,
+33,5,1,participant_empties_extra_water_into_sink
+33,6,0,
+33,7,1,participant_fills_measuring_cup_with_water
+33,8,1,participant_lays_out_clothes_on_living_room_couch
+340,1,1,participant_dusts_dining_room
+340,10,1,participant_washes_hands
+340,11,1,participant_washes_the_countertops
+340,12,0,
+340,13,1,participant_sortsfolds_the_laundry
+340,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+340,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+340,16,0,
+340,2,1,participant_fills_dispenser_with_medication
+340,3,0,
+340,4,0,
+340,5,1,participant_empties_extra_water_into_sink
+340,6,0,
+340,7,0,
+340,8,1,participant_lays_out_clothes_on_living_room_couch
+340,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+341,1,1,participant_dusts_dining_room
+341,10,0,
+341,11,2,participant_dries_the_countertops; participant_washes_the_countertops
+341,12,0,
+341,13,1,participant_sortsfolds_the_laundry
+341,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+341,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+341,16,0,
+341,2,1,participant_fills_dispenser_with_medication
+341,3,0,
+341,4,0,
+341,5,1,participant_empties_extra_water_into_sink
+341,6,0,
+341,7,0,
+341,8,1,participant_lays_out_clothes_on_living_room_couch
+341,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+344,1,1,participant_dusts_dining_room
+344,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+344,11,3,participant_dries_the_countertops; participant_washes_the_countertops; participant_wets_the_sponge
+344,12,0,
+344,13,1,participant_sortsfolds_the_laundry
+344,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+344,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+344,16,0,
+344,2,1,participant_fills_dispenser_with_medication
+344,3,0,
+344,4,0,
+344,5,1,participant_empties_extra_water_into_sink
+344,6,0,
+344,7,1,participant_boils_water_in_microwave
+344,8,1,participant_lays_out_clothes_on_living_room_couch
+344,9,0,
+345,1,1,participant_dusts_dining_room
+345,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+345,11,1,participant_wets_the_sponge
+345,12,0,
+345,13,1,participant_sortsfolds_the_laundry
+345,14,0,
+345,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+345,16,0,
+345,3,0,
+345,4,0,
+345,5,1,participant_empties_extra_water_into_sink
+345,6,0,
+345,7,0,
+345,8,1,participant_lays_out_clothes_on_living_room_couch
+345,9,1,participant_replaces_the_bulb
+346,1,1,participant_dusts_dining_room
+346,10,1,participant_washes_hands
+346,11,1,participant_washes_the_countertops
+346,12,0,
+346,13,1,participant_sortsfolds_the_laundry
+346,14,1,participant_removes_materials_from_cupboard
+346,15,1,participant_sorts_pile_of_statements_into_the_organizer
+346,16,0,
+346,2,0,
+346,3,0,
+346,4,0,
+346,5,1,participant_empties_extra_water_into_sink
+346,6,0,
+346,7,0,
+346,8,1,participant_lays_out_clothes_on_living_room_couch
+346,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+347,1,1,participant_dusts_dining_room
+347,10,0,
+347,11,0,
+347,12,0,
+347,13,1,participant_sortsfolds_the_laundry
+347,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+347,15,1,participant_sorts_pile_of_statements_into_the_organizer
+347,16,0,
+347,2,1,participant_fills_dispenser_with_medication
+347,3,0,
+347,4,0,
+347,5,1,participant_empties_extra_water_into_sink
+347,6,0,
+347,7,0,
+347,8,1,participant_lays_out_clothes_on_living_room_couch
+347,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+350,1,0,
+350,10,0,
+350,11,2,participant_dries_the_countertops; participant_washes_the_countertops
+350,12,0,
+350,13,1,participant_sortsfolds_the_laundry
+350,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+350,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+350,16,0,
+350,2,1,participant_fills_dispenser_with_medication
+350,3,0,
+350,4,0,
+350,5,1,participant_empties_extra_water_into_sink
+350,6,0,
+350,7,0,
+350,8,1,participant_lays_out_clothes_on_living_room_couch
+350,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+351,1,1,participant_dusts_dining_room
+351,10,0,
+351,11,1,participant_washes_the_countertops
+351,12,0,
+351,13,1,participant_sortsfolds_the_laundry
+351,14,1,participant_removes_materials_from_cupboard
+351,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+351,16,0,
+351,2,1,participant_fills_dispenser_with_medication
+351,3,0,
+351,4,0,
+351,5,1,participant_empties_extra_water_into_sink
+351,7,0,
+351,8,1,participant_lays_out_clothes_on_living_room_couch
+351,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+352,1,1,participant_dusts_dining_room
+352,10,0,
+352,11,0,
+352,12,0,
+352,13,1,participant_sortsfolds_the_laundry
+352,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+352,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+352,16,0,
+352,2,1,participant_fills_dispenser_with_medication
+352,3,0,
+352,4,0,
+352,5,1,participant_empties_extra_water_into_sink
+352,7,0,
+352,8,1,participant_lays_out_clothes_on_living_room_couch
+352,9,0,
+354,1,1,participant_dusts_dining_room
+354,10,0,
+354,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+354,12,0,
+354,13,1,participant_sortsfolds_the_laundry
+354,14,1,participant_puts_oatmeal_into_pot
+354,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+354,16,0,
+354,2,0,
+354,3,0,
+354,4,0,
+354,5,1,participant_empties_extra_water_into_sink
+354,6,0,
+354,7,0,
+354,8,1,participant_lays_out_clothes_on_living_room_couch
+354,9,0,
+355,1,1,participant_dusts_dining_room
+355,10,0,
+355,11,0,
+355,12,0,
+355,13,1,participant_sortsfolds_the_laundry
+355,14,2,participant_puts_oatmeal_into_pot; participant_removes_materials_from_cupboard
+355,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+355,16,0,
+355,2,0,
+355,3,0,
+355,4,0,
+355,5,0,
+355,6,0,
+355,7,0,
+355,8,1,participant_lays_out_clothes_on_living_room_couch
+355,9,0,
+356,1,0,
+356,10,2,participant_turns_on_water; participant_washes_hands
+356,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+356,12,0,
+356,13,1,participant_sortsfolds_the_laundry
+356,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+356,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+356,16,0,
+356,2,0,
+356,3,0,
+356,4,0,
+356,5,1,participant_empties_extra_water_into_sink
+356,6,0,
+356,7,2,participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+356,8,1,participant_lays_out_clothes_on_living_room_couch
+356,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+357,1,1,participant_dusts_dining_room
+357,10,0,
+357,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+357,12,0,
+357,13,1,participant_sortsfolds_the_laundry
+357,14,2,participant_puts_oatmeal_into_pot; participant_removes_materials_from_cupboard
+357,15,1,participant_sorts_pile_of_statements_into_the_organizer
+357,16,0,
+357,2,0,
+357,3,0,
+357,4,0,
+357,5,1,participant_empties_extra_water_into_sink
+357,6,0,
+357,7,0,
+357,8,1,participant_lays_out_clothes_on_living_room_couch
+357,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+367,1,1,participant_dusts_dining_room
+367,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+367,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+367,13,1,participant_sortsfolds_the_laundry
+367,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+367,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+367,16,0,
+367,2,1,participant_fills_dispenser_with_medication
+367,3,0,
+367,5,1,participant_empties_extra_water_into_sink
+367,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+367,8,1,participant_lays_out_clothes_on_living_room_couch
+367,9,0,
+370,1,1,participant_dusts_dining_room
+370,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+370,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+370,12,0,
+370,13,1,participant_sortsfolds_the_laundry
+370,14,5,participant_fills_pot_with_water; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+370,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+370,16,0,
+370,2,1,participant_fills_dispenser_with_medication
+370,3,0,
+370,4,0,
+370,5,1,participant_empties_extra_water_into_sink
+370,6,0,
+370,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+370,8,1,participant_lays_out_clothes_on_living_room_couch
+370,9,1,participant_removes_old_light_bulb
+371,1,1,participant_dusts_dining_room
+371,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+371,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+371,12,0,
+371,13,1,participant_sortsfolds_the_laundry
+371,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+371,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+371,16,0,
+371,2,1,participant_fills_dispenser_with_medication
+371,3,0,
+371,4,0,
+371,5,1,participant_empties_extra_water_into_sink
+371,6,0,
+371,7,1,participant_fills_measuring_cup_with_water
+371,8,1,participant_lays_out_clothes_on_living_room_couch
+371,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+375,1,1,participant_dusts_dining_room
+375,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+375,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+375,12,0,
+375,13,1,participant_sortsfolds_the_laundry
+375,14,3,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_removes_materials_from_cupboard
+375,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+375,16,0,
+375,2,1,participant_fills_dispenser_with_medication
+375,3,0,
+375,4,0,
+375,5,1,participant_empties_extra_water_into_sink
+375,6,0,
+375,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+375,8,1,participant_lays_out_clothes_on_living_room_couch
+375,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+376,1,1,participant_dusts_dining_room
+376,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+376,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+376,12,0,
+376,13,1,participant_sortsfolds_the_laundry
+376,14,4,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+376,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+376,16,1,participant_brings_deck_of_cards_to_the_dining_room_table
+376,2,1,participant_fills_dispenser_with_medication
+376,3,0,
+376,4,0,
+376,5,1,participant_empties_extra_water_into_sink
+376,6,0,
+376,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+376,8,1,participant_lays_out_clothes_on_living_room_couch
+376,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+377,1,1,participant_dusts_dining_room
+377,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+377,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+377,12,0,
+377,13,1,participant_sortsfolds_the_laundry
+377,14,5,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+377,15,1,participant_sorts_pile_of_statements_into_the_organizer
+377,16,0,
+377,2,1,participant_fills_dispenser_with_medication
+377,3,0,
+377,4,0,
+377,5,1,participant_empties_extra_water_into_sink
+377,6,0,
+377,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+377,8,1,participant_lays_out_clothes_on_living_room_couch
+377,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+37,1,1,participant_dusts_dining_room
+37,10,0,
+37,11,2,participant_dries_the_countertops; participant_washes_the_countertops
+37,12,0,
+37,13,1,participant_sortsfolds_the_laundry
+37,14,2,participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+37,15,1,participant_sorts_pile_of_statements_into_the_organizer
+37,16,0,
+37,2,1,participant_fills_dispenser_with_medication
+37,3,0,
+37,4,0,
+37,5,1,participant_empties_extra_water_into_sink
+37,6,0,
+37,7,0,
+37,8,1,participant_lays_out_clothes_on_living_room_couch
+37,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+381,1,1,participant_dusts_dining_room
+381,10,1,participant_washes_hands
+381,11,1,participant_washes_the_countertops
+381,12,0,
+381,13,1,participant_sortsfolds_the_laundry
+381,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+381,15,1,participant_sorts_pile_of_statements_into_the_organizer
+381,16,0,
+381,2,1,participant_fills_dispenser_with_medication
+381,3,0,
+381,4,0,
+381,5,1,participant_empties_extra_water_into_sink
+381,6,0,
+381,7,0,
+381,8,1,participant_lays_out_clothes_on_living_room_couch
+381,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+382,1,1,participant_dusts_dining_room
+382,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+382,11,1,participant_rinses_out_the_sponge
+382,12,0,
+382,13,1,participant_sortsfolds_the_laundry
+382,14,3,participant_fills_pot_with_water; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+382,15,0,
+382,16,0,
+382,2,1,participant_fills_dispenser_with_medication
+382,3,0,
+382,4,0,
+382,5,0,
+382,6,0,
+382,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+382,8,1,participant_lays_out_clothes_on_living_room_couch
+382,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+384,1,0,
+384,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+384,11,2,participant_washes_the_countertops; participant_wets_the_sponge
+384,12,0,
+384,13,1,participant_sortsfolds_the_laundry
+384,14,3,participant_fills_pot_with_water; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+384,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+384,16,0,
+384,2,0,
+384,3,0,
+384,4,0,
+384,5,1,participant_empties_extra_water_into_sink
+384,6,0,
+384,8,1,participant_lays_out_clothes_on_living_room_couch
+385,1,0,
+385,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+385,11,2,participant_washes_the_countertops; participant_wets_the_sponge
+385,12,0,
+385,13,1,participant_sortsfolds_the_laundry
+385,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+385,16,0,
+385,2,0,
+385,3,0,
+385,5,0,
+385,8,1,participant_lays_out_clothes_on_living_room_couch
+385,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+387,1,1,participant_dusts_dining_room
+387,10,0,
+387,11,1,participant_washes_the_countertops
+387,12,0,
+387,13,1,participant_sortsfolds_the_laundry
+387,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+387,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+387,16,0,
+387,2,1,participant_fills_dispenser_with_medication
+387,3,0,
+387,4,0,
+387,5,1,participant_empties_extra_water_into_sink
+387,7,0,
+387,8,1,participant_lays_out_clothes_on_living_room_couch
+387,9,0,
+388,1,1,participant_dusts_dining_room
+388,10,1,participant_washes_hands
+388,11,1,participant_washes_the_countertops
+388,12,0,
+388,13,1,participant_sortsfolds_the_laundry
+388,15,1,participant_sorts_pile_of_statements_into_the_organizer
+388,16,0,
+388,2,1,participant_fills_dispenser_with_medication
+388,3,0,
+388,4,0,
+388,5,0,
+388,6,0,
+388,7,0,
+388,8,1,participant_lays_out_clothes_on_living_room_couch
+388,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+389,1,0,
+389,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+389,11,1,participant_wets_the_sponge
+389,12,0,
+389,13,1,participant_sortsfolds_the_laundry
+389,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+389,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+389,16,0,
+389,2,1,participant_fills_dispenser_with_medication
+389,3,0,
+389,4,1,participant_selects_correct_dvd
+389,5,1,participant_empties_extra_water_into_sink
+389,6,0,
+389,7,1,participant_boils_water_in_microwave
+389,8,1,participant_lays_out_clothes_on_living_room_couch
+389,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+38,1,1,participant_dusts_dining_room
+38,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+38,13,0,
+38,14,0,
+38,15,1,participant_sorts_pile_of_statements_into_the_organizer
+38,16,0,
+38,5,1,participant_empties_extra_water_into_sink
+38,6,0,
+38,8,1,participant_lays_out_clothes_on_living_room_couch
+38,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+393,1,2,participant_dusts_dining_room; participant_sweeps_kitchen_floor
+393,10,0,
+393,11,0,
+393,12,0,
+393,13,1,participant_sortsfolds_the_laundry
+393,14,4,participant_puts_oatmeal_into_pot; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove
+393,15,1,participant_sorts_pile_of_statements_into_the_organizer
+393,16,0,
+393,2,1,participant_fills_dispenser_with_medication
+393,3,0,
+393,4,0,
+393,5,0,
+393,6,0,
+393,7,1,participant_boils_water_in_microwave
+393,8,0,
+393,9,0,
+394,1,1,participant_dusts_dining_room
+394,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+394,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+394,12,0,
+394,13,1,participant_sortsfolds_the_laundry
+394,14,3,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_removes_materials_from_cupboard
+394,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+394,16,0,
+394,2,1,participant_fills_dispenser_with_medication
+394,3,0,
+394,4,0,
+394,5,1,participant_empties_extra_water_into_sink
+394,6,0,
+394,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+394,8,1,participant_lays_out_clothes_on_living_room_couch
+394,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+395,1,1,participant_dusts_dining_room
+395,10,1,participant_washes_hands
+395,11,1,participant_washes_the_countertops
+395,12,0,
+395,13,1,participant_sortsfolds_the_laundry
+395,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+395,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+395,16,0,
+395,2,1,participant_fills_dispenser_with_medication
+395,3,0,
+395,4,0,
+395,5,1,participant_empties_extra_water_into_sink
+395,6,0,
+395,7,0,
+395,8,1,participant_lays_out_clothes_on_living_room_couch
+395,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+400,1,0,
+400,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+400,11,2,participant_rinses_out_the_sponge; participant_washes_the_countertops
+400,12,0,
+400,13,1,participant_sortsfolds_the_laundry
+400,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+400,15,1,participant_sorts_pile_of_statements_into_the_organizer
+400,16,0,
+400,2,1,participant_fills_dispenser_with_medication
+400,3,0,
+400,4,0,
+400,5,1,participant_empties_extra_water_into_sink
+400,6,0,
+400,7,0,
+400,8,1,participant_lays_out_clothes_on_living_room_couch
+400,9,1,participant_removes_old_light_bulb
+40,1,1,participant_dusts_dining_room
+40,10,0,
+40,11,1,participant_washes_the_countertops
+40,12,0,
+40,13,1,participant_sortsfolds_the_laundry
+40,14,2,participant_puts_raisin_in_oatmeal; participant_removes_materials_from_cupboard
+40,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+40,16,0,
+40,2,1,participant_fills_dispenser_with_medication
+40,3,0,
+40,4,0,
+40,5,1,participant_empties_extra_water_into_sink
+40,6,0,
+40,7,0,
+40,8,1,participant_lays_out_clothes_on_living_room_couch
+40,9,1,participant_replaces_the_bulb
+43,1,1,participant_dusts_dining_room
+43,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+43,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+43,12,0,
+43,13,1,participant_sortsfolds_the_laundry
+43,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+43,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+43,16,0,
+43,2,1,participant_fills_dispenser_with_medication
+43,3,0,
+43,4,0,
+43,5,1,participant_empties_extra_water_into_sink
+43,6,0,
+43,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+43,8,1,participant_lays_out_clothes_on_living_room_couch
+43,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+47,1,1,participant_dusts_dining_room
+47,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+47,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+47,12,0,
+47,13,1,participant_sortsfolds_the_laundry
+47,14,5,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+47,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+47,16,0,
+47,2,1,participant_fills_dispenser_with_medication
+47,3,0,
+47,4,0,
+47,5,1,participant_empties_extra_water_into_sink
+47,6,0,
+47,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+47,8,1,participant_lays_out_clothes_on_living_room_couch
+47,9,1,participant_removes_old_light_bulb
+53,1,1,participant_dusts_dining_room
+53,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+53,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+53,12,0,
+53,13,1,participant_sortsfolds_the_laundry
+53,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+53,15,1,participant_sorts_pile_of_statements_into_the_organizer
+53,16,0,
+53,2,0,
+53,3,0,
+53,4,0,
+53,5,1,participant_empties_extra_water_into_sink
+53,6,0,
+53,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+53,8,1,participant_lays_out_clothes_on_living_room_couch
+53,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+54,1,2,participant_dusts_dining_room; participant_dusts_living_room
+54,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+54,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+54,12,0,
+54,13,1,participant_sortsfolds_the_laundry
+54,14,5,participant_fills_pot_with_water; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+54,16,0,
+54,2,0,
+54,3,0,
+54,5,1,participant_empties_extra_water_into_sink
+54,6,0,
+54,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+54,8,2,participant_chooses_correct_outfit_from_closet; participant_lays_out_clothes_on_living_room_couch
+54,9,1,participant_replaces_the_bulb
+56,1,1,participant_dusts_dining_room
+56,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+56,11,3,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops
+56,12,0,
+56,13,1,participant_sortsfolds_the_laundry
+56,14,6,participant_fills_pot_with_water; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+56,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+56,16,0,
+56,2,1,participant_fills_dispenser_with_medication
+56,3,0,
+56,4,0,
+56,5,1,participant_empties_extra_water_into_sink
+56,6,0,
+56,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+56,8,1,participant_lays_out_clothes_on_living_room_couch
+56,9,0,
+5,1,1,participant_dusts_dining_room
+5,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+5,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+5,12,0,
+5,13,1,participant_sortsfolds_the_laundry
+5,14,3,participant_fills_pot_with_water; participant_removes_materials_from_cupboard; participant_turns_on_stove
+5,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+5,16,0,
+5,2,0,
+5,3,0,
+5,4,0,
+5,5,1,participant_empties_extra_water_into_sink
+5,6,0,
+5,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+5,8,1,participant_lays_out_clothes_on_living_room_couch
+5,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+6,1,2,participant_dusts_dining_room; participant_dusts_living_room
+6,10,0,
+6,11,2,participant_dries_the_countertops; participant_washes_the_countertops
+6,12,0,
+6,13,1,participant_sortsfolds_the_laundry
+6,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+6,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+6,16,0,
+6,2,1,participant_fills_dispenser_with_medication
+6,3,0,
+6,4,0,
+6,5,1,participant_empties_extra_water_into_sink
+6,6,0,
+6,7,0,
+6,8,1,participant_lays_out_clothes_on_living_room_couch
+6,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+70,1,1,participant_dusts_dining_room
+70,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+70,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+70,12,0,
+70,13,1,participant_sortsfolds_the_laundry
+70,14,4,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+70,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+70,16,0,
+70,2,1,participant_fills_dispenser_with_medication
+70,3,0,
+70,4,0,
+70,5,1,participant_empties_extra_water_into_sink
+70,6,0,
+70,7,1,participant_boils_water_in_microwave
+70,8,1,participant_lays_out_clothes_on_living_room_couch
+70,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+71,1,1,participant_dusts_dining_room
+71,10,2,participant_turns_on_water; participant_washes_hands
+71,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+71,12,0,
+71,13,1,participant_sortsfolds_the_laundry
+71,14,5,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove
+71,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+71,16,0,
+71,2,1,participant_fills_dispenser_with_medication
+71,3,0,
+71,4,0,
+71,5,1,participant_empties_extra_water_into_sink
+71,6,0,
+71,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+71,8,1,participant_lays_out_clothes_on_living_room_couch
+71,9,0,
+72,1,1,participant_dusts_dining_room
+72,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+72,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+72,12,0,
+72,13,1,participant_sortsfolds_the_laundry
+72,14,4,participant_puts_raisin_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+72,15,1,participant_sorts_pile_of_statements_into_the_organizer
+72,16,0,
+72,2,1,participant_fills_dispenser_with_medication
+72,3,0,
+72,4,0,
+72,5,1,participant_empties_extra_water_into_sink
+72,6,0,
+72,7,2,participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+72,8,1,participant_lays_out_clothes_on_living_room_couch
+72,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+76,10,0,
+76,11,1,participant_washes_the_countertops
+76,12,0,
+76,13,1,participant_sortsfolds_the_laundry
+76,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+76,15,1,participant_sorts_pile_of_statements_into_the_organizer
+76,16,0,
+76,2,0,
+76,3,0,
+76,4,0,
+76,5,1,participant_empties_extra_water_into_sink
+76,6,0,
+76,7,0,
+76,8,1,participant_lays_out_clothes_on_living_room_couch
+76,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+77,1,1,participant_dusts_dining_room
+77,10,1,participant_washes_hands
+77,11,2,participant_dries_the_countertops; participant_washes_the_countertops
+77,12,0,
+77,13,1,participant_sortsfolds_the_laundry
+77,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+77,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+77,16,0,
+77,2,1,participant_fills_dispenser_with_medication
+77,3,0,
+77,4,0,
+77,5,1,participant_empties_extra_water_into_sink
+77,6,0,
+77,7,0,
+77,8,1,participant_lays_out_clothes_on_living_room_couch
+77,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+7,1,1,participant_dusts_dining_room
+7,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+7,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+7,12,0,
+7,13,1,participant_sortsfolds_the_laundry
+7,14,7,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove; participant_turns_stove_off
+7,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+7,16,0,
+7,2,1,participant_fills_dispenser_with_medication
+7,3,0,
+7,4,0,
+7,5,1,participant_empties_extra_water_into_sink
+7,6,0,
+7,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+7,8,0,
+7,9,0,
+81,1,1,participant_dusts_dining_room
+81,10,1,participant_washes_hands
+81,11,1,participant_washes_the_countertops
+81,12,0,
+81,13,1,participant_sortsfolds_the_laundry
+81,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+81,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+81,16,0,
+81,2,1,participant_fills_dispenser_with_medication
+81,3,0,
+81,4,0,
+81,5,1,participant_empties_extra_water_into_sink
+81,6,0,
+81,7,1,participant_boils_water_in_microwave
+81,8,1,participant_lays_out_clothes_on_living_room_couch
+81,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+82,1,1,participant_dusts_dining_room
+82,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+82,11,4,participant_dries_the_countertops; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+82,13,1,participant_sortsfolds_the_laundry
+82,14,4,participant_fills_pot_with_water; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard; participant_turns_on_stove
+82,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+82,16,0,
+82,2,1,participant_fills_dispenser_with_medication
+82,3,0,
+82,4,0,
+82,5,1,participant_empties_extra_water_into_sink
+82,6,0,
+82,7,3,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water; participant_pours_water_into_cup_of_noodles
+82,8,1,participant_lays_out_clothes_on_living_room_couch
+82,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+83,1,1,participant_dusts_dining_room
+83,10,3,participant_dries_hands; participant_turns_on_water; participant_washes_hands
+83,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+83,12,0,
+83,13,1,participant_sortsfolds_the_laundry
+83,14,5,participant_fills_pot_with_water; participant_puts_oatmeal_into_pot; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+83,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+83,16,0,
+83,2,1,participant_fills_dispenser_with_medication
+83,3,0,
+83,4,0,
+83,5,1,participant_empties_extra_water_into_sink
+83,6,0,
+83,7,2,participant_boils_water_in_microwave; participant_fills_measuring_cup_with_water
+83,8,1,participant_lays_out_clothes_on_living_room_couch
+83,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+84,1,1,participant_dusts_dining_room
+84,10,0,
+84,11,0,
+84,12,0,
+84,13,1,participant_sortsfolds_the_laundry
+84,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+84,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+84,16,0,
+84,2,1,participant_fills_dispenser_with_medication
+84,3,0,
+84,4,0,
+84,5,1,participant_empties_extra_water_into_sink
+84,6,0,
+84,7,0,
+84,8,1,participant_lays_out_clothes_on_living_room_couch
+84,9,0,
+85,1,2,participant_dusts_dining_room; participant_dusts_living_room
+85,10,1,participant_turns_on_water
+85,11,1,participant_washes_the_countertops
+85,12,0,
+85,13,1,participant_sortsfolds_the_laundry
+85,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+85,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+85,16,0,
+85,2,1,participant_fills_dispenser_with_medication
+85,3,0,
+85,4,0,
+85,5,1,participant_empties_extra_water_into_sink
+85,7,0,
+85,8,1,participant_lays_out_clothes_on_living_room_couch
+85,9,1,participant_replaces_the_bulb
+87,1,1,participant_dusts_dining_room
+87,10,0,
+87,11,2,participant_dries_the_countertops; participant_washes_the_countertops
+87,12,0,
+87,13,1,participant_sortsfolds_the_laundry
+87,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+87,15,1,participant_sorts_pile_of_statements_into_the_organizer
+87,16,0,
+87,2,1,participant_fills_dispenser_with_medication
+87,3,0,
+87,4,0,
+87,5,1,participant_empties_extra_water_into_sink
+87,6,0,
+87,7,0,
+87,8,2,participant_chooses_correct_outfit_from_closet; participant_lays_out_clothes_on_living_room_couch
+87,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+88,1,1,participant_dusts_dining_room
+88,10,4,participant_dries_hands; participant_turns_on_water; participant_uses_hand_soap; participant_washes_hands
+88,11,5,participant_dries_the_countertops; participant_lathers_the_sponge_with_the_detergent; participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+88,12,0,
+88,13,1,participant_sortsfolds_the_laundry
+88,14,2,participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+88,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+88,16,0,
+88,2,1,participant_fills_dispenser_with_medication
+88,3,0,
+88,4,0,
+88,5,1,participant_empties_extra_water_into_sink
+88,6,0,
+88,7,0,
+88,8,1,participant_lays_out_clothes_on_living_room_couch
+88,9,0,
+89,1,1,participant_dusts_dining_room
+89,10,2,participant_dries_hands; participant_washes_hands
+89,11,1,participant_washes_the_countertops
+89,12,0,
+89,13,1,participant_sortsfolds_the_laundry
+89,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+89,15,2,participant_gathers_statements_from_bookshelf; participant_sorts_pile_of_statements_into_the_organizer
+89,16,0,
+89,2,1,participant_fills_dispenser_with_medication
+89,3,0,
+89,4,0,
+89,5,1,participant_empties_extra_water_into_sink
+89,6,0,
+89,7,0,
+89,8,1,participant_lays_out_clothes_on_living_room_couch
+89,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+91,1,2,participant_dusts_dining_room; participant_dusts_living_room
+91,10,0,
+91,11,1,participant_washes_the_countertops
+91,12,0,
+91,13,1,participant_sortsfolds_the_laundry
+91,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+91,15,1,participant_sorts_pile_of_statements_into_the_organizer
+91,16,0,
+91,2,1,participant_fills_dispenser_with_medication
+91,3,0,
+91,4,0,
+91,5,1,participant_empties_extra_water_into_sink
+91,6,0,
+91,7,0,
+91,8,1,participant_lays_out_clothes_on_living_room_couch
+91,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+98,1,1,participant_dusts_dining_room
+98,10,0,
+98,11,3,participant_rinses_out_the_sponge; participant_washes_the_countertops; participant_wets_the_sponge
+98,12,0,
+98,13,1,participant_sortsfolds_the_laundry
+98,14,4,participant_puts_oatmeal_into_pot; participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+98,15,1,participant_sorts_pile_of_statements_into_the_organizer
+98,16,0,
+98,2,1,participant_fills_dispenser_with_medication
+98,3,0,
+98,4,0,
+98,5,1,participant_empties_extra_water_into_sink
+98,6,0,
+98,7,1,participant_boils_water_in_microwave
+98,8,1,participant_lays_out_clothes_on_living_room_couch
+98,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb
+99,1,1,participant_dusts_dining_room
+99,10,0,
+99,11,0,
+99,12,0,
+99,13,1,participant_sortsfolds_the_laundry
+99,14,3,participant_puts_raisin_in_oatmeal; participant_puts_sugar_in_oatmeal; participant_removes_materials_from_cupboard
+99,15,1,participant_sorts_pile_of_statements_into_the_organizer
+99,16,0,
+99,2,1,participant_fills_dispenser_with_medication
+99,3,0,
+99,4,0,
+99,5,1,participant_empties_extra_water_into_sink
+99,7,0,
+99,8,1,participant_lays_out_clothes_on_living_room_couch
+99,9,2,participant_removes_old_light_bulb; participant_replaces_the_bulb

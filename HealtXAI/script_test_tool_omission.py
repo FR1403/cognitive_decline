@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
+import csv
 import glob
 import os
 import re
@@ -41,6 +42,7 @@ FORCE_REBUILD_OBJECT_CACHE = False
 script_dir = os.path.dirname(os.path.abspath(__file__))
 output_dir = os.path.join(script_dir, "test_tool_omission_creati_clingo")
 snapshot_path = os.path.join(script_dir, "tool_omission_db_snapshot.json")
+summary_csv_path = os.path.join(script_dir, "tool_omission_summary.csv")
 object_cache_path = os.path.join(
     script_dir,
     "utils",
@@ -281,6 +283,21 @@ def run_tool_omission_analysis() -> dict[tuple[str, str], int]:
 
     return patient_anomalies
 
+
+def save_tool_omission_summary_csv(
+    patient_anomalies: dict[tuple[str, str], int],
+    csv_path: str,
+) -> None:
+    with open(csv_path, "w", newline="", encoding="utf-8") as csv_file:
+        writer = csv.writer(csv_file)
+        writer.writerow(["patient_id", "activity_id", "tool_omission_count"])
+
+        for (patient_id, activity_id), anomaly_count in sorted(
+            patient_anomalies.items(),
+            key=lambda item: (int(item[0][0]), int(item[0][1])),
+        ):
+            writer.writerow([patient_id, activity_id, anomaly_count])
+
 #carica dati da DB o da snapshot json
 snapshot_data = load_or_build_snapshot(
     take_data_fn=take_data,
@@ -326,4 +343,8 @@ build_lp_files(
 )
 
 #lancia l'analisi tool omission con clingo e salva i risultati in un dizionario
-run_tool_omission_analysis()
+patient_anomalies = run_tool_omission_analysis()
+save_tool_omission_summary_csv(
+    patient_anomalies=patient_anomalies,
+    csv_path=summary_csv_path,
+)
