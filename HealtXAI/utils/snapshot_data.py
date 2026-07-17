@@ -26,6 +26,30 @@ def load_snapshot(snapshot_path: str) -> Dict[str, object]:
     return json.loads(Path(snapshot_path).read_text(encoding="utf-8"))
 
 
+def is_valid_snapshot_payload(payload: object) -> bool:
+    if not isinstance(payload, dict):
+        return False
+
+    required_list_keys = [
+        "activities_catalog",
+        "target_patients",
+        "patient_activities",
+        "patient_tasks",
+        "time_gap_control_tasks",
+        "time_gap_spatial_events",
+    ]
+    for key in required_list_keys:
+        if key not in payload or not isinstance(payload[key], list):
+            return False
+
+    # Se il catalogo attivita/task e' vuoto, molto probabilmente il DB non e'
+    # stato letto correttamente e questo snapshot non va riusato.
+    if not payload["activities_catalog"]:
+        return False
+
+    return True
+
+
 # Costruisce lo snapshot completo leggendo solo i dati necessari dal DB.
 def build_snapshot_from_db(
     take_data_fn: TakeDataFn,
@@ -197,7 +221,15 @@ def load_or_build_snapshot(
 
     if path.exists():
         print(f"debug : snapshot json trovato, saltiamo il caricamento dal db -> {snapshot_path}")
-        return load_snapshot(snapshot_path)
+        snapshot = load_snapshot(snapshot_path)
+        if is_valid_snapshot_payload(snapshot):
+            return snapshot
+
+        print(
+            "debug : snapshot json non valido o vuoto, lo scartiamo e ricarichiamo dal db "
+            f"-> {snapshot_path}"
+        )
+        path.unlink()
 
     print("debug : snapshot json assente, costruiamo i dati dal db")
     snapshot = build_snapshot_from_db(
@@ -205,6 +237,11 @@ def load_or_build_snapshot(
         target_patient_ids=target_patient_ids,
         healthy_diagnosis_ids=healthy_diagnosis_ids,
     )
+    if not is_valid_snapshot_payload(snapshot):
+        raise RuntimeError(
+            "Snapshot DB non valido: query incomplete o nessun catalogo activity/task "
+            "recuperato. Il file JSON non verra salvato."
+        )
     save_snapshot(snapshot_path, snapshot)
     print(f"debug : snapshot json salvato in {snapshot_path}")
     return snapshot

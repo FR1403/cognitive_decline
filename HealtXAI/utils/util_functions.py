@@ -10,7 +10,7 @@ db_params = {
     "host" : "localhost",
     "database": "CASAS400",
     "user": "postgres",
-    "password": "sandro",
+    "password": "psw",
     "port": "5432"
 }
 
