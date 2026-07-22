@@ -27,7 +27,7 @@ expected_pos(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_ch
 
 depends_on(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, participant_moves_to_the_hallway_closet).
 depends_on(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, participant_locates_the_laundry_basket).
-depends_on(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, participant_moves_to_the_couch).
+depends_on(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, participant_locates_the_laundry_basket).
 
 
 % ===============================
@@ -46,19 +46,25 @@ performed(i_p6_a13, participant_sortsfolds_the_laundry, 4).
 % ===========================
 
 
-reversal(I,X,Y) :-
+reversal_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,X,Tx),
     performed(I,Y,Ty),
     Ty < Tx.
 
-anticipation_omission(I,X,Y) :-
+reversal(I,Y) :-
+    reversal_detail(I,_,Y).
+
+anticipation_omission_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,Y,_),
     not performed(I,X,_).
 
-#show reversal/3.
-#show anticipation_omission/3.
+anticipation_omission(I,Y) :-
+    anticipation_omission_detail(I,_,Y).
+
+#show reversal/2.
+#show anticipation_omission/2.
 

@@ -57,19 +57,25 @@ performed(i_p255_a5, participant_returns_watering_can_to_supply_closet, 6).
 % ===========================
 
 
-reversal(I,X,Y) :-
+reversal_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,X,Tx),
     performed(I,Y,Ty),
     Ty < Tx.
 
-anticipation_omission(I,X,Y) :-
+reversal(I,Y) :-
+    reversal_detail(I,_,Y).
+
+anticipation_omission_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,Y,_),
     not performed(I,X,_).
 
-#show reversal/3.
-#show anticipation_omission/3.
+anticipation_omission(I,Y) :-
+    anticipation_omission_detail(I,_,Y).
+
+#show reversal/2.
+#show anticipation_omission/2.
 

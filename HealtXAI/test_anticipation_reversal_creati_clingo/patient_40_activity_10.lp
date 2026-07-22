@@ -30,7 +30,7 @@ expected_pos(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 
 
 depends_on(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, participant_washes_hands).
 depends_on(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, participant_moves_to_the_kitchen).
-depends_on(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, participant_turns_on_water).
+depends_on(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, participant_turns_on_water).
 depends_on(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, participant_uses_hand_soap).
 
 
@@ -47,19 +47,25 @@ performed(i_p40_a10, participant_moves_to_the_kitchen, 1).
 % ===========================
 
 
-reversal(I,X,Y) :-
+reversal_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,X,Tx),
     performed(I,Y,Ty),
     Ty < Tx.
 
-anticipation_omission(I,X,Y) :-
+reversal(I,Y) :-
+    reversal_detail(I,_,Y).
+
+anticipation_omission_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,Y,_),
     not performed(I,X,_).
 
-#show reversal/3.
-#show anticipation_omission/3.
+anticipation_omission(I,Y) :-
+    anticipation_omission_detail(I,_,Y).
+
+#show reversal/2.
+#show anticipation_omission/2.
 

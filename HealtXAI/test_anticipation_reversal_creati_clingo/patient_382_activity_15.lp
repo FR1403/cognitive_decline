@@ -50,19 +50,25 @@ performed(i_p382_a15, participant_sits_down_at_the_dining_room_table, 4).
 % ===========================
 
 
-reversal(I,X,Y) :-
+reversal_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,X,Tx),
     performed(I,Y,Ty),
     Ty < Tx.
 
-anticipation_omission(I,X,Y) :-
+reversal(I,Y) :-
+    reversal_detail(I,_,Y).
+
+anticipation_omission_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,Y,_),
     not performed(I,X,_).
 
-#show reversal/3.
-#show anticipation_omission/3.
+anticipation_omission(I,Y) :-
+    anticipation_omission_detail(I,_,Y).
+
+#show reversal/2.
+#show anticipation_omission/2.
 

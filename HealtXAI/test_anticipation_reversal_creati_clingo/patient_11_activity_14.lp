@@ -52,17 +52,18 @@ expected_pos(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given
 expected_pos(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_raisin_in_oatmeal, 12).
 expected_pos(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_throws_raisin_box_in_trashcan, 13).
 
-depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_fills_pot_with_water, participant_locates_pot).
+depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_fills_pot_with_water, participant_turns_on_stove).
+depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_locates_pot, participant_removes_materials_from_cupboard).
 depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_bowl, participant_stirs_oatmeal).
-depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_raisin_in_oatmeal, participant_puts_oatmeal_into_bowl).
-depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_sugar_in_oatmeal, participant_puts_oatmeal_into_bowl).
+depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_pot, participant_fills_pot_with_water).
+depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_raisin_in_oatmeal, participant_puts_sugar_in_oatmeal).
+depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_sugar_in_oatmeal, participant_turns_stove_off).
 depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_removes_materials_from_cupboard, participant_moves_to_the_kitchen).
 depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_stirs_oatmeal, participants_times_one_minute).
 depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_throws_raisin_box_in_trashcan, participant_puts_raisin_in_oatmeal).
-depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_stove_off, participant_stirs_oatmeal).
-depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participants_times_one_minute, participant_fills_pot_with_water).
+depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_on_stove, participant_locates_pot).
+depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_stove_off, participant_puts_oatmeal_into_bowl).
 depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participants_times_one_minute, participant_puts_oatmeal_into_pot).
-depends_on(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participants_times_one_minute, participant_turns_on_stove).
 
 
 % ===============================
@@ -82,19 +83,25 @@ performed(i_p11_a14, participant_throws_raisin_box_in_trashcan, 5).
 % ===========================
 
 
-reversal(I,X,Y) :-
+reversal_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,X,Tx),
     performed(I,Y,Ty),
     Ty < Tx.
 
-anticipation_omission(I,X,Y) :-
+reversal(I,Y) :-
+    reversal_detail(I,_,Y).
+
+anticipation_omission_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,Y,_),
     not performed(I,X,_).
 
-#show reversal/3.
-#show anticipation_omission/3.
+anticipation_omission(I,Y) :-
+    anticipation_omission_detail(I,_,Y).
+
+#show reversal/2.
+#show anticipation_omission/2.
 

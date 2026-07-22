@@ -1,6 +1,6 @@
 % =================================================================================================
 % Paziente 38
-% Attivit√†: Check the wattage of a desk lamp and replace the bulb.
+% Attivit‡: Check the wattage of a desk lamp and replace the bulb.
 % =================================================================================================
 
 

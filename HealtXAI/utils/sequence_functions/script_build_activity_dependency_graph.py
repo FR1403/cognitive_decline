@@ -16,10 +16,13 @@ FORCE_REBUILD_CATALOG_SNAPSHOT = False
 FORCE_REBUILD_DEPENDENCY_GRAPH = False
 
 DEFAULT_LLM_URL = os.getenv(
-    "LM_STUDIO_URL",
+    "LLM_API_URL",
     "http://127.0.0.1:1234/v1/chat/completions",
 )
-DEFAULT_MODEL = os.getenv("LM_STUDIO_MODEL", "mistral-7b-instruct-v0.3")
+DEFAULT_MODEL = os.getenv("LLM_MODEL", "mistral-7b-instruct-v0.3")
+DEFAULT_LLM_API_KEY = os.getenv("LLM_API_KEY", "")
+DEFAULT_LLM_HTTP_REFERER = os.getenv("LLM_HTTP_REFERER", "")
+DEFAULT_LLM_APP_TITLE = os.getenv("LLM_APP_TITLE", "")
 DEFAULT_TIMEOUT_SECONDS = 300
 DEFAULT_MAX_TOKENS = 1200
 DEFAULT_TEMPERATURE = 0.0
@@ -241,6 +244,9 @@ def ask_lm_studio_for_dependencies(
     activity_entry: dict[str, object],
     llm_url: str = DEFAULT_LLM_URL,
     model: str = DEFAULT_MODEL,
+    api_key: str = DEFAULT_LLM_API_KEY,
+    http_referer: str = DEFAULT_LLM_HTTP_REFERER,
+    app_title: str = DEFAULT_LLM_APP_TITLE,
     timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS,
     max_tokens: int = DEFAULT_MAX_TOKENS,
     temperature: float = DEFAULT_TEMPERATURE,
@@ -255,10 +261,18 @@ def ask_lm_studio_for_dependencies(
         ],
     }
 
+    request_headers = {"Content-Type": "application/json"}
+    if api_key:
+        request_headers["Authorization"] = f"Bearer {api_key}"
+    if http_referer:
+        request_headers["HTTP-Referer"] = http_referer
+    if app_title:
+        request_headers["X-Title"] = app_title
+
     request = urllib.request.Request(
         llm_url,
         data=json.dumps(request_payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
+        headers=request_headers,
         method="POST",
     )
 

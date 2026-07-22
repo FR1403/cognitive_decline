@@ -15,24 +15,20 @@ query_activities_actions = """SELECT aty.activity_id, aty.description AS activit
 JOIN task_types AS tt ON tt.activity_id = aty.activity_id"""
 
 # Query per ottenere l'elenco dei pazienti
-query_patients = '''SELECT DISTINCT patient_id FROM patients
-JOIN activities ON patient_id = patient
-WHERE patient_id IN (38, 102, 104, 135, 136, 137, 154, 183, 188, 212, 214, 218, 232, 
-242, 244, 276, 384, 385, 388, 6, 18, 40, 54, 71, 72, 76, 77, 82, 83, 89, 99, 101, 107, 
-111, 114, 117, 122, 127, 128, 130, 138, 144, 167, 173, 181, 186, 191, 193, 194, 208, 
-215, 255, 257, 259, 262, 274, 280, 289, 295, 298, 312, 315, 316, 318, 324, 327, 329, 
-334, 346, 356, 370, 375, 389, 7, 11, 13, 17, 20, 22, 24, 43, 53, 56, 81, 84, 85, 87, 
-88, 91, 98, 103, 105, 108, 113, 115, 120, 123, 124, 132, 141, 143, 146, 147, 149, 156,
-158, 163, 164, 171, 178, 180, 184, 187, 189, 201, 216, 220, 222, 225, 233, 235, 236, 
-247, 250, 256, 263, 264, 269, 281, 283, 285, 293, 305, 307, 314, 317, 335, 340, 341, 
-344, 345, 347, 350, 354, 355, 357, 367, 377, 382, 393, 394, 395, 400, 5, 25, 28, 33, 
-37, 47, 70, 100, 129, 134, 140, 153, 160, 161, 165, 169, 196, 200, 202, 211, 223, 
-229, 241, 245, 251, 253, 275, 288, 294, 300, 308, 321, 328, 351, 352, 371, 376, 381, 
-387)'''
+query_patients = """SELECT
+    p.patient_id
+FROM patients p
+JOIN diagnosis_types dt ON dt.diagnosis_id = p.diagnosis
+JOIN tasks t ON t.patient = p.patient_id
+WHERE p.diagnosis IN (1, 2, 4, 5)
+  AND t.activity BETWEEN 1 AND 16
+GROUP BY p.patient_id, dt.diagnosis_id, dt.description
+HAVING COUNT(DISTINCT t.activity) >= 6
+ORDER BY dt.description, p.patient_id;"""
 
 # tabella database anomalie_riscontrate(patient_id, omissions, diagnosis)
 # --- CREAZIONE TABELLA ANOMALIE --- 
-query_create = '''CREATE TABLE tracked_anomalies(
+query_create = '''CREATE TABLE IF NOT EXISTS tracked_anomalies(
                         patient_id INTEGER REFERENCES patients(patient_id),
                         activity_id INTEGER,
                         omission_number SMALLINT,
@@ -250,7 +246,10 @@ for file_path in file_lp :
     diagnosis = take_data(query_diagnosis)
     diagnosis = (diagnosis[0])["diagnosis"]
     
-    query_insert = f'''INSERT INTO tracked_anomalies VALUES({patient_id}, {activity_id}, {omission_number})'''
+    query_insert = f'''INSERT INTO tracked_anomalies (patient_id, activity_id, omission_number)
+                       VALUES({patient_id}, {activity_id}, {omission_number})
+                       ON CONFLICT (patient_id, activity_id)
+                       DO UPDATE SET omission_number = EXCLUDED.omission_number'''
 
 
     insert_data(query_insert)

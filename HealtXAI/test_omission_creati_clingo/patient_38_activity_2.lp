@@ -1,6 +1,6 @@
 % =================================================================================================
 % Paziente 38
-% Attivit√†: Obtain a watering can and water all plants in the living space.
+% Attivit‡: Obtain a watering can and water all plants in the living space.
 % =================================================================================================
 
 

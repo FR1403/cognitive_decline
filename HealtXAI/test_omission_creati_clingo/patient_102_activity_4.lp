@@ -1,6 +1,6 @@
 % =================================================================================================
 % Paziente 102
-% Attivit√†: Place a phone call to a recording and write down the recipe heard.
+% Attivit‡: Place a phone call to a recording and write down the recipe heard.
 % =================================================================================================
 
 

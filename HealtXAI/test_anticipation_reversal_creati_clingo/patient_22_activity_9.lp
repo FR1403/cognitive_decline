@@ -34,10 +34,10 @@ expected_pos(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_
 expected_pos(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 6).
 expected_pos(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 7).
 
+depends_on(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, participant_retrieves_light_bulbs_from_cabinet_b).
+depends_on(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, participant_checks_wattage).
 depends_on(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, participant_moves_to_the_dining_room).
-depends_on(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, participant_removes_old_light_bulb).
-depends_on(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b).
-depends_on(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, participant_checks_wattage).
+depends_on(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, participant_throws_away_old_light_bulb).
 depends_on(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, participant_moves_to_the_kitchen).
 depends_on(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, participant_removes_old_light_bulb).
 
@@ -60,19 +60,25 @@ performed(i_p22_a9, participant_replaces_the_bulb, 6).
 % ===========================
 
 
-reversal(I,X,Y) :-
+reversal_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,X,Tx),
     performed(I,Y,Ty),
     Ty < Tx.
 
-anticipation_omission(I,X,Y) :-
+reversal(I,Y) :-
+    reversal_detail(I,_,Y).
+
+anticipation_omission_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,Y,_),
     not performed(I,X,_).
 
-#show reversal/3.
-#show anticipation_omission/3.
+anticipation_omission(I,Y) :-
+    anticipation_omission_detail(I,_,Y).
+
+#show reversal/2.
+#show anticipation_omission/2.
 

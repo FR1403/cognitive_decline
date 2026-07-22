@@ -16,22 +16,16 @@ from utils.tools_functions.use_object_extractor import load_or_build_object_cach
 from utils.util_functions import *
 
 #configurazione iniziale
-TARGET_PATIENT_IDS = [
-    38, 102, 104, 135, 136, 137, 154, 183, 188, 212, 214, 218, 232,
-    242, 244, 276, 384, 385, 388, 6, 18, 40, 54, 71, 72, 76, 77, 82,
-    83, 89, 99, 101, 107, 111, 114, 117, 122, 127, 128, 130, 138, 144,
-    167, 173, 181, 186, 191, 193, 194, 208, 215, 255, 257, 259, 262,
-    274, 280, 289, 295, 298, 312, 315, 316, 318, 324, 327, 329, 334,
-    346, 356, 370, 375, 389, 7, 11, 13, 17, 20, 22, 24, 43, 53, 56, 81,
-    84, 85, 87, 88, 91, 98, 103, 105, 108, 113, 115, 120, 123, 124, 132,
-    141, 143, 146, 147, 149, 156, 158, 163, 164, 171, 178, 180, 184, 187,
-    189, 201, 216, 220, 222, 225, 233, 235, 236, 247, 250, 256, 263, 264,
-    269, 281, 283, 285, 293, 305, 307, 314, 317, 335, 340, 341, 344, 345,
-    347, 350, 354, 355, 357, 367, 377, 382, 393, 394, 395, 400, 5, 25,
-    28, 33, 37, 47, 70, 100, 129, 134, 140, 153, 160, 161, 165, 169, 196,
-    200, 202, 211, 223, 229, 241, 245, 251, 253, 275, 288, 294, 300, 308,
-    321, 328, 351, 352, 371, 376, 381, 387,
-]
+TARGET_PATIENTS_QUERY = """SELECT
+    p.patient_id
+FROM patients p
+JOIN diagnosis_types dt ON dt.diagnosis_id = p.diagnosis
+JOIN tasks t ON t.patient = p.patient_id
+WHERE p.diagnosis IN (1, 2, 4, 5)
+  AND t.activity BETWEEN 1 AND 16
+GROUP BY p.patient_id, dt.diagnosis_id, dt.description
+HAVING COUNT(DISTINCT t.activity) >= 6
+ORDER BY dt.description, p.patient_id;"""
 HEALTHY_DIAGNOSIS_IDS = [3, 4, 5, 8]
 OBJECT_RELEVANT_ACTION_TYPES = {1, 5, 10}
 OBJECT_USING_ACTION_TYPES = {5}
@@ -41,15 +35,37 @@ FORCE_REBUILD_OBJECT_CACHE = False
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 output_dir = os.path.join(script_dir, "test_tool_omission_creati_clingo")
-snapshot_path = os.path.join(script_dir, "tool_omission_db_snapshot.json")
 summary_csv_path = os.path.join(script_dir, "tool_omission_summary.csv")
-object_cache_path = os.path.join(
+tool_omission_json_dir = os.path.join(
     script_dir,
     "utils",
     "tools_functions",
+    "tool_omission_json",
+)
+snapshot_path = os.path.join(
+    tool_omission_json_dir,
+    "tool_omission_db_snapshot.json",
+)
+object_cache_path = os.path.join(
+    tool_omission_json_dir,
     "tool_omission_task_objects.json",
 )
 os.makedirs(output_dir, exist_ok=True)
+os.makedirs(tool_omission_json_dir, exist_ok=True)
+
+
+def load_target_patient_ids() -> list[int]:
+    print("debug : caricamento pazienti target con query dedicata")
+    target_patient_rows = take_data(TARGET_PATIENTS_QUERY) or []
+    target_patient_ids = [int(row["patient_id"]) for row in target_patient_rows]
+
+    if not target_patient_ids:
+        raise RuntimeError(
+            "La query dei pazienti target non ha restituito alcun patient_id."
+        )
+
+    print(f"debug : pazienti target caricati = {len(target_patient_ids)}")
+    return target_patient_ids
 
 #normalizza testi per file lp
 def clean_logic_label(label: str) -> str:
@@ -299,10 +315,11 @@ def save_tool_omission_summary_csv(
             writer.writerow([patient_id, activity_id, anomaly_count])
 
 #carica dati da DB o da snapshot json
+target_patient_ids = load_target_patient_ids()
 snapshot_data = load_or_build_snapshot(
     take_data_fn=take_data,
     snapshot_path=snapshot_path,
-    target_patient_ids=TARGET_PATIENT_IDS,
+    target_patient_ids=target_patient_ids,
     healthy_diagnosis_ids=HEALTHY_DIAGNOSIS_IDS,
     force_rebuild=FORCE_REBUILD_SNAPSHOT,
 )

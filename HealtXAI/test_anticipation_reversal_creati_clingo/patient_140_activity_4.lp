@@ -37,8 +37,8 @@ expected_pos(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, par
 expected_pos(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_turns_off_tv, 7).
 expected_pos(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_returns_dvd_to_pile, 8).
 
+depends_on(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_reads_instructions_next_to_the_tv, participant_selects_correct_dvd).
 depends_on(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_returns_dvd_to_pile, participant_turns_off_tv).
-depends_on(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_channel, participant_selects_correct_dvd).
 depends_on(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_channel, participants_uses_remote_to_turn_on_tv).
 depends_on(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_dvd, participant_moves_to_the_living_room).
 depends_on(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_turns_off_tv, participant_watches_news_clip).
@@ -59,19 +59,25 @@ performed(i_p140_a4, participant_moves_to_the_living_room, 1).
 % ===========================
 
 
-reversal(I,X,Y) :-
+reversal_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,X,Tx),
     performed(I,Y,Ty),
     Ty < Tx.
 
-anticipation_omission(I,X,Y) :-
+reversal(I,Y) :-
+    reversal_detail(I,_,Y).
+
+anticipation_omission_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,Y,_),
     not performed(I,X,_).
 
-#show reversal/3.
-#show anticipation_omission/3.
+anticipation_omission(I,Y) :-
+    anticipation_omission_detail(I,_,Y).
+
+#show reversal/2.
+#show anticipation_omission/2.
 

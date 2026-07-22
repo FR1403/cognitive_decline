@@ -37,10 +37,10 @@ expected_pos(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_ou
 expected_pos(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 7).
 expected_pos(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 8).
 
-depends_on(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, participant_washes_the_countertops).
+depends_on(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, participant_rinses_out_the_sponge).
 depends_on(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, participant_locates_the_dish_detergent).
 depends_on(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, participant_wets_the_sponge).
-depends_on(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, participant_rinses_out_the_sponge).
+depends_on(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, participant_dries_the_countertops).
 depends_on(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, participant_washes_the_countertops).
 depends_on(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, participant_lathers_the_sponge_with_the_detergent).
 depends_on(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, participant_locates_the_sponge).
@@ -58,19 +58,25 @@ instance(i_p352_a11, wash_and_dry_all_kitchen_countertop_surfaces).
 % ===========================
 
 
-reversal(I,X,Y) :-
+reversal_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,X,Tx),
     performed(I,Y,Ty),
     Ty < Tx.
 
-anticipation_omission(I,X,Y) :-
+reversal(I,Y) :-
+    reversal_detail(I,_,Y).
+
+anticipation_omission_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,Y,_),
     not performed(I,X,_).
 
-#show reversal/3.
-#show anticipation_omission/3.
+anticipation_omission(I,Y) :-
+    anticipation_omission_detail(I,_,Y).
+
+#show reversal/2.
+#show anticipation_omission/2.
 

@@ -39,7 +39,6 @@ expected_pos(write_a_birthday_card_enclose_a_check_and_address_an_envelope, part
 
 depends_on(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_addresses_the_envelope, participant_puts_birthday_card_and_check_in_envelope).
 depends_on(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_places_envelope_in_the_mail_organizer, participant_addresses_the_envelope).
-depends_on(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_puts_birthday_card_and_check_in_envelope, participant_writes_birthday_wish_inside_the_card_happy_birthday_name_wish).
 depends_on(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_puts_birthday_card_and_check_in_envelope, participant_writes_check_for_birthday_card).
 depends_on(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_writes_birthday_wish_inside_the_card_happy_birthday_name_wish, participant_retrieves_birthday_card).
 depends_on(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_writes_check_for_birthday_card, participant_retrieves_check).
@@ -58,19 +57,25 @@ performed(i_p220_a3, participant_sits_at_dining_room_table, 1).
 % ===========================
 
 
-reversal(I,X,Y) :-
+reversal_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,X,Tx),
     performed(I,Y,Ty),
     Ty < Tx.
 
-anticipation_omission(I,X,Y) :-
+reversal(I,Y) :-
+    reversal_detail(I,_,Y).
+
+anticipation_omission_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,Y,_),
     not performed(I,X,_).
 
-#show reversal/3.
-#show anticipation_omission/3.
+anticipation_omission(I,Y) :-
+    anticipation_omission_detail(I,_,Y).
+
+#show reversal/2.
+#show anticipation_omission/2.
 

@@ -31,8 +31,8 @@ expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands
 action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 3254).
 action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 29127).
 action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 32474).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 53341).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 63317).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 53356).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 54769).
 
 
 % ===============================

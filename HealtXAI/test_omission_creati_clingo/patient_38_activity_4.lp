@@ -1,6 +1,6 @@
 % =================================================================================================
 % Paziente 38
-% Attivit√†: Pick a complete outfit for an interview from a selection of clothing.
+% Attivit‡: Pick a complete outfit for an interview from a selection of clothing.
 % =================================================================================================
 
 

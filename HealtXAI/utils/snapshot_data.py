@@ -50,6 +50,32 @@ def is_valid_snapshot_payload(payload: object) -> bool:
     return True
 
 
+def has_matching_snapshot_meta(
+    payload: Dict[str, object],
+    target_patient_ids: List[int],
+    healthy_diagnosis_ids: List[int],
+) -> bool:
+    if not isinstance(payload, dict):
+        return False
+
+    meta = payload.get("meta")
+    if not isinstance(meta, dict):
+        return False
+
+    snapshot_target_ids = meta.get("target_patient_ids_filter")
+    snapshot_healthy_ids = meta.get("healthy_diagnosis_ids")
+
+    if snapshot_target_ids != [int(patient_id) for patient_id in target_patient_ids]:
+        return False
+
+    if snapshot_healthy_ids != [
+        int(diagnosis_id) for diagnosis_id in healthy_diagnosis_ids
+    ]:
+        return False
+
+    return True
+
+
 # Costruisce lo snapshot completo leggendo solo i dati necessari dal DB.
 def build_snapshot_from_db(
     take_data_fn: TakeDataFn,
@@ -222,11 +248,16 @@ def load_or_build_snapshot(
     if path.exists():
         print(f"debug : snapshot json trovato, saltiamo il caricamento dal db -> {snapshot_path}")
         snapshot = load_snapshot(snapshot_path)
-        if is_valid_snapshot_payload(snapshot):
+        if is_valid_snapshot_payload(snapshot) and has_matching_snapshot_meta(
+            snapshot,
+            target_patient_ids=target_patient_ids,
+            healthy_diagnosis_ids=healthy_diagnosis_ids,
+        ):
             return snapshot
 
         print(
-            "debug : snapshot json non valido o vuoto, lo scartiamo e ricarichiamo dal db "
+            "debug : snapshot json non valido, vuoto o non allineato ai filtri correnti, "
+            "lo scartiamo e ricarichiamo dal db "
             f"-> {snapshot_path}"
         )
         path.unlink()

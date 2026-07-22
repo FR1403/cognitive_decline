@@ -1,0 +1,107 @@
+% ======================================================================
+% Paziente 160
+% Attivita: Obtain a watering can and water all plants in the living space.
+% ======================================================================
+
+
+% ========================
+% Level A - Activity model
+% ========================
+
+activity(obtain_a_watering_can_and_water_all_plants_in_the_living_space).
+
+action(participant_retrieves_watering_can_from_supply_closet).
+action(participant_fills_watering_can).
+action(participant_waters_plants_windowsill).
+action(participant_waters_plants_coffee_table).
+action(participant_empties_extra_water_into_sink).
+action(participant_returns_watering_can_to_supply_closet).
+
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 1).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 12).
+
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 1).
+
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 633987).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 40960).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 38159).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 96987).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 19134).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 25812).
+
+
+% ===============================
+% Level B - Execution observation
+% ===============================
+
+instance(i_p160_a5, obtain_a_watering_can_and_water_all_plants_in_the_living_space).
+
+% raw_performed(Instance, Action, Order, TimeMs)
+
+raw_performed(i_p160_a5, participant_retrieves_watering_can_from_supply_closet, 1, 51278091).
+raw_performed(i_p160_a5, participant_fills_watering_can, 2, 51289034).
+raw_performed(i_p160_a5, participant_fills_watering_can, 3, 51290081).
+raw_performed(i_p160_a5, participant_fills_watering_can, 4, 51299060).
+raw_performed(i_p160_a5, participant_fills_watering_can, 5, 51300020).
+raw_performed(i_p160_a5, participant_waters_plants_windowsill, 6, 51301066).
+raw_performed(i_p160_a5, participant_waters_plants_coffee_table, 7, 51320054).
+raw_performed(i_p160_a5, participant_waters_plants_coffee_table, 8, 51330002).
+raw_performed(i_p160_a5, participant_empties_extra_water_into_sink, 9, 51335024).
+raw_performed(i_p160_a5, participant_empties_extra_water_into_sink, 10, 51341001).
+raw_performed(i_p160_a5, participant_empties_extra_water_into_sink, 11, 51342000).
+raw_performed(i_p160_a5, participant_returns_watering_can_to_supply_closet, 12, 51343009).
+
+prev_same(I,X,T1,T2) :-
+    raw_performed(I,X,_,T1),
+    raw_performed(I,X,_,T2),
+    T1 < T2,
+    not between_same_time(I,X,T1,T2).
+
+between_same_time(I,X,T1,T2) :-
+    raw_performed(I,X,_,T1),
+    raw_performed(I,X,_,T2),
+    raw_performed(I,X,_,Tm),
+    T1 < Tm,
+    Tm < T2.
+
+episode_start(I,X,T) :-
+    raw_performed(I,X,_,T),
+    not prev_same(I,X,_,T).
+
+episode_start(I,X,T2) :-
+    prev_same(I,X,T1,T2),
+    instance(I,A),
+    action_gap(A,X,G),
+    T2 - T1 > G.
+
+performed(I,X,Tstart) :-
+    episode_start(I,X,Tstart).
+
+
+% ===========================
+% Level C - Anomaly detection
+% ===========================
+
+
+performed_count(I,X,M) :-
+    instance(I,_),
+    action(X),
+    M = #count { T : performed(I,X,T) }.
+
+perseveration(I,X) :-
+    instance(I,A),
+    expected_count(A,X,N),
+    performed_count(I,X,M),
+    M > N.
+
+#show perseveration/2.
+

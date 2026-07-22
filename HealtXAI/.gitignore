@@ -1,5 +1,8 @@
 *.gguf
 *.json
+.env
+.env.*
+!.env.example
 perseveration_db_snapshot.json
 tool_omission_db_snapshot.json
 utils/time_gap_functions/controlGapList/time_gap_activity_task_gap.json

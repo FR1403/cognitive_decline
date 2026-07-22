@@ -1,6 +1,6 @@
 % =================================================================================================
 % Paziente 38
-% Attivit√†: Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.
+% Attivit‡: Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.
 % =================================================================================================
 
 

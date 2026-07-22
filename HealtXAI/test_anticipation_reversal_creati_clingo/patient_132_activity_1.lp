@@ -43,15 +43,11 @@ expected_pos(sweep_the_kitchen_and_dust_the_living_room, participant_returns_bro
 expected_pos(sweep_the_kitchen_and_dust_the_living_room, participant_returns_duster_to_supply_closet, 9).
 expected_pos(sweep_the_kitchen_and_dust_the_living_room, participants_returns_dust_pan_and_brush_to_supply_closet, 10).
 
-depends_on(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_dining_room, participant_retrieves_duster_from_supply_closet).
-depends_on(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_living_room, participant_retrieves_duster_from_supply_closet).
-depends_on(sweep_the_kitchen_and_dust_the_living_room, participant_returns_broom_to_supply_closet, participant_sweeps_kitchen_floor).
-depends_on(sweep_the_kitchen_and_dust_the_living_room, participant_returns_duster_to_supply_closet, participant_dusts_dining_room).
-depends_on(sweep_the_kitchen_and_dust_the_living_room, participant_returns_duster_to_supply_closet, participant_dusts_living_room).
+depends_on(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_dining_room, participant_sweeps_kitchen_floor).
+depends_on(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_living_room, participant_sweeps_kitchen_floor).
 depends_on(sweep_the_kitchen_and_dust_the_living_room, participant_sweeps_kitchen_floor, participant_retrieves_broom_from_supply_closet).
+depends_on(sweep_the_kitchen_and_dust_the_living_room, participant_sweeps_kitchen_floor, participant_retrieves_duster_from_supply_closet).
 depends_on(sweep_the_kitchen_and_dust_the_living_room, participant_uses_dust_pan_and_brush, participant_retrieves_dust_pan_and_brush_from_closet).
-depends_on(sweep_the_kitchen_and_dust_the_living_room, participant_uses_dust_pan_and_brush, participant_sweeps_kitchen_floor).
-depends_on(sweep_the_kitchen_and_dust_the_living_room, participants_returns_dust_pan_and_brush_to_supply_closet, participant_uses_dust_pan_and_brush).
 
 
 % ===============================
@@ -76,19 +72,25 @@ performed(i_p132_a1, participant_returns_duster_to_supply_closet, 10).
 % ===========================
 
 
-reversal(I,X,Y) :-
+reversal_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,X,Tx),
     performed(I,Y,Ty),
     Ty < Tx.
 
-anticipation_omission(I,X,Y) :-
+reversal(I,Y) :-
+    reversal_detail(I,_,Y).
+
+anticipation_omission_detail(I,X,Y) :-
     instance(I,A),
     depends_on(A,Y,X),
     performed(I,Y,_),
     not performed(I,X,_).
 
-#show reversal/3.
-#show anticipation_omission/3.
+anticipation_omission(I,Y) :-
+    anticipation_omission_detail(I,_,Y).
+
+#show reversal/2.
+#show anticipation_omission/2.
 
