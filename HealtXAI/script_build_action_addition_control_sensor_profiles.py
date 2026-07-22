@@ -31,17 +31,19 @@ MAX_NEIGHBORS = 6
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 action_addition_dir = os.path.join(script_dir, "utils", "action_addition")
+json_base_dir = os.path.join(script_dir, "utils", "json", "action_addition")
 snapshot_path = os.path.join(
-    action_addition_dir,
+    json_base_dir,
     "action_addition_control_db_snapshot.json",
 )
 export_json_path = os.path.join(
-    action_addition_dir,
+    json_base_dir,
     "action_addition_control_sensor_profiles.json",
 )
 map_image_path = os.path.join(action_addition_dir, "sensorlayout.png")
 
 os.makedirs(action_addition_dir, exist_ok=True)
+os.makedirs(json_base_dir, exist_ok=True)
 
 
 query_sensor_catalog = """SELECT

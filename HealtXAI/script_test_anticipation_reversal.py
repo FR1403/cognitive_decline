@@ -37,7 +37,7 @@ output_dir = os.path.join(script_dir, "test_anticipation_reversal_creati_clingo"
 sequence_json_dir = os.path.join(
     script_dir,
     "utils",
-    "sequence_functions",
+    "json",
     "anticipation_reversal_json",
 )
 snapshot_path = os.path.join(
@@ -47,6 +47,7 @@ snapshot_path = os.path.join(
 summary_csv_path = os.path.join(script_dir, "anticipation_reversal_summary.csv")
 dependency_cache_path = os.path.join(sequence_json_dir, "activity_dependency_graph.json")
 os.makedirs(output_dir, exist_ok=True)
+os.makedirs(sequence_json_dir, exist_ok=True)
 
 
 def load_target_patient_ids() -> list[int]:

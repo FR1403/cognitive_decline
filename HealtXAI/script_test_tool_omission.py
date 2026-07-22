@@ -39,8 +39,8 @@ summary_csv_path = os.path.join(script_dir, "tool_omission_summary.csv")
 tool_omission_json_dir = os.path.join(
     script_dir,
     "utils",
-    "tools_functions",
-    "tool_omission_json",
+    "json",
+    "tool_omission",
 )
 snapshot_path = os.path.join(
     tool_omission_json_dir,

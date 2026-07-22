@@ -35,28 +35,23 @@ output_dir = os.path.join(script_dir, "test_perseveration_creati_clingo")
 perseveration_function_dir = os.path.join(
     script_dir,
     "utils",
-    "perseveration_functions",
-)
-perseveration_json_dir = os.path.join(
-    perseveration_function_dir,
-    "perseveration_json",
-)
-perseveration_time_gap_dir = os.path.join(
-    perseveration_function_dir,
-    "time_gap_functions",
+    "json",
+    "perseveration",
 )
 snapshot_path = os.path.join(
-    perseveration_json_dir,
+    perseveration_function_dir,
     "perseveration_db_snapshot.json",
 )
 time_gap_export_path = os.path.join(
-    perseveration_json_dir,
+    perseveration_function_dir,
     "controlGapList",
     "time_gap_activity_task_gap.json",
 )
 os.makedirs(output_dir, exist_ok=True)
-os.makedirs(perseveration_json_dir, exist_ok=True)
-os.makedirs(perseveration_time_gap_dir, exist_ok=True)
+os.makedirs(
+    os.path.join(perseveration_function_dir, "controlGapList"),
+    exist_ok=True,
+)
 
 
 def load_target_patient_ids() -> list[int]:

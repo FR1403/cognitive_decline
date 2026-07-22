@@ -29,13 +29,17 @@ DEFAULT_TEMPERATURE = 0.0
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 sequence_functions_dir = script_dir
-sequence_json_dir = os.path.join(sequence_functions_dir, "anticipation_reversal_json")
+json_base_dir = os.path.join(
+    Path(script_dir).resolve().parents[1],
+    "json",
+    "anticipation_reversal_json",
+)
 catalog_snapshot_path = os.path.join(
-    sequence_json_dir,
+    json_base_dir,
     "activity_dependency_catalog_snapshot.json",
 )
 dependency_graph_path = os.path.join(
-    sequence_json_dir,
+    json_base_dir,
     "activity_dependency_graph.json",
 )
 
