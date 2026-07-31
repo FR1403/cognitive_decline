@@ -32,9 +32,6 @@ Tutti gli script che si connettono al database PostgreSQL locale (`CASAS400`) ut
 - `HealtXAI/utils/util_functions.py` (utility generali e app Streamlit)
 - `HealtXAI/modulo_regressione/regression_algorithm.py` (algoritmi di regressione e ML)
 - `HealtXAI/correlazione_coppie_diagnosi_combinata.py` (analisi correlazione combinata)
-- `HealtXAI/correlazione_omissioni.py` (analisi correlazione omissioni)
-- `HealtXAI/correlazione_perseveration.py` (analisi correlazione perseverazione)
-- `HealtXAI/pearson_correlation_omission_con_normalizzazione.py` (correlazione di Pearson con normalizzazione)
 
 ```python
 db_params = {

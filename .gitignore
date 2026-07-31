@@ -26,3 +26,9 @@ HealtXAI/correlazione_coppie_diagnosi_combinata_vecchia_mappatura.py
 
 # Large JSON snapshot files
 *.json
+
+# Binary installer packages
+*.deb
+
+# Large GGUF model files
+*.gguf

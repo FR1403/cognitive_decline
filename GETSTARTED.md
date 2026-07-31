@@ -41,9 +41,6 @@ Per connettersi al proprio database locale PostgreSQL `CASAS400`, modificare la 
 - `HealtXAI/utils/util_functions.py`
 - `HealtXAI/modulo_regressione/regression_algorithm.py`
 - `HealtXAI/correlazione_coppie_diagnosi_combinata.py`
-- `HealtXAI/correlazione_omissioni.py`
-- `HealtXAI/correlazione_perseveration.py`
-- `HealtXAI/pearson_correlation_omission_con_normalizzazione.py`
 
 ```python
 db_params = {
