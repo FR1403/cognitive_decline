@@ -6,13 +6,48 @@ from llama_cpp import Llama
 import json
 import os
 
+def _is_wsl() -> bool:
+    """Rileva se siamo in esecuzione dentro WSL (1 o 2)."""
+    # Metodo 1: variabile d'ambiente (sempre presente in WSL2 recente)
+    if "WSL_DISTRO_NAME" in os.environ:
+        return True
+    # Metodo 2: controllo /proc/version (funziona anche senza la variabile)
+    try:
+        with open("/proc/version", "r") as f:
+            content = f.read().lower()
+            if "microsoft" in content or "wsl" in content:
+                return True
+    except Exception:
+        pass
+    return False
+
+
+def get_lm_studio_url(port: int = 1234, path: str = "/v1/chat/completions") -> str:
+    """Restituisce l'URL corretto per LM Studio, adattandosi automaticamente se eseguito in WSL."""
+    ip = "127.0.0.1"
+    if _is_wsl():
+        try:
+            # In WSL2 l'host Windows si trova all'IP del nameserver in resolv.conf
+            with open("/etc/resolv.conf", "r") as f:
+                for line in f:
+                    if line.startswith("nameserver"):
+                        ip = line.split()[1].strip()
+                        break
+            print(f"debug : WSL rilevato, uso IP Windows: {ip}")
+        except Exception:
+            ip = "127.0.0.1"
+    return f"http://{ip}:{port}{path}"
+
 
 db_params = {
-    #"host": "169.254.188.21",
-    "host" : "localhost",
+    "host": "localhost",
     "database": "CASAS400",
     "user": "postgres",
+<<<<<<< Updated upstream
     "password": "sandro",
+=======
+    "password": "la_tua_password",
+>>>>>>> Stashed changes
     "port": "5432"
 }
 

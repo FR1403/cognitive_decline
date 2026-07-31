@@ -1,0 +1,25 @@
+# Virtual environments
+venv/
+.venv/
+env/
+cognitiveDecline/
+
+# Python bytecode & cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# IDE and OS system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# File specificati da ignorare
+pearson_correlation.md
+relazione_progetto_regressione.md
+HealtXAI/modulo_regressione/gui_regression.py
+HealtXAI/correlazione_coppie_diagnosi_totale_anomalie.py
+HealtXAI/correlazione_coppie_diagnosi_combinata_vecchia_mappatura.py

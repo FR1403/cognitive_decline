@@ -1,30 +1,86 @@
-## How to run the project
+# Guida Rapida di Avvio (Quick Start)
 
-- Attiva il venv `cognitiveDecline`
+Consulta la guida di dettaglio in [README.md](file:///c:/Users/flavy/tirocinio/declino_cognitivo/README.md).
 
-```sh
-source cognitiveDecline/bin/activate
+---
+
+### 1. Creazione e Attivazione Ambiente Isolato (`venv`)
+
+- **Windows (PowerShell)**:
+  ```powershell
+  # 1. CREA l'ambiente virtuale venv (da eseguire solo la prima volta)
+  python -m venv venv
+
+  # 2. ATTIVA l'ambiente virtuale venv (da eseguire ogni volta prima di lavorare)
+  .\venv\Scripts\Activate.ps1
+
+  # 3. INSTALLA le dipendenze Python nel venv
+  pip install -r requirements.txt
+  ```
+
+- **Linux / WSL (Ubuntu/Debian)**:
+  ```bash
+  # 1. INSTALLA le dipendenze di sistema operativo
+  sudo apt update && sudo apt install -y python3-tk python3-venv clingo libpq-dev
+
+  # 2. CREA l'ambiente virtuale venv (da eseguire solo la prima volta)
+  python3 -m venv venv
+
+  # 3. ATTIVA l'ambiente virtuale venv (da eseguire ogni volta prima di lavorare)
+  source venv/bin/activate
+
+  # 4. INSTALLA le dipendenze Python nel venv
+  pip install -r requirements.txt
+  ```
+
+---
+
+### 2. Configurazione Password Database PostgreSQL
+
+Per connettersi al proprio database locale PostgreSQL `CASAS400`, modificare la password nel dizionario `db_params` nei file Python (es. `regression_algorithm.py` o `util_functions.py`):
+```python
+db_params = {
+    "host": "localhost",
+    "database": "CASAS400",
+    "user": "postgres",
+    "password": "LA_TUA_PASSWORD",
+    "port": "5432"
+}
 ```
 
-- Se vuoi disattivare il venv esegui
-```sh
-deactivate cognitiveDecline
+---
+
+### 3. Avvio Dashboard Clinica (Streamlit)
+```bash
+streamlit run HealtXAI/modulo_regressione/app_streamlit.py
 ```
 
-- Se vuoi runnare i singoli test clingo esegui
+---
 
-```sh
-clingo nome_file.lp
-```
+### 4. Esecuzione Test Clingo (ASP Anomaly Detection)
 
-- Se vuoi runnare tutti i test clingo esegui dalla cartella `HealtXAI`
+- **Singolo test file .lp**:
+  ```bash
+  clingo nome_file.lp
+  ```
 
-```sh
-python run_test_clingo.py nome_cartella
-```
+- **Tutti i test Clingo (dalla cartella `HealtXAI`)**:
+  ```bash
+  cd HealtXAI
+  python run_test_clingo.py test_omission_creati_clingo
+  ```
 
-- Se vuoi creare il db come immagine docker, esegui il segunte comando dalla root
+---
 
-```sh
+### 5. Database PostgreSQL (Docker Compose)
+Per avviare il container del database dalla radice del progetto:
+```bash
 docker compose up -d --build
+```
+
+---
+
+### 6. Disattivazione Ambiente Virtuale
+```bash
+deactivate
 ```
