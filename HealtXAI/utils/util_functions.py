@@ -2,7 +2,11 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 import subprocess
 # pyrefly: ignore [missing-import]
-from llama_cpp import Llama
+try:
+    from llama_cpp import Llama
+except ImportError:
+    Llama = None
+
 import json
 import os
 
@@ -43,11 +47,7 @@ db_params = {
     "host": "localhost",
     "database": "CASAS400",
     "user": "postgres",
-<<<<<<< Updated upstream
-    "password": "sandro",
-=======
     "password": "la_tua_password",
->>>>>>> Stashed changes
     "port": "5432"
 }
 
@@ -58,9 +58,12 @@ MODEL_PATH = "models/Mistral-7B-Instruct-v0.3-Q5_K_M.gguf"
 # MODEL_PATH = os.path.join(BASE_DIR, "models", "Mistral-7B-Instruct-v0.3-Q5_K_M.gguf")
 
 try:
-    #n_gpu_layers=-1 scarica il modello sulla GPU
-    llm = Llama(model_path=MODEL_PATH, n_ctx=2048, n_gpu_layers=-1, n_threads=4, verbose=False)
-    print("Mistral-7B caricato con successo")
+    if Llama is not None:
+        #n_gpu_layers=-1 scarica il modello sulla GPU
+        llm = Llama(model_path=MODEL_PATH, n_ctx=2048, n_gpu_layers=-1, n_threads=4, verbose=False)
+        print("Mistral-7B caricato con successo")
+    else:
+        llm = None
 except Exception as e:
     print(f"Impossibile caricare l'LLM sulla GPU {e}")
     llm = None

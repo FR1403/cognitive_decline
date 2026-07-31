@@ -37,7 +37,14 @@ Consulta la guida di dettaglio in [README.md](file:///c:/Users/flavy/tirocinio/d
 
 ### 2. Configurazione Password Database PostgreSQL
 
-Per connettersi al proprio database locale PostgreSQL `CASAS400`, modificare la password nel dizionario `db_params` nei file Python (es. `regression_algorithm.py` o `util_functions.py`):
+Per connettersi al proprio database locale PostgreSQL `CASAS400`, modificare la password nel dizionario `db_params` nei seguenti file Python:
+- `HealtXAI/utils/util_functions.py`
+- `HealtXAI/modulo_regressione/regression_algorithm.py`
+- `HealtXAI/correlazione_coppie_diagnosi_combinata.py`
+- `HealtXAI/correlazione_omissioni.py`
+- `HealtXAI/correlazione_perseveration.py`
+- `HealtXAI/pearson_correlation_omission_con_normalizzazione.py`
+
 ```python
 db_params = {
     "host": "localhost",
