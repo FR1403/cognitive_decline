@@ -192,11 +192,19 @@ def converto_in_etichetta(valore):
 DEFAULT_DATASET_PATH = os.path.join(os.path.dirname(__file__), "dataset_regressione.csv")
 
 @st.cache_data(show_spinner=False)
-@st.cache_data(show_spinner=False)
-def load_and_train_all_models(use_stratify: bool = True, dataset_path=None, selected_anomalies=None, pearson_target_vals=None):
+def load_and_train_all_models(use_stratify: bool = True, dataset_path=None, selected_anomalies=None, pearson_target_vals=None, selected_patient_ids=None):
     if dataset_path is None:
         dataset_path = DEFAULT_DATASET_PATH if os.path.exists(DEFAULT_DATASET_PATH) else "dataset_regressione.csv"
     df = pd.read_csv(dataset_path)
+    
+    # Filtro sui pazienti di confronto selezionati dall'interfaccia (Gruppi clinici e/o ID specifici)
+    if pearson_target_vals is not None and len(pearson_target_vals) > 0:
+        df = df[df['Target_StatoCognitivo'].isin(pearson_target_vals)]
+    if selected_patient_ids is not None and len(selected_patient_ids) > 0:
+        df = df[df['patient_id'].isin(selected_patient_ids)]
+    if len(df) == 0:
+        df = pd.read_csv(dataset_path)
+
     patient_ids = df['patient_id']
     X = df.drop(columns=['patient_id', 'Target_StatoCognitivo'])
     
@@ -224,10 +232,20 @@ def load_and_train_all_models(use_stratify: bool = True, dataset_path=None, sele
             X = X[cols_to_keep]
             
     y = df['Target_StatoCognitivo']
-    strat_arg = y if use_stratify else None
+    
+    # Gestione sicura della stratificazione e dimensione test_size
+    strat_arg = None
+    if use_stratify and len(df) > 0:
+        counts = y.value_counts()
+        if (counts >= 2).all() and len(counts) > 1:
+            strat_arg = y
+
+    test_sz = 0.2
+    if len(df) < 5 and len(df) >= 2:
+        test_sz = 1
 
     X_train, X_test, y_train, y_test, ids_train, ids_test = train_test_split(
-        X, y, patient_ids, test_size=0.2, random_state=42, stratify=strat_arg
+        X, y, patient_ids, test_size=test_sz, random_state=42, stratify=strat_arg
     )
 
     scaler = StandardScaler()
@@ -318,10 +336,19 @@ def load_and_train_all_models(use_stratify: bool = True, dataset_path=None, sele
     return summary_df, trained_details, feature_importances, df, ids_test.values
 
 @st.cache_data(show_spinner=False)
-def load_and_eval_kfold(k_splits: int = 192, dataset_path=None, selected_anomalies=None, pearson_target_vals=None):
+def load_and_eval_kfold(k_splits: int = 192, dataset_path=None, selected_anomalies=None, pearson_target_vals=None, selected_patient_ids=None):
     if dataset_path is None:
         dataset_path = DEFAULT_DATASET_PATH if os.path.exists(DEFAULT_DATASET_PATH) else "dataset_regressione.csv"
     df = pd.read_csv(dataset_path)
+
+    # Filtro sui pazienti di confronto selezionati dall'interfaccia (Gruppi clinici e/o ID specifici)
+    if pearson_target_vals is not None and len(pearson_target_vals) > 0:
+        df = df[df['Target_StatoCognitivo'].isin(pearson_target_vals)]
+    if selected_patient_ids is not None and len(selected_patient_ids) > 0:
+        df = df[df['patient_id'].isin(selected_patient_ids)]
+    if len(df) == 0:
+        df = pd.read_csv(dataset_path)
+
     patient_ids = df['patient_id']
     X = df.drop(columns=['patient_id', 'Target_StatoCognitivo'])
 
@@ -354,7 +381,12 @@ def load_and_eval_kfold(k_splits: int = 192, dataset_path=None, selected_anomali
     if k_splits >= n_samples or k_splits == 192:
         cv_splitter = LeaveOneOut()
     else:
-        cv_splitter = StratifiedKFold(n_splits=k_splits, shuffle=True, random_state=42)
+        y_str = y.astype(str)
+        counts = y_str.value_counts()
+        if (counts >= k_splits).all() and len(counts) > 1:
+            cv_splitter = StratifiedKFold(n_splits=k_splits, shuffle=True, random_state=42)
+        else:
+            cv_splitter = KFold(n_splits=min(k_splits, n_samples), shuffle=True, random_state=42)
 
     models = {
         "K-Neighbors Regressor (KNN)": KNeighborsRegressor(n_neighbors=5),
@@ -448,10 +480,19 @@ st.sidebar.markdown("<h2 style='color:#f8fafc; margin-bottom: 0px;'>💡 HealtXA
 st.sidebar.markdown("<p style='color:#94a3b8; font-size: 0.9rem; margin-top: 0px;'>Progetto Tirocinio Declino Cognitivo</p>", unsafe_allow_html=True)
 st.sidebar.markdown("---")
 
-# 1. FILTRO GRUPPI CLINICI PER PEARSON (IN ALTO)
-st.sidebar.markdown("<p style='color:#cbd5e1; font-weight:600; margin-bottom: 8px;'>🔗 Pearson (r) - Filtro Gruppi Clinici</p>", unsafe_allow_html=True)
+# CARICAMENTO ANTEPRIMA LISTA PAZIENTI
+_df_preview_path = DEFAULT_DATASET_PATH if os.path.exists(DEFAULT_DATASET_PATH) else os.path.join(os.path.dirname(__file__), "dataset_regressione.csv")
+all_available_patient_ids = []
+if os.path.exists(_df_preview_path):
+    try:
+        all_available_patient_ids = sorted(list(pd.read_csv(_df_preview_path)['patient_id'].unique()))
+    except Exception:
+        all_available_patient_ids = []
+
+# 1. FILTRO PAZIENTI E GRUPPI DI CONFRONTO TARGET ALGORITMO
+st.sidebar.markdown("<p style='color:#cbd5e1; font-weight:600; margin-bottom: 8px;'>👥 Filtro Pazienti di Confronto & Target Modello</p>", unsafe_allow_html=True)
 pearson_preset = st.sidebar.selectbox(
-    "Seleziona Gruppi Pazienti per Pearson:",
+    "Seleziona Gruppi Pazienti per l'Algoritmo:",
     options=["Tutti (Sani + MCI + Demenza)", "Sani vs MCI", "Sani vs Demenza", "MCI vs Demenza", "Personalizzato"],
     index=0
 )
@@ -475,6 +516,13 @@ else:
     if "MCI (0.3)" in selected_cats: t_vals.append(0.3)
     if "Demenza (1.0)" in selected_cats: t_vals.append(1.0)
     pearson_target_vals = tuple(t_vals) if len(t_vals) > 0 else (0.0, 0.3, 1.0)
+
+selected_patients = st.sidebar.multiselect(
+    "Filtra per ID Paziente specifico:",
+    options=all_available_patient_ids, default=[],
+    placeholder="Tutti i Pazienti (Seleziona per filtrare...)"
+)
+selected_patient_ids_tuple = tuple(selected_patients) if len(selected_patients) > 0 else None
 
 st.sidebar.markdown("---")
 
@@ -565,20 +613,9 @@ if st.session_state.get('show_sync_success', False):
     st.session_state['show_sync_success'] = False
 
 summary_df, trained_details, feature_importances, full_df, test_patient_ids = load_and_train_all_models(
-    use_stratify=use_stratification, selected_anomalies=tuple(selected_anomalies), pearson_target_vals=pearson_target_vals
+    use_stratify=use_stratification, selected_anomalies=tuple(selected_anomalies), pearson_target_vals=pearson_target_vals, selected_patient_ids=selected_patient_ids_tuple
 )
 sorted_test_patient_ids = sorted(list(test_patient_ids))
-
-# 2. FILTRO MULTI-SELEZIONE PAZIENTI PER ID (IN BASSO)
-st.sidebar.markdown("---")
-st.sidebar.markdown("<p style='color:#cbd5e1; font-weight:600; margin-bottom: 8px;'>👥 Filtro Pazienti (Multi-Selezione ID)</p>", unsafe_allow_html=True)
-
-selected_patients = st.sidebar.multiselect(
-    "Filtra la dashboard per ID Paziente:",
-    options=sorted_test_patient_ids, default=[],
-    placeholder="Tutti i Pazienti (Seleziona per filtrare...)"
-)
-
 effective_patients = selected_patients if len(selected_patients) > 0 else sorted_test_patient_ids
 
 # HEADER & NAVBAR UNIFICATO E COMPATTO
@@ -950,7 +987,7 @@ if "kfold_executed_k" in st.session_state:
     active_k = st.session_state["kfold_executed_k"]
     with st.spinner(f"Compilazione K-Fold ({active_k} cicli) in corso..."):
         summary_kfold_df, trained_kfold_details = load_and_eval_kfold(
-            k_splits=active_k, selected_anomalies=tuple(selected_anomalies), pearson_target_vals=pearson_target_vals
+            k_splits=active_k, selected_anomalies=tuple(selected_anomalies), pearson_target_vals=pearson_target_vals, selected_patient_ids=selected_patient_ids_tuple
         )
 
     st.success(f"Protocollo di validazione (K={active_k}) concluso e verificato.")
