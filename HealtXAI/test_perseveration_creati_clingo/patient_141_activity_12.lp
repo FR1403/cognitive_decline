@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 141
-% Attività: Sort and fold a basketful of clothing containing men's, women's and children's articles.
+% Attivita: Place a phone call to a recording and write down the recipe heard.
 % ======================================================================
 
 
@@ -8,52 +8,51 @@
 % Level A - Activity model
 % ========================
 
-activity(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
+activity(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard).
 
-action(participant_moves_to_the_hallway_closet).
-action(participant_locates_the_laundry_basket).
-action(participant_moves_to_the_couch).
-action(participant_sortsfolds_the_laundry).
+action(participant_moves_to_the_dining_room_table).
+action(participant_sits_at_dining_room_table).
+action(participant_locates_the_phone_book).
+action(participant_locates_the_phone_number_for_safeway_food_and_drugs).
+action(participant_dials_the_number_and_listens_to_the_recording).
+action(participant_records_the_recipe).
+action(participant_hangs_up_the_phone).
 
-action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 7).
-action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 10).
-action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 7).
-action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 5).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 7).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 8).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 10).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 10).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 5).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 5).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 12).
 
-expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 1).
-expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 1).
-expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 1).
-expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 1).
 
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 240000).
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 18000).
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 240000).
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 240000).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 2133).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 5983).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 10).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 10).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 10).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 10).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 10).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p141_a13, sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
+instance(i_p141_a12, place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p141_a13, participant_moves_to_the_hallway_closet, 1, 55988039).
-raw_performed(i_p141_a13, participant_moves_to_the_hallway_closet, 2, 55989025).
-raw_performed(i_p141_a13, participant_locates_the_laundry_basket, 3, 55990007).
-raw_performed(i_p141_a13, participant_locates_the_laundry_basket, 4, 55995039).
-raw_performed(i_p141_a13, participant_locates_the_laundry_basket, 5, 55997008).
-raw_performed(i_p141_a13, participant_moves_to_the_couch, 6, 56002060).
-raw_performed(i_p141_a13, participant_moves_to_the_couch, 7, 56003065).
-raw_performed(i_p141_a13, participant_sortsfolds_the_laundry, 8, 56008086).
-raw_performed(i_p141_a13, participant_sortsfolds_the_laundry, 9, 56149016).
-raw_performed(i_p141_a13, participant_sortsfolds_the_laundry, 10, 56171015).
-raw_performed(i_p141_a13, participant_sortsfolds_the_laundry, 11, 56181026).
-raw_performed(i_p141_a13, participant_sortsfolds_the_laundry, 12, 56192084).
-raw_performed(i_p141_a13, participant_sortsfolds_the_laundry, 13, 56264081).
-raw_performed(i_p141_a13, participant_sortsfolds_the_laundry, 14, 56266068).
-raw_performed(i_p141_a13, participant_sortsfolds_the_laundry, 15, 56268075).
+raw_performed(i_p141_a12, participant_moves_to_the_dining_room_table, 1, 55575090).
+raw_performed(i_p141_a12, participant_sits_at_dining_room_table, 2, 55580072).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

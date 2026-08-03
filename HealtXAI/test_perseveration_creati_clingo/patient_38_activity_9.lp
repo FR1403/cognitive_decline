@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 38
-% Attività: Sort and file a small collection of billing statements.
+% Attivita: Check the wattage of a desk lamp and replace the bulb.
 % ======================================================================
 
 
@@ -8,46 +8,59 @@
 % Level A - Activity model
 % ========================
 
-activity(sort_and_file_a_small_collection_of_billing_statements).
+activity(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
 
-action(participant_moves_to_the_living_room).
-action(participant_gathers_statements_from_bookshelf).
-action(participant_moves_to_the_dining_room_table).
-action(participant_sits_down_at_the_dining_room_table).
-action(participant_sorts_pile_of_statements_into_the_organizer).
+action(participant_checks_wattage).
+action(participant_moves_to_the_kitchen).
+action(participant_retrieves_light_bulbs_from_cabinet_b).
+action(participant_moves_to_the_dining_room).
+action(participant_removes_old_light_bulb).
+action(participant_throws_away_old_light_bulb).
+action(participant_replaces_the_bulb).
 
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 7).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 5).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 7).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 8).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 5).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 6).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 7).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 1).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 7).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 5).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 12).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 5).
 
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 1).
 
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 240000).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 109234).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 160819).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 103499).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 119069).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 62259).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 13572).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 216342).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p38_a10, sort_and_file_a_small_collection_of_billing_statements).
+instance(i_p38_a9, check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p38_a10, participant_moves_to_the_kitchen, 1, 40101714).
-raw_performed(i_p38_a10, participant_turns_on_water, 2, 40103204).
-raw_performed(i_p38_a10, participant_washes_hands, 3, 40129476).
-raw_performed(i_p38_a10, participant_washes_hands, 4, 40139785).
-raw_performed(i_p38_a10, participant_dries_hands, 5, 40142094).
+raw_performed(i_p38_a9, participant_removes_old_light_bulb, 1, 39962506).
+raw_performed(i_p38_a9, participant_moves_to_the_kitchen, 2, 39964136).
+raw_performed(i_p38_a9, participant_moves_to_the_kitchen, 3, 39983632).
+raw_performed(i_p38_a9, participant_retrieves_light_bulbs_from_cabinet_b, 4, 39983796).
+raw_performed(i_p38_a9, participant_retrieves_light_bulbs_from_cabinet_b, 5, 39988067).
+raw_performed(i_p38_a9, participant_retrieves_light_bulbs_from_cabinet_b, 6, 40004427).
+raw_performed(i_p38_a9, participant_moves_to_the_dining_room, 7, 40004967).
+raw_performed(i_p38_a9, participant_replaces_the_bulb, 8, 40021495).
+raw_performed(i_p38_a9, participant_throws_away_old_light_bulb, 9, 40022897).
+raw_performed(i_p38_a9, participant_replaces_the_bulb, 10, 40022897).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

@@ -1,6 +1,6 @@
 % =================================================================================================
 % Paziente 38
-% Attivit√†: Setup hands for a card game, answer the phone and describe the rules of the game.
+% Attivit‡: Setup hands for a card game, answer the phone and describe the rules of the game.
 % =================================================================================================
 
 

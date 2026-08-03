@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 263
-% Attività: Obtain a watering can and water all plants in the living space.
+% Attivita: Obtain a watering can and water all plants in the living space.
 % ======================================================================
 
 
@@ -31,35 +31,34 @@ expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, p
 expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 1).
 expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 1).
 
-action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 18000).
-action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 240000).
-action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 240000).
-action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 240000).
-action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 240000).
-action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 18000).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 633987).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 40960).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 38159).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 96987).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 19134).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 25812).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p263_a6, obtain_a_watering_can_and_water_all_plants_in_the_living_space).
+instance(i_p263_a5, obtain_a_watering_can_and_water_all_plants_in_the_living_space).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p263_a6, participant_answers_the_phone, 1, 36426077).
-raw_performed(i_p263_a6, participant_walks_around_during_phone_call, 2, 36426079).
-raw_performed(i_p263_a6, participant_walks_around_during_phone_call, 3, 36427062).
-raw_performed(i_p263_a6, participant_walks_around_during_phone_call, 4, 36429009).
-raw_performed(i_p263_a6, participant_walks_around_during_phone_call, 5, 36431086).
-raw_performed(i_p263_a6, participant_walks_around_during_phone_call, 6, 36458006).
-raw_performed(i_p263_a6, participant_walks_around_during_phone_call, 7, 36459026).
-raw_performed(i_p263_a6, participant_stands_in_one_place, 8, 36472090).
-raw_performed(i_p263_a6, participant_stands_in_one_place, 9, 36511002).
-raw_performed(i_p263_a6, participant_stands_in_one_place, 10, 36517033).
-raw_performed(i_p263_a6, participant_stands_in_one_place, 11, 36525085).
-raw_performed(i_p263_a6, participant_stands_in_one_place, 12, 36533060).
-raw_performed(i_p263_a6, participant_hangs_up_the_phone, 13, 36537092).
+raw_performed(i_p263_a5, participant_retrieves_watering_can_from_supply_closet, 1, 36235055).
+raw_performed(i_p263_a5, participant_fills_watering_can, 2, 36242042).
+raw_performed(i_p263_a5, participant_fills_watering_can, 3, 36244070).
+raw_performed(i_p263_a5, participant_fills_watering_can, 4, 36250011).
+raw_performed(i_p263_a5, participant_fills_watering_can, 5, 36250073).
+raw_performed(i_p263_a5, participant_waters_plants_windowsill, 6, 36252024).
+raw_performed(i_p263_a5, participant_waters_plants_coffee_table, 7, 36268055).
+raw_performed(i_p263_a5, participant_waters_plants_coffee_table, 8, 36271068).
+raw_performed(i_p263_a5, participant_waters_plants_coffee_table, 9, 36279015).
+raw_performed(i_p263_a5, participant_empties_extra_water_into_sink, 10, 36283093).
+raw_performed(i_p263_a5, participant_empties_extra_water_into_sink, 11, 36286023).
+raw_performed(i_p263_a5, participant_returns_watering_can_to_supply_closet, 12, 36287027).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

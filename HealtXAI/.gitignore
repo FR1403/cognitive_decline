@@ -1,0 +1,12 @@
+*.gguf
+*.json
+.env
+.env.*
+!.env.example
+perseveration_db_snapshot.json
+tool_omission_db_snapshot.json
+utils/time_gap_functions/controlGapList/time_gap_activity_task_gap.json
+utils/tools_functions/tool_omission_task_objects.json
+test_tool_omission_creati_clingo/
+__pycache__/
+*.pyc

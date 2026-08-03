@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 212
-% Attività: Sort and fold a basketful of clothing containing men's, women's and children's articles.
+% Attivita: Pick a complete outfit for an interview from a selection of clothing.
 % ======================================================================
 
 
@@ -8,35 +8,38 @@
 % Level A - Activity model
 % ========================
 
-activity(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
+activity(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
 
-action(participant_moves_to_the_hallway_closet).
-action(participant_locates_the_laundry_basket).
-action(participant_moves_to_the_couch).
-action(participant_sortsfolds_the_laundry).
+action(participant_moves_to_hallway_closet).
+action(participant_chooses_correct_outfit_from_closet).
+action(participant_lays_out_clothes_on_living_room_couch).
 
-action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 7).
-action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 10).
-action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 7).
-action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 5).
+action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 7).
+action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 5).
+action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 5).
 
-expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 1).
-expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 1).
-expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 1).
-expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 1).
+expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 1).
+expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 1).
+expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 1).
 
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 240000).
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 18000).
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 240000).
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 240000).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 133523).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 122151).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 216006).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p212_a9, sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
+instance(i_p212_a8, pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
 
+% raw_performed(Instance, Action, Order, TimeMs)
+
+raw_performed(i_p212_a8, participant_moves_to_hallway_closet, 1, 49011627).
+raw_performed(i_p212_a8, participant_moves_to_hallway_closet, 2, 49012429).
+raw_performed(i_p212_a8, participant_chooses_correct_outfit_from_closet, 3, 49015382).
+raw_performed(i_p212_a8, participant_chooses_correct_outfit_from_closet, 4, 49053319).
+raw_performed(i_p212_a8, participant_chooses_correct_outfit_from_closet, 5, 49053345).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

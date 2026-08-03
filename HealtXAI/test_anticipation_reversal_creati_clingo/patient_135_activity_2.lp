@@ -23,7 +23,11 @@ expected_pos(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_p
 expected_pos(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_fills_dispenser_with_medication, 3).
 
 depends_on(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_fills_dispenser_with_medication, participant_reads_instructions).
+<<<<<<< HEAD
 depends_on(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_fills_dispenser_with_medication, participant_retrieves_materials_from_cupboard_a).
+=======
+depends_on(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_reads_instructions, participant_retrieves_materials_from_cupboard_a).
+>>>>>>> gap-objects-functions
 
 
 % ===============================

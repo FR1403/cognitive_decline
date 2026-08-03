@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 242
-% Attività: Wash hands with soap at the kitchen sink.
+% Attivita: Wash hands with soap at the kitchen sink.
 % ======================================================================
 
 
@@ -28,19 +28,27 @@ expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_s
 expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 1).
 expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 1).
 
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 240000).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 3254).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 29127).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 32474).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 53356).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 54769).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p242_a11, wash_hands_with_soap_at_the_kitchen_sink).
+instance(i_p242_a10, wash_hands_with_soap_at_the_kitchen_sink).
 
+% raw_performed(Instance, Action, Order, TimeMs)
+
+raw_performed(i_p242_a10, participant_moves_to_the_kitchen, 1, 54839789).
+raw_performed(i_p242_a10, participant_turns_on_water, 2, 54841216).
+raw_performed(i_p242_a10, participant_turns_on_water, 3, 54853747).
+raw_performed(i_p242_a10, participant_washes_hands, 4, 54896277).
+raw_performed(i_p242_a10, participant_washes_hands, 5, 54898751).
+raw_performed(i_p242_a10, participant_dries_hands, 6, 54915321).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

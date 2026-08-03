@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 241
-% Attività: Pick a complete outfit for an interview from a selection of clothing.
+% Attivita: Answer the phone and respond to questions pertaining to the video from task 4.
 % ======================================================================
 
 
@@ -8,44 +8,49 @@
 % Level A - Activity model
 % ========================
 
-activity(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
+activity(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4).
 
-action(participant_moves_to_hallway_closet).
-action(participant_chooses_correct_outfit_from_closet).
-action(participant_lays_out_clothes_on_living_room_couch).
+action(participant_answers_the_phone).
+action(participant_answers_questions_over_the_phone).
+action(participant_sits_down_during_conversation).
+action(participant_stands_in_one_place).
+action(participant_walks_around_during_phone_call).
+action(participant_hangs_up_the_phone).
 
-action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 7).
-action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 5).
-action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 5).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 11).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 11).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 8).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 7).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 7).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 12).
 
-expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 1).
-expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 1).
-expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 1).
 
-action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 240000).
-action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 240000).
-action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 240000).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 10).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 10).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 256050).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 211149).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 255139).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 3342).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p241_a7, pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
+instance(i_p241_a6, answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p241_a7, participant_retrieves_pitcher_of_water_from_refrigerator, 1, 36446211).
-raw_performed(i_p241_a7, participant_retrieves_pitcher_of_water_from_refrigerator, 2, 36446635).
-raw_performed(i_p241_a7, participant_retrieves_pitcher_of_water_from_refrigerator, 3, 36449132).
-raw_performed(i_p241_a7, participant_retrieves_pitcher_of_water_from_refrigerator, 4, 36449213).
-raw_performed(i_p241_a7, participant_retrieves_pitcher_of_water_from_refrigerator, 5, 36450308).
-raw_performed(i_p241_a7, participant_pours_glass_of_water, 6, 36456513).
-raw_performed(i_p241_a7, participant_returns_pitcher_of_water, 7, 36457785).
-raw_performed(i_p241_a7, participant_returns_pitcher_of_water, 8, 36458268).
-raw_performed(i_p241_a7, participant_returns_pitcher_of_water, 9, 36459957).
-raw_performed(i_p241_a7, participant_returns_pitcher_of_water, 10, 36460443).
-raw_performed(i_p241_a7, participant_returns_pitcher_of_water, 11, 36460817).
+raw_performed(i_p241_a6, participant_answers_the_phone, 1, 36079514).
+raw_performed(i_p241_a6, participant_stands_in_one_place, 2, 36083405).
+raw_performed(i_p241_a6, participant_stands_in_one_place, 3, 36215513).
+raw_performed(i_p241_a6, participant_hangs_up_the_phone, 4, 36218621).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

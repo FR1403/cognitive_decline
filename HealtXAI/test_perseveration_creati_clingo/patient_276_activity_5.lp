@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 276
-% Attività: Wash hands with soap at the kitchen sink.
+% Attivita: Obtain a watering can and water all plants in the living space.
 % ======================================================================
 
 
@@ -8,39 +8,52 @@
 % Level A - Activity model
 % ========================
 
-activity(wash_hands_with_soap_at_the_kitchen_sink).
+activity(obtain_a_watering_can_and_water_all_plants_in_the_living_space).
 
-action(participant_moves_to_the_kitchen).
-action(participant_turns_on_water).
-action(participant_uses_hand_soap).
-action(participant_washes_hands).
-action(participant_dries_hands).
+action(participant_retrieves_watering_can_from_supply_closet).
+action(participant_fills_watering_can).
+action(participant_waters_plants_windowsill).
+action(participant_waters_plants_coffee_table).
+action(participant_empties_extra_water_into_sink).
+action(participant_returns_watering_can_to_supply_closet).
 
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 7).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 5).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 5).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 5).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 1).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 12).
 
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 1).
 
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 240000).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 633987).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 40960).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 38159).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 96987).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 19134).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 25812).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p276_a6, wash_hands_with_soap_at_the_kitchen_sink).
+instance(i_p276_a5, obtain_a_watering_can_and_water_all_plants_in_the_living_space).
 
+% raw_performed(Instance, Action, Order, TimeMs)
+
+raw_performed(i_p276_a5, participant_retrieves_watering_can_from_supply_closet, 1, 49630033).
+raw_performed(i_p276_a5, participant_fills_watering_can, 2, 49665037).
+raw_performed(i_p276_a5, participant_fills_watering_can, 3, 49669017).
+raw_performed(i_p276_a5, participant_waters_plants_windowsill, 4, 49690037).
+raw_performed(i_p276_a5, participant_empties_extra_water_into_sink, 5, 49745014).
+raw_performed(i_p276_a5, participant_empties_extra_water_into_sink, 6, 49759057).
+raw_performed(i_p276_a5, participant_returns_watering_can_to_supply_closet, 7, 49760019).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

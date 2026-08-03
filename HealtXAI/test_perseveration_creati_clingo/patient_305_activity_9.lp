@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 305
-% Attività: Check the wattage of a desk lamp and replace the bulb.
+% Attivita: Check the wattage of a desk lamp and replace the bulb.
 % ======================================================================
 
 
@@ -34,24 +34,37 @@ expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participan
 expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 1).
 expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 1).
 
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 18000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 18000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 240000).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 109234).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 160819).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 103499).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 119069).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 62259).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 13572).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 216342).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p305_a10, check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
+instance(i_p305_a9, check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p305_a10, participant_moves_to_the_kitchen, 1, 37979297).
+raw_performed(i_p305_a9, participant_moves_to_the_kitchen, 1, 37779637).
+raw_performed(i_p305_a9, participant_retrieves_light_bulbs_from_cabinet_b, 2, 37780438).
+raw_performed(i_p305_a9, participant_retrieves_light_bulbs_from_cabinet_b, 3, 37795001).
+raw_performed(i_p305_a9, participant_moves_to_the_dining_room, 4, 37795201).
+raw_performed(i_p305_a9, participant_removes_old_light_bulb, 5, 37798566).
+raw_performed(i_p305_a9, participant_throws_away_old_light_bulb, 6, 37814949).
+raw_performed(i_p305_a9, participant_moves_to_the_kitchen, 7, 37814990).
+raw_performed(i_p305_a9, participant_retrieves_light_bulbs_from_cabinet_b, 8, 37815240).
+raw_performed(i_p305_a9, participant_retrieves_light_bulbs_from_cabinet_b, 9, 37820347).
+raw_performed(i_p305_a9, participant_retrieves_light_bulbs_from_cabinet_b, 10, 37826109).
+raw_performed(i_p305_a9, participant_moves_to_the_dining_room, 11, 37826327).
+raw_performed(i_p305_a9, participant_replaces_the_bulb, 12, 37828188).
+raw_performed(i_p305_a9, participant_replaces_the_bulb, 13, 37842983).
+raw_performed(i_p305_a9, participant_replaces_the_bulb, 14, 37849053).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

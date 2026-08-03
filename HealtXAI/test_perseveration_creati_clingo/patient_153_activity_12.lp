@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 153
-% Attività: Sort and file a small collection of billing statements.
+% Attivita: Place a phone call to a recording and write down the recipe heard.
 % ======================================================================
 
 
@@ -8,57 +8,51 @@
 % Level A - Activity model
 % ========================
 
-activity(sort_and_file_a_small_collection_of_billing_statements).
+activity(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard).
 
-action(participant_moves_to_the_living_room).
-action(participant_gathers_statements_from_bookshelf).
 action(participant_moves_to_the_dining_room_table).
-action(participant_sits_down_at_the_dining_room_table).
-action(participant_sorts_pile_of_statements_into_the_organizer).
+action(participant_sits_at_dining_room_table).
+action(participant_locates_the_phone_book).
+action(participant_locates_the_phone_number_for_safeway_food_and_drugs).
+action(participant_dials_the_number_and_listens_to_the_recording).
+action(participant_records_the_recipe).
+action(participant_hangs_up_the_phone).
 
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 7).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 5).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 7).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 8).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 5).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 7).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 8).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 10).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 10).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 5).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 5).
+action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 12).
 
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 1).
+expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 1).
 
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 240000).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 2133).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 5983).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 10).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 10).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 10).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 10).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 10).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p153_a13, sort_and_file_a_small_collection_of_billing_statements).
+instance(i_p153_a12, place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p153_a13, participant_moves_to_the_hallway_closet, 1, 40697757).
-raw_performed(i_p153_a13, participant_locates_the_laundry_basket, 2, 40704994).
-raw_performed(i_p153_a13, participant_moves_to_the_couch, 3, 40706254).
-raw_performed(i_p153_a13, participant_sortsfolds_the_laundry, 4, 40708967).
-raw_performed(i_p153_a13, participant_sortsfolds_the_laundry, 5, 40716084).
-raw_performed(i_p153_a13, participant_sortsfolds_the_laundry, 6, 40727431).
-raw_performed(i_p153_a13, participant_sortsfolds_the_laundry, 7, 40775156).
-raw_performed(i_p153_a13, participant_sortsfolds_the_laundry, 8, 40791515).
-raw_performed(i_p153_a13, participant_sortsfolds_the_laundry, 9, 40852821).
-raw_performed(i_p153_a13, participant_sortsfolds_the_laundry, 10, 40876421).
-raw_performed(i_p153_a13, participant_sortsfolds_the_laundry, 11, 40884052).
-raw_performed(i_p153_a13, participant_sortsfolds_the_laundry, 12, 40902975).
-raw_performed(i_p153_a13, participant_moves_to_the_hallway_closet, 13, 40922438).
-raw_performed(i_p153_a13, participant_sortsfolds_the_laundry, 14, 40922490).
-raw_performed(i_p153_a13, participant_moves_to_the_hallway_closet, 15, 40928354).
-raw_performed(i_p153_a13, participant_sortsfolds_the_laundry, 16, 40931271).
+raw_performed(i_p153_a12, participant_moves_to_the_dining_room_table, 1, 39975013).
+raw_performed(i_p153_a12, participant_sits_at_dining_room_table, 2, 39989579).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

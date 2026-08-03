@@ -1,6 +1,6 @@
 % =================================================================================================
 % Paziente 38
-% Attivit√†: Sort and file a small collection of billing statements.
+% Attivit‡: Sort and file a small collection of billing statements.
 % =================================================================================================
 
 

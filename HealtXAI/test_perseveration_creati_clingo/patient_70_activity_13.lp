@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 70
-% Attività: Sort and fold a basketful of clothing containing men's, women's and children's articles.
+% Attivita: Sort and fold a basketful of clothing containing men's, women's and children's articles.
 % ======================================================================
 
 
@@ -25,28 +25,35 @@ expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_
 expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 1).
 expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 1).
 
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 240000).
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 18000).
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 240000).
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 240000).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 284602).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 260783).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 302470).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 253947).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p70_a14, sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
+instance(i_p70_a13, sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p70_a14, participant_moves_to_the_kitchen, 1, 52545507).
-raw_performed(i_p70_a14, participant_removes_materials_from_cupboard, 2, 52552856).
-raw_performed(i_p70_a14, participant_removes_materials_from_cupboard, 3, 52555600).
-raw_performed(i_p70_a14, participant_fills_pot_with_water, 4, 52567908).
-raw_performed(i_p70_a14, participant_fills_pot_with_water, 5, 52570405).
-raw_performed(i_p70_a14, participant_fills_pot_with_water, 6, 52572883).
-raw_performed(i_p70_a14, participant_puts_oatmeal_into_pot, 7, 52636951).
-raw_performed(i_p70_a14, participant_puts_sugar_in_oatmeal, 8, 52729410).
+raw_performed(i_p70_a13, participant_moves_to_the_hallway_closet, 1, 52331394).
+raw_performed(i_p70_a13, participant_moves_to_the_hallway_closet, 2, 52332012).
+raw_performed(i_p70_a13, participant_locates_the_laundry_basket, 3, 52332779).
+raw_performed(i_p70_a13, participant_locates_the_laundry_basket, 4, 52337166).
+raw_performed(i_p70_a13, participant_locates_the_laundry_basket, 5, 52338230).
+raw_performed(i_p70_a13, participant_moves_to_the_couch, 6, 52339006).
+raw_performed(i_p70_a13, participant_sortsfolds_the_laundry, 7, 52340533).
+raw_performed(i_p70_a13, participant_sortsfolds_the_laundry, 8, 52395463).
+raw_performed(i_p70_a13, participant_sortsfolds_the_laundry, 9, 52411496).
+raw_performed(i_p70_a13, participant_sortsfolds_the_laundry, 10, 52430755).
+raw_performed(i_p70_a13, participant_sortsfolds_the_laundry, 11, 52435142).
+raw_performed(i_p70_a13, participant_sortsfolds_the_laundry, 12, 52441558).
+raw_performed(i_p70_a13, participant_sortsfolds_the_laundry, 13, 52452577).
+raw_performed(i_p70_a13, participant_sortsfolds_the_laundry, 14, 52471086).
+raw_performed(i_p70_a13, participant_sortsfolds_the_laundry, 15, 52492060).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

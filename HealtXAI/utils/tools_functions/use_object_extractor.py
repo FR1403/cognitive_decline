@@ -10,10 +10,16 @@ import urllib.request
 from pathlib import Path
 from typing import Callable, Optional
 
+<<<<<<< HEAD
 from utils.util_functions import get_lm_studio_url
 
 DEFAULT_LM_STUDIO_URL = get_lm_studio_url()
 DEFAULT_MODEL = "mistralai/mistral-7b-instruct-v0.3"
+=======
+
+DEFAULT_LM_STUDIO_URL = "http://127.0.0.1:1234/v1/chat/completions"
+DEFAULT_MODEL = "mistral-7b-instruct-v0.3"
+>>>>>>> gap-objects-functions
 DEFAULT_TIMEOUT_SECONDS = 60
 DEFAULT_FALLBACK_OBJECT = ""
 

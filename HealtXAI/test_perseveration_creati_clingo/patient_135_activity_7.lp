@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 135
-% Attività: Check the wattage of a desk lamp and replace the bulb.
+% Attivita: Prepare a cup of soup using the microwave.
 % ======================================================================
 
 
@@ -8,55 +8,76 @@
 % Level A - Activity model
 % ========================
 
-activity(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
+activity(prepare_a_cup_of_soup_using_the_microwave).
 
-action(participant_checks_wattage).
-action(participant_moves_to_the_kitchen).
-action(participant_retrieves_light_bulbs_from_cabinet_b).
-action(participant_moves_to_the_dining_room).
-action(participant_removes_old_light_bulb).
-action(participant_throws_away_old_light_bulb).
-action(participant_replaces_the_bulb).
+action(participant_retrieves_materials_from_cupboard_a).
+action(participant_fills_measuring_cup_with_water).
+action(participant_boils_water_in_microwave).
+action(participant_pours_water_into_cup_of_noodles).
+action(participant_retrieves_pitcher_of_water_from_refrigerator).
+action(participant_pours_glass_of_water).
+action(participant_returns_pitcher_of_water).
+action(participant_waits_for_water_to_simmer_in_cup_of_noodles).
+action(participant_brings_all_items_to_dining_room_table).
 
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 6).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 7).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 1).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 7).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 5).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 12).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 5).
+action_type(prepare_a_cup_of_soup_using_the_microwave, participant_retrieves_materials_from_cupboard_a, 1).
+action_type(prepare_a_cup_of_soup_using_the_microwave, participant_fills_measuring_cup_with_water, 5).
+action_type(prepare_a_cup_of_soup_using_the_microwave, participant_boils_water_in_microwave, 5).
+action_type(prepare_a_cup_of_soup_using_the_microwave, participant_pours_water_into_cup_of_noodles, 5).
+action_type(prepare_a_cup_of_soup_using_the_microwave, participant_retrieves_pitcher_of_water_from_refrigerator, 1).
+action_type(prepare_a_cup_of_soup_using_the_microwave, participant_pours_glass_of_water, 5).
+action_type(prepare_a_cup_of_soup_using_the_microwave, participant_returns_pitcher_of_water, 12).
+action_type(prepare_a_cup_of_soup_using_the_microwave, participant_waits_for_water_to_simmer_in_cup_of_noodles, 8).
+action_type(prepare_a_cup_of_soup_using_the_microwave, participant_brings_all_items_to_dining_room_table, 7).
 
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 1).
+expected_count(prepare_a_cup_of_soup_using_the_microwave, participant_retrieves_materials_from_cupboard_a, 1).
+expected_count(prepare_a_cup_of_soup_using_the_microwave, participant_fills_measuring_cup_with_water, 1).
+expected_count(prepare_a_cup_of_soup_using_the_microwave, participant_boils_water_in_microwave, 1).
+expected_count(prepare_a_cup_of_soup_using_the_microwave, participant_pours_water_into_cup_of_noodles, 1).
+expected_count(prepare_a_cup_of_soup_using_the_microwave, participant_retrieves_pitcher_of_water_from_refrigerator, 1).
+expected_count(prepare_a_cup_of_soup_using_the_microwave, participant_pours_glass_of_water, 1).
+expected_count(prepare_a_cup_of_soup_using_the_microwave, participant_returns_pitcher_of_water, 1).
+expected_count(prepare_a_cup_of_soup_using_the_microwave, participant_waits_for_water_to_simmer_in_cup_of_noodles, 1).
+expected_count(prepare_a_cup_of_soup_using_the_microwave, participant_brings_all_items_to_dining_room_table, 1).
 
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 18000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 18000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 240000).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_retrieves_materials_from_cupboard_a, 437605).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_fills_measuring_cup_with_water, 2749284).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_boils_water_in_microwave, 328296).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_pours_water_into_cup_of_noodles, 211844).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_retrieves_pitcher_of_water_from_refrigerator, 302796).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_pours_glass_of_water, 307897).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_returns_pitcher_of_water, 301246).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_waits_for_water_to_simmer_in_cup_of_noodles, 213072).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_brings_all_items_to_dining_room_table, 408640).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p135_a8, check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
+instance(i_p135_a7, prepare_a_cup_of_soup_using_the_microwave).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p135_a8, participant_moves_to_hallway_closet, 1, 42879302).
-raw_performed(i_p135_a8, participant_moves_to_hallway_closet, 2, 42889014).
-raw_performed(i_p135_a8, participant_chooses_correct_outfit_from_closet, 3, 42891377).
-raw_performed(i_p135_a8, participant_chooses_correct_outfit_from_closet, 4, 42935211).
-raw_performed(i_p135_a8, participant_lays_out_clothes_on_living_room_couch, 5, 42938690).
-raw_performed(i_p135_a8, participant_lays_out_clothes_on_living_room_couch, 6, 42946040).
+raw_performed(i_p135_a7, participant_retrieves_materials_from_cupboard_a, 1, 41825365).
+raw_performed(i_p135_a7, participant_retrieves_materials_from_cupboard_a, 2, 41901935).
+raw_performed(i_p135_a7, participant_retrieves_materials_from_cupboard_a, 3, 41920832).
+raw_performed(i_p135_a7, participant_fills_measuring_cup_with_water, 4, 42235759).
+raw_performed(i_p135_a7, participant_boils_water_in_microwave, 5, 42329434).
+raw_performed(i_p135_a7, participant_boils_water_in_microwave, 6, 42336998).
+raw_performed(i_p135_a7, participant_boils_water_in_microwave, 7, 42421574).
+raw_performed(i_p135_a7, participant_boils_water_in_microwave, 8, 42430102).
+raw_performed(i_p135_a7, participant_boils_water_in_microwave, 9, 42472984).
+raw_performed(i_p135_a7, participant_boils_water_in_microwave, 10, 42477331).
+raw_performed(i_p135_a7, participant_boils_water_in_microwave, 11, 42574791).
+raw_performed(i_p135_a7, participant_boils_water_in_microwave, 12, 42615371).
+raw_performed(i_p135_a7, participant_boils_water_in_microwave, 13, 42616880).
+raw_performed(i_p135_a7, participant_boils_water_in_microwave, 14, 42708041).
+raw_performed(i_p135_a7, participant_boils_water_in_microwave, 15, 42714052).
+raw_performed(i_p135_a7, participant_brings_all_items_to_dining_room_table, 16, 42755661).
+raw_performed(i_p135_a7, participant_brings_all_items_to_dining_room_table, 17, 42756552).
+raw_performed(i_p135_a7, participant_brings_all_items_to_dining_room_table, 18, 42759244).
+raw_performed(i_p135_a7, participant_brings_all_items_to_dining_room_table, 19, 42759872).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

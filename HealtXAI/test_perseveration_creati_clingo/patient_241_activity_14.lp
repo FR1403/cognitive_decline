@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 241
-% Attività: Setup hands for a card game, answer the phone and describe the rules of the game.
+% Attivita: Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.
 % ======================================================================
 
 
@@ -8,63 +8,74 @@
 % Level A - Activity model
 % ========================
 
-activity(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game).
+activity(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12).
 
 action(participant_moves_to_the_kitchen).
-action(participant_locates_deck_of_cards_from_kitchen_cabinet_b).
-action(participant_brings_deck_of_cards_to_the_dining_room_table).
-action(participant_sets_up_card_game).
-action(participant_answers_the_telephone).
-action(participant_explains_the_rules_of_the_game_over_the_phone).
-action(participant_hangs_up_the_phone).
+action(participant_removes_materials_from_cupboard).
+action(participant_locates_pot).
+action(participant_turns_on_stove).
+action(participant_fills_pot_with_water).
+action(participant_puts_oatmeal_into_pot).
+action(participants_times_one_minute).
+action(participant_stirs_oatmeal).
+action(participant_puts_oatmeal_into_bowl).
+action(participant_turns_stove_off).
+action(participant_puts_sugar_in_oatmeal).
+action(participant_puts_raisin_in_oatmeal).
+action(participant_throws_raisin_box_in_trashcan).
 
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_moves_to_the_kitchen, 7).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 10).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_brings_deck_of_cards_to_the_dining_room_table, 5).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_sets_up_card_game, 5).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_answers_the_telephone, 11).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_explains_the_rules_of_the_game_over_the_phone, 5).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_hangs_up_the_phone, 12).
+action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_moves_to_the_kitchen, 7).
+action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_removes_materials_from_cupboard, 5).
+action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_locates_pot, 10).
+action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_on_stove, 5).
+action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_fills_pot_with_water, 5).
+action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_pot, 5).
+action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participants_times_one_minute, 8).
+action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_stirs_oatmeal, 5).
+action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_bowl, 5).
+action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_stove_off, 5).
+action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_sugar_in_oatmeal, 5).
+action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_raisin_in_oatmeal, 5).
+action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_throws_raisin_box_in_trashcan, 12).
 
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_moves_to_the_kitchen, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_brings_deck_of_cards_to_the_dining_room_table, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_sets_up_card_game, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_answers_the_telephone, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_explains_the_rules_of_the_game_over_the_phone, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_hangs_up_the_phone, 1).
+expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_moves_to_the_kitchen, 1).
+expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_removes_materials_from_cupboard, 1).
+expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_locates_pot, 1).
+expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_on_stove, 1).
+expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_fills_pot_with_water, 1).
+expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_pot, 1).
+expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participants_times_one_minute, 1).
+expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_stirs_oatmeal, 1).
+expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_bowl, 1).
+expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_stove_off, 1).
+expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_sugar_in_oatmeal, 1).
+expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_raisin_in_oatmeal, 1).
+expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_throws_raisin_box_in_trashcan, 1).
 
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_moves_to_the_kitchen, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 18000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_brings_deck_of_cards_to_the_dining_room_table, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_sets_up_card_game, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_answers_the_telephone, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_explains_the_rules_of_the_game_over_the_phone, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_hangs_up_the_phone, 18000).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_moves_to_the_kitchen, 368896).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_removes_materials_from_cupboard, 404709).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_locates_pot, 10).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_on_stove, 424528).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_fills_pot_with_water, 324385).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_pot, 209693).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participants_times_one_minute, 10).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_stirs_oatmeal, 25391).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_bowl, 623867).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_stove_off, 298434).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_sugar_in_oatmeal, 112967).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_raisin_in_oatmeal, 137705).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_throws_raisin_box_in_trashcan, 3514).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p241_a15, setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game).
+instance(i_p241_a14, prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p241_a15, participant_moves_to_the_living_room, 1, 38802127).
-raw_performed(i_p241_a15, participant_gathers_statements_from_bookshelf, 2, 38804192).
-raw_performed(i_p241_a15, participant_gathers_statements_from_bookshelf, 3, 38820968).
-raw_performed(i_p241_a15, participant_gathers_statements_from_bookshelf, 4, 38829127).
-raw_performed(i_p241_a15, participant_gathers_statements_from_bookshelf, 5, 38831366).
-raw_performed(i_p241_a15, participant_gathers_statements_from_bookshelf, 6, 38834771).
-raw_performed(i_p241_a15, participant_gathers_statements_from_bookshelf, 7, 38836653).
-raw_performed(i_p241_a15, participant_gathers_statements_from_bookshelf, 8, 38838323).
-raw_performed(i_p241_a15, participant_moves_to_the_dining_room_table, 9, 38846044).
-raw_performed(i_p241_a15, participant_sits_down_at_the_dining_room_table, 10, 38848483).
-raw_performed(i_p241_a15, participant_sorts_pile_of_statements_into_the_organizer, 11, 38864048).
-raw_performed(i_p241_a15, participant_sorts_pile_of_statements_into_the_organizer, 12, 38869695).
-raw_performed(i_p241_a15, participant_sorts_pile_of_statements_into_the_organizer, 13, 38942493).
-raw_performed(i_p241_a15, participant_sorts_pile_of_statements_into_the_organizer, 14, 38952715).
+raw_performed(i_p241_a14, participant_moves_to_the_kitchen, 1, 38404979).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

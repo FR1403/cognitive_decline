@@ -1,6 +1,6 @@
 % =================================================================================================
 % Paziente 38
-% Attivit√†: Answer the phone and respond to questions pertaining to the video from task 4.
+% Attivit‡: Answer the phone and respond to questions pertaining to the video from task 4.
 % =================================================================================================
 
 

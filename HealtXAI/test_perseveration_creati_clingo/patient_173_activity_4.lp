@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 173
-% Attività: Find the appropriate DVD and watch the corresponding news clip.
+% Attivita: Find the appropriate DVD and watch the corresponding news clip.
 % ======================================================================
 
 
@@ -37,34 +37,67 @@ expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, p
 expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_turns_off_tv, 1).
 expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_returns_dvd_to_pile, 1).
 
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_moves_to_the_living_room, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_dvd, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_reads_instructions_next_to_the_tv, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participants_uses_remote_to_turn_on_tv, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_channel, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_watches_news_clip, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_turns_off_tv, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_returns_dvd_to_pile, 18000).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_moves_to_the_living_room, 27059).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_dvd, 39776).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_reads_instructions_next_to_the_tv, 408166).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participants_uses_remote_to_turn_on_tv, 72894).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_channel, 72894).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_watches_news_clip, 396941).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_turns_off_tv, 79724).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_returns_dvd_to_pile, 27096).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p173_a5, find_the_appropriate_dvd_and_watch_the_corresponding_news_clip).
+instance(i_p173_a4, find_the_appropriate_dvd_and_watch_the_corresponding_news_clip).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p173_a5, participant_retrieves_watering_can_from_supply_closet, 1, 35403983).
-raw_performed(i_p173_a5, participant_retrieves_watering_can_from_supply_closet, 2, 35407716).
-raw_performed(i_p173_a5, participant_fills_watering_can, 3, 35412892).
-raw_performed(i_p173_a5, participant_waters_plants_coffee_table, 4, 35423657).
-raw_performed(i_p173_a5, participant_waters_plants_coffee_table, 5, 35427640).
-raw_performed(i_p173_a5, participant_waters_plants_windowsill, 6, 35433589).
-raw_performed(i_p173_a5, participant_empties_extra_water_into_sink, 7, 35441006).
-raw_performed(i_p173_a5, participant_empties_extra_water_into_sink, 8, 35447737).
-raw_performed(i_p173_a5, participant_returns_watering_can_to_supply_closet, 9, 35449514).
-raw_performed(i_p173_a5, participant_returns_watering_can_to_supply_closet, 10, 35453187).
+raw_performed(i_p173_a4, participant_moves_to_the_living_room, 1, 34819953).
+raw_performed(i_p173_a4, participant_reads_instructions_next_to_the_tv, 2, 34821512).
+raw_performed(i_p173_a4, participant_reads_instructions_next_to_the_tv, 3, 34836901).
+raw_performed(i_p173_a4, participant_reads_instructions_next_to_the_tv, 4, 34838756).
+raw_performed(i_p173_a4, participant_reads_instructions_next_to_the_tv, 5, 34846690).
+raw_performed(i_p173_a4, participant_reads_instructions_next_to_the_tv, 6, 34858880).
+raw_performed(i_p173_a4, participant_watches_news_clip, 7, 34862302).
+raw_performed(i_p173_a4, participant_watches_news_clip, 8, 34864401).
+raw_performed(i_p173_a4, participant_watches_news_clip, 9, 34870447).
+raw_performed(i_p173_a4, participant_watches_news_clip, 10, 34875120).
+raw_performed(i_p173_a4, participant_watches_news_clip, 11, 34877743).
+raw_performed(i_p173_a4, participant_watches_news_clip, 12, 34883388).
+raw_performed(i_p173_a4, participant_watches_news_clip, 13, 34885250).
+raw_performed(i_p173_a4, participant_watches_news_clip, 14, 34890521).
+raw_performed(i_p173_a4, participant_watches_news_clip, 15, 34899563).
+raw_performed(i_p173_a4, participant_watches_news_clip, 16, 34906401).
+raw_performed(i_p173_a4, participant_watches_news_clip, 17, 34910740).
+raw_performed(i_p173_a4, participant_watches_news_clip, 18, 34915995).
+raw_performed(i_p173_a4, participant_watches_news_clip, 19, 34918827).
+raw_performed(i_p173_a4, participant_watches_news_clip, 20, 34923491).
+raw_performed(i_p173_a4, participant_watches_news_clip, 21, 34927029).
+raw_performed(i_p173_a4, participant_watches_news_clip, 22, 34936610).
+raw_performed(i_p173_a4, participant_watches_news_clip, 23, 34940558).
+raw_performed(i_p173_a4, participant_watches_news_clip, 24, 34971289).
+raw_performed(i_p173_a4, participant_watches_news_clip, 25, 34975582).
+raw_performed(i_p173_a4, participant_watches_news_clip, 26, 34977302).
+raw_performed(i_p173_a4, participant_watches_news_clip, 27, 34979890).
+raw_performed(i_p173_a4, participant_watches_news_clip, 28, 34982232).
+raw_performed(i_p173_a4, participant_watches_news_clip, 29, 34983379).
+raw_performed(i_p173_a4, participant_watches_news_clip, 30, 34994498).
+raw_performed(i_p173_a4, participant_watches_news_clip, 31, 34998448).
+raw_performed(i_p173_a4, participant_watches_news_clip, 32, 35000131).
+raw_performed(i_p173_a4, participant_watches_news_clip, 33, 35000267).
+raw_performed(i_p173_a4, participant_watches_news_clip, 34, 35000615).
+raw_performed(i_p173_a4, participant_watches_news_clip, 35, 35002196).
+raw_performed(i_p173_a4, participant_watches_news_clip, 36, 35004409).
+raw_performed(i_p173_a4, participant_watches_news_clip, 37, 35045598).
+raw_performed(i_p173_a4, participant_watches_news_clip, 38, 35142719).
+raw_performed(i_p173_a4, participant_watches_news_clip, 39, 35223140).
+raw_performed(i_p173_a4, participant_watches_news_clip, 40, 35285191).
+raw_performed(i_p173_a4, participant_watches_news_clip, 41, 35285430).
+raw_performed(i_p173_a4, participant_watches_news_clip, 42, 35285756).
+raw_performed(i_p173_a4, participant_watches_news_clip, 43, 35285865).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

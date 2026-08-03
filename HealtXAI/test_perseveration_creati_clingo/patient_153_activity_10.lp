@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 153
-% Attività: Place a phone call to a recording and write down the recipe heard.
+% Attivita: Wash hands with soap at the kitchen sink.
 % ======================================================================
 
 
@@ -8,76 +8,47 @@
 % Level A - Activity model
 % ========================
 
-activity(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard).
+activity(wash_hands_with_soap_at_the_kitchen_sink).
 
-action(participant_moves_to_the_dining_room_table).
-action(participant_sits_at_dining_room_table).
-action(participant_locates_the_phone_book).
-action(participant_locates_the_phone_number_for_safeway_food_and_drugs).
-action(participant_dials_the_number_and_listens_to_the_recording).
-action(participant_records_the_recipe).
-action(participant_hangs_up_the_phone).
+action(participant_moves_to_the_kitchen).
+action(participant_turns_on_water).
+action(participant_uses_hand_soap).
+action(participant_washes_hands).
+action(participant_dries_hands).
 
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 7).
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 8).
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 10).
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 10).
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 5).
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 5).
-action_type(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 12).
+action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 7).
+action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 5).
+action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 5).
+action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 5).
+action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 5).
 
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 1).
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 1).
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 1).
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 1).
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 1).
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 1).
-expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 1).
+expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 1).
+expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 1).
+expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 1).
+expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 1).
+expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 1).
 
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 240000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 240000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 18000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 18000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 240000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 240000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 18000).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 3254).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 29127).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 32474).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 53356).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 54769).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p153_a11, place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard).
+instance(i_p153_a10, wash_hands_with_soap_at_the_kitchen_sink).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p153_a11, participant_wets_the_sponge, 1, 39517975).
-raw_performed(i_p153_a11, participant_washes_the_countertops, 2, 39525837).
-raw_performed(i_p153_a11, participant_wets_the_sponge, 3, 39529288).
-raw_performed(i_p153_a11, participant_washes_the_countertops, 4, 39557724).
-raw_performed(i_p153_a11, participant_washes_the_countertops, 5, 39562320).
-raw_performed(i_p153_a11, participant_washes_the_countertops, 6, 39569011).
-raw_performed(i_p153_a11, participant_washes_the_countertops, 7, 39570464).
-raw_performed(i_p153_a11, participant_washes_the_countertops, 8, 39577233).
-raw_performed(i_p153_a11, participant_washes_the_countertops, 9, 39578278).
-raw_performed(i_p153_a11, participant_washes_the_countertops, 10, 39581493).
-raw_performed(i_p153_a11, participant_washes_the_countertops, 11, 39588153).
-raw_performed(i_p153_a11, participant_washes_the_countertops, 12, 39592110).
-raw_performed(i_p153_a11, participant_wets_the_sponge, 13, 39595325).
-raw_performed(i_p153_a11, participant_washes_the_countertops, 14, 39600306).
-raw_performed(i_p153_a11, participant_rinses_out_the_sponge, 15, 39626340).
-raw_performed(i_p153_a11, participant_rinses_out_the_sponge, 16, 39626367).
-raw_performed(i_p153_a11, participant_rinses_out_the_sponge, 17, 39630063).
-raw_performed(i_p153_a11, participant_dries_the_countertops, 18, 39634743).
-raw_performed(i_p153_a11, participant_dries_the_countertops, 19, 39649363).
-raw_performed(i_p153_a11, participant_dries_the_countertops, 20, 39657288).
-raw_performed(i_p153_a11, participant_dries_the_countertops, 21, 39658077).
-raw_performed(i_p153_a11, participant_dries_the_countertops, 22, 39683248).
-raw_performed(i_p153_a11, participant_dries_the_countertops, 23, 39690184).
-raw_performed(i_p153_a11, participant_dries_the_countertops, 24, 39692914).
-raw_performed(i_p153_a11, participant_dries_the_countertops, 25, 39698400).
-raw_performed(i_p153_a11, participant_dries_the_countertops, 26, 39702287).
-raw_performed(i_p153_a11, participant_dries_the_countertops, 27, 39712202).
+raw_performed(i_p153_a10, participant_moves_to_the_kitchen, 1, 39846084).
+raw_performed(i_p153_a10, participant_turns_on_water, 2, 39853096).
+raw_performed(i_p153_a10, participant_washes_hands, 3, 39853125).
+raw_performed(i_p153_a10, participant_washes_hands, 4, 39856905).
+raw_performed(i_p153_a10, participant_washes_hands, 5, 39860582).
+raw_performed(i_p153_a10, participant_dries_hands, 6, 39870235).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

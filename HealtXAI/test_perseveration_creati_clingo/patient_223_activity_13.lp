@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 223
-% Attività: Setup hands for a card game, answer the phone and describe the rules of the game.
+% Attivita: Sort and fold a basketful of clothing containing men's, women's and children's articles.
 % ======================================================================
 
 
@@ -8,54 +8,46 @@
 % Level A - Activity model
 % ========================
 
-activity(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game).
+activity(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
 
-action(participant_moves_to_the_kitchen).
-action(participant_locates_deck_of_cards_from_kitchen_cabinet_b).
-action(participant_brings_deck_of_cards_to_the_dining_room_table).
-action(participant_sets_up_card_game).
-action(participant_answers_the_telephone).
-action(participant_explains_the_rules_of_the_game_over_the_phone).
-action(participant_hangs_up_the_phone).
+action(participant_moves_to_the_hallway_closet).
+action(participant_locates_the_laundry_basket).
+action(participant_moves_to_the_couch).
+action(participant_sortsfolds_the_laundry).
 
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_moves_to_the_kitchen, 7).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 10).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_brings_deck_of_cards_to_the_dining_room_table, 5).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_sets_up_card_game, 5).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_answers_the_telephone, 11).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_explains_the_rules_of_the_game_over_the_phone, 5).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_hangs_up_the_phone, 12).
+action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 7).
+action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 10).
+action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 7).
+action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 5).
 
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_moves_to_the_kitchen, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_brings_deck_of_cards_to_the_dining_room_table, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_sets_up_card_game, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_answers_the_telephone, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_explains_the_rules_of_the_game_over_the_phone, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_hangs_up_the_phone, 1).
+expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 1).
+expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 1).
+expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 1).
+expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 1).
 
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_moves_to_the_kitchen, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 18000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_brings_deck_of_cards_to_the_dining_room_table, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_sets_up_card_game, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_answers_the_telephone, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_explains_the_rules_of_the_game_over_the_phone, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_hangs_up_the_phone, 18000).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 284602).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 260783).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 302470).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 253947).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p223_a14, setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game).
+instance(i_p223_a13, sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p223_a14, participant_moves_to_the_kitchen, 1, 57958050).
-raw_performed(i_p223_a14, participant_removes_materials_from_cupboard, 2, 57980008).
-raw_performed(i_p223_a14, participant_puts_raisin_in_oatmeal, 3, 58084038).
-raw_performed(i_p223_a14, participant_puts_sugar_in_oatmeal, 4, 58101068).
-raw_performed(i_p223_a14, participant_puts_sugar_in_oatmeal, 5, 58112077).
+raw_performed(i_p223_a13, participant_moves_to_the_hallway_closet, 1, 58188069).
+raw_performed(i_p223_a13, participant_locates_the_laundry_basket, 2, 58188069).
+raw_performed(i_p223_a13, participant_locates_the_laundry_basket, 3, 58189022).
+raw_performed(i_p223_a13, participant_moves_to_the_couch, 4, 58193046).
+raw_performed(i_p223_a13, participant_sortsfolds_the_laundry, 5, 58193046).
+raw_performed(i_p223_a13, participant_sortsfolds_the_laundry, 6, 58196014).
+raw_performed(i_p223_a13, participant_locates_the_laundry_basket, 7, 58197008).
+raw_performed(i_p223_a13, participant_moves_to_the_hallway_closet, 8, 58197040).
+raw_performed(i_p223_a13, participant_locates_the_laundry_basket, 9, 58198064).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

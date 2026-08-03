@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 147
-% Attività: Obtain a set of medicines and a weekly medicine dispenser, fill as per directions.
+% Attivita: Obtain a set of medicines and a weekly medicine dispenser, fill as per directions.
 % ======================================================================
 
 
@@ -22,20 +22,31 @@ expected_count(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as
 expected_count(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_reads_instructions, 1).
 expected_count(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_fills_dispenser_with_medication, 1).
 
-action_gap(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_retrieves_materials_from_cupboard_a, 18000).
-action_gap(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_reads_instructions, 240000).
-action_gap(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_fills_dispenser_with_medication, 240000).
+action_gap(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_retrieves_materials_from_cupboard_a, 159616).
+action_gap(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_reads_instructions, 279057).
+action_gap(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_fills_dispenser_with_medication, 145173).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p147_a3, obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions).
+instance(i_p147_a2, obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p147_a3, participant_sits_at_dining_room_table, 1, 48485870).
+raw_performed(i_p147_a2, participant_retrieves_materials_from_cupboard_a, 1, 48262919).
+raw_performed(i_p147_a2, participant_reads_instructions, 2, 48268545).
+raw_performed(i_p147_a2, participant_reads_instructions, 3, 48314743).
+raw_performed(i_p147_a2, participant_reads_instructions, 4, 48329366).
+raw_performed(i_p147_a2, participant_reads_instructions, 5, 48351348).
+raw_performed(i_p147_a2, participant_reads_instructions, 6, 48353249).
+raw_performed(i_p147_a2, participant_fills_dispenser_with_medication, 7, 48374338).
+raw_performed(i_p147_a2, participant_fills_dispenser_with_medication, 8, 48379870).
+raw_performed(i_p147_a2, participant_fills_dispenser_with_medication, 9, 48391721).
+raw_performed(i_p147_a2, participant_fills_dispenser_with_medication, 10, 48431869).
+raw_performed(i_p147_a2, participant_fills_dispenser_with_medication, 11, 48458482).
+raw_performed(i_p147_a2, participant_fills_dispenser_with_medication, 12, 48477216).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

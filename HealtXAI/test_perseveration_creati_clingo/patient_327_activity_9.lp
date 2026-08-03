@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 327
-% Attività: Wash hands with soap at the kitchen sink.
+% Attivita: Check the wattage of a desk lamp and replace the bulb.
 % ======================================================================
 
 
@@ -8,50 +8,56 @@
 % Level A - Activity model
 % ========================
 
-activity(wash_hands_with_soap_at_the_kitchen_sink).
+activity(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
 
+action(participant_checks_wattage).
 action(participant_moves_to_the_kitchen).
-action(participant_turns_on_water).
-action(participant_uses_hand_soap).
-action(participant_washes_hands).
-action(participant_dries_hands).
+action(participant_retrieves_light_bulbs_from_cabinet_b).
+action(participant_moves_to_the_dining_room).
+action(participant_removes_old_light_bulb).
+action(participant_throws_away_old_light_bulb).
+action(participant_replaces_the_bulb).
 
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 7).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 5).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 5).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 5).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 5).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 6).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 7).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 1).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 7).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 5).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 12).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 5).
 
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 1).
 
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 240000).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 109234).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 160819).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 103499).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 119069).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 62259).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 13572).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 216342).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p327_a10, wash_hands_with_soap_at_the_kitchen_sink).
+instance(i_p327_a9, check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p327_a10, participant_moves_to_the_kitchen, 1, 37237510).
-raw_performed(i_p327_a10, participant_turns_on_water, 2, 37243015).
-raw_performed(i_p327_a10, participant_washes_hands, 3, 37245466).
-raw_performed(i_p327_a10, participant_washes_hands, 4, 37247927).
-raw_performed(i_p327_a10, participant_washes_hands, 5, 37250402).
-raw_performed(i_p327_a10, participant_washes_hands, 6, 37252890).
-raw_performed(i_p327_a10, participant_washes_hands, 7, 37255338).
-raw_performed(i_p327_a10, participant_washes_hands, 8, 37260308).
-raw_performed(i_p327_a10, participant_dries_hands, 9, 37260961).
+raw_performed(i_p327_a9, participant_moves_to_the_kitchen, 1, 37115926).
+raw_performed(i_p327_a9, participant_retrieves_light_bulbs_from_cabinet_b, 2, 37116769).
+raw_performed(i_p327_a9, participant_retrieves_light_bulbs_from_cabinet_b, 3, 37140051).
+raw_performed(i_p327_a9, participant_moves_to_the_dining_room, 4, 37141272).
+raw_performed(i_p327_a9, participant_removes_old_light_bulb, 5, 37177551).
+raw_performed(i_p327_a9, participant_throws_away_old_light_bulb, 6, 37177551).
+raw_performed(i_p327_a9, participant_replaces_the_bulb, 7, 37177551).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

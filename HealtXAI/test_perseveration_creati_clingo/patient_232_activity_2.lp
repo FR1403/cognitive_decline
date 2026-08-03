@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 232
-% Attività: Obtain a set of medicines and a weekly medicine dispenser, fill as per directions.
+% Attivita: Obtain a set of medicines and a weekly medicine dispenser, fill as per directions.
 % ======================================================================
 
 
@@ -22,24 +22,31 @@ expected_count(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as
 expected_count(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_reads_instructions, 1).
 expected_count(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_fills_dispenser_with_medication, 1).
 
-action_gap(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_retrieves_materials_from_cupboard_a, 18000).
-action_gap(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_reads_instructions, 240000).
-action_gap(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_fills_dispenser_with_medication, 240000).
+action_gap(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_retrieves_materials_from_cupboard_a, 159616).
+action_gap(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_reads_instructions, 279057).
+action_gap(obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions, participant_fills_dispenser_with_medication, 145173).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p232_a3, obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions).
+instance(i_p232_a2, obtain_a_set_of_medicines_and_a_weekly_medicine_dispenser_fill_as_per_directions).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p232_a3, participant_retrieves_birthday_card, 1, 34080005).
-raw_performed(i_p232_a3, participant_retrieves_birthday_card, 2, 34082070).
-raw_performed(i_p232_a3, participant_retrieves_check, 3, 34083028).
-raw_performed(i_p232_a3, participant_sits_at_dining_room_table, 4, 34097072).
-raw_performed(i_p232_a3, participant_writes_check_for_birthday_card, 5, 34101089).
+raw_performed(i_p232_a2, participant_retrieves_materials_from_cupboard_a, 1, 33663002).
+raw_performed(i_p232_a2, participant_reads_instructions, 2, 33670009).
+raw_performed(i_p232_a2, participant_reads_instructions, 3, 33692080).
+raw_performed(i_p232_a2, participant_retrieves_materials_from_cupboard_a, 4, 33699042).
+raw_performed(i_p232_a2, participant_retrieves_materials_from_cupboard_a, 5, 33702041).
+raw_performed(i_p232_a2, participant_fills_dispenser_with_medication, 6, 33796001).
+raw_performed(i_p232_a2, participant_fills_dispenser_with_medication, 7, 33817089).
+raw_performed(i_p232_a2, participant_fills_dispenser_with_medication, 8, 33832057).
+raw_performed(i_p232_a2, participant_fills_dispenser_with_medication, 9, 33900032).
+raw_performed(i_p232_a2, participant_fills_dispenser_with_medication, 10, 33915040).
+raw_performed(i_p232_a2, participant_fills_dispenser_with_medication, 11, 33922032).
+raw_performed(i_p232_a2, participant_fills_dispenser_with_medication, 12, 33923064).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

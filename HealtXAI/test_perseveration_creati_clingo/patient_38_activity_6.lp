@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 38
-% Attività: Wash hands with soap at the kitchen sink.
+% Attivita: Answer the phone and respond to questions pertaining to the video from task 4.
 % ======================================================================
 
 
@@ -8,39 +8,49 @@
 % Level A - Activity model
 % ========================
 
-activity(wash_hands_with_soap_at_the_kitchen_sink).
+activity(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4).
 
-action(participant_moves_to_the_kitchen).
-action(participant_turns_on_water).
-action(participant_uses_hand_soap).
-action(participant_washes_hands).
-action(participant_dries_hands).
+action(participant_answers_the_phone).
+action(participant_answers_questions_over_the_phone).
+action(participant_sits_down_during_conversation).
+action(participant_stands_in_one_place).
+action(participant_walks_around_during_phone_call).
+action(participant_hangs_up_the_phone).
 
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 7).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 5).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 5).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 5).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 5).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 11).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 11).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 8).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 7).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 7).
+action_type(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 12).
 
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 1).
+expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 1).
 
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 240000).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 10).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 10).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 256050).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 211149).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 255139).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 3342).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p38_a7, wash_hands_with_soap_at_the_kitchen_sink).
+instance(i_p38_a6, answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4).
 
+% raw_performed(Instance, Action, Order, TimeMs)
+
+raw_performed(i_p38_a6, participant_answers_the_phone, 1, 36910045).
+raw_performed(i_p38_a6, participant_sits_down_during_conversation, 2, 36945244).
+raw_performed(i_p38_a6, participant_sits_down_during_conversation, 3, 36959823).
+raw_performed(i_p38_a6, participant_sits_down_during_conversation, 4, 37078682).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

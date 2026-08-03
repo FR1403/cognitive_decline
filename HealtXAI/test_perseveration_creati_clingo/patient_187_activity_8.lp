@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 187
-% Attività: Pick a complete outfit for an interview from a selection of clothing.
+% Attivita: Pick a complete outfit for an interview from a selection of clothing.
 % ======================================================================
 
 
@@ -22,31 +22,40 @@ expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_cloth
 expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 1).
 expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 1).
 
-action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 240000).
-action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 240000).
-action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 240000).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 133523).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 122151).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 216006).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p187_a9, pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
+instance(i_p187_a8, pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p187_a9, participant_checks_wattage, 1, 35442075).
-raw_performed(i_p187_a9, participant_retrieves_light_bulbs_from_cabinet_b, 2, 35447029).
-raw_performed(i_p187_a9, participant_removes_old_light_bulb, 3, 35447029).
-raw_performed(i_p187_a9, participant_moves_to_the_kitchen, 4, 35450020).
-raw_performed(i_p187_a9, participant_retrieves_light_bulbs_from_cabinet_b, 5, 35451005).
-raw_performed(i_p187_a9, participant_retrieves_light_bulbs_from_cabinet_b, 6, 35462002).
-raw_performed(i_p187_a9, participant_moves_to_the_dining_room, 7, 35462066).
-raw_performed(i_p187_a9, participant_moves_to_the_dining_room, 8, 35463093).
-raw_performed(i_p187_a9, participant_moves_to_the_kitchen, 9, 35490027).
-raw_performed(i_p187_a9, participant_moves_to_the_dining_room, 10, 35513029).
-raw_performed(i_p187_a9, participant_replaces_the_bulb, 11, 35517068).
-raw_performed(i_p187_a9, participant_replaces_the_bulb, 12, 35535000).
+raw_performed(i_p187_a8, participant_moves_to_hallway_closet, 1, 34571049).
+raw_performed(i_p187_a8, participant_moves_to_hallway_closet, 2, 34572036).
+raw_performed(i_p187_a8, participant_chooses_correct_outfit_from_closet, 3, 34574002).
+raw_performed(i_p187_a8, participant_chooses_correct_outfit_from_closet, 4, 34582065).
+raw_performed(i_p187_a8, participant_chooses_correct_outfit_from_closet, 5, 34588073).
+raw_performed(i_p187_a8, participant_chooses_correct_outfit_from_closet, 6, 34592004).
+raw_performed(i_p187_a8, participant_chooses_correct_outfit_from_closet, 7, 34604035).
+raw_performed(i_p187_a8, participant_chooses_correct_outfit_from_closet, 8, 34608001).
+raw_performed(i_p187_a8, participant_chooses_correct_outfit_from_closet, 9, 34611028).
+raw_performed(i_p187_a8, participant_chooses_correct_outfit_from_closet, 10, 34617068).
+raw_performed(i_p187_a8, participant_chooses_correct_outfit_from_closet, 11, 34622043).
+raw_performed(i_p187_a8, participant_lays_out_clothes_on_living_room_couch, 12, 34625078).
+raw_performed(i_p187_a8, participant_lays_out_clothes_on_living_room_couch, 13, 34629008).
+raw_performed(i_p187_a8, participant_lays_out_clothes_on_living_room_couch, 14, 34642089).
+raw_performed(i_p187_a8, participant_lays_out_clothes_on_living_room_couch, 15, 34646043).
+raw_performed(i_p187_a8, participant_moves_to_hallway_closet, 16, 34648011).
+raw_performed(i_p187_a8, participant_chooses_correct_outfit_from_closet, 17, 34649016).
+raw_performed(i_p187_a8, participant_chooses_correct_outfit_from_closet, 18, 34657055).
+raw_performed(i_p187_a8, participant_chooses_correct_outfit_from_closet, 19, 34658081).
+raw_performed(i_p187_a8, participant_lays_out_clothes_on_living_room_couch, 20, 34659061).
+raw_performed(i_p187_a8, participant_lays_out_clothes_on_living_room_couch, 21, 34659064).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

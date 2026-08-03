@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 54
-% Attività: Write a birthday card, enclose a check and address an envelope.
+% Attivita: Write a birthday card, enclose a check and address an envelope.
 % ======================================================================
 
 
@@ -37,29 +37,22 @@ expected_count(write_a_birthday_card_enclose_a_check_and_address_an_envelope, pa
 expected_count(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_addresses_the_envelope, 1).
 expected_count(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_places_envelope_in_the_mail_organizer, 1).
 
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_sits_at_dining_room_table, 240000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_retrieves_birthday_card, 18000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_writes_birthday_wish_inside_the_card_happy_birthday_name_wish, 240000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_retrieves_check, 18000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_writes_check_for_birthday_card, 240000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_puts_birthday_card_and_check_in_envelope, 240000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_addresses_the_envelope, 240000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_places_envelope_in_the_mail_organizer, 18000).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_sits_at_dining_room_table, 10258).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_retrieves_birthday_card, 10).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_writes_birthday_wish_inside_the_card_happy_birthday_name_wish, 10).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_retrieves_check, 12).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_writes_check_for_birthday_card, 12).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_puts_birthday_card_and_check_in_envelope, 12).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_addresses_the_envelope, 10).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_places_envelope_in_the_mail_organizer, 10).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p54_a4, write_a_birthday_card_enclose_a_check_and_address_an_envelope).
+instance(i_p54_a3, write_a_birthday_card_enclose_a_check_and_address_an_envelope).
 
-% raw_performed(Instance, Action, Order, TimeMs)
-
-raw_performed(i_p54_a4, participant_moves_to_the_living_room, 1, 48998044).
-raw_performed(i_p54_a4, participant_reads_instructions_next_to_the_tv, 2, 49025091).
-raw_performed(i_p54_a4, participant_reads_instructions_next_to_the_tv, 3, 49028070).
-raw_performed(i_p54_a4, participant_watches_news_clip, 4, 49396029).
-raw_performed(i_p54_a4, participant_watches_news_clip, 5, 49400009).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

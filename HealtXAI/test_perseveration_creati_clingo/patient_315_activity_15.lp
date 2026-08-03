@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 315
-% Attività: Setup hands for a card game, answer the phone and describe the rules of the game.
+% Attivita: Sort and file a small collection of billing statements.
 % ======================================================================
 
 
@@ -8,53 +8,54 @@
 % Level A - Activity model
 % ========================
 
-activity(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game).
+activity(sort_and_file_a_small_collection_of_billing_statements).
 
-action(participant_moves_to_the_kitchen).
-action(participant_locates_deck_of_cards_from_kitchen_cabinet_b).
-action(participant_brings_deck_of_cards_to_the_dining_room_table).
-action(participant_sets_up_card_game).
-action(participant_answers_the_telephone).
-action(participant_explains_the_rules_of_the_game_over_the_phone).
-action(participant_hangs_up_the_phone).
+action(participant_moves_to_the_living_room).
+action(participant_gathers_statements_from_bookshelf).
+action(participant_moves_to_the_dining_room_table).
+action(participant_sits_down_at_the_dining_room_table).
+action(participant_sorts_pile_of_statements_into_the_organizer).
 
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_moves_to_the_kitchen, 7).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 10).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_brings_deck_of_cards_to_the_dining_room_table, 5).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_sets_up_card_game, 5).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_answers_the_telephone, 11).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_explains_the_rules_of_the_game_over_the_phone, 5).
-action_type(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_hangs_up_the_phone, 12).
+action_type(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 7).
+action_type(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 5).
+action_type(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 7).
+action_type(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 8).
+action_type(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 5).
 
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_moves_to_the_kitchen, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_brings_deck_of_cards_to_the_dining_room_table, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_sets_up_card_game, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_answers_the_telephone, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_explains_the_rules_of_the_game_over_the_phone, 1).
-expected_count(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_hangs_up_the_phone, 1).
+expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 1).
+expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 1).
+expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 1).
+expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 1).
+expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 1).
 
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_moves_to_the_kitchen, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 18000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_brings_deck_of_cards_to_the_dining_room_table, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_sets_up_card_game, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_answers_the_telephone, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_explains_the_rules_of_the_game_over_the_phone, 240000).
-action_gap(setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game, participant_hangs_up_the_phone, 18000).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 58997).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 98761).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 108552).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 62051).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 145184).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p315_a16, setup_hands_for_a_card_game_answer_the_phone_and_describe_the_rules_of_the_game).
+instance(i_p315_a15, sort_and_file_a_small_collection_of_billing_statements).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p315_a16, participant_moves_to_the_kitchen, 1, 53214076).
-raw_performed(i_p315_a16, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 2, 53316005).
-raw_performed(i_p315_a16, participant_brings_deck_of_cards_to_the_dining_room_table, 3, 53319004).
-raw_performed(i_p315_a16, participant_brings_deck_of_cards_to_the_dining_room_table, 4, 53320091).
+raw_performed(i_p315_a15, participant_moves_to_the_living_room, 1, 53097023).
+raw_performed(i_p315_a15, participant_gathers_statements_from_bookshelf, 2, 53098048).
+raw_performed(i_p315_a15, participant_moves_to_the_dining_room_table, 3, 53104014).
+raw_performed(i_p315_a15, participant_moves_to_the_dining_room_table, 4, 53106008).
+raw_performed(i_p315_a15, participant_moves_to_the_dining_room_table, 5, 53106031).
+raw_performed(i_p315_a15, participant_sits_down_at_the_dining_room_table, 6, 53108064).
+raw_performed(i_p315_a15, participant_sorts_pile_of_statements_into_the_organizer, 7, 53110094).
+raw_performed(i_p315_a15, participant_sorts_pile_of_statements_into_the_organizer, 8, 53117059).
+raw_performed(i_p315_a15, participant_sorts_pile_of_statements_into_the_organizer, 9, 53136049).
+raw_performed(i_p315_a15, participant_sorts_pile_of_statements_into_the_organizer, 10, 53140047).
+raw_performed(i_p315_a15, participant_sorts_pile_of_statements_into_the_organizer, 11, 53154032).
+raw_performed(i_p315_a15, participant_sorts_pile_of_statements_into_the_organizer, 12, 53158096).
+raw_performed(i_p315_a15, participant_sorts_pile_of_statements_into_the_organizer, 13, 53177026).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

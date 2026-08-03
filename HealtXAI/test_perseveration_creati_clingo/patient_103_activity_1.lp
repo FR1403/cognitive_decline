@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 103
-% Attività: Sweep the kitchen and dust the living room.
+% Attivita: Sweep the kitchen and dust the living room.
 % ======================================================================
 
 
@@ -43,42 +43,68 @@ expected_count(sweep_the_kitchen_and_dust_the_living_room, participant_returns_b
 expected_count(sweep_the_kitchen_and_dust_the_living_room, participant_returns_duster_to_supply_closet, 1).
 expected_count(sweep_the_kitchen_and_dust_the_living_room, participants_returns_dust_pan_and_brush_to_supply_closet, 1).
 
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_broom_from_supply_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_duster_from_supply_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_dust_pan_and_brush_from_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_sweeps_kitchen_floor, 240000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_uses_dust_pan_and_brush, 240000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_living_room, 240000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_dining_room, 240000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_returns_broom_to_supply_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_returns_duster_to_supply_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participants_returns_dust_pan_and_brush_to_supply_closet, 18000).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_broom_from_supply_closet, 9166).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_duster_from_supply_closet, 63001).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_dust_pan_and_brush_from_closet, 38902).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_sweeps_kitchen_floor, 321564).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_uses_dust_pan_and_brush, 142634).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_living_room, 159196).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_dining_room, 504567).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_returns_broom_to_supply_closet, 26492).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_returns_duster_to_supply_closet, 22029).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participants_returns_dust_pan_and_brush_to_supply_closet, 206023).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p103_a2, sweep_the_kitchen_and_dust_the_living_room).
+instance(i_p103_a1, sweep_the_kitchen_and_dust_the_living_room).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p103_a2, participant_retrieves_materials_from_cupboard_a, 1, 48313714).
-raw_performed(i_p103_a2, participant_retrieves_materials_from_cupboard_a, 2, 48317092).
-raw_performed(i_p103_a2, participant_reads_instructions, 3, 48324281).
-raw_performed(i_p103_a2, participant_reads_instructions, 4, 48332252).
-raw_performed(i_p103_a2, participant_reads_instructions, 5, 48343722).
-raw_performed(i_p103_a2, participant_reads_instructions, 6, 48360571).
-raw_performed(i_p103_a2, participant_reads_instructions, 7, 48375604).
-raw_performed(i_p103_a2, participant_reads_instructions, 8, 48383198).
-raw_performed(i_p103_a2, participant_reads_instructions, 9, 48395140).
-raw_performed(i_p103_a2, participant_reads_instructions, 10, 48402831).
-raw_performed(i_p103_a2, participant_reads_instructions, 11, 48411540).
-raw_performed(i_p103_a2, participant_reads_instructions, 12, 48422804).
-raw_performed(i_p103_a2, participant_reads_instructions, 13, 48453012).
-raw_performed(i_p103_a2, participant_reads_instructions, 14, 48462073).
-raw_performed(i_p103_a2, participant_fills_dispenser_with_medication, 15, 48469012).
-raw_performed(i_p103_a2, participant_fills_dispenser_with_medication, 16, 48469036).
+raw_performed(i_p103_a1, participant_retrieves_broom_from_supply_closet, 1, 48029505).
+raw_performed(i_p103_a1, participant_retrieves_dust_pan_and_brush_from_closet, 2, 48029505).
+raw_performed(i_p103_a1, participant_sweeps_kitchen_floor, 3, 48032431).
+raw_performed(i_p103_a1, participant_uses_dust_pan_and_brush, 4, 48032431).
+raw_performed(i_p103_a1, participant_sweeps_kitchen_floor, 5, 48033442).
+raw_performed(i_p103_a1, participant_uses_dust_pan_and_brush, 6, 48033442).
+raw_performed(i_p103_a1, participant_sweeps_kitchen_floor, 7, 48040024).
+raw_performed(i_p103_a1, participant_uses_dust_pan_and_brush, 8, 48040024).
+raw_performed(i_p103_a1, participant_sweeps_kitchen_floor, 9, 48043512).
+raw_performed(i_p103_a1, participant_uses_dust_pan_and_brush, 10, 48043512).
+raw_performed(i_p103_a1, participant_sweeps_kitchen_floor, 11, 48058693).
+raw_performed(i_p103_a1, participant_uses_dust_pan_and_brush, 12, 48058693).
+raw_performed(i_p103_a1, participant_sweeps_kitchen_floor, 13, 48074909).
+raw_performed(i_p103_a1, participant_uses_dust_pan_and_brush, 14, 48074909).
+raw_performed(i_p103_a1, participant_sweeps_kitchen_floor, 15, 48086079).
+raw_performed(i_p103_a1, participant_uses_dust_pan_and_brush, 16, 48086079).
+raw_performed(i_p103_a1, participant_sweeps_kitchen_floor, 17, 48102308).
+raw_performed(i_p103_a1, participant_uses_dust_pan_and_brush, 18, 48102308).
+raw_performed(i_p103_a1, participant_sweeps_kitchen_floor, 19, 48102332).
+raw_performed(i_p103_a1, participant_uses_dust_pan_and_brush, 20, 48102332).
+raw_performed(i_p103_a1, participant_returns_broom_to_supply_closet, 21, 48106009).
+raw_performed(i_p103_a1, participants_returns_dust_pan_and_brush_to_supply_closet, 22, 48113664).
+raw_performed(i_p103_a1, participant_retrieves_duster_from_supply_closet, 23, 48121492).
+raw_performed(i_p103_a1, participant_dusts_dining_room, 24, 48140834).
+raw_performed(i_p103_a1, participant_dusts_dining_room, 25, 48140858).
+raw_performed(i_p103_a1, participant_dusts_dining_room, 26, 48140882).
+raw_performed(i_p103_a1, participant_dusts_dining_room, 27, 48162849).
+raw_performed(i_p103_a1, participant_dusts_dining_room, 28, 48164988).
+raw_performed(i_p103_a1, participant_dusts_dining_room, 29, 48168723).
+raw_performed(i_p103_a1, participant_dusts_dining_room, 30, 48180971).
+raw_performed(i_p103_a1, participant_dusts_dining_room, 31, 48189384).
+raw_performed(i_p103_a1, participant_dusts_dining_room, 32, 48191675).
+raw_performed(i_p103_a1, participant_dusts_dining_room, 33, 48192732).
+raw_performed(i_p103_a1, participant_dusts_dining_room, 34, 48196157).
+raw_performed(i_p103_a1, participant_dusts_dining_room, 35, 48196229).
+raw_performed(i_p103_a1, participant_dusts_living_room, 36, 48197186).
+raw_performed(i_p103_a1, participant_dusts_living_room, 37, 48197256).
+raw_performed(i_p103_a1, participant_dusts_living_room, 38, 48200023).
+raw_performed(i_p103_a1, participant_dusts_living_room, 39, 48204993).
+raw_performed(i_p103_a1, participant_dusts_living_room, 40, 48216990).
+raw_performed(i_p103_a1, participant_dusts_living_room, 41, 48217019).
+raw_performed(i_p103_a1, participant_returns_duster_to_supply_closet, 42, 48219357).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

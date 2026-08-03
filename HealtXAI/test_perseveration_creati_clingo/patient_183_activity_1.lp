@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 183
-% Attività: Sweep the kitchen and dust the living room.
+% Attivita: Sweep the kitchen and dust the living room.
 % ======================================================================
 
 
@@ -43,24 +43,39 @@ expected_count(sweep_the_kitchen_and_dust_the_living_room, participant_returns_b
 expected_count(sweep_the_kitchen_and_dust_the_living_room, participant_returns_duster_to_supply_closet, 1).
 expected_count(sweep_the_kitchen_and_dust_the_living_room, participants_returns_dust_pan_and_brush_to_supply_closet, 1).
 
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_broom_from_supply_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_duster_from_supply_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_dust_pan_and_brush_from_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_sweeps_kitchen_floor, 240000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_uses_dust_pan_and_brush, 240000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_living_room, 240000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_dining_room, 240000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_returns_broom_to_supply_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_returns_duster_to_supply_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participants_returns_dust_pan_and_brush_to_supply_closet, 18000).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_broom_from_supply_closet, 9166).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_duster_from_supply_closet, 63001).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_dust_pan_and_brush_from_closet, 38902).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_sweeps_kitchen_floor, 321564).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_uses_dust_pan_and_brush, 142634).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_living_room, 159196).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_dining_room, 504567).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_returns_broom_to_supply_closet, 26492).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_returns_duster_to_supply_closet, 22029).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participants_returns_dust_pan_and_brush_to_supply_closet, 206023).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p183_a2, sweep_the_kitchen_and_dust_the_living_room).
+instance(i_p183_a1, sweep_the_kitchen_and_dust_the_living_room).
 
+% raw_performed(Instance, Action, Order, TimeMs)
+
+raw_performed(i_p183_a1, participant_retrieves_broom_from_supply_closet, 1, 51994242).
+raw_performed(i_p183_a1, participant_sweeps_kitchen_floor, 2, 52032982).
+raw_performed(i_p183_a1, participant_sweeps_kitchen_floor, 3, 52049881).
+raw_performed(i_p183_a1, participant_sweeps_kitchen_floor, 4, 52062737).
+raw_performed(i_p183_a1, participant_sweeps_kitchen_floor, 5, 52101366).
+raw_performed(i_p183_a1, participant_sweeps_kitchen_floor, 6, 52116041).
+raw_performed(i_p183_a1, participant_sweeps_kitchen_floor, 7, 52123889).
+raw_performed(i_p183_a1, participant_sweeps_kitchen_floor, 8, 52166913).
+raw_performed(i_p183_a1, participant_retrieves_dust_pan_and_brush_from_closet, 9, 52217444).
+raw_performed(i_p183_a1, participant_uses_dust_pan_and_brush, 10, 52267791).
+raw_performed(i_p183_a1, participant_uses_dust_pan_and_brush, 11, 52271751).
+raw_performed(i_p183_a1, participant_uses_dust_pan_and_brush, 12, 52273961).
+raw_performed(i_p183_a1, participant_uses_dust_pan_and_brush, 13, 52278382).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

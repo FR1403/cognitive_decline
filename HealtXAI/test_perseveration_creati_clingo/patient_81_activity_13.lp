@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 81
-% Attività: Sort and fold a basketful of clothing containing men's, women's and children's articles.
+% Attivita: Sort and fold a basketful of clothing containing men's, women's and children's articles.
 % ======================================================================
 
 
@@ -25,36 +25,67 @@ expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_
 expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 1).
 expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 1).
 
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 240000).
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 18000).
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 240000).
-action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 240000).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 284602).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 260783).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 302470).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 253947).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p81_a14, sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
+instance(i_p81_a13, sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p81_a14, participant_moves_to_the_kitchen, 1, 37209020).
-raw_performed(i_p81_a14, participant_moves_to_the_kitchen, 2, 37211027).
-raw_performed(i_p81_a14, participant_removes_materials_from_cupboard, 3, 37212088).
-raw_performed(i_p81_a14, participant_removes_materials_from_cupboard, 4, 37215004).
-raw_performed(i_p81_a14, participant_removes_materials_from_cupboard, 5, 37236001).
-raw_performed(i_p81_a14, participant_removes_materials_from_cupboard, 6, 37237033).
-raw_performed(i_p81_a14, participant_removes_materials_from_cupboard, 7, 37243003).
-raw_performed(i_p81_a14, participant_puts_raisin_in_oatmeal, 8, 37246043).
-raw_performed(i_p81_a14, participant_puts_sugar_in_oatmeal, 9, 37252046).
-raw_performed(i_p81_a14, participant_puts_sugar_in_oatmeal, 10, 37255034).
-raw_performed(i_p81_a14, participant_removes_materials_from_cupboard, 11, 37347041).
-raw_performed(i_p81_a14, participant_removes_materials_from_cupboard, 12, 37351000).
-raw_performed(i_p81_a14, participant_throws_raisin_box_in_trashcan, 13, 37494056).
-raw_performed(i_p81_a14, participant_removes_materials_from_cupboard, 14, 37549093).
-raw_performed(i_p81_a14, participant_removes_materials_from_cupboard, 15, 37551086).
-raw_performed(i_p81_a14, participant_removes_materials_from_cupboard, 16, 37552021).
+raw_performed(i_p81_a13, participant_moves_to_the_hallway_closet, 1, 36952076).
+raw_performed(i_p81_a13, participant_moves_to_the_hallway_closet, 2, 36953006).
+raw_performed(i_p81_a13, participant_locates_the_laundry_basket, 3, 36954036).
+raw_performed(i_p81_a13, participant_locates_the_laundry_basket, 4, 36959069).
+raw_performed(i_p81_a13, participant_moves_to_the_couch, 5, 36961003).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 6, 36961003).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 7, 36961093).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 8, 36974011).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 9, 36975093).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 10, 36983074).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 11, 36997051).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 12, 37003088).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 13, 37008037).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 14, 37014063).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 15, 37017008).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 16, 37018096).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 17, 37024015).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 18, 37025006).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 19, 37031048).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 20, 37035026).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 21, 37038003).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 22, 37038066).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 23, 37051033).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 24, 37054023).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 25, 37061072).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 26, 37063021).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 27, 37066055).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 28, 37071047).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 29, 37077046).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 30, 37078076).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 31, 37079038).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 32, 37082077).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 33, 37086019).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 34, 37089017).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 35, 37102015).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 36, 37104068).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 37, 37109098).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 38, 37114032).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 39, 37118007).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 40, 37121013).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 41, 37123005).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 42, 37124006).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 43, 37129081).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 44, 37135096).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 45, 37140052).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 46, 37140079).
+raw_performed(i_p81_a13, participant_sortsfolds_the_laundry, 47, 37158075).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 103
-% Attività: Wash and dry all kitchen countertop surfaces.
+% Attivita: Wash and dry all kitchen countertop surfaces.
 % ======================================================================
 
 
@@ -37,26 +37,41 @@ expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_
 expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 1).
 expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 1).
 
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_sponge, 18000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_dish_detergent, 18000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 18000).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_sponge, 17266).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_dish_detergent, 91).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, 276069).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, 103550).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, 156154).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, 123649).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 100328).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 4392).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p103_a12, wash_and_dry_all_kitchen_countertop_surfaces).
+instance(i_p103_a11, wash_and_dry_all_kitchen_countertop_surfaces).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p103_a12, participant_moves_to_the_dining_room_table, 1, 51265309).
-raw_performed(i_p103_a12, participant_sits_at_dining_room_table, 2, 51265404).
+raw_performed(i_p103_a11, participant_wets_the_sponge, 1, 51085093).
+raw_performed(i_p103_a11, participant_wets_the_sponge, 2, 51088849).
+raw_performed(i_p103_a11, participant_washes_the_countertops, 3, 51089241).
+raw_performed(i_p103_a11, participant_washes_the_countertops, 4, 51100691).
+raw_performed(i_p103_a11, participant_washes_the_countertops, 5, 51109436).
+raw_performed(i_p103_a11, participant_washes_the_countertops, 6, 51111914).
+raw_performed(i_p103_a11, participant_washes_the_countertops, 7, 51120141).
+raw_performed(i_p103_a11, participant_washes_the_countertops, 8, 51130871).
+raw_performed(i_p103_a11, participant_washes_the_countertops, 9, 51159458).
+raw_performed(i_p103_a11, participant_rinses_out_the_sponge, 10, 51162949).
+raw_performed(i_p103_a11, participant_rinses_out_the_sponge, 11, 51166739).
+raw_performed(i_p103_a11, participant_rinses_out_the_sponge, 12, 51170602).
+raw_performed(i_p103_a11, participant_rinses_out_the_sponge, 13, 51174467).
+raw_performed(i_p103_a11, participant_rinses_out_the_sponge, 14, 51178335).
+raw_performed(i_p103_a11, participant_dries_the_countertops, 15, 51182573).
+raw_performed(i_p103_a11, participant_dries_the_countertops, 16, 51186845).
+raw_performed(i_p103_a11, participant_dries_the_countertops, 17, 51190691).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

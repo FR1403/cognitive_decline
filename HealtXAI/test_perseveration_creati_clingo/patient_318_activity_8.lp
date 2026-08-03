@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 318
-% Attività: Check the wattage of a desk lamp and replace the bulb.
+% Attivita: Pick a complete outfit for an interview from a selection of clothing.
 % ======================================================================
 
 
@@ -8,56 +8,42 @@
 % Level A - Activity model
 % ========================
 
-activity(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
+activity(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
 
-action(participant_checks_wattage).
-action(participant_moves_to_the_kitchen).
-action(participant_retrieves_light_bulbs_from_cabinet_b).
-action(participant_moves_to_the_dining_room).
-action(participant_removes_old_light_bulb).
-action(participant_throws_away_old_light_bulb).
-action(participant_replaces_the_bulb).
+action(participant_moves_to_hallway_closet).
+action(participant_chooses_correct_outfit_from_closet).
+action(participant_lays_out_clothes_on_living_room_couch).
 
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 6).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 7).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 1).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 7).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 5).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 12).
-action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 5).
+action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 7).
+action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 5).
+action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 5).
 
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 1).
-expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 1).
+expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 1).
+expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 1).
+expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 1).
 
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 18000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 240000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 18000).
-action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 240000).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 133523).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 122151).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 216006).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p318_a9, check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
+instance(i_p318_a8, pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p318_a9, participant_removes_old_light_bulb, 1, 35716093).
-raw_performed(i_p318_a9, participant_moves_to_the_kitchen, 2, 35740079).
-raw_performed(i_p318_a9, participant_retrieves_light_bulbs_from_cabinet_b, 3, 35741068).
-raw_performed(i_p318_a9, participant_moves_to_the_dining_room, 4, 35748052).
-raw_performed(i_p318_a9, participant_moves_to_the_dining_room, 5, 35751041).
-raw_performed(i_p318_a9, participant_throws_away_old_light_bulb, 6, 35753070).
-raw_performed(i_p318_a9, participant_replaces_the_bulb, 7, 35764004).
+raw_performed(i_p318_a8, participant_moves_to_hallway_closet, 1, 34708004).
+raw_performed(i_p318_a8, participant_moves_to_hallway_closet, 2, 34709013).
+raw_performed(i_p318_a8, participant_chooses_correct_outfit_from_closet, 3, 34709095).
+raw_performed(i_p318_a8, participant_chooses_correct_outfit_from_closet, 4, 34746075).
+raw_performed(i_p318_a8, participant_chooses_correct_outfit_from_closet, 5, 34761009).
+raw_performed(i_p318_a8, participant_chooses_correct_outfit_from_closet, 6, 34761072).
+raw_performed(i_p318_a8, participant_lays_out_clothes_on_living_room_couch, 7, 34763018).
+raw_performed(i_p318_a8, participant_lays_out_clothes_on_living_room_couch, 8, 34769000).
+raw_performed(i_p318_a8, participant_lays_out_clothes_on_living_room_couch, 9, 34769070).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 316
-% Attività: Wash and dry all kitchen countertop surfaces.
+% Attivita: Check the wattage of a desk lamp and replace the bulb.
 % ======================================================================
 
 
@@ -8,59 +8,56 @@
 % Level A - Activity model
 % ========================
 
-activity(wash_and_dry_all_kitchen_countertop_surfaces).
+activity(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
 
-action(participant_locates_the_sponge).
-action(participant_locates_the_dish_detergent).
-action(participant_wets_the_sponge).
-action(participant_lathers_the_sponge_with_the_detergent).
-action(participant_washes_the_countertops).
-action(participant_rinses_out_the_sponge).
-action(participant_dries_the_countertops).
-action(participant_returns_the_sponge_to_the_sponge_drying_dish).
+action(participant_checks_wattage).
+action(participant_moves_to_the_kitchen).
+action(participant_retrieves_light_bulbs_from_cabinet_b).
+action(participant_moves_to_the_dining_room).
+action(participant_removes_old_light_bulb).
+action(participant_throws_away_old_light_bulb).
+action(participant_replaces_the_bulb).
 
-action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_sponge, 10).
-action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_dish_detergent, 10).
-action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, 5).
-action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, 5).
-action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, 5).
-action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, 5).
-action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 5).
-action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 12).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 6).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 7).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 1).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 7).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 5).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 12).
+action_type(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 5).
 
-expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_sponge, 1).
-expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_dish_detergent, 1).
-expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, 1).
-expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, 1).
-expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, 1).
-expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, 1).
-expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 1).
-expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 1).
+expected_count(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 1).
 
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_sponge, 18000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_dish_detergent, 18000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 18000).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_checks_wattage, 109234).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_kitchen, 160819).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_retrieves_light_bulbs_from_cabinet_b, 103499).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_moves_to_the_dining_room, 119069).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, 62259).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_throws_away_old_light_bulb, 13572).
+action_gap(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, 216342).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p316_a10, wash_and_dry_all_kitchen_countertop_surfaces).
+instance(i_p316_a9, check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p316_a10, participant_moves_to_the_kitchen, 1, 56752403).
-raw_performed(i_p316_a10, participant_turns_on_water, 2, 56759002).
-raw_performed(i_p316_a10, participant_washes_hands, 3, 56762799).
-raw_performed(i_p316_a10, participant_washes_hands, 4, 56775820).
-raw_performed(i_p316_a10, participant_washes_hands, 5, 56779792).
-raw_performed(i_p316_a10, participant_dries_hands, 6, 56784569).
+raw_performed(i_p316_a9, participant_checks_wattage, 1, 56653961).
+raw_performed(i_p316_a9, participant_removes_old_light_bulb, 2, 56653961).
+raw_performed(i_p316_a9, participant_moves_to_the_kitchen, 3, 56655864).
+raw_performed(i_p316_a9, participant_retrieves_light_bulbs_from_cabinet_b, 4, 56658309).
+raw_performed(i_p316_a9, participant_retrieves_light_bulbs_from_cabinet_b, 5, 56677233).
+raw_performed(i_p316_a9, participant_retrieves_light_bulbs_from_cabinet_b, 6, 56688830).
+raw_performed(i_p316_a9, participant_moves_to_the_dining_room, 7, 56703843).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

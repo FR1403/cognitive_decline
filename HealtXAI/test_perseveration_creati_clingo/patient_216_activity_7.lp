@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 216
-% Attività: Prepare a cup of soup using the microwave.
+% Attivita: Prepare a cup of soup using the microwave.
 % ======================================================================
 
 
@@ -40,35 +40,44 @@ expected_count(prepare_a_cup_of_soup_using_the_microwave, participant_returns_pi
 expected_count(prepare_a_cup_of_soup_using_the_microwave, participant_waits_for_water_to_simmer_in_cup_of_noodles, 1).
 expected_count(prepare_a_cup_of_soup_using_the_microwave, participant_brings_all_items_to_dining_room_table, 1).
 
-action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_retrieves_materials_from_cupboard_a, 18000).
-action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_fills_measuring_cup_with_water, 240000).
-action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_boils_water_in_microwave, 240000).
-action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_pours_water_into_cup_of_noodles, 240000).
-action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_retrieves_pitcher_of_water_from_refrigerator, 18000).
-action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_pours_glass_of_water, 240000).
-action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_returns_pitcher_of_water, 18000).
-action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_waits_for_water_to_simmer_in_cup_of_noodles, 240000).
-action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_brings_all_items_to_dining_room_table, 240000).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_retrieves_materials_from_cupboard_a, 437605).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_fills_measuring_cup_with_water, 2749284).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_boils_water_in_microwave, 328296).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_pours_water_into_cup_of_noodles, 211844).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_retrieves_pitcher_of_water_from_refrigerator, 302796).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_pours_glass_of_water, 307897).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_returns_pitcher_of_water, 301246).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_waits_for_water_to_simmer_in_cup_of_noodles, 213072).
+action_gap(prepare_a_cup_of_soup_using_the_microwave, participant_brings_all_items_to_dining_room_table, 408640).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p216_a8, prepare_a_cup_of_soup_using_the_microwave).
+instance(i_p216_a7, prepare_a_cup_of_soup_using_the_microwave).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p216_a8, participant_moves_to_hallway_closet, 1, 55120063).
-raw_performed(i_p216_a8, participant_moves_to_hallway_closet, 2, 55120065).
-raw_performed(i_p216_a8, participant_chooses_correct_outfit_from_closet, 3, 55121049).
-raw_performed(i_p216_a8, participant_chooses_correct_outfit_from_closet, 4, 55166018).
-raw_performed(i_p216_a8, participant_lays_out_clothes_on_living_room_couch, 5, 55167088).
-raw_performed(i_p216_a8, participant_lays_out_clothes_on_living_room_couch, 6, 55168051).
-raw_performed(i_p216_a8, participant_lays_out_clothes_on_living_room_couch, 7, 55174018).
-raw_performed(i_p216_a8, participant_lays_out_clothes_on_living_room_couch, 8, 55188059).
-raw_performed(i_p216_a8, participant_lays_out_clothes_on_living_room_couch, 9, 55189061).
-raw_performed(i_p216_a8, participant_lays_out_clothes_on_living_room_couch, 10, 55190051).
+raw_performed(i_p216_a7, participant_retrieves_materials_from_cupboard_a, 1, 54480017).
+raw_performed(i_p216_a7, participant_retrieves_materials_from_cupboard_a, 2, 54483044).
+raw_performed(i_p216_a7, participant_retrieves_materials_from_cupboard_a, 3, 54498053).
+raw_performed(i_p216_a7, participant_retrieves_materials_from_cupboard_a, 4, 54500001).
+raw_performed(i_p216_a7, participant_retrieves_materials_from_cupboard_a, 5, 54699033).
+raw_performed(i_p216_a7, participant_retrieves_materials_from_cupboard_a, 6, 54705051).
+raw_performed(i_p216_a7, participant_retrieves_materials_from_cupboard_a, 7, 54751048).
+raw_performed(i_p216_a7, participant_retrieves_materials_from_cupboard_a, 8, 54755004).
+raw_performed(i_p216_a7, participant_brings_all_items_to_dining_room_table, 9, 54840035).
+raw_performed(i_p216_a7, participant_brings_all_items_to_dining_room_table, 10, 54845059).
+raw_performed(i_p216_a7, participant_brings_all_items_to_dining_room_table, 11, 54846022).
+raw_performed(i_p216_a7, participant_brings_all_items_to_dining_room_table, 12, 54848030).
+raw_performed(i_p216_a7, participant_brings_all_items_to_dining_room_table, 13, 54857023).
+raw_performed(i_p216_a7, participant_retrieves_materials_from_cupboard_a, 14, 55017023).
+raw_performed(i_p216_a7, participant_retrieves_materials_from_cupboard_a, 15, 55021000).
+raw_performed(i_p216_a7, participant_brings_all_items_to_dining_room_table, 16, 55031007).
+raw_performed(i_p216_a7, participant_brings_all_items_to_dining_room_table, 17, 55031074).
+raw_performed(i_p216_a7, participant_brings_all_items_to_dining_room_table, 18, 55032035).
+raw_performed(i_p216_a7, participant_brings_all_items_to_dining_room_table, 19, 55033065).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

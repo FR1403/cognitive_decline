@@ -30,7 +30,11 @@ expected_pos(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 
 
 depends_on(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, participant_washes_hands).
 depends_on(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, participant_moves_to_the_kitchen).
+<<<<<<< HEAD
 depends_on(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, participant_turns_on_water).
+=======
+depends_on(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, participant_turns_on_water).
+>>>>>>> gap-objects-functions
 depends_on(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, participant_uses_hand_soap).
 
 

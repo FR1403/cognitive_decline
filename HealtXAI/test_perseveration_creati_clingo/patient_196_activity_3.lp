@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 196
-% Attività: Write a birthday card, enclose a check and address an envelope.
+% Attivita: Write a birthday card, enclose a check and address an envelope.
 % ======================================================================
 
 
@@ -37,45 +37,25 @@ expected_count(write_a_birthday_card_enclose_a_check_and_address_an_envelope, pa
 expected_count(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_addresses_the_envelope, 1).
 expected_count(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_places_envelope_in_the_mail_organizer, 1).
 
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_sits_at_dining_room_table, 240000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_retrieves_birthday_card, 18000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_writes_birthday_wish_inside_the_card_happy_birthday_name_wish, 240000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_retrieves_check, 18000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_writes_check_for_birthday_card, 240000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_puts_birthday_card_and_check_in_envelope, 240000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_addresses_the_envelope, 240000).
-action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_places_envelope_in_the_mail_organizer, 18000).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_sits_at_dining_room_table, 10258).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_retrieves_birthday_card, 10).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_writes_birthday_wish_inside_the_card_happy_birthday_name_wish, 10).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_retrieves_check, 12).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_writes_check_for_birthday_card, 12).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_puts_birthday_card_and_check_in_envelope, 12).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_addresses_the_envelope, 10).
+action_gap(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_places_envelope_in_the_mail_organizer, 10).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p196_a4, write_a_birthday_card_enclose_a_check_and_address_an_envelope).
+instance(i_p196_a3, write_a_birthday_card_enclose_a_check_and_address_an_envelope).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p196_a4, participant_moves_to_the_living_room, 1, 33253015).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 2, 33256050).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 3, 33269044).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 4, 33276011).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 5, 33279081).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 6, 33289001).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 7, 33305061).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 8, 33307000).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 9, 33330033).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 10, 33349014).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 11, 33361053).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 12, 33367060).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 13, 33388066).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 14, 33396016).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 15, 33416062).
-raw_performed(i_p196_a4, participant_reads_instructions_next_to_the_tv, 16, 33435050).
-raw_performed(i_p196_a4, participant_watches_news_clip, 17, 33437099).
-raw_performed(i_p196_a4, participant_watches_news_clip, 18, 33438002).
-raw_performed(i_p196_a4, participant_watches_news_clip, 19, 33659063).
-raw_performed(i_p196_a4, participant_watches_news_clip, 20, 33677018).
-raw_performed(i_p196_a4, participant_watches_news_clip, 21, 33682000).
+raw_performed(i_p196_a3, participant_sits_at_dining_room_table, 1, 33092091).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

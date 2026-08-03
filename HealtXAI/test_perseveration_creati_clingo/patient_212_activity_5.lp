@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 212
-% Attività: Pick a complete outfit for an interview from a selection of clothing.
+% Attivita: Obtain a watering can and water all plants in the living space.
 % ======================================================================
 
 
@@ -8,31 +8,56 @@
 % Level A - Activity model
 % ========================
 
-activity(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
+activity(obtain_a_watering_can_and_water_all_plants_in_the_living_space).
 
-action(participant_moves_to_hallway_closet).
-action(participant_chooses_correct_outfit_from_closet).
-action(participant_lays_out_clothes_on_living_room_couch).
+action(participant_retrieves_watering_can_from_supply_closet).
+action(participant_fills_watering_can).
+action(participant_waters_plants_windowsill).
+action(participant_waters_plants_coffee_table).
+action(participant_empties_extra_water_into_sink).
+action(participant_returns_watering_can_to_supply_closet).
 
-action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 7).
-action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 5).
-action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 1).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 5).
+action_type(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 12).
 
-expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 1).
-expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 1).
-expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 1).
+expected_count(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 1).
 
-action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 240000).
-action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 240000).
-action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 240000).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_retrieves_watering_can_from_supply_closet, 633987).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, 40960).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, 38159).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, 96987).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, 19134).
+action_gap(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_returns_watering_can_to_supply_closet, 25812).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p212_a6, pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
+instance(i_p212_a5, obtain_a_watering_can_and_water_all_plants_in_the_living_space).
 
+% raw_performed(Instance, Action, Order, TimeMs)
+
+raw_performed(i_p212_a5, participant_retrieves_watering_can_from_supply_closet, 1, 48862465).
+raw_performed(i_p212_a5, participant_fills_watering_can, 2, 48878225).
+raw_performed(i_p212_a5, participant_fills_watering_can, 3, 48878252).
+raw_performed(i_p212_a5, participant_fills_watering_can, 4, 48882066).
+raw_performed(i_p212_a5, participant_fills_watering_can, 5, 48882095).
+raw_performed(i_p212_a5, participant_fills_watering_can, 6, 48885827).
+raw_performed(i_p212_a5, participant_waters_plants_windowsill, 7, 48894862).
+raw_performed(i_p212_a5, participant_waters_plants_windowsill, 8, 48905604).
+raw_performed(i_p212_a5, participant_waters_plants_windowsill, 9, 48923902).
+raw_performed(i_p212_a5, participant_empties_extra_water_into_sink, 10, 48938133).
+raw_performed(i_p212_a5, participant_empties_extra_water_into_sink, 11, 48948150).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

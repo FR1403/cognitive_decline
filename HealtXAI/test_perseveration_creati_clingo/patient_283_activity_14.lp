@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 283
-% Attività: Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.
+% Attivita: Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.
 % ======================================================================
 
 
@@ -52,43 +52,36 @@ expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_giv
 expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_raisin_in_oatmeal, 1).
 expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_throws_raisin_box_in_trashcan, 1).
 
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_moves_to_the_kitchen, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_removes_materials_from_cupboard, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_locates_pot, 18000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_on_stove, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_fills_pot_with_water, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_pot, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participants_times_one_minute, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_stirs_oatmeal, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_bowl, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_stove_off, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_sugar_in_oatmeal, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_raisin_in_oatmeal, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_throws_raisin_box_in_trashcan, 18000).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_moves_to_the_kitchen, 368896).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_removes_materials_from_cupboard, 404709).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_locates_pot, 10).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_on_stove, 424528).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_fills_pot_with_water, 324385).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_pot, 209693).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participants_times_one_minute, 10).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_stirs_oatmeal, 25391).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_bowl, 623867).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_stove_off, 298434).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_sugar_in_oatmeal, 112967).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_raisin_in_oatmeal, 137705).
+action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_throws_raisin_box_in_trashcan, 3514).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p283_a15, prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12).
+instance(i_p283_a14, prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p283_a15, participant_moves_to_the_living_room, 1, 55377163).
-raw_performed(i_p283_a15, participant_gathers_statements_from_bookshelf, 2, 55378752).
-raw_performed(i_p283_a15, participant_gathers_statements_from_bookshelf, 3, 55394072).
-raw_performed(i_p283_a15, participant_gathers_statements_from_bookshelf, 4, 55395764).
-raw_performed(i_p283_a15, participant_gathers_statements_from_bookshelf, 5, 55399307).
-raw_performed(i_p283_a15, participant_gathers_statements_from_bookshelf, 6, 55402129).
-raw_performed(i_p283_a15, participant_gathers_statements_from_bookshelf, 7, 55416368).
-raw_performed(i_p283_a15, participant_gathers_statements_from_bookshelf, 8, 55422560).
-raw_performed(i_p283_a15, participant_moves_to_the_dining_room_table, 9, 55426855).
-raw_performed(i_p283_a15, participant_sits_down_at_the_dining_room_table, 10, 55428161).
-raw_performed(i_p283_a15, participant_sorts_pile_of_statements_into_the_organizer, 11, 55430159).
-raw_performed(i_p283_a15, participant_sorts_pile_of_statements_into_the_organizer, 12, 55433909).
-raw_performed(i_p283_a15, participant_sorts_pile_of_statements_into_the_organizer, 13, 55460154).
-raw_performed(i_p283_a15, participant_sorts_pile_of_statements_into_the_organizer, 14, 55484871).
+raw_performed(i_p283_a14, participant_moves_to_the_kitchen, 1, 54943507).
+raw_performed(i_p283_a14, participant_removes_materials_from_cupboard, 2, 54945538).
+raw_performed(i_p283_a14, participant_removes_materials_from_cupboard, 3, 54948951).
+raw_performed(i_p283_a14, participant_puts_oatmeal_into_pot, 4, 54956430).
+raw_performed(i_p283_a14, participant_puts_oatmeal_into_pot, 5, 54973514).
+raw_performed(i_p283_a14, participant_puts_oatmeal_into_pot, 6, 54992021).
+raw_performed(i_p283_a14, participant_puts_oatmeal_into_pot, 7, 55019761).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

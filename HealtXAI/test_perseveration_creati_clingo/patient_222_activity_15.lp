@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 222
-% Attività: Sort and file a small collection of billing statements.
+% Attivita: Sort and file a small collection of billing statements.
 % ======================================================================
 
 
@@ -28,25 +28,35 @@ expected_count(sort_and_file_a_small_collection_of_billing_statements, participa
 expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 1).
 expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 1).
 
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 240000).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 58997).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 98761).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 108552).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 62051).
+action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 145184).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p222_a16, sort_and_file_a_small_collection_of_billing_statements).
+instance(i_p222_a15, sort_and_file_a_small_collection_of_billing_statements).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p222_a16, participant_moves_to_the_kitchen, 1, 53204980).
-raw_performed(i_p222_a16, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 2, 53208705).
-raw_performed(i_p222_a16, participant_locates_deck_of_cards_from_kitchen_cabinet_b, 3, 53211758).
-raw_performed(i_p222_a16, participant_brings_deck_of_cards_to_the_dining_room_table, 4, 53213937).
+raw_performed(i_p222_a15, participant_moves_to_the_living_room, 1, 53112029).
+raw_performed(i_p222_a15, participant_gathers_statements_from_bookshelf, 2, 53113067).
+raw_performed(i_p222_a15, participant_gathers_statements_from_bookshelf, 3, 53116073).
+raw_performed(i_p222_a15, participant_moves_to_the_dining_room_table, 4, 53118155).
+raw_performed(i_p222_a15, participant_sits_down_at_the_dining_room_table, 5, 53121828).
+raw_performed(i_p222_a15, participant_sorts_pile_of_statements_into_the_organizer, 6, 53126852).
+raw_performed(i_p222_a15, participant_sorts_pile_of_statements_into_the_organizer, 7, 53135431).
+raw_performed(i_p222_a15, participant_sorts_pile_of_statements_into_the_organizer, 8, 53143881).
+raw_performed(i_p222_a15, participant_sorts_pile_of_statements_into_the_organizer, 9, 53145846).
+raw_performed(i_p222_a15, participant_sorts_pile_of_statements_into_the_organizer, 10, 53155208).
+raw_performed(i_p222_a15, participant_sorts_pile_of_statements_into_the_organizer, 11, 53159518).
+raw_performed(i_p222_a15, participant_sorts_pile_of_statements_into_the_organizer, 12, 53162350).
+raw_performed(i_p222_a15, participant_sorts_pile_of_statements_into_the_organizer, 13, 53175675).
+raw_performed(i_p222_a15, participant_sorts_pile_of_statements_into_the_organizer, 14, 53201137).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

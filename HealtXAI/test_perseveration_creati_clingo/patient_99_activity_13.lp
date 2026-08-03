@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 99
-% Attività: Prepare a bowl of oatmeal on the stovetop from the directions given in task 12.
+% Attivita: Sort and fold a basketful of clothing containing men's, women's and children's articles.
 % ======================================================================
 
 
@@ -8,85 +8,77 @@
 % Level A - Activity model
 % ========================
 
-activity(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12).
+activity(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
 
-action(participant_moves_to_the_kitchen).
-action(participant_removes_materials_from_cupboard).
-action(participant_locates_pot).
-action(participant_turns_on_stove).
-action(participant_fills_pot_with_water).
-action(participant_puts_oatmeal_into_pot).
-action(participants_times_one_minute).
-action(participant_stirs_oatmeal).
-action(participant_puts_oatmeal_into_bowl).
-action(participant_turns_stove_off).
-action(participant_puts_sugar_in_oatmeal).
-action(participant_puts_raisin_in_oatmeal).
-action(participant_throws_raisin_box_in_trashcan).
+action(participant_moves_to_the_hallway_closet).
+action(participant_locates_the_laundry_basket).
+action(participant_moves_to_the_couch).
+action(participant_sortsfolds_the_laundry).
 
-action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_moves_to_the_kitchen, 7).
-action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_removes_materials_from_cupboard, 5).
-action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_locates_pot, 10).
-action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_on_stove, 5).
-action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_fills_pot_with_water, 5).
-action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_pot, 5).
-action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participants_times_one_minute, 8).
-action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_stirs_oatmeal, 5).
-action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_bowl, 5).
-action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_stove_off, 5).
-action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_sugar_in_oatmeal, 5).
-action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_raisin_in_oatmeal, 5).
-action_type(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_throws_raisin_box_in_trashcan, 12).
+action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 7).
+action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 10).
+action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 7).
+action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 5).
 
-expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_moves_to_the_kitchen, 1).
-expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_removes_materials_from_cupboard, 1).
-expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_locates_pot, 1).
-expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_on_stove, 1).
-expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_fills_pot_with_water, 1).
-expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_pot, 1).
-expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participants_times_one_minute, 1).
-expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_stirs_oatmeal, 1).
-expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_bowl, 1).
-expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_stove_off, 1).
-expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_sugar_in_oatmeal, 1).
-expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_raisin_in_oatmeal, 1).
-expected_count(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_throws_raisin_box_in_trashcan, 1).
+expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 1).
+expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 1).
+expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 1).
+expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 1).
 
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_moves_to_the_kitchen, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_removes_materials_from_cupboard, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_locates_pot, 18000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_on_stove, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_fills_pot_with_water, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_pot, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participants_times_one_minute, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_stirs_oatmeal, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_oatmeal_into_bowl, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_turns_stove_off, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_sugar_in_oatmeal, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_puts_raisin_in_oatmeal, 240000).
-action_gap(prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12, participant_throws_raisin_box_in_trashcan, 18000).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 284602).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 260783).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 302470).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 253947).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p99_a14, prepare_a_bowl_of_oatmeal_on_the_stovetop_from_the_directions_given_in_task_12).
+instance(i_p99_a13, sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p99_a14, participant_moves_to_the_kitchen, 1, 58528013).
-raw_performed(i_p99_a14, participant_removes_materials_from_cupboard, 2, 58563025).
-raw_performed(i_p99_a14, participant_puts_sugar_in_oatmeal, 3, 58572024).
-raw_performed(i_p99_a14, participant_puts_raisin_in_oatmeal, 4, 58578052).
-raw_performed(i_p99_a14, participant_removes_materials_from_cupboard, 5, 58583014).
-raw_performed(i_p99_a14, participant_removes_materials_from_cupboard, 6, 58639019).
-raw_performed(i_p99_a14, participant_removes_materials_from_cupboard, 7, 58643013).
-raw_performed(i_p99_a14, participant_removes_materials_from_cupboard, 8, 58663040).
-raw_performed(i_p99_a14, participant_removes_materials_from_cupboard, 9, 58667077).
-raw_performed(i_p99_a14, participant_removes_materials_from_cupboard, 10, 58719038).
-raw_performed(i_p99_a14, participant_removes_materials_from_cupboard, 11, 58722007).
-raw_performed(i_p99_a14, participant_removes_materials_from_cupboard, 12, 58724002).
+raw_performed(i_p99_a13, participant_moves_to_the_hallway_closet, 1, 58128079).
+raw_performed(i_p99_a13, participant_moves_to_the_hallway_closet, 2, 58129000).
+raw_performed(i_p99_a13, participant_locates_the_laundry_basket, 3, 58130045).
+raw_performed(i_p99_a13, participant_moves_to_the_couch, 4, 58137015).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 5, 58138083).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 6, 58138086).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 7, 58140050).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 8, 58147082).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 9, 58153025).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 10, 58158068).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 11, 58163023).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 12, 58168022).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 13, 58177095).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 14, 58202000).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 15, 58209026).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 16, 58218086).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 17, 58225013).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 18, 58227063).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 19, 58230010).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 20, 58233009).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 21, 58247020).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 22, 58254069).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 23, 58258028).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 24, 58258030).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 25, 58260018).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 26, 58271045).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 27, 58276003).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 28, 58281006).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 29, 58286046).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 30, 58291022).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 31, 58293051).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 32, 58304050).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 33, 58305013).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 34, 58307042).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 35, 58311019).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 36, 58318038).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 37, 58328037).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 38, 58331008).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 39, 58338040).
+raw_performed(i_p99_a13, participant_sortsfolds_the_laundry, 40, 58339088).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 115
-% Attività: Sweep the kitchen and dust the living room.
+% Attivita: Sweep the kitchen and dust the living room.
 % ======================================================================
 
 
@@ -43,44 +43,40 @@ expected_count(sweep_the_kitchen_and_dust_the_living_room, participant_returns_b
 expected_count(sweep_the_kitchen_and_dust_the_living_room, participant_returns_duster_to_supply_closet, 1).
 expected_count(sweep_the_kitchen_and_dust_the_living_room, participants_returns_dust_pan_and_brush_to_supply_closet, 1).
 
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_broom_from_supply_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_duster_from_supply_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_dust_pan_and_brush_from_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_sweeps_kitchen_floor, 240000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_uses_dust_pan_and_brush, 240000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_living_room, 240000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_dining_room, 240000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_returns_broom_to_supply_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_returns_duster_to_supply_closet, 18000).
-action_gap(sweep_the_kitchen_and_dust_the_living_room, participants_returns_dust_pan_and_brush_to_supply_closet, 18000).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_broom_from_supply_closet, 9166).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_duster_from_supply_closet, 63001).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_retrieves_dust_pan_and_brush_from_closet, 38902).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_sweeps_kitchen_floor, 321564).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_uses_dust_pan_and_brush, 142634).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_living_room, 159196).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_dining_room, 504567).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_returns_broom_to_supply_closet, 26492).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participant_returns_duster_to_supply_closet, 22029).
+action_gap(sweep_the_kitchen_and_dust_the_living_room, participants_returns_dust_pan_and_brush_to_supply_closet, 206023).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p115_a2, sweep_the_kitchen_and_dust_the_living_room).
+instance(i_p115_a1, sweep_the_kitchen_and_dust_the_living_room).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p115_a2, participant_retrieves_materials_from_cupboard_a, 1, 33518124).
-raw_performed(i_p115_a2, participant_retrieves_materials_from_cupboard_a, 2, 33527899).
-raw_performed(i_p115_a2, participant_reads_instructions, 3, 33539508).
-raw_performed(i_p115_a2, participant_reads_instructions, 4, 33560117).
-raw_performed(i_p115_a2, participant_reads_instructions, 5, 33593945).
-raw_performed(i_p115_a2, participant_reads_instructions, 6, 33598092).
-raw_performed(i_p115_a2, participant_reads_instructions, 7, 33617903).
-raw_performed(i_p115_a2, participant_reads_instructions, 8, 33622268).
-raw_performed(i_p115_a2, participant_reads_instructions, 9, 33636410).
-raw_performed(i_p115_a2, participant_reads_instructions, 10, 33644737).
-raw_performed(i_p115_a2, participant_reads_instructions, 11, 33661358).
-raw_performed(i_p115_a2, participant_reads_instructions, 12, 33673446).
-raw_performed(i_p115_a2, participant_reads_instructions, 13, 33680070).
-raw_performed(i_p115_a2, participant_reads_instructions, 14, 33720871).
-raw_performed(i_p115_a2, participant_reads_instructions, 15, 33725484).
-raw_performed(i_p115_a2, participant_reads_instructions, 16, 33742391).
-raw_performed(i_p115_a2, participant_reads_instructions, 17, 33755980).
-raw_performed(i_p115_a2, participant_fills_dispenser_with_medication, 18, 33757025).
+raw_performed(i_p115_a1, participant_retrieves_broom_from_supply_closet, 1, 33148638).
+raw_performed(i_p115_a1, participant_retrieves_dust_pan_and_brush_from_closet, 2, 33148638).
+raw_performed(i_p115_a1, participant_sweeps_kitchen_floor, 3, 33161741).
+raw_performed(i_p115_a1, participant_sweeps_kitchen_floor, 4, 33168875).
+raw_performed(i_p115_a1, participant_sweeps_kitchen_floor, 5, 33171779).
+raw_performed(i_p115_a1, participant_sweeps_kitchen_floor, 6, 33189701).
+raw_performed(i_p115_a1, participant_sweeps_kitchen_floor, 7, 33193238).
+raw_performed(i_p115_a1, participant_sweeps_kitchen_floor, 8, 33207605).
+raw_performed(i_p115_a1, participant_uses_dust_pan_and_brush, 9, 33207605).
+raw_performed(i_p115_a1, participant_uses_dust_pan_and_brush, 10, 33211220).
+raw_performed(i_p115_a1, participant_returns_broom_to_supply_closet, 11, 33213011).
+raw_performed(i_p115_a1, participants_returns_dust_pan_and_brush_to_supply_closet, 12, 33213011).
+raw_performed(i_p115_a1, participant_retrieves_duster_from_supply_closet, 13, 33221167).
+raw_performed(i_p115_a1, participant_returns_duster_to_supply_closet, 14, 33418520).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

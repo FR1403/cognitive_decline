@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 276
-% Attività: Sort and file a small collection of billing statements.
+% Attivita: Pick a complete outfit for an interview from a selection of clothing.
 % ======================================================================
 
 
@@ -8,39 +8,42 @@
 % Level A - Activity model
 % ========================
 
-activity(sort_and_file_a_small_collection_of_billing_statements).
+activity(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
 
-action(participant_moves_to_the_living_room).
-action(participant_gathers_statements_from_bookshelf).
-action(participant_moves_to_the_dining_room_table).
-action(participant_sits_down_at_the_dining_room_table).
-action(participant_sorts_pile_of_statements_into_the_organizer).
+action(participant_moves_to_hallway_closet).
+action(participant_chooses_correct_outfit_from_closet).
+action(participant_lays_out_clothes_on_living_room_couch).
 
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 7).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 5).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 7).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 8).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 5).
+action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 7).
+action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 5).
+action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 5).
 
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 1).
+expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 1).
+expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 1).
+expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 1).
 
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 240000).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 133523).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 122151).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 216006).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p276_a9, sort_and_file_a_small_collection_of_billing_statements).
+instance(i_p276_a8, pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
 
+% raw_performed(Instance, Action, Order, TimeMs)
+
+raw_performed(i_p276_a8, participant_moves_to_hallway_closet, 1, 49856000).
+raw_performed(i_p276_a8, participant_moves_to_hallway_closet, 2, 49858032).
+raw_performed(i_p276_a8, participant_moves_to_hallway_closet, 3, 49865088).
+raw_performed(i_p276_a8, participant_moves_to_hallway_closet, 4, 49892000).
+raw_performed(i_p276_a8, participant_moves_to_hallway_closet, 5, 49893041).
+raw_performed(i_p276_a8, participant_moves_to_hallway_closet, 6, 49994057).
+raw_performed(i_p276_a8, participant_moves_to_hallway_closet, 7, 49995060).
+raw_performed(i_p276_a8, participant_moves_to_hallway_closet, 8, 50020000).
+raw_performed(i_p276_a8, participant_moves_to_hallway_closet, 9, 50030033).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

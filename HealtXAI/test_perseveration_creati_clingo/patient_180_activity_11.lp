@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 180
-% Attività: Wash and dry all kitchen countertop surfaces.
+% Attivita: Wash and dry all kitchen countertop surfaces.
 % ======================================================================
 
 
@@ -37,26 +37,33 @@ expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_
 expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 1).
 expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 1).
 
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_sponge, 18000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_dish_detergent, 18000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 240000).
-action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 18000).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_sponge, 17266).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_dish_detergent, 91).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, 276069).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, 103550).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, 156154).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, 123649).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 100328).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 4392).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p180_a12, wash_and_dry_all_kitchen_countertop_surfaces).
+instance(i_p180_a11, wash_and_dry_all_kitchen_countertop_surfaces).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p180_a12, participant_moves_to_the_dining_room_table, 1, 40881014).
-raw_performed(i_p180_a12, participant_sits_at_dining_room_table, 2, 40899094).
+raw_performed(i_p180_a11, participant_wets_the_sponge, 1, 40668054).
+raw_performed(i_p180_a11, participant_lathers_the_sponge_with_the_detergent, 2, 40672037).
+raw_performed(i_p180_a11, participant_washes_the_countertops, 3, 40682000).
+raw_performed(i_p180_a11, participant_washes_the_countertops, 4, 40698007).
+raw_performed(i_p180_a11, participant_rinses_out_the_sponge, 5, 40715088).
+raw_performed(i_p180_a11, participant_dries_the_countertops, 6, 40736019).
+raw_performed(i_p180_a11, participant_dries_the_countertops, 7, 40743012).
+raw_performed(i_p180_a11, participant_dries_the_countertops, 8, 40752082).
+raw_performed(i_p180_a11, participant_dries_the_countertops, 9, 40761005).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

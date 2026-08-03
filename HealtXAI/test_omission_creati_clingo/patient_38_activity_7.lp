@@ -1,6 +1,6 @@
 % =================================================================================================
 % Paziente 38
-% Attivit√†: Sort and fold a basketful of clothing containing men's, women's and children's articles.
+% Attivit‡: Sort and fold a basketful of clothing containing men's, women's and children's articles.
 % =================================================================================================
 
 

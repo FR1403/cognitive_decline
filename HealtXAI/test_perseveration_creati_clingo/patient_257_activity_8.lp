@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 257
-% Attività: Wash hands with soap at the kitchen sink.
+% Attivita: Pick a complete outfit for an interview from a selection of clothing.
 % ======================================================================
 
 
@@ -8,50 +8,45 @@
 % Level A - Activity model
 % ========================
 
-activity(wash_hands_with_soap_at_the_kitchen_sink).
+activity(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
 
-action(participant_moves_to_the_kitchen).
-action(participant_turns_on_water).
-action(participant_uses_hand_soap).
-action(participant_washes_hands).
-action(participant_dries_hands).
+action(participant_moves_to_hallway_closet).
+action(participant_chooses_correct_outfit_from_closet).
+action(participant_lays_out_clothes_on_living_room_couch).
 
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 7).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 5).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 5).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 5).
-action_type(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 5).
+action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 7).
+action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 5).
+action_type(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 5).
 
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 1).
-expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 1).
+expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 1).
+expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 1).
+expected_count(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 1).
 
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 240000).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 240000).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_moves_to_hallway_closet, 133523).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, 122151).
+action_gap(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, 216006).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p257_a9, wash_hands_with_soap_at_the_kitchen_sink).
+instance(i_p257_a8, pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p257_a9, participant_moves_to_the_kitchen, 1, 53156167).
-raw_performed(i_p257_a9, participant_retrieves_light_bulbs_from_cabinet_b, 2, 53157817).
-raw_performed(i_p257_a9, participant_retrieves_light_bulbs_from_cabinet_b, 3, 53161434).
-raw_performed(i_p257_a9, participant_retrieves_light_bulbs_from_cabinet_b, 4, 53182839).
-raw_performed(i_p257_a9, participant_retrieves_light_bulbs_from_cabinet_b, 5, 53275163).
-raw_performed(i_p257_a9, participant_retrieves_light_bulbs_from_cabinet_b, 6, 53333933).
-raw_performed(i_p257_a9, participant_removes_old_light_bulb, 7, 53361236).
-raw_performed(i_p257_a9, participant_throws_away_old_light_bulb, 8, 53396310).
-raw_performed(i_p257_a9, participant_replaces_the_bulb, 9, 53396310).
+raw_performed(i_p257_a8, participant_lays_out_clothes_on_living_room_couch, 1, 51140112).
+raw_performed(i_p257_a8, participant_lays_out_clothes_on_living_room_couch, 2, 51177078).
+raw_performed(i_p257_a8, participant_moves_to_hallway_closet, 3, 51863402).
+raw_performed(i_p257_a8, participant_moves_to_hallway_closet, 4, 51863482).
+raw_performed(i_p257_a8, participant_chooses_correct_outfit_from_closet, 5, 51867105).
+raw_performed(i_p257_a8, participant_chooses_correct_outfit_from_closet, 6, 51876783).
+raw_performed(i_p257_a8, participant_chooses_correct_outfit_from_closet, 7, 51876858).
+raw_performed(i_p257_a8, participant_chooses_correct_outfit_from_closet, 8, 51902646).
+raw_performed(i_p257_a8, participant_chooses_correct_outfit_from_closet, 9, 51904081).
+raw_performed(i_p257_a8, participant_lays_out_clothes_on_living_room_couch, 10, 51907523).
+raw_performed(i_p257_a8, participant_lays_out_clothes_on_living_room_couch, 11, 51920615).
+raw_performed(i_p257_a8, participant_lays_out_clothes_on_living_room_couch, 12, 51922481).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

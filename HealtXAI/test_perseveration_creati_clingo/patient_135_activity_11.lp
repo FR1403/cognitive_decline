@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 135
-% Attività: Sort and file a small collection of billing statements.
+% Attivita: Wash and dry all kitchen countertop surfaces.
 % ======================================================================
 
 
@@ -8,39 +8,77 @@
 % Level A - Activity model
 % ========================
 
-activity(sort_and_file_a_small_collection_of_billing_statements).
+activity(wash_and_dry_all_kitchen_countertop_surfaces).
 
-action(participant_moves_to_the_living_room).
-action(participant_gathers_statements_from_bookshelf).
-action(participant_moves_to_the_dining_room_table).
-action(participant_sits_down_at_the_dining_room_table).
-action(participant_sorts_pile_of_statements_into_the_organizer).
+action(participant_locates_the_sponge).
+action(participant_locates_the_dish_detergent).
+action(participant_wets_the_sponge).
+action(participant_lathers_the_sponge_with_the_detergent).
+action(participant_washes_the_countertops).
+action(participant_rinses_out_the_sponge).
+action(participant_dries_the_countertops).
+action(participant_returns_the_sponge_to_the_sponge_drying_dish).
 
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 7).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 5).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 7).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 8).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 5).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_sponge, 10).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_dish_detergent, 10).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, 5).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, 5).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, 5).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, 5).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 5).
+action_type(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 12).
 
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_sponge, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_dish_detergent, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 1).
+expected_count(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 1).
 
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 240000).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_sponge, 17266).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_locates_the_dish_detergent, 91).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_wets_the_sponge, 276069).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_lathers_the_sponge_with_the_detergent, 103550).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_washes_the_countertops, 156154).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_rinses_out_the_sponge, 123649).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_dries_the_countertops, 100328).
+action_gap(wash_and_dry_all_kitchen_countertop_surfaces, participant_returns_the_sponge_to_the_sponge_drying_dish, 4392).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p135_a12, sort_and_file_a_small_collection_of_billing_statements).
+instance(i_p135_a11, wash_and_dry_all_kitchen_countertop_surfaces).
 
+% raw_performed(Instance, Action, Order, TimeMs)
+
+raw_performed(i_p135_a11, participant_wets_the_sponge, 1, 45253991).
+raw_performed(i_p135_a11, participant_wets_the_sponge, 2, 45254018).
+raw_performed(i_p135_a11, participant_washes_the_countertops, 3, 45255972).
+raw_performed(i_p135_a11, participant_washes_the_countertops, 4, 45267433).
+raw_performed(i_p135_a11, participant_washes_the_countertops, 5, 45271461).
+raw_performed(i_p135_a11, participant_washes_the_countertops, 6, 45295542).
+raw_performed(i_p135_a11, participant_washes_the_countertops, 7, 45321588).
+raw_performed(i_p135_a11, participant_washes_the_countertops, 8, 45329561).
+raw_performed(i_p135_a11, participant_washes_the_countertops, 9, 45337684).
+raw_performed(i_p135_a11, participant_washes_the_countertops, 10, 45339160).
+raw_performed(i_p135_a11, participant_wets_the_sponge, 11, 45344741).
+raw_performed(i_p135_a11, participant_wets_the_sponge, 12, 45344769).
+raw_performed(i_p135_a11, participant_wets_the_sponge, 13, 45348556).
+raw_performed(i_p135_a11, participant_washes_the_countertops, 14, 45352673).
+raw_performed(i_p135_a11, participant_wets_the_sponge, 15, 45386074).
+raw_performed(i_p135_a11, participant_wets_the_sponge, 16, 45389894).
+raw_performed(i_p135_a11, participant_wets_the_sponge, 17, 45393606).
+raw_performed(i_p135_a11, participant_washes_the_countertops, 18, 45393998).
+raw_performed(i_p135_a11, participant_washes_the_countertops, 19, 45400528).
+raw_performed(i_p135_a11, participant_washes_the_countertops, 20, 45419281).
+raw_performed(i_p135_a11, participant_rinses_out_the_sponge, 21, 45437239).
+raw_performed(i_p135_a11, participant_rinses_out_the_sponge, 22, 45440999).
+raw_performed(i_p135_a11, participant_rinses_out_the_sponge, 23, 45448550).
+raw_performed(i_p135_a11, participant_rinses_out_the_sponge, 24, 45452327).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 305
-% Attività: Answer the phone and respond to questions pertaining to the video from task 4.
+% Attivita: Answer the phone and respond to questions pertaining to the video from task 4.
 % ======================================================================
 
 
@@ -31,37 +31,50 @@ expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video
 expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 1).
 expected_count(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 1).
 
-action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 240000).
-action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 240000).
-action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 240000).
-action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 240000).
-action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 240000).
-action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 18000).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_the_phone, 10).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, 10).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_sits_down_during_conversation, 256050).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_stands_in_one_place, 211149).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_walks_around_during_phone_call, 255139).
+action_gap(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 3342).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p305_a7, answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4).
+instance(i_p305_a6, answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p305_a7, participant_retrieves_pitcher_of_water_from_refrigerator, 1, 36895680).
-raw_performed(i_p305_a7, participant_retrieves_pitcher_of_water_from_refrigerator, 2, 36896208).
-raw_performed(i_p305_a7, participant_retrieves_pitcher_of_water_from_refrigerator, 3, 36898794).
-raw_performed(i_p305_a7, participant_retrieves_pitcher_of_water_from_refrigerator, 4, 36899242).
-raw_performed(i_p305_a7, participant_pours_glass_of_water, 5, 36903658).
-raw_performed(i_p305_a7, participant_pours_glass_of_water, 6, 36908717).
-raw_performed(i_p305_a7, participant_pours_glass_of_water, 7, 36915281).
-raw_performed(i_p305_a7, participant_pours_glass_of_water, 8, 36916959).
-raw_performed(i_p305_a7, participant_returns_pitcher_of_water, 9, 36918138).
-raw_performed(i_p305_a7, participant_returns_pitcher_of_water, 10, 36918538).
-raw_performed(i_p305_a7, participant_returns_pitcher_of_water, 11, 36920734).
-raw_performed(i_p305_a7, participant_returns_pitcher_of_water, 12, 36920806).
-raw_performed(i_p305_a7, participant_brings_all_items_to_dining_room_table, 13, 37045257).
-raw_performed(i_p305_a7, participant_brings_all_items_to_dining_room_table, 14, 37045636).
-raw_performed(i_p305_a7, participant_brings_all_items_to_dining_room_table, 15, 37048015).
+raw_performed(i_p305_a6, participant_answers_the_phone, 1, 36493433).
+raw_performed(i_p305_a6, participant_walks_around_during_phone_call, 2, 36494147).
+raw_performed(i_p305_a6, participant_walks_around_during_phone_call, 3, 36495438).
+raw_performed(i_p305_a6, participant_stands_in_one_place, 4, 36506891).
+raw_performed(i_p305_a6, participant_stands_in_one_place, 5, 36525250).
+raw_performed(i_p305_a6, participant_walks_around_during_phone_call, 6, 36527037).
+raw_performed(i_p305_a6, participant_walks_around_during_phone_call, 7, 36527530).
+raw_performed(i_p305_a6, participant_walks_around_during_phone_call, 8, 36527985).
+raw_performed(i_p305_a6, participant_walks_around_during_phone_call, 9, 36530890).
+raw_performed(i_p305_a6, participant_walks_around_during_phone_call, 10, 36535029).
+raw_performed(i_p305_a6, participant_walks_around_during_phone_call, 11, 36535289).
+raw_performed(i_p305_a6, participant_walks_around_during_phone_call, 12, 36535497).
+raw_performed(i_p305_a6, participant_walks_around_during_phone_call, 13, 36536523).
+raw_performed(i_p305_a6, participant_sits_down_during_conversation, 14, 36537587).
+raw_performed(i_p305_a6, participant_sits_down_during_conversation, 15, 36538459).
+raw_performed(i_p305_a6, participant_sits_down_during_conversation, 16, 36541523).
+raw_performed(i_p305_a6, participant_sits_down_during_conversation, 17, 36570535).
+raw_performed(i_p305_a6, participant_sits_down_during_conversation, 18, 36570779).
+raw_performed(i_p305_a6, participant_sits_down_during_conversation, 19, 36613050).
+raw_performed(i_p305_a6, participant_sits_down_during_conversation, 20, 36616633).
+raw_performed(i_p305_a6, participant_sits_down_during_conversation, 21, 36616896).
+raw_performed(i_p305_a6, participant_sits_down_during_conversation, 22, 36677946).
+raw_performed(i_p305_a6, participant_sits_down_during_conversation, 23, 36717678).
+raw_performed(i_p305_a6, participant_sits_down_during_conversation, 24, 36719370).
+raw_performed(i_p305_a6, participant_sits_down_during_conversation, 25, 36719496).
+raw_performed(i_p305_a6, participant_sits_down_during_conversation, 26, 36719526).
+raw_performed(i_p305_a6, participant_walks_around_during_phone_call, 27, 36722617).
+raw_performed(i_p305_a6, participant_hangs_up_the_phone, 28, 36722757).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

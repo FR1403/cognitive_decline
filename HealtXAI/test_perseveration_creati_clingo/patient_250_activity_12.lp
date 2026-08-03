@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 250
-% Attività: Place a phone call to a recording and write down the recipe heard.
+% Attivita: Place a phone call to a recording and write down the recipe heard.
 % ======================================================================
 
 
@@ -34,42 +34,24 @@ expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard
 expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 1).
 expected_count(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 1).
 
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 240000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 240000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 18000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 18000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 240000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 240000).
-action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 18000).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_moves_to_the_dining_room_table, 2133).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_sits_at_dining_room_table, 5983).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_book, 10).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_locates_the_phone_number_for_safeway_food_and_drugs, 10).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, 10).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, 10).
+action_gap(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_hangs_up_the_phone, 10).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p250_a13, place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard).
+instance(i_p250_a12, place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p250_a13, participant_moves_to_the_hallway_closet, 1, 39754072).
-raw_performed(i_p250_a13, participant_moves_to_the_hallway_closet, 2, 39755073).
-raw_performed(i_p250_a13, participant_locates_the_laundry_basket, 3, 39756059).
-raw_performed(i_p250_a13, participant_locates_the_laundry_basket, 4, 39756062).
-raw_performed(i_p250_a13, participant_locates_the_laundry_basket, 5, 39757086).
-raw_performed(i_p250_a13, participant_locates_the_laundry_basket, 6, 39760083).
-raw_performed(i_p250_a13, participant_locates_the_laundry_basket, 7, 39762013).
-raw_performed(i_p250_a13, participant_moves_to_the_couch, 8, 39763014).
-raw_performed(i_p250_a13, participant_sortsfolds_the_laundry, 9, 39763014).
-raw_performed(i_p250_a13, participant_sortsfolds_the_laundry, 10, 39764037).
-raw_performed(i_p250_a13, participant_sortsfolds_the_laundry, 11, 39774035).
-raw_performed(i_p250_a13, participant_sortsfolds_the_laundry, 12, 40006054).
-raw_performed(i_p250_a13, participant_moves_to_the_hallway_closet, 13, 40007058).
-raw_performed(i_p250_a13, participant_moves_to_the_hallway_closet, 14, 40008020).
-raw_performed(i_p250_a13, participant_moves_to_the_couch, 15, 40015073).
-raw_performed(i_p250_a13, participant_sortsfolds_the_laundry, 16, 40015073).
-raw_performed(i_p250_a13, participant_sortsfolds_the_laundry, 17, 40016003).
-raw_performed(i_p250_a13, participant_sortsfolds_the_laundry, 18, 40018086).
-raw_performed(i_p250_a13, participant_sortsfolds_the_laundry, 19, 40027034).
+raw_performed(i_p250_a12, participant_moves_to_the_dining_room_table, 1, 39567091).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

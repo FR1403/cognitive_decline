@@ -1,6 +1,6 @@
 % =================================================================================================
 % Paziente 102
-% Attivit√†: Wash and dry all kitchen countertop surfaces.
+% Attivit‡: Wash and dry all kitchen countertop surfaces.
 % =================================================================================================
 
 

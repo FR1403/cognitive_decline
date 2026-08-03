@@ -1,6 +1,6 @@
 % =================================================================================================
 % Paziente 104
-% Attivit√†: Obtain a set of medicines and a weekly medicine dispenser, fill as per directions.
+% Attivit‡: Obtain a set of medicines and a weekly medicine dispenser, fill as per directions.
 % =================================================================================================
 
 

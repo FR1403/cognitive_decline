@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 318
-% Attività: Sort and file a small collection of billing statements.
+% Attivita: Sort and fold a basketful of clothing containing men's, women's and children's articles.
 % ======================================================================
 
 
@@ -8,60 +8,51 @@
 % Level A - Activity model
 % ========================
 
-activity(sort_and_file_a_small_collection_of_billing_statements).
+activity(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
 
-action(participant_moves_to_the_living_room).
-action(participant_gathers_statements_from_bookshelf).
-action(participant_moves_to_the_dining_room_table).
-action(participant_sits_down_at_the_dining_room_table).
-action(participant_sorts_pile_of_statements_into_the_organizer).
+action(participant_moves_to_the_hallway_closet).
+action(participant_locates_the_laundry_basket).
+action(participant_moves_to_the_couch).
+action(participant_sortsfolds_the_laundry).
 
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 7).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 5).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 7).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 8).
-action_type(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 5).
+action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 7).
+action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 10).
+action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 7).
+action_type(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 5).
 
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 1).
-expected_count(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 1).
+expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 1).
+expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 1).
+expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 1).
+expected_count(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 1).
 
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_living_room, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, 240000).
-action_gap(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 240000).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_hallway_closet, 284602).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, 260783).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, 302470).
+action_gap(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 253947).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p318_a14, sort_and_file_a_small_collection_of_billing_statements).
+instance(i_p318_a13, sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p318_a14, participant_moves_to_the_kitchen, 1, 36763061).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 2, 36786082).
-raw_performed(i_p318_a14, participant_puts_sugar_in_oatmeal, 3, 36794006).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 4, 36801011).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 5, 36824004).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 6, 36826032).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 7, 36956059).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 8, 36973013).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 9, 37180031).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 10, 37200006).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 11, 37206088).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 12, 37212007).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 13, 37225063).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 14, 37228055).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 15, 37243005).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 16, 37244099).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 17, 37326028).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 18, 37332008).
-raw_performed(i_p318_a14, participant_removes_materials_from_cupboard, 19, 37334059).
+raw_performed(i_p318_a13, participant_moves_to_the_hallway_closet, 1, 36508070).
+raw_performed(i_p318_a13, participant_locates_the_laundry_basket, 2, 36508072).
+raw_performed(i_p318_a13, participant_moves_to_the_couch, 3, 36515037).
+raw_performed(i_p318_a13, participant_moves_to_the_couch, 4, 36516000).
+raw_performed(i_p318_a13, participant_sortsfolds_the_laundry, 5, 36517045).
+raw_performed(i_p318_a13, participant_sortsfolds_the_laundry, 6, 36519010).
+raw_performed(i_p318_a13, participant_sortsfolds_the_laundry, 7, 36523073).
+raw_performed(i_p318_a13, participant_sortsfolds_the_laundry, 8, 36524076).
+raw_performed(i_p318_a13, participant_sortsfolds_the_laundry, 9, 36526067).
+raw_performed(i_p318_a13, participant_sortsfolds_the_laundry, 10, 36531065).
+raw_performed(i_p318_a13, participant_sortsfolds_the_laundry, 11, 36533012).
+raw_performed(i_p318_a13, participant_sortsfolds_the_laundry, 12, 36571075).
+raw_performed(i_p318_a13, participant_sortsfolds_the_laundry, 13, 36601087).
+raw_performed(i_p318_a13, participant_sortsfolds_the_laundry, 14, 36676033).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),

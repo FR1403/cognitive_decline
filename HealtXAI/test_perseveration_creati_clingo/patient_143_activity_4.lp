@@ -1,6 +1,6 @@
 % ======================================================================
 % Paziente 143
-% Attività: Find the appropriate DVD and watch the corresponding news clip.
+% Attivita: Find the appropriate DVD and watch the corresponding news clip.
 % ======================================================================
 
 
@@ -37,34 +37,48 @@ expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, p
 expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_turns_off_tv, 1).
 expected_count(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_returns_dvd_to_pile, 1).
 
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_moves_to_the_living_room, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_dvd, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_reads_instructions_next_to_the_tv, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participants_uses_remote_to_turn_on_tv, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_channel, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_watches_news_clip, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_turns_off_tv, 240000).
-action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_returns_dvd_to_pile, 18000).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_moves_to_the_living_room, 27059).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_dvd, 39776).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_reads_instructions_next_to_the_tv, 408166).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participants_uses_remote_to_turn_on_tv, 72894).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_channel, 72894).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_watches_news_clip, 396941).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_turns_off_tv, 79724).
+action_gap(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_returns_dvd_to_pile, 27096).
 
 
 % ===============================
 % Level B - Execution observation
 % ===============================
 
-instance(i_p143_a5, find_the_appropriate_dvd_and_watch_the_corresponding_news_clip).
+instance(i_p143_a4, find_the_appropriate_dvd_and_watch_the_corresponding_news_clip).
 
 % raw_performed(Instance, Action, Order, TimeMs)
 
-raw_performed(i_p143_a5, participant_retrieves_watering_can_from_supply_closet, 1, 53222003).
-raw_performed(i_p143_a5, participant_fills_watering_can, 2, 53231094).
-raw_performed(i_p143_a5, participant_fills_watering_can, 3, 53233000).
-raw_performed(i_p143_a5, participant_fills_watering_can, 4, 53234097).
-raw_performed(i_p143_a5, participant_waters_plants_windowsill, 5, 53235575).
-raw_performed(i_p143_a5, participant_waters_plants_coffee_table, 6, 53261061).
-raw_performed(i_p143_a5, participant_waters_plants_coffee_table, 7, 53261200).
-raw_performed(i_p143_a5, participant_waters_plants_coffee_table, 8, 53262561).
-raw_performed(i_p143_a5, participant_empties_extra_water_into_sink, 9, 53271524).
-raw_performed(i_p143_a5, participant_returns_watering_can_to_supply_closet, 10, 53271873).
+raw_performed(i_p143_a4, participant_moves_to_the_living_room, 1, 52788071).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 2, 52790093).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 3, 52808426).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 4, 52819006).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 5, 52832074).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 6, 52840007).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 7, 52842718).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 8, 52855039).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 9, 52871391).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 10, 52874415).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 11, 52934436).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 12, 52941045).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 13, 52964383).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 14, 53040501).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 15, 53049235).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 16, 53067069).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 17, 53076013).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 18, 53089039).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 19, 53106440).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 20, 53127566).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 21, 53131603).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 22, 53145307).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 23, 53148572).
+raw_performed(i_p143_a4, participant_reads_instructions_next_to_the_tv, 24, 53166096).
 
 prev_same(I,X,T1,T2) :-
     raw_performed(I,X,_,T1),
