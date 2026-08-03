@@ -26,7 +26,12 @@ Il sistema si articola su tre moduli principali:
 
 ## 🔑 Configurazione Password Database PostgreSQL
 
-Tutti gli script che si connettono al database PostgreSQL locale (`CASAS400`) utilizzano il dizionario `db_params`. Ciascun utente deve semplicemente **inserire la password del proprio database PostgreSQL** nel parametro `"password"` dei file Python (es. in `HealtXAI/modulo_regressione/regression_algorithm.py` o `HealtXAI/utils/util_functions.py`):
+Tutti gli script che si connettono al database PostgreSQL locale (`CASAS400`) utilizzano il dizionario `db_params`. Ciascun utente deve semplicemente **inserire la password del proprio database PostgreSQL** nel parametro `"password"` dei seguenti file Python:
+
+### 📌 Elenco dei file da aggiornare:
+- `HealtXAI/utils/util_functions.py` (utility generali e app Streamlit)
+- `HealtXAI/modulo_regressione/regression_algorithm.py` (algoritmi di regressione e ML)
+- `HealtXAI/correlazione_coppie_diagnosi_combinata.py` (analisi correlazione combinata)
 
 ```python
 db_params = {
@@ -132,7 +137,9 @@ python HealtXAI/modulo_regressione/train_regression.py
 ### 3. Test ed Esecuzione Anomaly Detection (Clingo / ASP)
 Per eseguire l'estrazione delle anomalie logiche tramite Clingo:
 ```bash
-python HealtXAI/run_test_clingo.py
+python HealtXAI/run_test_clingo.py <nome_cartella>
+# Esempio:
+python HealtXAI/run_test_clingo.py test_omission_creati_clingo
 ```
 
 ### 4. Database PostgreSQL locale tramite Docker

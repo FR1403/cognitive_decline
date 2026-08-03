@@ -7,21 +7,12 @@ import re
 import urllib.error
 import urllib.request
 from typing import Any, Dict
-<<<<<<< Updated upstream
-
-
-# Parametri di default per una endpoint compatibile con OpenAI-style chat
-# completions. Restano modificabili dal chiamante se servira' in seguito.
-DEFAULT_LLM_URL = "http://127.0.0.1:1234/v1/chat/completions"
-DEFAULT_MODEL = "mistral-7b-instruct-v0.3"
-=======
 from utils.util_functions import get_lm_studio_url
 
 # Parametri di default per una endpoint compatibile con OpenAI-style chat
 # completions. Restano modificabili dal chiamante se servira' in seguito.
 DEFAULT_LLM_URL = get_lm_studio_url()
 DEFAULT_MODEL = "mistralai/mistral-7b-instruct-v0.3"
->>>>>>> Stashed changes
 DEFAULT_TIMEOUT_SECONDS = 120
 DEFAULT_MAX_TOKENS = 512
 DEFAULT_TEMPERATURE = 0.1
@@ -32,11 +23,7 @@ DEFAULT_TEMPERATURE = 0.1
 def ask_time_gap_llm(
     prompt: str,
     llm_url: str = DEFAULT_LLM_URL,
-<<<<<<< Updated upstream
     model: str = DEFAULT_MODEL,
-=======
-    model: str = DEFAULT_MODEL, #mistral7bthpool
->>>>>>> Stashed changes
     timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS,
     max_tokens: int = DEFAULT_MAX_TOKENS,
     temperature: float = DEFAULT_TEMPERATURE,
