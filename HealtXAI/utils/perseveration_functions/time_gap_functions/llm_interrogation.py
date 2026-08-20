@@ -13,6 +13,10 @@ from utils.util_functions import get_lm_studio_url
 # completions. Restano modificabili dal chiamante se servira' in seguito.
 DEFAULT_LLM_URL = get_lm_studio_url()
 DEFAULT_MODEL = "mistralai/mistral-7b-instruct-v0.3"
+<<<<<<< HEAD
+=======
+
+>>>>>>> a9fe5fc4bc0a5b7341d67e732f33a8348e0cf2e9
 DEFAULT_TIMEOUT_SECONDS = 120
 DEFAULT_MAX_TOKENS = 512
 DEFAULT_TEMPERATURE = 0.1

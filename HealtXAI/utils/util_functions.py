@@ -108,8 +108,8 @@ Rispondi ESCLUSIVAMENTE con un oggetto JSON contenente la chiave "gap_ms" e il v
         print(f"⚠️ Errore parsing LLM per '{task_description}' ({e}). Uso valore di default.")
         return max_time_healthy
 
-
-
+CLINGO_CMD = os.getenv("CLINGO_CMD", "clingo")
+CLINGO_SUCCESS_CODES = {0, 10, 20, 30}
 
 livello_A = '''
 % ========================

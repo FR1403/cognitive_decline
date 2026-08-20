@@ -5,7 +5,7 @@ import os
 import plotly.express as px
 
 # ML dependencies
-from sklearn.model_selection import train_test_split, LeaveOneOut, StratifiedKFold
+from sklearn.model_selection import train_test_split, LeaveOneOut, StratifiedKFold, KFold
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.linear_model import LinearRegression, Ridge, Lasso
@@ -36,6 +36,9 @@ st.markdown("""
        ========================================================= */
     .stDeployButton { display: none !important; }
     footer { visibility: hidden; }
+    #MainMenu { visibility: hidden; }
+
+    /* Lascia il padding standard di Streamlit così la pagina non si sovrappone all'header */
     .block-container { padding-top: 1.5rem !important; }
 
     /* Riduzione spazio vuoto in cima alla Sidebar */
@@ -49,9 +52,9 @@ st.markdown("""
         padding-top: 0.5rem !important;
     }
     [data-testid="stSidebarHeader"] {
-        padding-top: 0rem !important;
-        padding-bottom: 0rem !important;
-        height: 0px !important;
+        padding-top: 0.9rem !important;
+        padding-bottom: 0.5rem !important;
+        height: auto !important;
     }
 
     /* =========================================================
@@ -70,7 +73,7 @@ st.markdown("""
        ========================================================= */
     div[data-testid="stElementContainer"]:has(.glass-header) { 
         position: sticky; 
-        top: 1rem; 
+        top: 3.8rem;
         z-index: 500; 
         background: transparent;
         padding-top: 0rem; 
@@ -84,6 +87,7 @@ st.markdown("""
         -webkit-backdrop-filter: blur(20px);
         border-radius: 12px; 
         border: 1px solid rgba(255, 255, 255, 0.08); 
+        border-top: none;
         box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
         display: flex;
         flex-direction: column;
@@ -192,21 +196,23 @@ def converto_in_etichetta(valore):
 DEFAULT_DATASET_PATH = os.path.join(os.path.dirname(__file__), "dataset_regressione.csv")
 
 @st.cache_data(show_spinner=False)
-def load_and_train_all_models(use_stratify: bool = True, dataset_path=None, selected_anomalies=None, pearson_target_vals=None, selected_patient_ids=None):
+def load_and_train_all_models(use_stratify: bool = True, dataset_path=None, selected_anomalies=None, pearson_target_vals=None, selected_patient_ids=None, selected_diagnosis_ids=None):
     if dataset_path is None:
         dataset_path = DEFAULT_DATASET_PATH if os.path.exists(DEFAULT_DATASET_PATH) else "dataset_regressione.csv"
     df = pd.read_csv(dataset_path)
     
-    # Filtro sui pazienti di confronto selezionati dall'interfaccia (Gruppi clinici e/o ID specifici)
+    # Filtro sui pazienti di confronto selezionati dall'interfaccia (Gruppi clinici, diagnosi specifiche e/o ID specifici)
     if pearson_target_vals is not None and len(pearson_target_vals) > 0:
         df = df[df['Target_StatoCognitivo'].isin(pearson_target_vals)]
+    if selected_diagnosis_ids is not None and 'diagnosis' in df.columns:
+        df = df[df['diagnosis'].isin(selected_diagnosis_ids)]
     if selected_patient_ids is not None and len(selected_patient_ids) > 0:
         df = df[df['patient_id'].isin(selected_patient_ids)]
     if len(df) == 0:
         df = pd.read_csv(dataset_path)
 
     patient_ids = df['patient_id']
-    X = df.drop(columns=['patient_id', 'Target_StatoCognitivo'])
+    X = df.drop(columns=['patient_id', 'Target_StatoCognitivo', 'diagnosis'], errors='ignore')
     
     if selected_anomalies is not None and len(selected_anomalies) > 0:
         cols_to_keep = []
@@ -218,18 +224,20 @@ def load_and_train_all_models(use_stratify: bool = True, dataset_path=None, sele
             elif 'Perseveration' in col: keep = 'Perseveration' in selected_anomalies
             elif 'AnticipationOmission' in col: keep = 'Anticipation Omission' in selected_anomalies
             elif 'Reversal' in col and 'Anticipation' not in col: keep = 'Reversal' in selected_anomalies
+            elif 'ReachTouch' in col: keep = 'Reach Touch' in selected_anomalies
+            elif 'ActionAdditions' in col: keep = 'Action Additions' in selected_anomalies
             elif 'pacing' == col: keep = 'Pacing' in selected_anomalies
             elif 'sharp_angles' == col: keep = 'Sharp Angles' in selected_anomalies
             elif 'lapping' == col: keep = 'Lapping' in selected_anomalies
             elif 'length' == col: keep = 'Length' in selected_anomalies
             elif 'straightness' == col: keep = 'Straightness' in selected_anomalies
             elif 'jerk' == col: keep = 'Jerk' in selected_anomalies
-            elif 'pacing_lapping' == col: keep = ('Pacing' in selected_anomalies or 'Lapping' in selected_anomalies)
-            elif 'Totale_Anomalie_Globale' == col or 'Media_Anomalie_Globale' == col or '_#TotaleAnomalie' in col:
-                keep = all(k in selected_anomalies for k in ['Omission', 'Perseveration', 'Tool Omission', 'Anticipation Omission', 'Reversal'])
             if keep: cols_to_keep.append(col)
         if len(cols_to_keep) > 0:
-            X = X[cols_to_keep]
+            X = X[cols_to_keep].copy()
+            anom_cols_active = [c for c in cols_to_keep if any(k in c for k in ['Omission', 'Reversal', 'Perseveration', 'ReachTouch', 'ActionAdditions'])]
+            if len(anom_cols_active) > 0:
+                X['Media_Anomalie_Globale'] = X[anom_cols_active].mean(axis=1)
             
     y = df['Target_StatoCognitivo']
     
@@ -336,21 +344,23 @@ def load_and_train_all_models(use_stratify: bool = True, dataset_path=None, sele
     return summary_df, trained_details, feature_importances, df, ids_test.values
 
 @st.cache_data(show_spinner=False)
-def load_and_eval_kfold(k_splits: int = 192, dataset_path=None, selected_anomalies=None, pearson_target_vals=None, selected_patient_ids=None):
+def load_and_eval_kfold(k_splits: int = 192, dataset_path=None, selected_anomalies=None, pearson_target_vals=None, selected_patient_ids=None, selected_diagnosis_ids=None):
     if dataset_path is None:
         dataset_path = DEFAULT_DATASET_PATH if os.path.exists(DEFAULT_DATASET_PATH) else "dataset_regressione.csv"
     df = pd.read_csv(dataset_path)
 
-    # Filtro sui pazienti di confronto selezionati dall'interfaccia (Gruppi clinici e/o ID specifici)
+    # Filtro sui pazienti di confronto selezionati dall'interfaccia (Gruppi clinici, diagnosi specifiche e/o ID specifici)
     if pearson_target_vals is not None and len(pearson_target_vals) > 0:
         df = df[df['Target_StatoCognitivo'].isin(pearson_target_vals)]
+    if selected_diagnosis_ids is not None and 'diagnosis' in df.columns:
+        df = df[df['diagnosis'].isin(selected_diagnosis_ids)]
     if selected_patient_ids is not None and len(selected_patient_ids) > 0:
         df = df[df['patient_id'].isin(selected_patient_ids)]
     if len(df) == 0:
         df = pd.read_csv(dataset_path)
 
     patient_ids = df['patient_id']
-    X = df.drop(columns=['patient_id', 'Target_StatoCognitivo'])
+    X = df.drop(columns=['patient_id', 'Target_StatoCognitivo', 'diagnosis'], errors='ignore')
 
     if selected_anomalies is not None and len(selected_anomalies) > 0:
         cols_to_keep = []
@@ -362,23 +372,25 @@ def load_and_eval_kfold(k_splits: int = 192, dataset_path=None, selected_anomali
             elif 'Perseveration' in col: keep = 'Perseveration' in selected_anomalies
             elif 'AnticipationOmission' in col: keep = 'Anticipation Omission' in selected_anomalies
             elif 'Reversal' in col and 'Anticipation' not in col: keep = 'Reversal' in selected_anomalies
+            elif 'ReachTouch' in col: keep = 'Reach Touch' in selected_anomalies
+            elif 'ActionAdditions' in col: keep = 'Action Additions' in selected_anomalies
             elif 'pacing' == col: keep = 'Pacing' in selected_anomalies
             elif 'sharp_angles' == col: keep = 'Sharp Angles' in selected_anomalies
             elif 'lapping' == col: keep = 'Lapping' in selected_anomalies
             elif 'length' == col: keep = 'Length' in selected_anomalies
             elif 'straightness' == col: keep = 'Straightness' in selected_anomalies
             elif 'jerk' == col: keep = 'Jerk' in selected_anomalies
-            elif 'pacing_lapping' == col: keep = ('Pacing' in selected_anomalies or 'Lapping' in selected_anomalies)
-            elif 'Totale_Anomalie_Globale' == col or 'Media_Anomalie_Globale' == col or '_#TotaleAnomalie' in col:
-                keep = all(k in selected_anomalies for k in ['Omission', 'Perseveration', 'Tool Omission', 'Anticipation Omission', 'Reversal'])
             if keep: cols_to_keep.append(col)
         if len(cols_to_keep) > 0:
-            X = X[cols_to_keep]
+            X = X[cols_to_keep].copy()
+            anom_cols_active = [c for c in cols_to_keep if any(k in c for k in ['Omission', 'Reversal', 'Perseveration', 'ReachTouch', 'ActionAdditions'])]
+            if len(anom_cols_active) > 0:
+                X['Media_Anomalie_Globale'] = X[anom_cols_active].mean(axis=1)
 
     y = df['Target_StatoCognitivo']
     n_samples = len(df)
     
-    if k_splits >= n_samples or k_splits == 192:
+    if k_splits >= n_samples:
         cv_splitter = LeaveOneOut()
     else:
         y_str = y.astype(str)
@@ -493,9 +505,18 @@ if os.path.exists(_df_preview_path):
 st.sidebar.markdown("<p style='color:#cbd5e1; font-weight:600; margin-bottom: 8px;'>👥 Filtro Pazienti di Confronto & Target Modello</p>", unsafe_allow_html=True)
 pearson_preset = st.sidebar.selectbox(
     "Seleziona Gruppi Pazienti per l'Algoritmo:",
-    options=["Tutti (Sani + MCI + Demenza)", "Sani vs MCI", "Sani vs Demenza", "MCI vs Demenza", "Personalizzato"],
+    options=[
+        "Tutti (Sani + MCI + Demenza)", 
+        "Sani vs MCI", 
+        "Sani vs Demenza", 
+        "MCI vs Demenza", 
+        "Sani Giovani (60-74 anni) vs Demenza",
+        "Personalizzato"
+    ],
     index=0
 )
+
+selected_diagnosis_ids = None
 
 if pearson_preset == "Tutti (Sani + MCI + Demenza)":
     pearson_target_vals = (0.0, 0.3, 1.0)
@@ -505,6 +526,9 @@ elif pearson_preset == "Sani vs Demenza":
     pearson_target_vals = (0.0, 1.0)
 elif pearson_preset == "MCI vs Demenza":
     pearson_target_vals = (0.3, 1.0)
+elif pearson_preset == "Sani Giovani (60-74 anni) vs Demenza":
+    pearson_target_vals = (0.0, 1.0)
+    selected_diagnosis_ids = (1, 4)
 else:
     selected_cats = st.sidebar.multiselect(
         "Categorie Cognitive Incluse:",
@@ -527,6 +551,7 @@ selected_patient_ids_tuple = tuple(selected_patients) if len(selected_patients) 
 st.sidebar.markdown("---")
 
 with st.sidebar.form(key="training_options_form"):
+    db_password_input = st.text_input("🔑 Password DB PostgreSQL:", type="password", value="", help="Inserisci la password per connetterti al DB PostgreSQL locale (CASAS400)")
     use_stratification = st.checkbox("Usa Divisione Stratificata (Stratify)", value=True)
 
     st.markdown("<p style='color:#cbd5e1; font-weight:600; margin-bottom: 8px;'>🧬 Features del Modello</p>", unsafe_allow_html=True)
@@ -535,12 +560,14 @@ with st.sidebar.form(key="training_options_form"):
         use_om = st.toggle("Omission", value=True)
         use_to = st.toggle("Tool Omiss.", value=True)
         use_ao = st.toggle("Anticip. Om.", value=True)
+        use_rt = st.toggle("Reach Touch", value=True)
         use_pa = st.toggle("Pacing", value=True)
         use_sa = st.toggle("Sharp Angles", value=True)
         use_la = st.toggle("Lapping", value=True)
     with col_f2:
         use_pe = st.toggle("Perseveration", value=True)
         use_re = st.toggle("Reversal", value=True)
+        use_aa = st.toggle("Action Add.", value=True)
         use_le = st.toggle("Length", value=True)
         use_st = st.toggle("Straightness", value=True)
         use_jk = st.toggle("Jerk", value=True)
@@ -554,6 +581,8 @@ if use_pe: selected_anomalies.append("Perseveration")
 if use_to: selected_anomalies.append("Tool Omission")
 if use_ao: selected_anomalies.append("Anticipation Omission")
 if use_re: selected_anomalies.append("Reversal")
+if use_rt: selected_anomalies.append("Reach Touch")
+if use_aa: selected_anomalies.append("Action Additions")
 if use_pa: selected_anomalies.append("Pacing")
 if use_sa: selected_anomalies.append("Sharp Angles")
 if use_la: selected_anomalies.append("Lapping")
@@ -564,24 +593,27 @@ if use_jk: selected_anomalies.append("Jerk")
 # Estrazione DB e Logica Unificata
 if btn_submit:
     st.cache_data.clear()
+    st.session_state.pop('sync_error_msg', None)
     try:
         from regression_algorithm import create_feature_vectors
         original_cwd = os.getcwd()
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
         
-        df_new = create_feature_vectors()
+        df_new = create_feature_vectors(db_password=db_password_input)
         os.chdir(original_cwd)
         
         if df_new is not None:
             cols_to_keep = []
             for col in df_new.columns:
                 keep = False
-                if col in ['patient_id', 'Target_StatoCognitivo', 'N_Attivita_Svolte']: keep = True
+                if col in ['patient_id', 'diagnosis', 'Target_StatoCognitivo', 'N_Attivita_Svolte']: keep = True
                 elif 'ToolOmission' in col: keep = 'Tool Omission' in selected_anomalies
                 elif 'Omission' in col and 'Anticipation' not in col: keep = 'Omission' in selected_anomalies
                 elif 'Perseveration' in col: keep = 'Perseveration' in selected_anomalies
                 elif 'AnticipationOmission' in col: keep = 'Anticipation Omission' in selected_anomalies
                 elif 'Reversal' in col and 'Anticipation' not in col: keep = 'Reversal' in selected_anomalies
+                elif 'ReachTouch' in col: keep = 'Reach Touch' in selected_anomalies
+                elif 'ActionAdditions' in col: keep = 'Action Additions' in selected_anomalies
                 elif 'pacing' == col: keep = 'Pacing' in selected_anomalies
                 elif 'sharp_angles' == col: keep = 'Sharp Angles' in selected_anomalies
                 elif 'lapping' == col: keep = 'Lapping' in selected_anomalies
@@ -590,7 +622,7 @@ if btn_submit:
                 elif 'jerk' == col: keep = 'Jerk' in selected_anomalies
                 elif 'pacing_lapping' == col: keep = ('Pacing' in selected_anomalies or 'Lapping' in selected_anomalies)
                 elif 'Totale_Anomalie_Globale' == col or 'Media_Anomalie_Globale' == col:
-                    keep = all(k in selected_anomalies for k in ['Omission', 'Perseveration', 'Tool Omission', 'Anticipation Omission', 'Reversal'])
+                    keep = all(k in selected_anomalies for k in ['Omission', 'Perseveration', 'Tool Omission', 'Anticipation Omission', 'Reversal', 'Reach Touch', 'Action Additions'])
                 if keep: cols_to_keep.append(col)
             if len(cols_to_keep) > 0:
                 df_new = df_new[cols_to_keep]
@@ -598,10 +630,11 @@ if btn_submit:
             csv_path = os.path.join(os.path.dirname(__file__), 'dataset_regressione.csv')
             df_new.to_csv(csv_path, index=False)
             st.cache_data.clear()
-    except Exception:
-        pass
-
-    st.session_state['show_sync_success'] = True
+            st.session_state['show_sync_success'] = True
+        else:
+            st.session_state['sync_error_msg'] = "Autenticazione DB fallita o nessun dato. Inserire la password corretta nel campo sopra."
+    except Exception as err:
+        st.session_state['sync_error_msg'] = f"Errore di connessione: {err}"
 
 if len(selected_anomalies) == 0:
     st.sidebar.error("Selezionare almeno un task comportamentale.")
@@ -609,12 +642,18 @@ if len(selected_anomalies) == 0:
 
 # Visualizzazione Messaggi
 if st.session_state.get('show_sync_success', False):
-    st.sidebar.success("✅ Modelli riaddestrati con le feature selezionate!")
+    st.sidebar.success("✅ Dataset risincronizzato dal DB e modelli riaddestrati!")
     st.session_state['show_sync_success'] = False
 
+if st.session_state.get('sync_error_msg', None):
+    st.sidebar.error(f"❌ {st.session_state['sync_error_msg']}")
+
 summary_df, trained_details, feature_importances, full_df, test_patient_ids = load_and_train_all_models(
-    use_stratify=use_stratification, selected_anomalies=tuple(selected_anomalies), pearson_target_vals=pearson_target_vals, selected_patient_ids=selected_patient_ids_tuple
+    use_stratify=use_stratification, selected_anomalies=tuple(selected_anomalies), pearson_target_vals=pearson_target_vals, selected_patient_ids=selected_patient_ids_tuple, selected_diagnosis_ids=selected_diagnosis_ids
 )
+
+if pearson_preset == "Sani Giovani (60-74 anni) vs Demenza" and 'diagnosis' not in full_df.columns:
+    st.sidebar.warning("⚠️ Per la categoria **Sani Giovani vs Demenza**, clicca su **'🚀 Sincronizza & Addestra Modello'** nella sidebar per estrarre la colonna `diagnosis` dal DB ed escludere gli Over 75 (diagnosis=5).")
 sorted_test_patient_ids = sorted(list(test_patient_ids))
 effective_patients = selected_patients if len(selected_patients) > 0 else sorted_test_patient_ids
 
@@ -646,12 +685,13 @@ if use_stratification:
 st.markdown('<div id="section-leaderboard"></div>', unsafe_allow_html=True)
 st.subheader("Fase 1: Leaderboard Modelli Regressivi")
 
-col_sort, _ = st.columns([2, 2])
+col_sort, _ = st.columns([2.5, 1.5])
 with col_sort:
-    sort_by = st.radio("Criterio di ottimizzazione:", options=["MAE (Errore Minore)", "R² Score (Maggiore)", "Accuratezza % (Maggiore)"], horizontal=True)
+    sort_by = st.radio("Criterio di ottimizzazione:", options=["MAE (Errore Minore)", "R² Score (Maggiore)", "Pearson r (Maggiore)", "Accuratezza % (Maggiore)"], horizontal=True)
 
 if sort_by == "MAE (Errore Minore)": sorted_summary = summary_df.sort_values(by="MAE", ascending=True)
 elif sort_by == "R² Score (Maggiore)": sorted_summary = summary_df.sort_values(by="R² Score", ascending=False)
+elif sort_by == "Pearson r (Maggiore)": sorted_summary = summary_df.sort_values(by="Pearson r", ascending=False)
 else: sorted_summary = summary_df.sort_values(by="Accuratezza %", ascending=False)
 
 display_cols = ["Modello", "MAE", "MSE", "R² Score", "Pearson r", "P-Value", "Accuratezza", "Predizioni Corrette"]
@@ -901,11 +941,13 @@ with tab_pearson:
     st.markdown("#### Analisi Correlazione Pearson tra Biomarcatori e Stato Cognitivo")
     st.markdown(f"ℹ️ **Filtro Categorie Cliniche Attivo per Pearson:** `{pearson_preset}` (Target ∈ `{list(pearson_target_vals)}`)")
     
-    X_full = full_df.drop(columns=['patient_id', 'Target_StatoCognitivo'])
+    X_full = full_df.drop(columns=['patient_id', 'Target_StatoCognitivo', 'diagnosis'], errors='ignore')
     y_full = full_df['Target_StatoCognitivo']
     
     p_mask = y_full.isin(pearson_target_vals)
     df_pearson_subset = full_df[p_mask]
+    if selected_diagnosis_ids is not None and 'diagnosis' in df_pearson_subset.columns:
+        df_pearson_subset = df_pearson_subset[df_pearson_subset['diagnosis'].isin(selected_diagnosis_ids)]
     
     if len(df_pearson_subset) >= 3 and len(df_pearson_subset['Target_StatoCognitivo'].unique()) > 1:
         feat_pearson_results = []
@@ -959,17 +1001,28 @@ st.markdown("---")
 st.markdown('<div id="section-kfold"></div>', unsafe_allow_html=True)
 st.subheader("Fase 4: Stress-Test e Validazione Crociata (K-Fold)")
 
+n_active_patients = len(full_df) if 'full_df' in locals() and full_df is not None else 192
+
 col_k1, col_k2 = st.columns([1, 2], vertical_alignment="bottom")
 with col_k1:
     k_choice = st.selectbox(
         "Topologia di Validazione:",
-        options=["Leave-One-Out (K=192)", "10-Fold (K=10)", "5-Fold (K=5)", "K Personalizzato"],
+        options=[
+            f"Leave-One-Out (K={n_active_patients})", 
+            "10-Fold (K=10)", 
+            "5-Fold (K=5)", 
+            "K Personalizzato"
+        ],
         index=0
     )
-    if "192" in k_choice: selected_k = 192
-    elif "10" in k_choice: selected_k = 10
-    elif "5" in k_choice: selected_k = 5
-    else: selected_k = st.number_input("Inserisci il valore di K:", min_value=2, max_value=192, value=192, step=1)
+    if "Leave-One-Out" in k_choice: 
+        selected_k = n_active_patients
+    elif "10-Fold" in k_choice: 
+        selected_k = min(10, n_active_patients)
+    elif "5-Fold" in k_choice: 
+        selected_k = min(5, n_active_patients)
+    else: 
+        selected_k = st.number_input("Inserisci il valore di K:", min_value=2, max_value=n_active_patients, value=n_active_patients, step=1)
     
     start_cv_button = st.button("ESEGUI PROTOCOLLO O.O.F.", type="primary", use_container_width=True)
 
@@ -987,17 +1040,18 @@ if "kfold_executed_k" in st.session_state:
     active_k = st.session_state["kfold_executed_k"]
     with st.spinner(f"Compilazione K-Fold ({active_k} cicli) in corso..."):
         summary_kfold_df, trained_kfold_details = load_and_eval_kfold(
-            k_splits=active_k, selected_anomalies=tuple(selected_anomalies), pearson_target_vals=pearson_target_vals, selected_patient_ids=selected_patient_ids_tuple
+            k_splits=active_k, selected_anomalies=tuple(selected_anomalies), pearson_target_vals=pearson_target_vals, selected_patient_ids=selected_patient_ids_tuple, selected_diagnosis_ids=selected_diagnosis_ids
         )
 
     st.success(f"Protocollo di validazione (K={active_k}) concluso e verificato.")
     
-    col_sort_k, _ = st.columns([2, 2])
+    col_sort_k, _ = st.columns([2.5, 1.5])
     with col_sort_k:
-        sort_by_k = st.radio("Criterio di ottimizzazione K-Fold:", options=["MAE (Errore Minore)", "R² Score (Maggiore)", "Accuratezza % (Maggiore)"], horizontal=True, key="sort_kfold")
+        sort_by_k = st.radio("Criterio di ottimizzazione K-Fold:", options=["MAE (Errore Minore)", "R² Score (Maggiore)", "Pearson r (Maggiore)", "Accuratezza % (Maggiore)"], horizontal=True, key="sort_kfold")
         
     if sort_by_k == "MAE (Errore Minore)": sorted_summary_kfold = summary_kfold_df.sort_values(by="MAE", ascending=True)
     elif sort_by_k == "R² Score (Maggiore)": sorted_summary_kfold = summary_kfold_df.sort_values(by="R² Score", ascending=False)
+    elif sort_by_k == "Pearson r (Maggiore)": sorted_summary_kfold = summary_kfold_df.sort_values(by="Pearson r", ascending=False)
     else: sorted_summary_kfold = summary_kfold_df.sort_values(by="Accuratezza %", ascending=False)
 
     col_kfold_1, col_kfold_2 = st.columns([1.5, 1])
