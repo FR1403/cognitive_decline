@@ -3,7 +3,6 @@ import subprocess
 
 import psycopg2
 from psycopg2.extras import RealDictCursor
-<<<<<<< HEAD
 import subprocess
 # pyrefly: ignore [missing-import]
 try:
@@ -13,8 +12,6 @@ except ImportError:
 
 import json
 import os
-=======
->>>>>>> gap-objects-functions
 
 def _is_wsl() -> bool:
     """Rileva se siamo in esecuzione dentro WSL (1 o 2)."""
@@ -53,8 +50,7 @@ db_params = {
     "host": "localhost",
     "database": "CASAS400",
     "user": "postgres",
-<<<<<<< HEAD
-    "password": "la_tua_password",
+    "password": "sandro",
     "port": "5432"
 }
 
@@ -112,16 +108,8 @@ Rispondi ESCLUSIVAMENTE con un oggetto JSON contenente la chiave "gap_ms" e il v
         print(f"⚠️ Errore parsing LLM per '{task_description}' ({e}). Uso valore di default.")
         return max_time_healthy
 
-
-
-=======
-    "password": "psw",
-    "port": "5432"
-}
-
 CLINGO_CMD = os.getenv("CLINGO_CMD", "clingo")
 CLINGO_SUCCESS_CODES = {0, 10, 20, 30}
->>>>>>> gap-objects-functions
 
 livello_A = '''
 % ========================

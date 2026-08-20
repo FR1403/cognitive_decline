@@ -9,11 +9,7 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-<<<<<<< HEAD
 from utils.util_functions import take_data, get_lm_studio_url
-=======
-from utils.util_functions import take_data
->>>>>>> gap-objects-functions
 
 
 FORCE_REBUILD_CATALOG_SNAPSHOT = False
@@ -21,11 +17,7 @@ FORCE_REBUILD_DEPENDENCY_GRAPH = False
 
 DEFAULT_LLM_URL = os.getenv(
     "LLM_API_URL",
-<<<<<<< HEAD
     get_lm_studio_url(),
-=======
-    "http://127.0.0.1:1234/v1/chat/completions",
->>>>>>> gap-objects-functions
 )
 DEFAULT_MODEL = os.getenv("LLM_MODEL", "mistral-7b-instruct-v0.3")
 DEFAULT_LLM_API_KEY = os.getenv("LLM_API_KEY", "")

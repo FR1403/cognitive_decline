@@ -8,13 +8,16 @@ db_params = {
     "host": "localhost",
     "database": "CASAS400",
     "user": "postgres",
-    "password": "la_tua_password",
+    "password": "sandro",
     "port": "5432"
 }
 
-def create_feature_vectors():
+def create_feature_vectors(db_password=None):
     try:
-        connessione = psycopg2.connect(**db_params)
+        params = db_params.copy()
+        if db_password and str(db_password).strip():
+            params["password"] = str(db_password).strip()
+        connessione = psycopg2.connect(**params)
         print("Connessione al database riuscita!")
 
         # Query per recuperare tutte le anomalie per ogni paziente e per ogni attività
@@ -40,6 +43,8 @@ def create_feature_vectors():
                 COALESCE(t.tool_omission_number, 0) AS tool_omission,
                 COALESCE(t.reversal_number, 0) AS reversal,
                 COALESCE(t.anticipation_omission_number, 0) AS anticipation_omission,
+                COALESCE(paa."Reach-touch", 0) AS reach_touch,
+                COALESCE(paa."Action additions", 0) AS action_additions,
                 COALESCE(tm.pacing, 0) AS pacing,
                 COALESCE(tm.sharp_angles, 0) AS sharp_angles,
                 COALESCE(tm.lapping, 0) AS lapping,
@@ -48,6 +53,8 @@ def create_feature_vectors():
                 COALESCE(tm.jerk, 0) AS jerk
             FROM tracked_anomalies t
             JOIN patients p ON p.patient_id = t.patient_id
+            LEFT JOIN public.participants_activity_anomalies paa 
+                   ON paa.patient_id = t.patient_id AND paa.activity_type = t.activity_id
             LEFT JOIN trajectory_metrics tm ON tm.patient_id = t.patient_id
             WHERE p.diagnosis IN (1, 2, 4, 5) 
               AND t.activity_id BETWEEN 1 AND 16
@@ -105,7 +112,10 @@ def create_feature_vectors():
             tot_tool_omissions = group['tool_omission'].sum()
             tot_reversal = group['reversal'].sum()
             tot_anticipation_omission = group['anticipation_omission'].sum()
-            tot_anomalies_globale = tot_omissions + tot_perseverations + tot_tool_omissions + tot_reversal + tot_anticipation_omission
+            tot_reach_touch = group['reach_touch'].sum() if 'reach_touch' in group.columns else 0
+            tot_action_additions = group['action_additions'].sum() if 'action_additions' in group.columns else 0
+            tot_anomalies_globale = (tot_omissions + tot_perseverations + tot_tool_omissions + 
+                                     tot_reversal + tot_anticipation_omission + tot_reach_touch + tot_action_additions)
 
             patient_features['N_Attivita_Svolte'] = n_activities
             patient_features['Media_Omissioni'] = round(tot_omissions / n_activities, 4) if n_activities > 0 else 0.0
@@ -113,14 +123,17 @@ def create_feature_vectors():
             patient_features['Media_ToolOmissioni'] = round(tot_tool_omissions / n_activities, 4) if n_activities > 0 else 0.0
             patient_features['Media_Reversal'] = round(tot_reversal / n_activities, 4) if n_activities > 0 else 0.0
             patient_features['Media_AnticipationOmission'] = round(tot_anticipation_omission / n_activities, 4) if n_activities > 0 else 0.0
+            patient_features['Media_ReachTouch'] = round(tot_reach_touch / n_activities, 4) if n_activities > 0 else 0.0
+            patient_features['Media_ActionAdditions'] = round(tot_action_additions / n_activities, 4) if n_activities > 0 else 0.0
             patient_features['Media_Anomalie_Globale'] = round(tot_anomalies_globale / n_activities, 4) if n_activities > 0 else 0.0
+            patient_features['diagnosis'] = int(diagnosis)
             patient_features['Target_StatoCognitivo'] = target_value
 
             patients_data.append(patient_features)
 
         final_df = pd.DataFrame(patients_data)
 
-        columns_order = ['patient_id']
+        columns_order = ['patient_id', 'diagnosis']
             
         columns_order.extend([
             'N_Attivita_Svolte',
@@ -129,6 +142,8 @@ def create_feature_vectors():
             'Media_ToolOmissioni',
             'Media_Reversal',
             'Media_AnticipationOmission',
+            'Media_ReachTouch',
+            'Media_ActionAdditions',
             'Media_Anomalie_Globale',
             'pacing',
             'sharp_angles',
