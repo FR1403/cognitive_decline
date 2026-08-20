@@ -22,7 +22,7 @@ part_of(participant_moves_to_the_dining_room_table, sort_and_file_a_small_collec
 part_of(participant_sits_down_at_the_dining_room_table, sort_and_file_a_small_collection_of_billing_statements).
 part_of(participant_sorts_pile_of_statements_into_the_organizer, sort_and_file_a_small_collection_of_billing_statements).
 
-expected_object(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, book_shelf).
+expected_object(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, statements).
 expected_object(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, organizer).
 
 
@@ -43,14 +43,14 @@ performed(i_p102_a15, participant_gathers_statements_from_bookshelf, 8).
 performed(i_p102_a15, participant_gathers_statements_from_bookshelf, 9).
 performed(i_p102_a15, participant_gathers_statements_from_bookshelf, 10).
 
-observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,book_shelf).
-observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,book_shelf).
-observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,book_shelf).
-observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,book_shelf).
-observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,book_shelf).
-observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,book_shelf).
-observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,book_shelf).
-observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,book_shelf).
+observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,statements).
+observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,statements).
+observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,statements).
+observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,statements).
+observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,statements).
+observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,statements).
+observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,statements).
+observed_object(i_p102_a15,participant_gathers_statements_from_bookshelf,statements).
 
 
 % ===========================

@@ -18,8 +18,8 @@ part_of(participant_moves_to_hallway_closet, pick_a_complete_outfit_for_an_inter
 part_of(participant_chooses_correct_outfit_from_closet, pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
 part_of(participant_lays_out_clothes_on_living_room_couch, pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing).
 
-expected_object(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, closet_or_hanger).
-expected_object(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, couch).
+expected_object(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_chooses_correct_outfit_from_closet, outfit).
+expected_object(pick_a_complete_outfit_for_an_interview_from_a_selection_of_clothing, participant_lays_out_clothes_on_living_room_couch, clothes).
 
 
 % ===============================
@@ -50,15 +50,15 @@ performed(i_p308_a8, participant_lays_out_clothes_on_living_room_couch, 19).
 performed(i_p308_a8, participant_lays_out_clothes_on_living_room_couch, 20).
 performed(i_p308_a8, participant_lays_out_clothes_on_living_room_couch, 21).
 
-observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,closet_or_hanger).
-observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,closet_or_hanger).
-observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,closet_or_hanger).
-observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,closet_or_hanger).
-observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,closet_or_hanger).
-observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,closet_or_hanger).
-observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,closet_or_hanger).
-observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,closet_or_hanger).
-observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,closet_or_hanger).
+observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,outfit).
+observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,outfit).
+observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,outfit).
+observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,outfit).
+observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,outfit).
+observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,outfit).
+observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,outfit).
+observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,outfit).
+observed_object(i_p308_a8,participant_chooses_correct_outfit_from_closet,outfit).
 
 
 % ===========================

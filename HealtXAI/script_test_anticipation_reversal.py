@@ -24,7 +24,7 @@ FROM patients p
 JOIN diagnosis_types dt ON dt.diagnosis_id = p.diagnosis
 JOIN tasks t ON t.patient = p.patient_id
 WHERE p.diagnosis IN (1, 2, 4, 5)
-  AND t.activity BETWEEN 1 AND 16
+  AND t.activity BETWEEN 1 AND 24
 GROUP BY p.patient_id, dt.diagnosis_id, dt.description
 HAVING COUNT(DISTINCT t.activity) >= 6
 ORDER BY dt.description, p.patient_id;"""

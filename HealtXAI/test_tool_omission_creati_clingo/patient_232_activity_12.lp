@@ -27,7 +27,7 @@ part_of(participant_records_the_recipe, place_a_phone_call_to_a_recording_and_wr
 part_of(participant_hangs_up_the_phone, place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard).
 
 expected_object(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_dials_the_number_and_listens_to_the_recording, phone).
-expected_object(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, recipe_book_or_digital_device_if_recording_electronically).
+expected_object(place_a_phone_call_to_a_recording_and_write_down_the_recipe_heard, participant_records_the_recipe, pen).
 
 
 % ===============================

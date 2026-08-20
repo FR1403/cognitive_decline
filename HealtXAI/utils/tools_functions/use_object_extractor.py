@@ -1,4 +1,4 @@
-"""Extract the object/tool used to perform an action via an LLM."""
+"""Estrae l'oggetto/tool usato per performare un'azione via LLM"""
 
 from __future__ import annotations
 
@@ -10,18 +10,13 @@ import urllib.request
 from pathlib import Path
 from typing import Callable, Optional
 
-<<<<<<< HEAD
 from utils.util_functions import get_lm_studio_url
 
 DEFAULT_LM_STUDIO_URL = get_lm_studio_url()
 DEFAULT_MODEL = "mistralai/mistral-7b-instruct-v0.3"
-=======
-
-DEFAULT_LM_STUDIO_URL = "http://127.0.0.1:1234/v1/chat/completions"
-DEFAULT_MODEL = "mistral-7b-instruct-v0.3"
->>>>>>> gap-objects-functions
 DEFAULT_TIMEOUT_SECONDS = 60
 DEFAULT_FALLBACK_OBJECT = ""
+RAW_CACHE_SUFFIX = "_raw"
 
 #consulta LLM per estrarre l'oggetto di un'azione 
 def extract_use_object(
@@ -34,6 +29,27 @@ def extract_use_object(
     completion_fn: Optional[Callable[[dict, str, int], str]] = None,
 ) -> str:
     """Return only the object/tool used to execute the given action."""
+    raw_answer = extract_raw_use_object(
+        action_description,
+        endpoint=endpoint,
+        model=model,
+        timeout_seconds=timeout_seconds,
+        fallback_object=fallback_object,
+        completion_fn=completion_fn,
+    )
+    return _parse_object(raw_answer, fallback_object)
+
+
+def extract_raw_use_object(
+    action_description: str,
+    *,
+    endpoint: str = DEFAULT_LM_STUDIO_URL,
+    model: str = DEFAULT_MODEL,
+    timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS,
+    fallback_object: str = DEFAULT_FALLBACK_OBJECT,
+    completion_fn: Optional[Callable[[dict, str, int], str]] = None,
+) -> str:
+    """Return the raw model output for the given action."""
     normalized_action = action_description.strip()
     if not normalized_action:
         return fallback_object
@@ -45,19 +61,17 @@ def extract_use_object(
     completion_caller = completion_fn or _call_lm_studio
 
     try:
-        raw_answer = completion_caller(payload, resolved_endpoint, timeout_seconds)
-        return _parse_object(raw_answer, fallback_object)
+        return completion_caller(payload, resolved_endpoint, timeout_seconds)
     except urllib.error.HTTPError:
         fallback_model = _discover_first_model(resolved_endpoint, timeout_seconds)
         if fallback_model and fallback_model != resolved_model:
             retry_payload = _build_payload(prompt, fallback_model)
             try:
-                raw_answer = completion_caller(
+                return completion_caller(
                     retry_payload,
                     resolved_endpoint,
                     timeout_seconds,
                 )
-                return _parse_object(raw_answer, fallback_object)
             except (OSError, urllib.error.URLError, TimeoutError, ValueError, KeyError):
                 return fallback_object
         return fallback_object
@@ -83,6 +97,11 @@ def save_object_cache(cache_path: str, cache_payload: dict[str, str]) -> None:
     )
 
 
+def get_raw_cache_path(cache_path: str) -> str:
+    path = Path(cache_path)
+    return str(path.with_name(f"{path.stem}{RAW_CACHE_SUFFIX}{path.suffix}"))
+
+
 def load_or_build_object_cache(
     action_descriptions: list[str],
     cache_path: str,
@@ -95,14 +114,35 @@ def load_or_build_object_cache(
     completion_fn: Optional[Callable[[dict, str, int], str]] = None,
 ) -> dict[str, str]:
     path = Path(cache_path)
-    if force_rebuild and path.exists():
-        print(f"debug : eliminiamo la cache oggetti esistente {cache_path}")
-        path.unlink()
+    raw_path = Path(get_raw_cache_path(cache_path))
+    if force_rebuild:
+        if path.exists():
+            print(f"debug : eliminiamo la cache oggetti pulita esistente {cache_path}")
+            path.unlink()
+        if raw_path.exists():
+            print(f"debug : eliminiamo la cache oggetti grezza esistente {raw_path}")
+            raw_path.unlink()
 
-    if path.exists():
-        print(f"debug : cache oggetti trovata, saltiamo LM Studio -> {cache_path}")
-        return load_object_cache(cache_path)
+    unique_descriptions = _deduplicate_descriptions(action_descriptions)
+    raw_cache_payload = _load_or_build_raw_object_cache(
+        action_descriptions=unique_descriptions,
+        raw_cache_path=str(raw_path),
+        endpoint=endpoint,
+        model=model,
+        timeout_seconds=timeout_seconds,
+        fallback_object=fallback_object,
+        completion_fn=completion_fn,
+    )
+    clean_cache_payload = _parse_raw_object_cache(
+        raw_cache_payload=raw_cache_payload,
+        fallback_object=fallback_object,
+    )
+    save_object_cache(cache_path, clean_cache_payload)
+    print(f"debug : cache oggetti pulita salvata in {cache_path}")
+    return clean_cache_payload
 
+
+def _deduplicate_descriptions(action_descriptions: list[str]) -> list[str]:
     unique_descriptions = []
     seen_descriptions = set()
     for raw_description in action_descriptions:
@@ -111,15 +151,44 @@ def load_or_build_object_cache(
             continue
         seen_descriptions.add(normalized_description)
         unique_descriptions.append(normalized_description)
+    return unique_descriptions
 
-    print(
-        "debug : cache oggetti assente, estraiamo gli oggetti usati con LM Studio "
-        f"per {len(unique_descriptions)} task"
-    )
 
-    cache_payload: dict[str, str] = {}
-    for description in unique_descriptions:
-        cache_payload[description] = extract_use_object(
+def _load_or_build_raw_object_cache(
+    action_descriptions: list[str],
+    raw_cache_path: str,
+    *,
+    endpoint: str,
+    model: str,
+    timeout_seconds: int,
+    fallback_object: str,
+    completion_fn: Optional[Callable[[dict, str, int], str]],
+) -> dict[str, str]:
+    raw_cache_payload = load_object_cache(raw_cache_path)
+    missing_descriptions = [
+        description
+        for description in action_descriptions
+        if description not in raw_cache_payload
+    ]
+
+    if raw_cache_payload and not missing_descriptions:
+        print(f"debug : cache oggetti grezza trovata, usiamo quella -> {raw_cache_path}")
+        return raw_cache_payload
+
+    if raw_cache_payload:
+        print(
+            "debug : cache oggetti grezza trovata ma incompleta, estraiamo le task mancanti "
+            f"({len(missing_descriptions)})"
+        )
+    else:
+        print(
+            "debug : cache oggetti grezza assente, estraiamo il testo raw con LM Studio "
+            f"per {len(action_descriptions)} task"
+        )
+
+    descriptions_to_fetch = missing_descriptions or action_descriptions
+    for description in descriptions_to_fetch:
+        raw_cache_payload[description] = extract_raw_use_object(
             description,
             endpoint=endpoint,
             model=model,
@@ -128,9 +197,23 @@ def load_or_build_object_cache(
             completion_fn=completion_fn,
         )
 
-    save_object_cache(cache_path, cache_payload)
-    print(f"debug : cache oggetti salvata in {cache_path}")
-    return cache_payload
+    save_object_cache(raw_cache_path, raw_cache_payload)
+    print(f"debug : cache oggetti grezza salvata in {raw_cache_path}")
+    return raw_cache_payload
+
+
+def _parse_raw_object_cache(
+    raw_cache_payload: dict[str, str],
+    *,
+    fallback_object: str,
+) -> dict[str, str]:
+    clean_cache_payload: dict[str, str] = {}
+    for description, raw_answer in raw_cache_payload.items():
+        clean_cache_payload[str(description)] = _parse_object(
+            str(raw_answer),
+            fallback_object,
+        )
+    return clean_cache_payload
 
 #costruisce il prompt
 def _build_payload(prompt: str, model: str) -> dict:
@@ -139,14 +222,7 @@ def _build_payload(prompt: str, model: str) -> dict:
         "messages": [
             {
                 "role": "user",
-                "content": (
-                    "You identify the object used to perform an action. "
-                    "Return only the object name. "
-                    "If multiple objects are mentioned, choose the instrument "
-                    "that executes the action, not the object receiving it. "
-                    "No explanations. No JSON. No full sentence.\n\n"
-                    f"{prompt}"
-                ),
+                "content": prompt,
             },
         ],
         "temperature": 0.0,
@@ -158,10 +234,13 @@ def _build_payload(prompt: str, model: str) -> dict:
 def _build_prompt(action_description: str) -> str:
     return "\n".join(
         [
-            "Identify the object most likely used to perform this action.",
-            "Return only the object/tool name.",
-            "If the phrase implies both a tool and a target/container/object,",
-            "return the tool that performs the action.",
+            "Identify the object or tool most likely used to perform this action.",
+            "Return exactly one object/tool name.",
+            "If multiple objects are mentioned, choose the instrument that executes the action,",
+            "not the object receiving it.",
+            "No parentheses. No explanatory notes. No alternatives.",
+            "No explanations. No JSON. No full sentence.",
+            "If no tool or object is used, return an empty string.",
             "",
             f"Action: {action_description}",
             "",
@@ -198,6 +277,8 @@ def _parse_object(answer: str, fallback_object: str) -> str:
     cleaned = cleaned.strip("\"'`")
     cleaned = re.sub(r"^(object|tool)\s*:\s*", "", cleaned, flags=re.IGNORECASE)
     cleaned = cleaned.splitlines()[0].strip()
+    cleaned = re.sub(r"\([^)]*\)", "", cleaned).strip()
+    cleaned = re.split(r"\s+or\s+|\s*/\s*|,", cleaned, maxsplit=1, flags=re.IGNORECASE)[0].strip()
     cleaned = cleaned.rstrip(".")
 
     if not cleaned:

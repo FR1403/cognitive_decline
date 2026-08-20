@@ -31,7 +31,7 @@ part_of(participant_places_envelope_in_the_mail_organizer, write_a_birthday_card
 expected_object(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_writes_birthday_wish_inside_the_card_happy_birthday_name_wish, pen).
 expected_object(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_writes_check_for_birthday_card, pen).
 expected_object(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_puts_birthday_card_and_check_in_envelope, envelope).
-expected_object(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_addresses_the_envelope, envelope_stamp).
+expected_object(write_a_birthday_card_enclose_a_check_and_address_an_envelope, participant_addresses_the_envelope, pen).
 
 
 % ===============================

@@ -29,15 +29,9 @@ expected_pos(sort_and_file_a_small_collection_of_billing_statements, participant
 expected_pos(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, 5).
 
 depends_on(sort_and_file_a_small_collection_of_billing_statements, participant_gathers_statements_from_bookshelf, participant_moves_to_the_living_room).
-<<<<<<< HEAD
 depends_on(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, participant_moves_to_the_dining_room_table).
 depends_on(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, participant_gathers_statements_from_bookshelf).
 depends_on(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, participant_moves_to_the_dining_room_table).
-=======
-depends_on(sort_and_file_a_small_collection_of_billing_statements, participant_moves_to_the_dining_room_table, participant_gathers_statements_from_bookshelf).
-depends_on(sort_and_file_a_small_collection_of_billing_statements, participant_sits_down_at_the_dining_room_table, participant_moves_to_the_dining_room_table).
-depends_on(sort_and_file_a_small_collection_of_billing_statements, participant_sorts_pile_of_statements_into_the_organizer, participant_sits_down_at_the_dining_room_table).
->>>>>>> gap-objects-functions
 
 
 % ===============================

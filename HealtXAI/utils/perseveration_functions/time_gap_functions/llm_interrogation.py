@@ -11,13 +11,8 @@ from utils.util_functions import get_lm_studio_url
 
 # Parametri di default per una endpoint compatibile con OpenAI-style chat
 # completions. Restano modificabili dal chiamante se servira' in seguito.
-<<<<<<< HEAD:HealtXAI/utils/time_gap_functions/llm_interrogation.py
 DEFAULT_LLM_URL = get_lm_studio_url()
 DEFAULT_MODEL = "mistralai/mistral-7b-instruct-v0.3"
-=======
-DEFAULT_LLM_URL = "http://127.0.0.1:1234/v1/chat/completions"  
-DEFAULT_MODEL = "mistral-7b-instruct-v0.3"
->>>>>>> gap-objects-functions:HealtXAI/utils/perseveration_functions/time_gap_functions/llm_interrogation.py
 DEFAULT_TIMEOUT_SECONDS = 120
 DEFAULT_MAX_TOKENS = 512
 DEFAULT_TEMPERATURE = 0.1

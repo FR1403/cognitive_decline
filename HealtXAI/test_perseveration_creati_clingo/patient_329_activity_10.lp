@@ -28,11 +28,11 @@ expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_s
 expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 1).
 expected_count(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 1).
 
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 3254).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 29127).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 32474).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 53356).
-action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 54769).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_moves_to_the_kitchen, 2712).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, 27062).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, 27062).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, 50932).
+action_gap(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, 52764).
 
 
 % ===============================

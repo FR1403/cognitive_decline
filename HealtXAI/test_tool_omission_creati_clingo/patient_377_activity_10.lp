@@ -22,9 +22,9 @@ part_of(participant_uses_hand_soap, wash_hands_with_soap_at_the_kitchen_sink).
 part_of(participant_washes_hands, wash_hands_with_soap_at_the_kitchen_sink).
 part_of(participant_dries_hands, wash_hands_with_soap_at_the_kitchen_sink).
 
-expected_object(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, pitcher).
+expected_object(wash_hands_with_soap_at_the_kitchen_sink, participant_turns_on_water, faucet).
 expected_object(wash_hands_with_soap_at_the_kitchen_sink, participant_uses_hand_soap, hand_soap).
-expected_object(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, soap).
+expected_object(wash_hands_with_soap_at_the_kitchen_sink, participant_washes_hands, hand_soap).
 expected_object(wash_hands_with_soap_at_the_kitchen_sink, participant_dries_hands, towel).
 
 

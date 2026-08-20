@@ -20,7 +20,7 @@ part_of(participant_locates_the_laundry_basket, sort_and_fold_a_basketful_of_clo
 part_of(participant_moves_to_the_couch, sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
 part_of(participant_sortsfolds_the_laundry, sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles).
 
-expected_object(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, iron).
+expected_object(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, laundry).
 
 
 % ===============================
@@ -148,6 +148,117 @@ performed(i_p305_a13, participant_sortsfolds_the_laundry, 116).
 performed(i_p305_a13, participant_sortsfolds_the_laundry, 117).
 performed(i_p305_a13, participant_sortsfolds_the_laundry, 118).
 
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
+observed_object(i_p305_a13,participant_sortsfolds_the_laundry,laundry).
 
 
 % ===========================

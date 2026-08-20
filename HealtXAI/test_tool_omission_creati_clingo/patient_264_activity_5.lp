@@ -27,7 +27,7 @@ part_of(participant_returns_watering_can_to_supply_closet, obtain_a_watering_can
 expected_object(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_fills_watering_can, watering_can).
 expected_object(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_windowsill, watering_can).
 expected_object(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_waters_plants_coffee_table, watering_can).
-expected_object(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, sink).
+expected_object(obtain_a_watering_can_and_water_all_plants_in_the_living_space, participant_empties_extra_water_into_sink, watering_can).
 
 
 % ===============================
@@ -50,6 +50,7 @@ observed_object(i_p264_a5,participant_waters_plants_windowsill,watering_can).
 observed_object(i_p264_a5,participant_waters_plants_coffee_table,watering_can).
 observed_object(i_p264_a5,participant_waters_plants_coffee_table,watering_can).
 observed_object(i_p264_a5,participant_waters_plants_coffee_table,watering_can).
+observed_object(i_p264_a5,participant_empties_extra_water_into_sink,watering_can).
 
 
 % ===========================

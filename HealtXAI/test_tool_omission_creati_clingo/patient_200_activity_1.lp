@@ -33,9 +33,9 @@ part_of(participant_returns_duster_to_supply_closet, sweep_the_kitchen_and_dust_
 part_of(participants_returns_dust_pan_and_brush_to_supply_closet, sweep_the_kitchen_and_dust_the_living_room).
 
 expected_object(sweep_the_kitchen_and_dust_the_living_room, participant_sweeps_kitchen_floor, broom).
-expected_object(sweep_the_kitchen_and_dust_the_living_room, participant_uses_dust_pan_and_brush, dust_pan).
+expected_object(sweep_the_kitchen_and_dust_the_living_room, participant_uses_dust_pan_and_brush, dust_pan_and_brush).
 expected_object(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_living_room, duster).
-expected_object(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_dining_room, dusting_the_dining_room_typically_involves_using_a_duster_or_feather_duster_so_the_object_used).
+expected_object(sweep_the_kitchen_and_dust_the_living_room, participant_dusts_dining_room, duster).
 
 
 % ===============================
@@ -104,8 +104,8 @@ observed_object(i_p200_a1,participant_sweeps_kitchen_floor,broom).
 observed_object(i_p200_a1,participant_sweeps_kitchen_floor,broom).
 observed_object(i_p200_a1,participant_sweeps_kitchen_floor,broom).
 observed_object(i_p200_a1,participant_sweeps_kitchen_floor,broom).
-observed_object(i_p200_a1,participant_uses_dust_pan_and_brush,dust_pan).
-observed_object(i_p200_a1,participant_uses_dust_pan_and_brush,dust_pan).
+observed_object(i_p200_a1,participant_uses_dust_pan_and_brush,dust_pan_and_brush).
+observed_object(i_p200_a1,participant_uses_dust_pan_and_brush,dust_pan_and_brush).
 observed_object(i_p200_a1,participant_dusts_living_room,duster).
 observed_object(i_p200_a1,participant_dusts_living_room,duster).
 observed_object(i_p200_a1,participant_dusts_living_room,duster).
@@ -125,8 +125,22 @@ observed_object(i_p200_a1,participant_dusts_living_room,duster).
 observed_object(i_p200_a1,participant_dusts_living_room,duster).
 observed_object(i_p200_a1,participant_dusts_living_room,duster).
 observed_object(i_p200_a1,participant_dusts_living_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
 observed_object(i_p200_a1,participant_dusts_living_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
 observed_object(i_p200_a1,participant_dusts_living_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
+observed_object(i_p200_a1,participant_dusts_dining_room,duster).
 
 
 % ===========================

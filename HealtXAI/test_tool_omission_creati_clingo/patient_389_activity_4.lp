@@ -28,10 +28,10 @@ part_of(participant_watches_news_clip, find_the_appropriate_dvd_and_watch_the_co
 part_of(participant_turns_off_tv, find_the_appropriate_dvd_and_watch_the_corresponding_news_clip).
 part_of(participant_returns_dvd_to_pile, find_the_appropriate_dvd_and_watch_the_corresponding_news_clip).
 
-expected_object(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_dvd, dvd_player).
+expected_object(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_dvd, dvd).
 expected_object(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participants_uses_remote_to_turn_on_tv, remote).
-expected_object(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_channel, channel_selector).
-expected_object(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_turns_off_tv, tv_remote_or_switch_if_no_remote_is_mentioned).
+expected_object(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_selects_correct_channel, remote).
+expected_object(find_the_appropriate_dvd_and_watch_the_corresponding_news_clip, participant_turns_off_tv, remote).
 
 
 % ===============================
@@ -44,7 +44,7 @@ performed(i_p389_a4, participant_selects_correct_dvd, 1).
 performed(i_p389_a4, participant_selects_correct_channel, 2).
 performed(i_p389_a4, participant_selects_correct_channel, 3).
 
-observed_object(i_p389_a4,participant_selects_correct_channel,channel_selector).
+observed_object(i_p389_a4,participant_selects_correct_channel,remote).
 
 
 % ===========================

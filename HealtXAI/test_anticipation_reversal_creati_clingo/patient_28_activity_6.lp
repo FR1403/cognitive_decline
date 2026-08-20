@@ -32,11 +32,7 @@ expected_pos(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_f
 expected_pos(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, 6).
 
 depends_on(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_answers_questions_over_the_phone, participant_answers_the_phone).
-<<<<<<< HEAD
 depends_on(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, participant_answers_questions_over_the_phone).
-=======
-depends_on(answer_the_phone_and_respond_to_questions_pertaining_to_the_video_from_task_4, participant_hangs_up_the_phone, participant_answers_the_phone).
->>>>>>> gap-objects-functions
 
 
 % ===============================

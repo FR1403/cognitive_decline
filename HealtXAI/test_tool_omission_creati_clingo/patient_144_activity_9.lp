@@ -26,8 +26,8 @@ part_of(participant_removes_old_light_bulb, check_the_wattage_of_a_desk_lamp_and
 part_of(participant_throws_away_old_light_bulb, check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
 part_of(participant_replaces_the_bulb, check_the_wattage_of_a_desk_lamp_and_replace_the_bulb).
 
-expected_object(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, bulb_extractor).
-expected_object(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, bulb_replace).
+expected_object(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_removes_old_light_bulb, old_light_bulb).
+expected_object(check_the_wattage_of_a_desk_lamp_and_replace_the_bulb, participant_replaces_the_bulb, light_bulb).
 
 
 % ===============================
@@ -58,6 +58,7 @@ performed(i_p144_a9, participant_moves_to_the_dining_room, 19).
 performed(i_p144_a9, participant_moves_to_the_dining_room, 20).
 performed(i_p144_a9, participant_replaces_the_bulb, 21).
 
+observed_object(i_p144_a9,participant_replaces_the_bulb,light_bulb).
 
 
 % ===========================

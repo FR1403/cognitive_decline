@@ -26,13 +26,8 @@ expected_pos(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_ch
 expected_pos(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, 4).
 
 depends_on(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_locates_the_laundry_basket, participant_moves_to_the_hallway_closet).
-<<<<<<< HEAD
 depends_on(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, participant_locates_the_laundry_basket).
 depends_on(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, participant_moves_to_the_couch).
-=======
-depends_on(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_moves_to_the_couch, participant_locates_the_laundry_basket).
-depends_on(sort_and_fold_a_basketful_of_clothing_containing_mens_womens_and_childrens_articles, participant_sortsfolds_the_laundry, participant_locates_the_laundry_basket).
->>>>>>> gap-objects-functions
 
 
 % ===============================

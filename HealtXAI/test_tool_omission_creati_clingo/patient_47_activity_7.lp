@@ -30,9 +30,9 @@ part_of(participant_returns_pitcher_of_water, prepare_a_cup_of_soup_using_the_mi
 part_of(participant_waits_for_water_to_simmer_in_cup_of_noodles, prepare_a_cup_of_soup_using_the_microwave).
 part_of(participant_brings_all_items_to_dining_room_table, prepare_a_cup_of_soup_using_the_microwave).
 
-expected_object(prepare_a_cup_of_soup_using_the_microwave, participant_fills_measuring_cup_with_water, pitcher).
+expected_object(prepare_a_cup_of_soup_using_the_microwave, participant_fills_measuring_cup_with_water, measuring_cup).
 expected_object(prepare_a_cup_of_soup_using_the_microwave, participant_boils_water_in_microwave, microwave).
-expected_object(prepare_a_cup_of_soup_using_the_microwave, participant_pours_water_into_cup_of_noodles, pitcher).
+expected_object(prepare_a_cup_of_soup_using_the_microwave, participant_pours_water_into_cup_of_noodles, measuring_cup).
 expected_object(prepare_a_cup_of_soup_using_the_microwave, participant_pours_glass_of_water, pitcher).
 
 
@@ -91,7 +91,6 @@ performed(i_p47_a7, participant_brings_all_items_to_dining_room_table, 45).
 observed_object(i_p47_a7,participant_pours_glass_of_water,pitcher).
 observed_object(i_p47_a7,participant_pours_glass_of_water,pitcher).
 observed_object(i_p47_a7,participant_pours_glass_of_water,pitcher).
-observed_object(i_p47_a7,participant_pours_water_into_cup_of_noodles,pitcher).
 
 
 % ===========================
