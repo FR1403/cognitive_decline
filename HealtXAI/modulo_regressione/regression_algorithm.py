@@ -125,7 +125,6 @@ def create_feature_vectors(db_password=None):
             patient_features['Media_AnticipationOmission'] = round(tot_anticipation_omission / n_activities, 4) if n_activities > 0 else 0.0
             patient_features['Media_ReachTouch'] = round(tot_reach_touch / n_activities, 4) if n_activities > 0 else 0.0
             patient_features['Media_ActionAdditions'] = round(tot_action_additions / n_activities, 4) if n_activities > 0 else 0.0
-            patient_features['Media_Anomalie_Globale'] = round(tot_anomalies_globale / n_activities, 4) if n_activities > 0 else 0.0
             patient_features['diagnosis'] = int(diagnosis)
             patient_features['Target_StatoCognitivo'] = target_value
 
@@ -144,7 +143,7 @@ def create_feature_vectors(db_password=None):
             'Media_AnticipationOmission',
             'Media_ReachTouch',
             'Media_ActionAdditions',
-            'Media_Anomalie_Globale',
+
             'pacing',
             'sharp_angles',
             'lapping',

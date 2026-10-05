@@ -1,0 +1,177 @@
+% ==============================================================================
+% TABELLE CORRELAZIONE DI PEARSON (ANOMALIE COMPORTAMENTALI HEALTHXAI)
+% Generate da: correlazione_coppie_diagnosi_combinata.py
+%
+% Pacchetti necessari nel preambolo LaTeX:
+% \usepackage{booktabs}
+% \usepackage{tabularx}
+% \usepackage{float}
+% \usepackage{adjustbox}
+% \usepackage{multirow}
+% ==============================================================================
+
+% ==============================================================================
+% 1. TABELLA SINOTTICA GLOBALE (PANORAMICA COMPLETA PER LA SEZIONE 4.2 DELLA TESI)
+% ==============================================================================
+\begin{table}[H]
+\centering
+\caption{Matrice sinottica della Correlazione di Pearson ($r$ e relativo $p$-value) tra i biomarcatori comportamentali estratti tramite logica formale e lo stato cognitivo dei pazienti, suddivisi per coorte diagnostica. Valori calcolati sia su scala media per paziente (RAW) sia normalizzati per numero di attività (NORM).}
+\label{tab:sinottica_correlazioni_pearson}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Biomarcatore / Anomalia} & \textbf{Scala} & \textbf{Globale ($N=192$)} & \textbf{Sani vs MCI ($N=173$)} & \textbf{Sani vs Dem. ($N=138$)} & \textbf{MCI vs Dem. ($N=73$)} & \textbf{Sani Giov. vs Dem. ($N=99$)} \\
+\midrule
+\multirow{2}{*}{\textbf{Omissioni}} 
+ & RAW  & $r = +0.1153$ ($p = 0.111$) & $r = +0.0050$ ($p = 0.948$) & $r = +0.1442$ ($p = 0.092$) & $r = +0.1774$ ($p = 0.133$) & $r = +0.2006^*$ ($p = 0.047$) \\
+ & NORM & $\mathbf{r = +0.2447^{***}}$ ($p < 0.001$) & $r = +0.0296$ ($p = 0.699$) & $\mathbf{r = +0.3212^{***}}$ ($p < 0.001$) & $\mathbf{r = +0.2978^*}$ ($p = 0.011$) & $\mathbf{r = +0.3868^{***}}$ ($p < 0.001$) \\
+\midrule
+\multirow{2}{*}{\textbf{Perseverazioni}} 
+ & RAW  & $\mathbf{r = +0.2706^{***}}$ ($p < 0.001$) & $\mathbf{r = +0.1885^*}$ ($p = 0.013$) & $\mathbf{r = +0.3594^{***}}$ ($p < 0.001$) & $r = +0.1551$ ($p = 0.190$) & $\mathbf{r = +0.3865^{***}}$ ($p < 0.001$) \\
+ & NORM & $\mathbf{r = +0.2775^{***}}$ ($p < 0.001$) & $\mathbf{r = +0.1695^*}$ ($p = 0.026$) & $\mathbf{r = +0.3559^{***}}$ ($p < 0.001$) & $r = +0.1870$ ($p = 0.113$) & $\mathbf{r = +0.3712^{***}}$ ($p < 0.001$) \\
+\midrule
+\multirow{2}{*}{\textbf{Tool Omission}} 
+ & RAW  & $r = -0.1439^*$ ($p = 0.046$) & $r = +0.0821$ ($p = 0.283$) & $r = -0.2220^{**}$ ($p = 0.009$) & $r = -0.3313^{**}$ ($p = 0.004$) & $r = -0.2552^*$ ($p = 0.011$) \\
+ & NORM & $r = -0.0903$ ($p = 0.213$) & $r = +0.0801$ ($p = 0.295$) & $r = -0.1476$ ($p = 0.084$) & $r = -0.2464^*$ ($p = 0.036$) & $r = -0.1630$ ($p = 0.107$) \\
+\midrule
+\multirow{2}{*}{\textbf{Reversal}} 
+ & RAW  & $r = -0.0603$ ($p = 0.406$) & $r = -0.0305$ ($p = 0.690$) & $r = -0.0663$ ($p = 0.440$) & $r = -0.0640$ ($p = 0.591$) & $r = -0.0953$ ($p = 0.348$) \\
+ & NORM & $r = -0.0355$ ($p = 0.625$) & $r = -0.0132$ ($p = 0.863$) & $r = -0.0414$ ($p = 0.629$) & $r = -0.0424$ ($p = 0.722$) & $r = -0.0684$ ($p = 0.501$) \\
+\midrule
+\multirow{2}{*}{\textbf{Anticipation Omission}} 
+ & RAW  & $r = -0.1422^*$ ($p = 0.049$) & $r = +0.1530^*$ ($p = 0.044$) & $r = -0.2406^{**}$ ($p = 0.005$) & $r = -0.3857^{***}$ ($p < 0.001$) & $r = -0.2733^{**}$ ($p = 0.006$) \\
+ & NORM & $r = -0.0624$ ($p = 0.390$) & $r = +0.1535^*$ ($p = 0.044$) & $r = -0.1429$ ($p = 0.095$) & $r = -0.2622^*$ ($p = 0.025$) & $r = -0.1592$ ($p = 0.116$) \\
+\midrule
+\multirow{2}{*}{\textbf{Media Anomalie Globale}} 
+ & RAW  & $r = +0.0321$ ($p = 0.658$) & $r = +0.1573^*$ ($p = 0.039$) & $r = -0.0015$ ($p = 0.986$) & $r = -0.1279$ ($p = 0.281$) & $r = +0.0298$ ($p = 0.770$) \\
+ & NORM & $\mathbf{r = +0.2357^{**}}$ ($p = 0.001$) & $r = +0.1461$ ($p = 0.055$) & $\mathbf{r = +0.2889^{***}}$ ($p < 0.001$) & $r = +0.1612$ ($p = 0.173$) & $\mathbf{r = +0.3372^{***}}$ ($p < 0.001$) \\
+\bottomrule
+\multicolumn{7}{l}{\footnotesize Livelli di significatività statistica: $^*p < 0.05$, $^{**}p < 0.01$, $^{***}p < 0.001$.}
+\end{tabular}%
+}
+\end{table}
+
+
+% ==============================================================================
+% 2. TABELLE ANALITICHE INDIVIDUALI PER ANOMALIA (STILE CAPITOLO SPERIMENTALE)
+% ==============================================================================
+
+% --- Tabella A: Omissioni ---
+\begin{table}[H]
+\centering
+\caption{Analisi di Correlazione di Pearson: Anomalia di \textbf{Omissione} per coppia di diagnosi clinica.}
+\label{tab:corr_omissioni}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Confronto Diagnostico} & \textbf{$N^\circ$ Pazienti} & \textbf{Pearson $r$ (RAW)} & \textbf{$p$-value (RAW)} & \textbf{Pearson $r$ (NORM)} & \textbf{$p$-value (NORM)} \\
+\midrule
+1. Globale (Sani + MCI + Demenza)      & 192 & +0.1153 & 0.1111 & \textbf{+0.2447} & \textbf{0.0006} ($p < 0.001$) \\
+2. Sani vs MCI                          & 173 & +0.0050 & 0.9478 & +0.0296 & 0.6990 \\
+3. Sani vs Demenza                      & 138 & +0.1442 & 0.0916 & \textbf{+0.3212} & \textbf{0.0001} ($p < 0.001$) \\
+4. MCI vs Demenza                       & 73  & +0.1774 & 0.1331 & \textbf{+0.2978} & \textbf{0.0105} ($p < 0.05$) \\
+5. Sani Giovani (60--74) vs Demenza     & 99  & \textbf{+0.2006} & \textbf{0.0465} & \textbf{+0.3868} & \textbf{0.0001} ($p < 0.001$) \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+% --- Tabella B: Perseverazioni ---
+\begin{table}[H]
+\centering
+\caption{Analisi di Correlazione di Pearson: Anomalia di \textbf{Perseverazione} per coppia di diagnosi clinica.}
+\label{tab:corr_perseverazioni}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Confronto Diagnostico} & \textbf{$N^\circ$ Pazienti} & \textbf{Pearson $r$ (RAW)} & \textbf{$p$-value (RAW)} & \textbf{Pearson $r$ (NORM)} & \textbf{$p$-value (NORM)} \\
+\midrule
+1. Globale (Sani + MCI + Demenza)      & 192 & \textbf{+0.2706} & \textbf{0.0001} ($p < 0.001$) & \textbf{+0.2775} & \textbf{0.0001} ($p < 0.001$) \\
+2. Sani vs MCI                          & 173 & \textbf{+0.1885} & \textbf{0.0130} ($p < 0.05$)  & \textbf{+0.1695} & \textbf{0.0258} ($p < 0.05$) \\
+3. Sani vs Demenza                      & 138 & \textbf{+0.3594} & \textbf{< 0.0001} ($p < 0.001$) & \textbf{+0.3559} & \textbf{< 0.0001} ($p < 0.001$) \\
+4. MCI vs Demenza                       & 73  & +0.1551 & 0.1900 & +0.1870 & 0.1131 \\
+5. Sani Giovani (60--74) vs Demenza     & 99  & \textbf{+0.3865} & \textbf{0.0001} ($p < 0.001$) & \textbf{+0.3712} & \textbf{0.0002} ($p < 0.001$) \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+% --- Tabella C: Tool Omission ---
+\begin{table}[H]
+\centering
+\caption{Analisi di Correlazione di Pearson: Anomalia di \textbf{Tool Omission} per coppia di diagnosi clinica.}
+\label{tab:corr_tool_omission}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Confronto Diagnostico} & \textbf{$N^\circ$ Pazienti} & \textbf{Pearson $r$ (RAW)} & \textbf{$p$-value (RAW)} & \textbf{Pearson $r$ (NORM)} & \textbf{$p$-value (NORM)} \\
+\midrule
+1. Globale (Sani + MCI + Demenza)      & 192 & \textbf{-0.1439} & \textbf{0.0464} ($p < 0.05$) & -0.0903 & 0.2127 \\
+2. Sani vs MCI                          & 173 & +0.0821 & 0.2828 & +0.0801 & 0.2949 \\
+3. Sani vs Demenza                      & 138 & \textbf{-0.2220} & \textbf{0.0089} ($p < 0.01$) & -0.1476 & 0.0841 \\
+4. MCI vs Demenza                       & 73  & \textbf{-0.3313} & \textbf{0.0042} ($p < 0.01$) & \textbf{-0.2464} & \textbf{0.0356} ($p < 0.05$) \\
+5. Sani Giovani (60--74) vs Demenza     & 99  & \textbf{-0.2552} & \textbf{0.0108} ($p < 0.05$) & -0.1630 & 0.1070 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+% --- Tabella D: Reversal ---
+\begin{table}[H]
+\centering
+\caption{Analisi di Correlazione di Pearson: Anomalia di \textbf{Reversal} per coppia di diagnosi clinica.}
+\label{tab:corr_reversal}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Confronto Diagnostico} & \textbf{$N^\circ$ Pazienti} & \textbf{Pearson $r$ (RAW)} & \textbf{$p$-value (RAW)} & \textbf{Pearson $r$ (NORM)} & \textbf{$p$-value (NORM)} \\
+\midrule
+1. Globale (Sani + MCI + Demenza)      & 192 & -0.0603 & 0.4059 & -0.0355 & 0.6247 \\
+2. Sani vs MCI                          & 173 & -0.0305 & 0.6904 & -0.0132 & 0.8632 \\
+3. Sani vs Demenza                      & 138 & -0.0663 & 0.4395 & -0.0414 & 0.6294 \\
+4. MCI vs Demenza                       & 73  & -0.0640 & 0.5909 & -0.0424 & 0.7215 \\
+5. Sani Giovani (60--74) vs Demenza     & 99  & -0.0953 & 0.3482 & -0.0684 & 0.5010 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+% --- Tabella E: Anticipation Omission ---
+\begin{table}[H]
+\centering
+\caption{Analisi di Correlazione di Pearson: Anomalia di \textbf{Anticipation Omission} per coppia di diagnosi clinica.}
+\label{tab:corr_anticipation_omission}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Confronto Diagnostico} & \textbf{$N^\circ$ Pazienti} & \textbf{Pearson $r$ (RAW)} & \textbf{$p$-value (RAW)} & \textbf{Pearson $r$ (NORM)} & \textbf{$p$-value (NORM)} \\
+\midrule
+1. Globale (Sani + MCI + Demenza)      & 192 & \textbf{-0.1422} & \textbf{0.0492} ($p < 0.05$) & -0.0624 & 0.3897 \\
+2. Sani vs MCI                          & 173 & \textbf{+0.1530} & \textbf{0.0444} ($p < 0.05$) & \textbf{+0.1535} & \textbf{0.0438} ($p < 0.05$) \\
+3. Sani vs Demenza                      & 138 & \textbf{-0.2406} & \textbf{0.0045} ($p < 0.01$) & -0.1429 & 0.0946 \\
+4. MCI vs Demenza                       & 73  & \textbf{-0.3857} & \textbf{0.0008} ($p < 0.001$) & \textbf{-0.2622} & \textbf{0.0250} ($p < 0.05$) \\
+5. Sani Giovani (60--74) vs Demenza     & 99  & \textbf{-0.2733} & \textbf{0.0062} ($p < 0.01$) & -0.1592 & 0.1155 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+% --- Tabella F: Media Anomalie Globale ---
+\begin{table}[H]
+\centering
+\caption{Analisi di Correlazione di Pearson: \textbf{Media Anomalie Globale} (Somma Omissioni, Perseverazioni, Tool Omission, Reversal, Anticipation Omission) per coppia di diagnosi clinica.}
+\label{tab:corr_media_globale}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Confronto Diagnostico} & \textbf{$N^\circ$ Pazienti} & \textbf{Pearson $r$ (RAW)} & \textbf{$p$-value (RAW)} & \textbf{Pearson $r$ (NORM)} & \textbf{$p$-value (NORM)} \\
+\midrule
+1. Globale (Sani + MCI + Demenza)      & 192 & +0.0321 & 0.6580 & \textbf{+0.2357} & \textbf{0.0010} ($p < 0.01$) \\
+2. Sani vs MCI                          & 173 & \textbf{+0.1573} & \textbf{0.0388} ($p < 0.05$) & +0.1461 & 0.0551 \\
+3. Sani vs Demenza                      & 138 & -0.0015 & 0.9860 & \textbf{+0.2889} & \textbf{0.0006} ($p < 0.001$) \\
+4. MCI vs Demenza                       & 73  & -0.1279 & 0.2808 & +0.1612 & 0.1732 \\
+5. Sani Giovani (60--74) vs Demenza     & 99  & +0.0298 & 0.7697 & \textbf{+0.3372} & \textbf{0.0006} ($p < 0.001$) \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

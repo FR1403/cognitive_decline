@@ -1,0 +1,551 @@
+Coorte,N_Pazienti,Combinazione,Modello,Pearson_r,P_Value,MAE,MSE,R2,Accuratezza_%,Accuratezza,Predizioni_Corrette
+Sani Giovani vs Demenza,99,Tutte le Anomalie (5),Random Forest,0.6341,1.8496354704525245e-12,0.1736,0.093,0.4004,73.7,73.7%,73/99
+Sani Giovani vs Demenza,99,Tutte le Anomalie (5),Gradient Boosting,0.5661,1.0157810128616683e-09,0.1794,0.1162,0.251,79.8,79.8%,79/99
+Sani Giovani vs Demenza,99,Tutte le Anomalie (5),K-Neighbors Regressor (KNN),0.3355,0.0006877027926962081,0.2141,0.1463,0.0569,58.6,58.6%,58/99
+Sani Giovani vs Demenza,99,Tutte le Anomalie (5),Support Vector Regressor (SVR - RBF),0.5432,6.30079447034788e-09,0.2224,0.11,0.2906,59.6,59.6%,59/99
+Sani Giovani vs Demenza,99,Tutte le Anomalie (5),AdaBoost Regressor,0.3603,0.00024925957251574325,0.2675,0.1422,0.0832,45.5,45.5%,45/99
+Sani Giovani vs Demenza,99,Tutte le Anomalie (5),Neural Network (MLP),0.3241,0.0010652016773573514,0.2834,0.2052,-0.3231,62.6,62.6%,62/99
+Sani Giovani vs Demenza,99,Tutte le Anomalie (5),Lasso Regression (L1),0.1831,0.06972310343328396,0.2904,0.1985,-0.2797,47.5,47.5%,47/99
+Sani Giovani vs Demenza,99,Tutte le Anomalie (5),Hist Gradient Boosting,0.2344,0.019518576896732674,0.2948,0.1606,-0.0354,45.5,45.5%,45/99
+Sani Giovani vs Demenza,99,Tutte le Anomalie (5),Ridge Regression (L2),0.1621,0.10888267749975357,0.2995,0.2235,-0.4411,49.5,49.5%,49/99
+Sani Giovani vs Demenza,99,Tutte le Anomalie (5),Linear Regression,0.1557,0.1237608473011563,0.3013,0.2282,-0.4713,49.5,49.5%,49/99
+Sani Giovani vs Demenza,99,Senza Perseveration,Gradient Boosting,0.6459,5.261892304700281e-13,0.1542,0.0946,0.3903,80.8,80.8%,80/99
+Sani Giovani vs Demenza,99,Senza Perseveration,Random Forest,0.6711,2.950853313732133e-14,0.164,0.0853,0.4499,74.7,74.7%,74/99
+Sani Giovani vs Demenza,99,Senza Perseveration,Support Vector Regressor (SVR - RBF),0.5482,4.258814474776318e-09,0.2188,0.1092,0.2957,59.6,59.6%,59/99
+Sani Giovani vs Demenza,99,Senza Perseveration,K-Neighbors Regressor (KNN),0.3324,0.0007767264667501586,0.2263,0.1438,0.0725,49.5,49.5%,49/99
+Sani Giovani vs Demenza,99,Senza Perseveration,AdaBoost Regressor,0.4543,2.3192286775825743e-06,0.2473,0.1248,0.1952,48.5,48.5%,48/99
+Sani Giovani vs Demenza,99,Senza Perseveration,Lasso Regression (L1),0.1488,0.14166387385379,0.2931,0.2088,-0.3462,45.5,45.5%,45/99
+Sani Giovani vs Demenza,99,Senza Perseveration,Neural Network (MLP),0.1887,0.06147600853199692,0.2953,0.3095,-0.9958,63.6,63.6%,63/99
+Sani Giovani vs Demenza,99,Senza Perseveration,Ridge Regression (L2),0.1434,0.15677590454827978,0.2999,0.2325,-0.4989,45.5,45.5%,45/99
+Sani Giovani vs Demenza,99,Senza Perseveration,Linear Regression,0.1385,0.17151624889606462,0.3017,0.2372,-0.5295,45.5,45.5%,45/99
+Sani Giovani vs Demenza,99,Senza Perseveration,Hist Gradient Boosting,0.0007,0.9942059606595377,0.322,0.1873,-0.208,41.4,41.4%,41/99
+Sani Giovani vs Demenza,99,Senza Reversal,Random Forest,0.6042,3.574686277847619e-11,0.1825,0.0993,0.36,70.7,70.7%,70/99
+Sani Giovani vs Demenza,99,Senza Reversal,Gradient Boosting,0.5586,1.8681188159439357e-09,0.1865,0.1159,0.2524,78.8,78.8%,78/99
+Sani Giovani vs Demenza,99,Senza Reversal,K-Neighbors Regressor (KNN),0.4092,2.608758432026746e-05,0.2081,0.1354,0.1272,58.6,58.6%,58/99
+Sani Giovani vs Demenza,99,Senza Reversal,Support Vector Regressor (SVR - RBF),0.5621,1.408613157993903e-09,0.2199,0.1068,0.3112,61.6,61.6%,61/99
+Sani Giovani vs Demenza,99,Senza Reversal,AdaBoost Regressor,0.4218,1.3696756622970576e-05,0.2496,0.13,0.1617,48.5,48.5%,48/99
+Sani Giovani vs Demenza,99,Senza Reversal,Lasso Regression (L1),0.1866,0.06434308978075033,0.2886,0.1956,-0.2612,47.5,47.5%,47/99
+Sani Giovani vs Demenza,99,Senza Reversal,Neural Network (MLP),0.2131,0.0341606209272976,0.2969,0.2592,-0.671,63.6,63.6%,63/99
+Sani Giovani vs Demenza,99,Senza Reversal,Ridge Regression (L2),0.1627,0.10758027065312246,0.2987,0.2202,-0.4201,47.5,47.5%,47/99
+Sani Giovani vs Demenza,99,Senza Reversal,Linear Regression,0.1561,0.12295438746413559,0.3004,0.2249,-0.4503,47.5,47.5%,47/99
+Sani Giovani vs Demenza,99,Senza Reversal,Hist Gradient Boosting,0.2339,0.01981181724657474,0.3018,0.161,-0.0378,41.4,41.4%,41/99
+Sani Giovani vs Demenza,99,Senza Anticipation Omission,Gradient Boosting,0.5993,5.6218638876217614e-11,0.1667,0.1056,0.3191,78.8,78.8%,78/99
+Sani Giovani vs Demenza,99,Senza Anticipation Omission,Random Forest,0.6505,3.165764591535758e-13,0.1674,0.0897,0.4216,74.7,74.7%,74/99
+Sani Giovani vs Demenza,99,Senza Anticipation Omission,K-Neighbors Regressor (KNN),0.2922,0.0033356263576386964,0.2182,0.1519,0.0204,57.6,57.6%,57/99
+Sani Giovani vs Demenza,99,Senza Anticipation Omission,Support Vector Regressor (SVR - RBF),0.544,5.901330895050984e-09,0.2183,0.1097,0.2929,59.6,59.6%,59/99
+Sani Giovani vs Demenza,99,Senza Anticipation Omission,AdaBoost Regressor,0.4242,1.209575408501802e-05,0.2666,0.1297,0.1637,40.4,40.4%,40/99
+Sani Giovani vs Demenza,99,Senza Anticipation Omission,Lasso Regression (L1),0.1648,0.10306767121093002,0.2918,0.204,-0.3157,46.5,46.5%,46/99
+Sani Giovani vs Demenza,99,Senza Anticipation Omission,Ridge Regression (L2),0.1565,0.12200094197767751,0.2997,0.2244,-0.4471,47.5,47.5%,47/99
+Sani Giovani vs Demenza,99,Senza Anticipation Omission,Linear Regression,0.1502,0.1378075764490794,0.3016,0.229,-0.4765,45.5,45.5%,45/99
+Sani Giovani vs Demenza,99,Senza Anticipation Omission,Hist Gradient Boosting,0.196,0.05180009299697187,0.3043,0.1686,-0.0872,44.4,44.4%,44/99
+Sani Giovani vs Demenza,99,Senza Anticipation Omission,Neural Network (MLP),0.1823,0.07089289526243137,0.306,0.2829,-0.8243,57.6,57.6%,57/99
+Sani Giovani vs Demenza,99,Senza Tool Omission,Random Forest,0.5335,1.2996976909360316e-08,0.2038,0.1131,0.2707,67.7,67.7%,67/99
+Sani Giovani vs Demenza,99,Senza Tool Omission,K-Neighbors Regressor (KNN),0.312,0.0016666939394706483,0.2202,0.1483,0.0439,55.6,55.6%,55/99
+Sani Giovani vs Demenza,99,Senza Tool Omission,Support Vector Regressor (SVR - RBF),0.4977,1.597323405891105e-07,0.2288,0.1177,0.2408,62.6,62.6%,62/99
+Sani Giovani vs Demenza,99,Senza Tool Omission,Gradient Boosting,0.3631,0.00022099873499827652,0.2491,0.1597,-0.0297,61.6,61.6%,61/99
+Sani Giovani vs Demenza,99,Senza Tool Omission,AdaBoost Regressor,0.2715,0.006565854316301497,0.2857,0.1578,-0.0175,43.4,43.4%,43/99
+Sani Giovani vs Demenza,99,Senza Tool Omission,Lasso Regression (L1),0.1911,0.05813829751911783,0.2891,0.195,-0.2572,47.5,47.5%,47/99
+Sani Giovani vs Demenza,99,Senza Tool Omission,Neural Network (MLP),0.2537,0.011297725400518972,0.2939,0.2457,-0.5846,63.6,63.6%,63/99
+Sani Giovani vs Demenza,99,Senza Tool Omission,Ridge Regression (L2),0.1829,0.06993811938279877,0.2965,0.2131,-0.3743,49.5,49.5%,49/99
+Sani Giovani vs Demenza,99,Senza Tool Omission,Linear Regression,0.1768,0.08003487833631442,0.2983,0.2171,-0.3997,49.5,49.5%,49/99
+Sani Giovani vs Demenza,99,Senza Tool Omission,Hist Gradient Boosting,0.2076,0.03924837824809499,0.3059,0.1621,-0.0453,41.4,41.4%,41/99
+Sani Giovani vs Demenza,99,Senza Omission,Random Forest,0.5254,2.3483384527887767e-08,0.2023,0.1164,0.2496,70.7,70.7%,70/99
+Sani Giovani vs Demenza,99,Senza Omission,AdaBoost Regressor,0.4845,3.739894977934848e-07,0.2205,0.1209,0.2206,62.6,62.6%,62/99
+Sani Giovani vs Demenza,99,Senza Omission,Gradient Boosting,0.4963,1.7495979239710494e-07,0.2217,0.1313,0.1535,63.6,63.6%,63/99
+Sani Giovani vs Demenza,99,Senza Omission,Support Vector Regressor (SVR - RBF),0.4907,2.5181187774178895e-07,0.2289,0.1186,0.2352,60.6,60.6%,60/99
+Sani Giovani vs Demenza,99,Senza Omission,K-Neighbors Regressor (KNN),0.2657,0.007856425011955728,0.2404,0.1547,0.0022,48.5,48.5%,48/99
+Sani Giovani vs Demenza,99,Senza Omission,Lasso Regression (L1),0.1903,0.05920972725367103,0.2889,0.1942,-0.2522,42.4,42.4%,42/99
+Sani Giovani vs Demenza,99,Senza Omission,Ridge Regression (L2),0.1817,0.07187633722464672,0.2948,0.2123,-0.3692,43.4,43.4%,43/99
+Sani Giovani vs Demenza,99,Senza Omission,Linear Regression,0.1754,0.08252932260276467,0.2965,0.2165,-0.3963,43.4,43.4%,43/99
+Sani Giovani vs Demenza,99,Senza Omission,Hist Gradient Boosting,0.2137,0.03368596262967958,0.306,0.1657,-0.0682,45.5,45.5%,45/99
+Sani Giovani vs Demenza,99,Senza Omission,Neural Network (MLP),0.1427,0.15894425654960648,0.3291,0.3011,-0.9413,54.5,54.5%,54/99
+Sani Giovani vs Demenza,99,Solo Perseveration,Random Forest,0.4702,9.072913028833082e-07,0.219,0.1279,0.1754,64.6,64.6%,64/99
+Sani Giovani vs Demenza,99,Solo Perseveration,Support Vector Regressor (SVR - RBF),0.4849,3.652614010632912e-07,0.2332,0.1187,0.2347,70.7,70.7%,70/99
+Sani Giovani vs Demenza,99,Solo Perseveration,K-Neighbors Regressor (KNN),0.2556,0.010661756514418945,0.2384,0.1568,-0.0108,53.5,53.5%,53/99
+Sani Giovani vs Demenza,99,Solo Perseveration,Neural Network (MLP),0.4045,3.284284616586361e-05,0.2479,0.1624,-0.047,60.6,60.6%,60/99
+Sani Giovani vs Demenza,99,Solo Perseveration,Gradient Boosting,0.3854,8.171166977843362e-05,0.2484,0.1645,-0.0604,63.6,63.6%,63/99
+Sani Giovani vs Demenza,99,Solo Perseveration,AdaBoost Regressor,0.3435,0.0004997945351299236,0.2509,0.1484,0.0432,57.6,57.6%,57/99
+Sani Giovani vs Demenza,99,Solo Perseveration,Lasso Regression (L1),0.1525,0.13172542164644524,0.2857,0.2019,-0.3016,53.5,53.5%,53/99
+Sani Giovani vs Demenza,99,Solo Perseveration,Ridge Regression (L2),0.1361,0.17910088523735845,0.2873,0.2248,-0.4493,50.5,50.5%,50/99
+Sani Giovani vs Demenza,99,Solo Perseveration,Linear Regression,0.1312,0.1954553983713614,0.2885,0.2291,-0.4771,51.5,51.5%,51/99
+Sani Giovani vs Demenza,99,Solo Perseveration,Hist Gradient Boosting,0.2808,0.0048700341560970984,0.2933,0.1535,0.0105,39.4,39.4%,39/99
+Sani Giovani vs Demenza,99,Solo Reversal,Random Forest,0.448,3.317219124091951e-06,0.2202,0.1385,0.107,63.6,63.6%,63/99
+Sani Giovani vs Demenza,99,Solo Reversal,Support Vector Regressor (SVR - RBF),0.4723,8.009960756075904e-07,0.2343,0.1206,0.2224,67.7,67.7%,67/99
+Sani Giovani vs Demenza,99,Solo Reversal,Gradient Boosting,0.3789,0.0001097858164667016,0.2409,0.162,-0.0447,65.7,65.7%,65/99
+Sani Giovani vs Demenza,99,Solo Reversal,K-Neighbors Regressor (KNN),0.2582,0.009883408220725004,0.2465,0.1543,0.0048,45.5,45.5%,45/99
+Sani Giovani vs Demenza,99,Solo Reversal,AdaBoost Regressor,0.473,7.652168995783898e-07,0.2591,0.127,0.1812,50.5,50.5%,50/99
+Sani Giovani vs Demenza,99,Solo Reversal,Neural Network (MLP),0.2575,0.010079303510670297,0.2849,0.1942,-0.2523,57.6,57.6%,57/99
+Sani Giovani vs Demenza,99,Solo Reversal,Ridge Regression (L2),0.1237,0.22237327200909646,0.2907,0.2349,-0.5144,50.5,50.5%,50/99
+Sani Giovani vs Demenza,99,Solo Reversal,Linear Regression,0.1212,0.2320246765482822,0.2913,0.2389,-0.5405,50.5,50.5%,50/99
+Sani Giovani vs Demenza,99,Solo Reversal,Lasso Regression (L1),0.1228,0.22596558426615113,0.2935,0.2147,-0.3841,56.6,56.6%,56/99
+Sani Giovani vs Demenza,99,Solo Reversal,Hist Gradient Boosting,-0.0594,0.5589516301150299,0.3271,0.1847,-0.1912,31.3,31.3%,31/99
+Sani Giovani vs Demenza,99,Solo Anticipation Omission,Random Forest,0.5268,2.1302153669022568e-08,0.1992,0.1166,0.2479,70.7,70.7%,70/99
+Sani Giovani vs Demenza,99,Solo Anticipation Omission,Support Vector Regressor (SVR - RBF),0.4781,5.604013871167473e-07,0.2264,0.1205,0.223,69.7,69.7%,69/99
+Sani Giovani vs Demenza,99,Solo Anticipation Omission,Gradient Boosting,0.4233,1.271537135554615e-05,0.2299,0.1474,0.0495,68.7,68.7%,68/99
+Sani Giovani vs Demenza,99,Solo Anticipation Omission,AdaBoost Regressor,0.4752,6.686902841217029e-07,0.2463,0.1255,0.1906,49.5,49.5%,49/99
+Sani Giovani vs Demenza,99,Solo Anticipation Omission,K-Neighbors Regressor (KNN),0.2941,0.003132934062358561,0.2545,0.1471,0.0517,39.4,39.4%,39/99
+Sani Giovani vs Demenza,99,Solo Anticipation Omission,Neural Network (MLP),0.3557,0.00030208823322351456,0.2761,0.1775,-0.1444,60.6,60.6%,60/99
+Sani Giovani vs Demenza,99,Solo Anticipation Omission,Lasso Regression (L1),0.1536,0.12895493145041298,0.2906,0.2038,-0.3138,46.5,46.5%,46/99
+Sani Giovani vs Demenza,99,Solo Anticipation Omission,Ridge Regression (L2),0.1519,0.13346743413284468,0.2957,0.2217,-0.4293,46.5,46.5%,46/99
+Sani Giovani vs Demenza,99,Solo Anticipation Omission,Linear Regression,0.148,0.14368236520176964,0.297,0.2256,-0.4548,46.5,46.5%,46/99
+Sani Giovani vs Demenza,99,Solo Anticipation Omission,Hist Gradient Boosting,0.0426,0.675317300860368,0.3175,0.1778,-0.1466,40.4,40.4%,40/99
+Sani Giovani vs Demenza,99,Solo Tool Omission,Random Forest,0.5196,3.575497784728881e-08,0.1975,0.1191,0.2322,72.7,72.7%,72/99
+Sani Giovani vs Demenza,99,Solo Tool Omission,Gradient Boosting,0.4133,2.121987344598447e-05,0.23,0.1523,0.018,68.7,68.7%,68/99
+Sani Giovani vs Demenza,99,Solo Tool Omission,Support Vector Regressor (SVR - RBF),0.4517,2.6989698445845614e-06,0.2358,0.126,0.1877,68.7,68.7%,68/99
+Sani Giovani vs Demenza,99,Solo Tool Omission,AdaBoost Regressor,0.5236,2.6719244520897897e-08,0.238,0.1156,0.2547,53.5,53.5%,53/99
+Sani Giovani vs Demenza,99,Solo Tool Omission,K-Neighbors Regressor (KNN),0.2862,0.0040758738659168,0.2404,0.1507,0.0282,45.5,45.5%,45/99
+Sani Giovani vs Demenza,99,Solo Tool Omission,Neural Network (MLP),0.3439,0.0004911058785745566,0.2874,0.1927,-0.2428,60.6,60.6%,60/99
+Sani Giovani vs Demenza,99,Solo Tool Omission,Lasso Regression (L1),0.1614,0.11049862298681082,0.2889,0.2009,-0.2956,37.4,37.4%,37/99
+Sani Giovani vs Demenza,99,Solo Tool Omission,Ridge Regression (L2),0.1581,0.11812765683201705,0.2954,0.2185,-0.4092,40.4,40.4%,40/99
+Sani Giovani vs Demenza,99,Solo Tool Omission,Linear Regression,0.1535,0.12937630381655582,0.297,0.2226,-0.4355,41.4,41.4%,41/99
+Sani Giovani vs Demenza,99,Solo Tool Omission,Hist Gradient Boosting,0.0767,0.45037800182085264,0.3212,0.1786,-0.1517,36.4,36.4%,36/99
+Sani Giovani vs Demenza,99,Solo Omission,Random Forest,0.5266,2.161759267912126e-08,0.2012,0.1153,0.2567,66.7,66.7%,66/99
+Sani Giovani vs Demenza,99,Solo Omission,Gradient Boosting,0.4254,1.1385880272825925e-05,0.2308,0.1434,0.0756,63.6,63.6%,63/99
+Sani Giovani vs Demenza,99,Solo Omission,Support Vector Regressor (SVR - RBF),0.4065,2.9806324066779883e-05,0.2357,0.132,0.1489,65.7,65.7%,65/99
+Sani Giovani vs Demenza,99,Solo Omission,K-Neighbors Regressor (KNN),0.2524,0.011731801303848764,0.2384,0.1543,0.0048,50.5,50.5%,50/99
+Sani Giovani vs Demenza,99,Solo Omission,Neural Network (MLP),0.2976,0.0027772938818189526,0.2561,0.1704,-0.0987,60.6,60.6%,60/99
+Sani Giovani vs Demenza,99,Solo Omission,Lasso Regression (L1),0.1739,0.08524331022605842,0.2843,0.201,-0.2961,43.4,43.4%,43/99
+Sani Giovani vs Demenza,99,Solo Omission,AdaBoost Regressor,0.384,8.725058343728865e-05,0.2858,0.139,0.1035,40.4,40.4%,40/99
+Sani Giovani vs Demenza,99,Solo Omission,Ridge Regression (L2),0.1711,0.09043290115067763,0.2902,0.2184,-0.4081,44.4,44.4%,44/99
+Sani Giovani vs Demenza,99,Solo Omission,Linear Regression,0.1668,0.09895196372619844,0.2917,0.2222,-0.4328,44.4,44.4%,44/99
+Sani Giovani vs Demenza,99,Solo Omission,Hist Gradient Boosting,-0.0802,0.4299837133814839,0.3286,0.1921,-0.2389,36.4,36.4%,36/99
+MCI vs Demenza,73,Tutte le Anomalie (5),Random Forest,0.6246,3.523608493891894e-09,0.1654,0.0575,0.3901,83.6,83.6%,61/73
+MCI vs Demenza,73,Tutte le Anomalie (5),Gradient Boosting,0.5393,8.528225808639571e-07,0.1764,0.071,0.2476,82.2,82.2%,60/73
+MCI vs Demenza,73,Tutte le Anomalie (5),AdaBoost Regressor,0.4226,0.00019588290856922095,0.187,0.0847,0.1018,75.3,75.3%,55/73
+MCI vs Demenza,73,Tutte le Anomalie (5),K-Neighbors Regressor (KNN),0.3568,0.0019429226880986093,0.1975,0.0867,0.0807,76.7,76.7%,56/73
+MCI vs Demenza,73,Tutte le Anomalie (5),Support Vector Regressor (SVR - RBF),0.5263,1.7303462010897266e-06,0.2,0.0684,0.2754,76.7,76.7%,56/73
+MCI vs Demenza,73,Tutte le Anomalie (5),Lasso Regression (L1),0.3353,0.0037308723832742453,0.2227,0.0921,0.0241,79.5,79.5%,58/73
+MCI vs Demenza,73,Tutte le Anomalie (5),Ridge Regression (L2),0.2911,0.012460859562761387,0.2395,0.1031,-0.0931,75.3,75.3%,55/73
+MCI vs Demenza,73,Tutte le Anomalie (5),Linear Regression,0.2793,0.016720312883550418,0.2441,0.1069,-0.1337,74.0,74.0%,54/73
+MCI vs Demenza,73,Tutte le Anomalie (5),Hist Gradient Boosting,0.2421,0.03902709217741262,0.2499,0.0976,-0.0346,67.1,67.1%,49/73
+MCI vs Demenza,73,Tutte le Anomalie (5),Neural Network (MLP),0.3002,0.009877376421875451,0.2694,0.1391,-0.4744,71.2,71.2%,52/73
+MCI vs Demenza,73,Senza Perseveration,Random Forest,0.6367,1.4026019006335292e-09,0.1648,0.0561,0.405,86.3,86.3%,63/73
+MCI vs Demenza,73,Senza Perseveration,Gradient Boosting,0.5782,8.488937676257766e-08,0.1669,0.0664,0.2958,82.2,82.2%,60/73
+MCI vs Demenza,73,Senza Perseveration,AdaBoost Regressor,0.4829,1.5137694040823167e-05,0.1778,0.0762,0.1926,79.5,79.5%,58/73
+MCI vs Demenza,73,Senza Perseveration,K-Neighbors Regressor (KNN),0.3891,0.0006676885335564085,0.1918,0.0843,0.1064,78.1,78.1%,57/73
+MCI vs Demenza,73,Senza Perseveration,Support Vector Regressor (SVR - RBF),0.5669,1.7099587805554796e-07,0.1925,0.0641,0.3203,78.1,78.1%,57/73
+MCI vs Demenza,73,Senza Perseveration,Lasso Regression (L1),0.334,0.0038734392378256643,0.2228,0.0922,0.0223,79.5,79.5%,58/73
+MCI vs Demenza,73,Senza Perseveration,Ridge Regression (L2),0.3114,0.007325893688968047,0.2358,0.0997,-0.0572,75.3,75.3%,55/73
+MCI vs Demenza,73,Senza Perseveration,Linear Regression,0.302,0.009403676518161527,0.24,0.1027,-0.089,71.2,71.2%,52/73
+MCI vs Demenza,73,Senza Perseveration,Hist Gradient Boosting,0.2372,0.043320766150052044,0.2519,0.096,-0.0177,68.5,68.5%,50/73
+MCI vs Demenza,73,Senza Perseveration,Neural Network (MLP),0.3671,0.0013978731473128002,0.27,0.1473,-0.5617,78.1,78.1%,57/73
+MCI vs Demenza,73,Senza Reversal,Random Forest,0.6364,1.4332278887767065e-09,0.1676,0.0562,0.4038,83.6,83.6%,61/73
+MCI vs Demenza,73,Senza Reversal,Gradient Boosting,0.5179,2.6978689392227685e-06,0.1863,0.075,0.2053,80.8,80.8%,59/73
+MCI vs Demenza,73,Senza Reversal,AdaBoost Regressor,0.4143,0.0002684077203814984,0.1943,0.0816,0.1351,78.1,78.1%,57/73
+MCI vs Demenza,73,Senza Reversal,Support Vector Regressor (SVR - RBF),0.5546,3.565755793265182e-07,0.197,0.0662,0.2978,78.1,78.1%,57/73
+MCI vs Demenza,73,Senza Reversal,K-Neighbors Regressor (KNN),0.3411,0.0031461803813647654,0.2014,0.0878,0.0694,74.0,74.0%,54/73
+MCI vs Demenza,73,Senza Reversal,Lasso Regression (L1),0.3439,0.0028883697552567252,0.2208,0.0906,0.0401,78.1,78.1%,57/73
+MCI vs Demenza,73,Senza Reversal,Ridge Regression (L2),0.2919,0.012215519413875163,0.2353,0.1022,-0.0832,76.7,76.7%,56/73
+MCI vs Demenza,73,Senza Reversal,Linear Regression,0.2806,0.01617576525601605,0.2398,0.1058,-0.1212,74.0,74.0%,54/73
+MCI vs Demenza,73,Senza Reversal,Hist Gradient Boosting,0.2873,0.013705901287522429,0.2429,0.0936,0.0076,69.9,69.9%,51/73
+MCI vs Demenza,73,Senza Reversal,Neural Network (MLP),0.3294,0.0044323652883712615,0.251,0.131,-0.3882,74.0,74.0%,54/73
+MCI vs Demenza,73,Senza Anticipation Omission,Random Forest,0.4417,9.15621092800205e-05,0.1985,0.0784,0.1691,79.5,79.5%,58/73
+MCI vs Demenza,73,Senza Anticipation Omission,Gradient Boosting,0.3953,0.0005370328574142879,0.2046,0.0969,-0.0269,75.3,75.3%,55/73
+MCI vs Demenza,73,Senza Anticipation Omission,Support Vector Regressor (SVR - RBF),0.4452,7.932228772159697e-05,0.2125,0.0759,0.1953,75.3,75.3%,55/73
+MCI vs Demenza,73,Senza Anticipation Omission,K-Neighbors Regressor (KNN),0.2151,0.06766298035066029,0.2129,0.0985,-0.0445,74.0,74.0%,54/73
+MCI vs Demenza,73,Senza Anticipation Omission,AdaBoost Regressor,0.2255,0.05503527215677741,0.2279,0.1024,-0.0851,72.6,72.6%,53/73
+MCI vs Demenza,73,Senza Anticipation Omission,Lasso Regression (L1),0.2392,0.04152534832010576,0.2338,0.1008,-0.0687,78.1,78.1%,57/73
+MCI vs Demenza,73,Senza Anticipation Omission,Ridge Regression (L2),0.2354,0.044982107878531866,0.2381,0.1074,-0.1388,76.7,76.7%,56/73
+MCI vs Demenza,73,Senza Anticipation Omission,Hist Gradient Boosting,0.2946,0.01139763453273339,0.2384,0.0905,0.0402,75.3,75.3%,55/73
+MCI vs Demenza,73,Senza Anticipation Omission,Linear Regression,0.228,0.05239467700186141,0.2411,0.1106,-0.1726,74.0,74.0%,54/73
+MCI vs Demenza,73,Senza Anticipation Omission,Neural Network (MLP),0.3101,0.007580795946598063,0.2463,0.133,-0.4102,74.0,74.0%,54/73
+MCI vs Demenza,73,Senza Tool Omission,Gradient Boosting,0.5192,2.527421621899792e-06,0.1761,0.0741,0.2141,80.8,80.8%,59/73
+MCI vs Demenza,73,Senza Tool Omission,Random Forest,0.5266,1.7051511141338718e-06,0.1832,0.0688,0.2709,83.6,83.6%,61/73
+MCI vs Demenza,73,Senza Tool Omission,AdaBoost Regressor,0.4378,0.00010721647098001119,0.2035,0.0797,0.1557,79.5,79.5%,58/73
+MCI vs Demenza,73,Senza Tool Omission,K-Neighbors Regressor (KNN),0.3002,0.009867129409859742,0.2071,0.0908,0.0381,75.3,75.3%,55/73
+MCI vs Demenza,73,Senza Tool Omission,Support Vector Regressor (SVR - RBF),0.4508,6.278742383666014e-05,0.2112,0.0759,0.196,78.1,78.1%,57/73
+MCI vs Demenza,73,Senza Tool Omission,Lasso Regression (L1),0.3561,0.00198654173009521,0.2203,0.0888,0.0583,80.8,80.8%,59/73
+MCI vs Demenza,73,Senza Tool Omission,Ridge Regression (L2),0.3256,0.004939795843323711,0.2342,0.0972,-0.0304,75.3,75.3%,55/73
+MCI vs Demenza,73,Senza Tool Omission,Linear Regression,0.3157,0.006519153913277326,0.238,0.1003,-0.063,74.0,74.0%,54/73
+MCI vs Demenza,73,Senza Tool Omission,Hist Gradient Boosting,0.214,0.06906615743855976,0.2568,0.0996,-0.0554,67.1,67.1%,49/73
+MCI vs Demenza,73,Senza Tool Omission,Neural Network (MLP),0.2984,0.01035375478260648,0.2896,0.1674,-0.7744,69.9,69.9%,51/73
+MCI vs Demenza,73,Senza Omission,Random Forest,0.6078,1.181941481044314e-08,0.1664,0.0595,0.369,82.2,82.2%,60/73
+MCI vs Demenza,73,Senza Omission,Gradient Boosting,0.551,4.381841127820844e-07,0.1741,0.0723,0.2333,76.7,76.7%,56/73
+MCI vs Demenza,73,Senza Omission,AdaBoost Regressor,0.475,2.1775875398472038e-05,0.191,0.0757,0.1973,78.1,78.1%,57/73
+MCI vs Demenza,73,Senza Omission,Support Vector Regressor (SVR - RBF),0.5005,6.51895997283265e-06,0.2008,0.0709,0.2485,74.0,74.0%,54/73
+MCI vs Demenza,73,Senza Omission,K-Neighbors Regressor (KNN),0.367,0.0014027919887328957,0.209,0.0835,0.1149,78.1,78.1%,57/73
+MCI vs Demenza,73,Senza Omission,Lasso Regression (L1),0.352,0.0022581029307053063,0.2213,0.0898,0.0484,79.5,79.5%,58/73
+MCI vs Demenza,73,Senza Omission,Ridge Regression (L2),0.3373,0.003522572977124817,0.2331,0.0964,-0.0216,76.7,76.7%,56/73
+MCI vs Demenza,73,Senza Omission,Linear Regression,0.3265,0.004809070378359,0.2372,0.0996,-0.0562,74.0,74.0%,54/73
+MCI vs Demenza,73,Senza Omission,Hist Gradient Boosting,0.3256,0.004945431568563729,0.2426,0.0886,0.0613,71.2,71.2%,52/73
+MCI vs Demenza,73,Senza Omission,Neural Network (MLP),0.357,0.0019316588342694508,0.256,0.1372,-0.4548,76.7,76.7%,56/73
+MCI vs Demenza,73,Solo Perseveration,Gradient Boosting,0.4404,9.642856760536702e-05,0.188,0.0885,0.0622,79.5,79.5%,58/73
+MCI vs Demenza,73,Solo Perseveration,Random Forest,0.4773,1.9547691595096876e-05,0.1884,0.075,0.2045,80.8,80.8%,59/73
+MCI vs Demenza,73,Solo Perseveration,K-Neighbors Regressor (KNN),0.3206,0.005682166375589103,0.2071,0.0886,0.0608,75.3,75.3%,55/73
+MCI vs Demenza,73,Solo Perseveration,Support Vector Regressor (SVR - RBF),0.4197,0.00021859264866885028,0.2075,0.0783,0.1699,75.3,75.3%,55/73
+MCI vs Demenza,73,Solo Perseveration,Ridge Regression (L2),0.2423,0.038899344326624716,0.2291,0.1037,-0.0988,75.3,75.3%,55/73
+MCI vs Demenza,73,Solo Perseveration,Linear Regression,0.237,0.04348146944704515,0.2307,0.1065,-0.1284,75.3,75.3%,55/73
+MCI vs Demenza,73,Solo Perseveration,Lasso Regression (L1),0.2164,0.06596721997033068,0.2362,0.1012,-0.0724,75.3,75.3%,55/73
+MCI vs Demenza,73,Solo Perseveration,AdaBoost Regressor,0.3715,0.0012117823062537461,0.2442,0.0863,0.0857,76.7,76.7%,56/73
+MCI vs Demenza,73,Solo Perseveration,Neural Network (MLP),0.3621,0.001644737174543663,0.2462,0.1273,-0.3498,79.5,79.5%,58/73
+MCI vs Demenza,73,Solo Perseveration,Hist Gradient Boosting,0.1422,0.2301846183127543,0.2605,0.1035,-0.0967,68.5,68.5%,50/73
+MCI vs Demenza,73,Solo Reversal,Gradient Boosting,0.4493,6.694526111895803e-05,0.183,0.0845,0.1038,78.1,78.1%,57/73
+MCI vs Demenza,73,Solo Reversal,Random Forest,0.4677,3.012663631362888e-05,0.187,0.0761,0.1934,82.2,82.2%,60/73
+MCI vs Demenza,73,Solo Reversal,Support Vector Regressor (SVR - RBF),0.4969,7.750911800352686e-06,0.2038,0.0715,0.2416,80.8,80.8%,59/73
+MCI vs Demenza,73,Solo Reversal,Ridge Regression (L2),0.2541,0.030058419635488387,0.2297,0.1022,-0.0834,75.3,75.3%,55/73
+MCI vs Demenza,73,Solo Reversal,Linear Regression,0.2521,0.03142449144131819,0.2317,0.1042,-0.1047,75.3,75.3%,55/73
+MCI vs Demenza,73,Solo Reversal,K-Neighbors Regressor (KNN),0.1233,0.29859923130602045,0.2321,0.1044,-0.1071,75.3,75.3%,55/73
+MCI vs Demenza,73,Solo Reversal,Lasso Regression (L1),0.2107,0.07353318184008462,0.2361,0.102,-0.0813,75.3,75.3%,55/73
+MCI vs Demenza,73,Solo Reversal,Neural Network (MLP),0.3084,0.007936248986969563,0.2502,0.1468,-0.5565,82.2,82.2%,60/73
+MCI vs Demenza,73,Solo Reversal,AdaBoost Regressor,0.2153,0.0673420708103281,0.2667,0.0974,-0.0328,76.7,76.7%,56/73
+MCI vs Demenza,73,Solo Reversal,Hist Gradient Boosting,-0.0608,0.6092605721057857,0.2763,0.1126,-0.1932,68.5,68.5%,50/73
+MCI vs Demenza,73,Solo Anticipation Omission,Gradient Boosting,0.5709,1.3377198662479468e-07,0.1571,0.0682,0.2774,80.8,80.8%,59/73
+MCI vs Demenza,73,Solo Anticipation Omission,Random Forest,0.5734,1.1442837793005671e-07,0.1688,0.0636,0.3255,82.2,82.2%,60/73
+MCI vs Demenza,73,Solo Anticipation Omission,Support Vector Regressor (SVR - RBF),0.5925,3.345592897546604e-08,0.1857,0.0615,0.3486,82.2,82.2%,60/73
+MCI vs Demenza,73,Solo Anticipation Omission,AdaBoost Regressor,0.5182,2.6546234539630547e-06,0.1935,0.0694,0.2639,83.6,83.6%,61/73
+MCI vs Demenza,73,Solo Anticipation Omission,K-Neighbors Regressor (KNN),0.2976,0.010569626060687865,0.209,0.091,0.0352,75.3,75.3%,55/73
+MCI vs Demenza,73,Solo Anticipation Omission,Neural Network (MLP),0.5353,1.061910491967117e-06,0.2171,0.0923,0.022,78.1,78.1%,57/73
+MCI vs Demenza,73,Solo Anticipation Omission,Lasso Regression (L1),0.3758,0.0010523989004527128,0.2175,0.086,0.0879,78.1,78.1%,57/73
+MCI vs Demenza,73,Solo Anticipation Omission,Ridge Regression (L2),0.3761,0.0010407689264335291,0.2211,0.0891,0.0551,76.7,76.7%,56/73
+MCI vs Demenza,73,Solo Anticipation Omission,Linear Regression,0.3685,0.0013387232151585169,0.2241,0.0911,0.0341,75.3,75.3%,55/73
+MCI vs Demenza,73,Solo Anticipation Omission,Hist Gradient Boosting,0.246,0.03593217727674915,0.2527,0.0932,0.0124,68.5,68.5%,50/73
+MCI vs Demenza,73,Solo Tool Omission,Gradient Boosting,0.5579,2.923021204360796e-07,0.1692,0.0691,0.2672,83.6,83.6%,61/73
+MCI vs Demenza,73,Solo Tool Omission,Random Forest,0.4993,6.911553871548267e-06,0.1874,0.072,0.2364,82.2,82.2%,60/73
+MCI vs Demenza,73,Solo Tool Omission,Support Vector Regressor (SVR - RBF),0.4845,1.4049473681350441e-05,0.1973,0.0725,0.2317,78.1,78.1%,57/73
+MCI vs Demenza,73,Solo Tool Omission,AdaBoost Regressor,0.4665,3.176661333873947e-05,0.2067,0.0748,0.2071,79.5,79.5%,58/73
+MCI vs Demenza,73,Solo Tool Omission,K-Neighbors Regressor (KNN),0.3446,0.002835226198286399,0.211,0.0859,0.0893,78.1,78.1%,57/73
+MCI vs Demenza,73,Solo Tool Omission,Lasso Regression (L1),0.2945,0.0114449380030939,0.225,0.0944,-0.0006,78.1,78.1%,57/73
+MCI vs Demenza,73,Solo Tool Omission,Ridge Regression (L2),0.2897,0.012918505105848964,0.228,0.0992,-0.0519,75.3,75.3%,55/73
+MCI vs Demenza,73,Solo Tool Omission,Linear Regression,0.2848,0.014600617412567449,0.2294,0.1012,-0.0731,72.6,72.6%,53/73
+MCI vs Demenza,73,Solo Tool Omission,Neural Network (MLP),0.4175,0.0002377229062967324,0.2313,0.1141,-0.2093,78.1,78.1%,57/73
+MCI vs Demenza,73,Solo Tool Omission,Hist Gradient Boosting,0.3063,0.00839301719770435,0.2381,0.0884,0.063,69.9,69.9%,51/73
+MCI vs Demenza,73,Solo Omission,Gradient Boosting,0.415,0.0002613410168420438,0.1913,0.0888,0.0592,78.1,78.1%,57/73
+MCI vs Demenza,73,Solo Omission,Random Forest,0.4234,0.00018967730817693576,0.1973,0.081,0.1409,78.1,78.1%,57/73
+MCI vs Demenza,73,Solo Omission,K-Neighbors Regressor (KNN),0.2487,0.03384207087188531,0.211,0.0961,-0.0189,74.0,74.0%,54/73
+MCI vs Demenza,73,Solo Omission,Support Vector Regressor (SVR - RBF),0.2829,0.015283835335781358,0.221,0.0925,0.0197,78.1,78.1%,57/73
+MCI vs Demenza,73,Solo Omission,Ridge Regression (L2),0.2342,0.04613273701554448,0.2288,0.1048,-0.1108,74.0,74.0%,54/73
+MCI vs Demenza,73,Solo Omission,Linear Regression,0.2318,0.048413949020951856,0.2304,0.1068,-0.1316,72.6,72.6%,53/73
+MCI vs Demenza,73,Solo Omission,Lasso Regression (L1),0.2093,0.07561182806243859,0.2348,0.1028,-0.0901,76.7,76.7%,56/73
+MCI vs Demenza,73,Solo Omission,AdaBoost Regressor,0.279,0.016823574736726344,0.2504,0.0921,0.0235,76.7,76.7%,56/73
+MCI vs Demenza,73,Solo Omission,Neural Network (MLP),0.2516,0.031768720079432045,0.2704,0.1626,-0.7241,74.0,74.0%,54/73
+MCI vs Demenza,73,Solo Omission,Hist Gradient Boosting,-0.1866,0.11394537777784564,0.2925,0.1207,-0.2789,67.1,67.1%,49/73
+Sani vs Demenza,138,Tutte le Anomalie (5),Random Forest,0.5403,7.934025235330087e-12,0.1465,0.0852,0.2822,79.0,79.0%,109/138
+Sani vs Demenza,138,Tutte le Anomalie (5),Gradient Boosting,0.4219,2.543423461470727e-07,0.1616,0.1114,0.0618,79.7,79.7%,110/138
+Sani vs Demenza,138,Tutte le Anomalie (5),K-Neighbors Regressor (KNN),0.2357,0.005387986384344678,0.1754,0.1203,-0.0132,63.8,63.8%,88/138
+Sani vs Demenza,138,Tutte le Anomalie (5),Support Vector Regressor (SVR - RBF),0.5003,4.170279052483218e-10,0.1834,0.0893,0.2478,69.6,69.6%,96/138
+Sani vs Demenza,138,Tutte le Anomalie (5),Lasso Regression (L1),0.1675,0.049542278133625994,0.2298,0.142,-0.1957,58.7,58.7%,81/138
+Sani vs Demenza,138,Tutte le Anomalie (5),Ridge Regression (L2),0.131,0.12563558561226804,0.2414,0.1613,-0.3585,60.1,60.1%,83/138
+Sani vs Demenza,138,Tutte le Anomalie (5),Linear Regression,0.1264,0.13956924730856377,0.2422,0.1632,-0.3742,60.1,60.1%,83/138
+Sani vs Demenza,138,Tutte le Anomalie (5),Hist Gradient Boosting,0.0931,0.27730010626453794,0.2565,0.1402,-0.1806,53.6,53.6%,74/138
+Sani vs Demenza,138,Tutte le Anomalie (5),Neural Network (MLP),0.2294,0.00679022407453139,0.261,0.1844,-0.5535,64.5,64.5%,89/138
+Sani vs Demenza,138,Tutte le Anomalie (5),AdaBoost Regressor,0.2422,0.0042046801083254455,0.2613,0.1256,-0.0583,42.8,42.8%,59/138
+Sani vs Demenza,138,Senza Perseveration,Random Forest,0.585,4.930033106939391e-14,0.1414,0.0787,0.3375,77.5,77.5%,107/138
+Sani vs Demenza,138,Senza Perseveration,Gradient Boosting,0.5285,2.698843769838287e-11,0.1441,0.0918,0.2266,81.9,81.9%,113/138
+Sani vs Demenza,138,Senza Perseveration,Support Vector Regressor (SVR - RBF),0.528,2.828335818066603e-11,0.1795,0.0859,0.2766,68.8,68.8%,95/138
+Sani vs Demenza,138,Senza Perseveration,K-Neighbors Regressor (KNN),0.2284,0.00704029534959738,0.1855,0.12,-0.0107,58.0,58.0%,80/138
+Sani vs Demenza,138,Senza Perseveration,Lasso Regression (L1),0.1274,0.13654402328330387,0.2322,0.1482,-0.2486,61.6,61.6%,85/138
+Sani vs Demenza,138,Senza Perseveration,Ridge Regression (L2),0.0842,0.32587681273223135,0.2437,0.1717,-0.4464,62.3,62.3%,86/138
+Sani vs Demenza,138,Senza Perseveration,Linear Regression,0.0801,0.35007477743803633,0.2444,0.1739,-0.4644,62.3,62.3%,86/138
+Sani vs Demenza,138,Senza Perseveration,Hist Gradient Boosting,0.0341,0.6909144158995026,0.2545,0.1437,-0.2102,50.7,50.7%,70/138
+Sani vs Demenza,138,Senza Perseveration,Neural Network (MLP),0.0757,0.3774918262496918,0.2579,0.2316,-0.9504,68.1,68.1%,94/138
+Sani vs Demenza,138,Senza Perseveration,AdaBoost Regressor,0.2367,0.005194798056463887,0.2626,0.1255,-0.057,39.1,39.1%,54/138
+Sani vs Demenza,138,Senza Reversal,Random Forest,0.5261,3.4305421019752603e-11,0.1499,0.0881,0.2583,79.0,79.0%,109/138
+Sani vs Demenza,138,Senza Reversal,Gradient Boosting,0.4157,3.967152884600198e-07,0.1689,0.1113,0.0627,76.1,76.1%,105/138
+Sani vs Demenza,138,Senza Reversal,K-Neighbors Regressor (KNN),0.278,0.0009641827141529834,0.1739,0.1154,0.0283,65.2,65.2%,90/138
+Sani vs Demenza,138,Senza Reversal,Support Vector Regressor (SVR - RBF),0.5165,8.856327196047504e-11,0.1828,0.0875,0.263,68.8,68.8%,95/138
+Sani vs Demenza,138,Senza Reversal,Lasso Regression (L1),0.1745,0.040689536296425695,0.2279,0.1403,-0.1814,60.1,60.1%,83/138
+Sani vs Demenza,138,Senza Reversal,Ridge Regression (L2),0.1327,0.12065443824428418,0.2406,0.1599,-0.3466,58.7,58.7%,81/138
+Sani vs Demenza,138,Senza Reversal,Linear Regression,0.128,0.13449310695971053,0.2414,0.1617,-0.3623,58.0,58.0%,80/138
+Sani vs Demenza,138,Senza Reversal,Hist Gradient Boosting,0.0991,0.24742250468073196,0.2545,0.1415,-0.1917,54.3,54.3%,75/138
+Sani vs Demenza,138,Senza Reversal,AdaBoost Regressor,0.284,0.0007362391622999529,0.2583,0.1211,-0.0199,40.6,40.6%,56/138
+Sani vs Demenza,138,Senza Reversal,Neural Network (MLP),0.0575,0.5028698968338486,0.2723,0.2456,-1.0686,63.8,63.8%,88/138
+Sani vs Demenza,138,Senza Anticipation Omission,Random Forest,0.5197,6.526308244548598e-11,0.1498,0.0893,0.2477,76.8,76.8%,106/138
+Sani vs Demenza,138,Senza Anticipation Omission,Gradient Boosting,0.4206,2.812015230475616e-07,0.1659,0.1116,0.0597,77.5,77.5%,107/138
+Sani vs Demenza,138,Senza Anticipation Omission,K-Neighbors Regressor (KNN),0.1933,0.023084142704553546,0.1725,0.1249,-0.0522,67.4,67.4%,93/138
+Sani vs Demenza,138,Senza Anticipation Omission,Support Vector Regressor (SVR - RBF),0.5106,1.574483363525942e-10,0.1822,0.0878,0.2606,69.6,69.6%,96/138
+Sani vs Demenza,138,Senza Anticipation Omission,Lasso Regression (L1),0.1579,0.06430846242204502,0.2303,0.1435,-0.2085,60.9,60.9%,84/138
+Sani vs Demenza,138,Senza Anticipation Omission,Ridge Regression (L2),0.1312,0.12513068887723997,0.2402,0.1594,-0.3428,60.9,60.9%,84/138
+Sani vs Demenza,138,Senza Anticipation Omission,Linear Regression,0.1267,0.1386462470456638,0.241,0.1611,-0.3571,60.9,60.9%,84/138
+Sani vs Demenza,138,Senza Anticipation Omission,Hist Gradient Boosting,0.137,0.10909708668367218,0.2574,0.1374,-0.1574,50.7,50.7%,70/138
+Sani vs Demenza,138,Senza Anticipation Omission,Neural Network (MLP),0.0458,0.5936442842772979,0.2689,0.2648,-1.23,66.7,66.7%,92/138
+Sani vs Demenza,138,Senza Anticipation Omission,AdaBoost Regressor,0.1227,0.15179726656048706,0.2861,0.145,-0.2211,34.8,34.8%,48/138
+Sani vs Demenza,138,Senza Tool Omission,Random Forest,0.4133,4.7086144211164663e-07,0.1779,0.1025,0.1364,71.7,71.7%,99/138
+Sani vs Demenza,138,Senza Tool Omission,K-Neighbors Regressor (KNN),0.1589,0.06267411448886756,0.1783,0.1278,-0.0767,64.5,64.5%,89/138
+Sani vs Demenza,138,Senza Tool Omission,Support Vector Regressor (SVR - RBF),0.467,7.772443790885701e-09,0.186,0.0934,0.2137,71.0,71.0%,98/138
+Sani vs Demenza,138,Senza Tool Omission,Gradient Boosting,0.2437,0.0039713515846274495,0.2023,0.1478,-0.2453,72.5,72.5%,100/138
+Sani vs Demenza,138,Senza Tool Omission,Lasso Regression (L1),0.1755,0.039558531369992316,0.2287,0.1405,-0.1834,58.7,58.7%,81/138
+Sani vs Demenza,138,Senza Tool Omission,Ridge Regression (L2),0.1499,0.07930144588961122,0.2392,0.1555,-0.3095,59.4,59.4%,82/138
+Sani vs Demenza,138,Senza Tool Omission,Linear Regression,0.1457,0.08812057930769188,0.24,0.157,-0.3223,59.4,59.4%,82/138
+Sani vs Demenza,138,Senza Tool Omission,Hist Gradient Boosting,-0.0157,0.8549560828465526,0.2616,0.1508,-0.2705,52.9,52.9%,73/138
+Sani vs Demenza,138,Senza Tool Omission,AdaBoost Regressor,0.2053,0.015696248270996513,0.2735,0.1312,-0.1051,38.4,38.4%,53/138
+Sani vs Demenza,138,Senza Tool Omission,Neural Network (MLP),0.0947,0.26902553323131445,0.2784,0.2477,-1.0865,63.8,63.8%,88/138
+Sani vs Demenza,138,Senza Omission,Random Forest,0.4615,1.2163255485561076e-08,0.1695,0.0965,0.1873,71.7,71.7%,99/138
+Sani vs Demenza,138,Senza Omission,Support Vector Regressor (SVR - RBF),0.4666,8.0358746860835e-09,0.1914,0.0929,0.2176,72.5,72.5%,100/138
+Sani vs Demenza,138,Senza Omission,Gradient Boosting,0.3552,1.9110878562026134e-05,0.1915,0.1257,-0.0588,72.5,72.5%,100/138
+Sani vs Demenza,138,Senza Omission,K-Neighbors Regressor (KNN),0.2031,0.016906041004938612,0.1928,0.1232,-0.0376,55.1,55.1%,76/138
+Sani vs Demenza,138,Senza Omission,Lasso Regression (L1),0.171,0.04496549249257843,0.2297,0.1401,-0.1802,60.9,60.9%,84/138
+Sani vs Demenza,138,Senza Omission,Ridge Regression (L2),0.1518,0.07558049318963395,0.2387,0.1537,-0.2943,60.1,60.1%,83/138
+Sani vs Demenza,138,Senza Omission,Linear Regression,0.1474,0.08445063782223121,0.2396,0.1552,-0.3076,60.1,60.1%,83/138
+Sani vs Demenza,138,Senza Omission,AdaBoost Regressor,0.178,0.03677863674859501,0.245,0.1342,-0.1305,55.8,55.8%,77/138
+Sani vs Demenza,138,Senza Omission,Hist Gradient Boosting,0.1319,0.12292993733814708,0.2521,0.1366,-0.1508,52.2,52.2%,72/138
+Sani vs Demenza,138,Senza Omission,Neural Network (MLP),0.0647,0.45096241591899616,0.2737,0.2288,-0.927,64.5,64.5%,89/138
+Sani vs Demenza,138,Solo Perseveration,K-Neighbors Regressor (KNN),0.2243,0.00816758808166702,0.1841,0.1214,-0.0229,58.7,58.7%,81/138
+Sani vs Demenza,138,Solo Perseveration,Random Forest,0.3961,1.514615448795025e-06,0.185,0.1072,0.0972,68.8,68.8%,95/138
+Sani vs Demenza,138,Solo Perseveration,Support Vector Regressor (SVR - RBF),0.49,1.06529255236987e-09,0.1956,0.0906,0.237,75.4,75.4%,104/138
+Sani vs Demenza,138,Solo Perseveration,Gradient Boosting,0.3202,0.00012866927662714367,0.1972,0.1345,-0.133,72.5,72.5%,100/138
+Sani vs Demenza,138,Solo Perseveration,Neural Network (MLP),0.2817,0.0008168020316611129,0.2094,0.1443,-0.2156,68.8,68.8%,95/138
+Sani vs Demenza,138,Solo Perseveration,Lasso Regression (L1),0.1389,0.10433879355516783,0.2261,0.1441,-0.2136,66.7,66.7%,92/138
+Sani vs Demenza,138,Solo Perseveration,Hist Gradient Boosting,0.2455,0.003701981455299082,0.2282,0.117,0.0148,53.6,53.6%,74/138
+Sani vs Demenza,138,Solo Perseveration,Ridge Regression (L2),0.1239,0.14775528192808074,0.2284,0.1574,-0.3256,62.3,62.3%,86/138
+Sani vs Demenza,138,Solo Perseveration,Linear Regression,0.1203,0.15985474288888193,0.2291,0.1589,-0.3382,62.3,62.3%,86/138
+Sani vs Demenza,138,Solo Perseveration,AdaBoost Regressor,0.118,0.16801077139050563,0.2893,0.149,-0.2551,39.9,39.9%,55/138
+Sani vs Demenza,138,Solo Reversal,K-Neighbors Regressor (KNN),0.2539,0.0026562016369926287,0.1797,0.1183,0.0039,59.4,59.4%,82/138
+Sani vs Demenza,138,Solo Reversal,Random Forest,0.3732,6.521785064558126e-06,0.1883,0.1117,0.0595,64.5,64.5%,89/138
+Sani vs Demenza,138,Solo Reversal,Gradient Boosting,0.3192,0.00013537309625742731,0.1933,0.132,-0.1116,73.2,73.2%,101/138
+Sani vs Demenza,138,Solo Reversal,Support Vector Regressor (SVR - RBF),0.5147,1.0582781917058484e-10,0.1946,0.0883,0.2559,77.5,77.5%,107/138
+Sani vs Demenza,138,Solo Reversal,Neural Network (MLP),0.2614,0.0019584797665122486,0.2184,0.1306,-0.1002,68.1,68.1%,94/138
+Sani vs Demenza,138,Solo Reversal,Ridge Regression (L2),0.0692,0.42009316180575595,0.2353,0.1689,-0.4229,65.2,65.2%,90/138
+Sani vs Demenza,138,Solo Reversal,Linear Regression,0.0663,0.4396976114139841,0.2358,0.1707,-0.4375,64.5,64.5%,89/138
+Sani vs Demenza,138,Solo Reversal,Lasso Regression (L1),0.0763,0.3734652792874933,0.2362,0.154,-0.2972,70.3,70.3%,97/138
+Sani vs Demenza,138,Solo Reversal,Hist Gradient Boosting,0.0289,0.7364893194434031,0.2491,0.1372,-0.1558,49.3,49.3%,68/138
+Sani vs Demenza,138,Solo Reversal,AdaBoost Regressor,0.2157,0.011077750843220957,0.2776,0.1349,-0.1361,44.9,44.9%,62/138
+Sani vs Demenza,138,Solo Anticipation Omission,Random Forest,0.4275,1.698575192016534e-07,0.175,0.1016,0.1442,75.4,75.4%,104/138
+Sani vs Demenza,138,Solo Anticipation Omission,K-Neighbors Regressor (KNN),0.3215,0.00012039836906595604,0.1855,0.1101,0.0723,57.2,57.2%,79/138
+Sani vs Demenza,138,Solo Anticipation Omission,Support Vector Regressor (SVR - RBF),0.4803,2.50749285610338e-09,0.1864,0.0914,0.2305,73.9,73.9%,102/138
+Sani vs Demenza,138,Solo Anticipation Omission,Gradient Boosting,0.3297,7.832849995230758e-05,0.1901,0.1269,-0.0687,73.2,73.2%,101/138
+Sani vs Demenza,138,Solo Anticipation Omission,Neural Network (MLP),0.3146,0.0001712005910797358,0.2155,0.1336,-0.1253,68.8,68.8%,95/138
+Sani vs Demenza,138,Solo Anticipation Omission,Hist Gradient Boosting,0.1031,0.2287117342835096,0.2337,0.131,-0.1036,58.7,58.7%,81/138
+Sani vs Demenza,138,Solo Anticipation Omission,Lasso Regression (L1),0.111,0.1948023656454579,0.2338,0.1489,-0.2544,65.2,65.2%,90/138
+Sani vs Demenza,138,Solo Anticipation Omission,Ridge Regression (L2),0.0989,0.24823530296783472,0.2397,0.163,-0.3733,61.6,61.6%,85/138
+Sani vs Demenza,138,Solo Anticipation Omission,Linear Regression,0.0954,0.26588981126965167,0.2405,0.1647,-0.3876,60.9,60.9%,84/138
+Sani vs Demenza,138,Solo Anticipation Omission,AdaBoost Regressor,0.255,0.002545550624690113,0.2571,0.1254,-0.0566,45.7,45.7%,63/138
+Sani vs Demenza,138,Solo Tool Omission,Random Forest,0.4744,4.166920222011762e-09,0.1641,0.0952,0.1978,71.0,71.0%,98/138
+Sani vs Demenza,138,Solo Tool Omission,K-Neighbors Regressor (KNN),0.3319,6.993966729713498e-05,0.1681,0.1101,0.0723,63.8,63.8%,88/138
+Sani vs Demenza,138,Solo Tool Omission,Gradient Boosting,0.3854,3.050472246871675e-06,0.1759,0.1193,-0.0052,78.3,78.3%,108/138
+Sani vs Demenza,138,Solo Tool Omission,Support Vector Regressor (SVR - RBF),0.4529,2.4425782067046754e-08,0.1942,0.0954,0.1963,75.4,75.4%,104/138
+Sani vs Demenza,138,Solo Tool Omission,Neural Network (MLP),0.3033,0.00029944194805666525,0.223,0.1445,-0.2173,72.5,72.5%,100/138
+Sani vs Demenza,138,Solo Tool Omission,Lasso Regression (L1),0.1219,0.1542251840079059,0.2314,0.146,-0.2299,63.8,63.8%,88/138
+Sani vs Demenza,138,Solo Tool Omission,Ridge Regression (L2),0.098,0.2528774223195027,0.2394,0.1615,-0.3602,60.9,60.9%,84/138
+Sani vs Demenza,138,Solo Tool Omission,Linear Regression,0.0938,0.273759256118054,0.2402,0.1632,-0.375,60.1,60.1%,83/138
+Sani vs Demenza,138,Solo Tool Omission,AdaBoost Regressor,0.2411,0.004394779682688468,0.2494,0.1278,-0.0764,50.0,50.0%,69/138
+Sani vs Demenza,138,Solo Tool Omission,Hist Gradient Boosting,0.1645,0.05384683203728121,0.2497,0.1307,-0.1007,52.9,52.9%,73/138
+Sani vs Demenza,138,Solo Omission,Random Forest,0.4127,4.913147379902903e-07,0.1777,0.1049,0.1165,71.0,71.0%,98/138
+Sani vs Demenza,138,Solo Omission,K-Neighbors Regressor (KNN),0.2126,0.012303993807268442,0.1797,0.1217,-0.0254,62.3,62.3%,86/138
+Sani vs Demenza,138,Solo Omission,Support Vector Regressor (SVR - RBF),0.4349,9.822789907720131e-08,0.1887,0.0966,0.1865,72.5,72.5%,100/138
+Sani vs Demenza,138,Solo Omission,Gradient Boosting,0.3196,0.0001332367370130059,0.1916,0.1357,-0.1433,73.2,73.2%,101/138
+Sani vs Demenza,138,Solo Omission,Neural Network (MLP),0.1896,0.02590901700278621,0.2236,0.1533,-0.2916,63.0,63.0%,87/138
+Sani vs Demenza,138,Solo Omission,Lasso Regression (L1),0.1415,0.09789229659655503,0.2282,0.1456,-0.2262,66.7,66.7%,92/138
+Sani vs Demenza,138,Solo Omission,Ridge Regression (L2),0.108,0.20752678627068727,0.2359,0.1629,-0.3722,65.9,65.9%,91/138
+Sani vs Demenza,138,Solo Omission,Linear Regression,0.1041,0.2242254219484973,0.2366,0.1646,-0.3868,65.2,65.2%,90/138
+Sani vs Demenza,138,Solo Omission,Hist Gradient Boosting,-0.0357,0.6772601219489305,0.2566,0.1443,-0.2154,51.4,51.4%,71/138
+Sani vs Demenza,138,Solo Omission,AdaBoost Regressor,0.1236,0.14855095220438008,0.325,0.1471,-0.2386,14.5,14.5%,20/138
+Tutti (Sani+MCI+Demenza),192,Tutte le Anomalie (5),Gradient Boosting,0.4262,7.109026158202061e-10,0.1934,0.0782,0.1376,58.3,58.3%,112/192
+Tutti (Sani+MCI+Demenza),192,Tutte le Anomalie (5),Random Forest,0.4595,2.017040721994458e-11,0.194,0.0726,0.1987,55.7,55.7%,107/192
+Tutti (Sani+MCI+Demenza),192,Tutte le Anomalie (5),Support Vector Regressor (SVR - RBF),0.414,2.390564560221733e-09,0.2016,0.0755,0.1677,56.8,56.8%,109/192
+Tutti (Sani+MCI+Demenza),192,Tutte le Anomalie (5),K-Neighbors Regressor (KNN),0.1204,0.09618539790044996,0.2173,0.0999,-0.1023,50.5,50.5%,97/192
+Tutti (Sani+MCI+Demenza),192,Tutte le Anomalie (5),Hist Gradient Boosting,0.2459,0.0005875856621215063,0.224,0.0961,-0.0599,49.0,49.0%,94/192
+Tutti (Sani+MCI+Demenza),192,Tutte le Anomalie (5),Lasso Regression (L1),0.144,0.04624140799050491,0.2285,0.098,-0.0805,42.2,42.2%,81/192
+Tutti (Sani+MCI+Demenza),192,Tutte le Anomalie (5),AdaBoost Regressor,0.2504,0.00045953053748872376,0.2326,0.0898,0.0096,40.1,40.1%,77/192
+Tutti (Sani+MCI+Demenza),192,Tutte le Anomalie (5),Ridge Regression (L2),0.1013,0.16225571013566398,0.2342,0.1104,-0.2176,47.4,47.4%,91/192
+Tutti (Sani+MCI+Demenza),192,Tutte le Anomalie (5),Linear Regression,0.0992,0.17118977291622822,0.2346,0.111,-0.2243,47.4,47.4%,91/192
+Tutti (Sani+MCI+Demenza),192,Tutte le Anomalie (5),Neural Network (MLP),0.103,0.15492628521932705,0.2727,0.1551,-0.7105,48.4,48.4%,93/192
+Tutti (Sani+MCI+Demenza),192,Senza Perseveration,Random Forest,0.464,1.2215582178252168e-11,0.2016,0.0725,0.2001,53.6,53.6%,103/192
+Tutti (Sani+MCI+Demenza),192,Senza Perseveration,Gradient Boosting,0.4219,1.0959218108806269e-09,0.2035,0.0822,0.0928,55.2,55.2%,106/192
+Tutti (Sani+MCI+Demenza),192,Senza Perseveration,Support Vector Regressor (SVR - RBF),0.3894,2.3665956925465595e-08,0.2094,0.0777,0.1435,49.0,49.0%,94/192
+Tutti (Sani+MCI+Demenza),192,Senza Perseveration,K-Neighbors Regressor (KNN),0.1686,0.019430495586400604,0.2222,0.096,-0.0594,50.0,50.0%,96/192
+Tutti (Sani+MCI+Demenza),192,Senza Perseveration,Hist Gradient Boosting,0.2648,0.00020591943959383222,0.2249,0.0933,-0.029,48.4,48.4%,93/192
+Tutti (Sani+MCI+Demenza),192,Senza Perseveration,AdaBoost Regressor,0.333,2.3642504221589096e-06,0.2304,0.0837,0.0769,34.9,34.9%,67/192
+Tutti (Sani+MCI+Demenza),192,Senza Perseveration,Lasso Regression (L1),0.0666,0.35888930934055674,0.2371,0.1038,-0.1445,35.4,35.4%,68/192
+Tutti (Sani+MCI+Demenza),192,Senza Perseveration,Ridge Regression (L2),0.0506,0.4862263461369503,0.2388,0.1156,-0.2753,42.7,42.7%,82/192
+Tutti (Sani+MCI+Demenza),192,Senza Perseveration,Linear Regression,0.0489,0.5006479860518245,0.2391,0.1163,-0.2827,42.7,42.7%,82/192
+Tutti (Sani+MCI+Demenza),192,Senza Perseveration,Neural Network (MLP),0.0382,0.5983872563273314,0.2614,0.1628,-0.7954,44.8,44.8%,86/192
+Tutti (Sani+MCI+Demenza),192,Senza Reversal,Random Forest,0.4519,4.7347245567149417e-11,0.1937,0.0736,0.1877,58.3,58.3%,112/192
+Tutti (Sani+MCI+Demenza),192,Senza Reversal,Support Vector Regressor (SVR - RBF),0.4233,9.519636512281542e-10,0.2007,0.0747,0.1757,58.3,58.3%,112/192
+Tutti (Sani+MCI+Demenza),192,Senza Reversal,Gradient Boosting,0.3715,1.1229019330590557e-07,0.2064,0.0874,0.0365,60.4,60.4%,116/192
+Tutti (Sani+MCI+Demenza),192,Senza Reversal,K-Neighbors Regressor (KNN),0.1959,0.006471990453306165,0.2115,0.0943,-0.0404,49.5,49.5%,95/192
+Tutti (Sani+MCI+Demenza),192,Senza Reversal,Lasso Regression (L1),0.1358,0.06042018981633387,0.2295,0.0982,-0.0834,44.8,44.8%,86/192
+Tutti (Sani+MCI+Demenza),192,Senza Reversal,Hist Gradient Boosting,0.1953,0.006637312717321144,0.2303,0.1011,-0.1153,47.9,47.9%,92/192
+Tutti (Sani+MCI+Demenza),192,Senza Reversal,Ridge Regression (L2),0.0953,0.1885525063372534,0.2345,0.1096,-0.2087,45.8,45.8%,88/192
+Tutti (Sani+MCI+Demenza),192,Senza Reversal,Linear Regression,0.093,0.19949757101541846,0.2348,0.1102,-0.2151,45.8,45.8%,88/192
+Tutti (Sani+MCI+Demenza),192,Senza Reversal,AdaBoost Regressor,0.22,0.00216790932198907,0.2398,0.0926,-0.021,34.9,34.9%,67/192
+Tutti (Sani+MCI+Demenza),192,Senza Reversal,Neural Network (MLP),0.0548,0.4501204664901166,0.2532,0.1671,-0.843,49.5,49.5%,95/192
+Tutti (Sani+MCI+Demenza),192,Senza Anticipation Omission,Support Vector Regressor (SVR - RBF),0.416,1.9635588179199976e-09,0.2035,0.0753,0.169,54.7,54.7%,105/192
+Tutti (Sani+MCI+Demenza),192,Senza Anticipation Omission,Random Forest,0.3808,5.055344228915909e-08,0.2067,0.0816,0.0996,57.3,57.3%,110/192
+Tutti (Sani+MCI+Demenza),192,Senza Anticipation Omission,Gradient Boosting,0.3271,3.6488325687527913e-06,0.2112,0.0905,0.002,57.3,57.3%,110/192
+Tutti (Sani+MCI+Demenza),192,Senza Anticipation Omission,K-Neighbors Regressor (KNN),0.1196,0.09845681999738919,0.2136,0.1012,-0.1159,54.7,54.7%,105/192
+Tutti (Sani+MCI+Demenza),192,Senza Anticipation Omission,Hist Gradient Boosting,0.2706,0.000146956829322944,0.221,0.0938,-0.0345,48.4,48.4%,93/192
+Tutti (Sani+MCI+Demenza),192,Senza Anticipation Omission,Lasso Regression (L1),0.1437,0.04678597226430952,0.2277,0.098,-0.0814,42.7,42.7%,82/192
+Tutti (Sani+MCI+Demenza),192,Senza Anticipation Omission,Ridge Regression (L2),0.1031,0.1546297466341693,0.2324,0.1096,-0.2093,47.4,47.4%,91/192
+Tutti (Sani+MCI+Demenza),192,Senza Anticipation Omission,Linear Regression,0.1011,0.163063436724558,0.2327,0.1102,-0.2156,47.4,47.4%,91/192
+Tutti (Sani+MCI+Demenza),192,Senza Anticipation Omission,AdaBoost Regressor,0.2308,0.001278959553925215,0.2405,0.0937,-0.0336,34.9,34.9%,67/192
+Tutti (Sani+MCI+Demenza),192,Senza Anticipation Omission,Neural Network (MLP),-0.0533,0.4630700391669041,0.2826,0.2178,-1.4024,43.8,43.8%,84/192
+Tutti (Sani+MCI+Demenza),192,Senza Tool Omission,Support Vector Regressor (SVR - RBF),0.3917,1.9329221303526258e-08,0.2044,0.077,0.1507,54.7,54.7%,105/192
+Tutti (Sani+MCI+Demenza),192,Senza Tool Omission,Random Forest,0.3063,1.559254243120356e-05,0.2178,0.0872,0.0386,47.4,47.4%,91/192
+Tutti (Sani+MCI+Demenza),192,Senza Tool Omission,K-Neighbors Regressor (KNN),0.0757,0.29652858252067305,0.2209,0.1037,-0.1442,50.0,50.0%,96/192
+Tutti (Sani+MCI+Demenza),192,Senza Tool Omission,Hist Gradient Boosting,0.2342,0.0010766169570170748,0.2274,0.0965,-0.0648,46.4,46.4%,89/192
+Tutti (Sani+MCI+Demenza),192,Senza Tool Omission,Gradient Boosting,0.2118,0.0031820350681949386,0.2279,0.1053,-0.1613,49.5,49.5%,95/192
+Tutti (Sani+MCI+Demenza),192,Senza Tool Omission,Lasso Regression (L1),0.1453,0.04441138616156586,0.2284,0.0979,-0.0794,42.2,42.2%,81/192
+Tutti (Sani+MCI+Demenza),192,Senza Tool Omission,Ridge Regression (L2),0.1166,0.10729429248670733,0.2326,0.108,-0.1907,45.8,45.8%,88/192
+Tutti (Sani+MCI+Demenza),192,Senza Tool Omission,Linear Regression,0.1147,0.11325804288081634,0.2329,0.1085,-0.1965,45.3,45.3%,87/192
+Tutti (Sani+MCI+Demenza),192,Senza Tool Omission,AdaBoost Regressor,0.1524,0.03483403935807315,0.2463,0.0994,-0.0966,39.6,39.6%,76/192
+Tutti (Sani+MCI+Demenza),192,Senza Tool Omission,Neural Network (MLP),0.0794,0.2738266924838865,0.2561,0.1592,-0.7555,49.0,49.0%,94/192
+Tutti (Sani+MCI+Demenza),192,Senza Omission,Support Vector Regressor (SVR - RBF),0.3769,7.098004899763092e-08,0.2018,0.0783,0.136,55.7,55.7%,107/192
+Tutti (Sani+MCI+Demenza),192,Senza Omission,Random Forest,0.3427,1.1374604355440394e-06,0.2095,0.0844,0.0695,55.2,55.2%,106/192
+Tutti (Sani+MCI+Demenza),192,Senza Omission,Gradient Boosting,0.3242,4.47288003107629e-06,0.212,0.0903,0.0045,51.6,51.6%,99/192
+Tutti (Sani+MCI+Demenza),192,Senza Omission,K-Neighbors Regressor (KNN),0.1407,0.0516404454857206,0.2207,0.0989,-0.0912,49.0,49.0%,94/192
+Tutti (Sani+MCI+Demenza),192,Senza Omission,Hist Gradient Boosting,0.2949,3.281263662044945e-05,0.2235,0.0916,-0.0101,48.4,48.4%,93/192
+Tutti (Sani+MCI+Demenza),192,Senza Omission,Lasso Regression (L1),0.1376,0.057097521664736924,0.2289,0.0982,-0.0828,40.6,40.6%,78/192
+Tutti (Sani+MCI+Demenza),192,Senza Omission,AdaBoost Regressor,0.2256,0.0016512814622109595,0.2311,0.0938,-0.0346,38.5,38.5%,74/192
+Tutti (Sani+MCI+Demenza),192,Senza Omission,Ridge Regression (L2),0.1137,0.11621625058605994,0.2329,0.1078,-0.1896,45.3,45.3%,87/192
+Tutti (Sani+MCI+Demenza),192,Senza Omission,Linear Regression,0.1118,0.12265726395480407,0.2332,0.1084,-0.1955,45.3,45.3%,87/192
+Tutti (Sani+MCI+Demenza),192,Senza Omission,Neural Network (MLP),0.0487,0.5022348106711229,0.2595,0.1504,-0.6595,43.8,43.8%,84/192
+Tutti (Sani+MCI+Demenza),192,Solo Perseveration,Support Vector Regressor (SVR - RBF),0.4446,1.0448912530338137e-10,0.1946,0.0731,0.1941,58.3,58.3%,112/192
+Tutti (Sani+MCI+Demenza),192,Solo Perseveration,K-Neighbors Regressor (KNN),0.1946,0.006829263224922939,0.208,0.0946,-0.0431,54.2,54.2%,104/192
+Tutti (Sani+MCI+Demenza),192,Solo Perseveration,Gradient Boosting,0.3002,2.3339022837076768e-05,0.2129,0.0924,-0.0189,54.7,54.7%,105/192
+Tutti (Sani+MCI+Demenza),192,Solo Perseveration,Neural Network (MLP),0.2691,0.00016089650409826075,0.2132,0.0945,-0.0421,50.0,50.0%,96/192
+Tutti (Sani+MCI+Demenza),192,Solo Perseveration,Hist Gradient Boosting,0.2852,6.0727088946591706e-05,0.2156,0.0898,0.01,49.5,49.5%,95/192
+Tutti (Sani+MCI+Demenza),192,Solo Perseveration,Random Forest,0.3339,2.2113727935545355e-06,0.2157,0.0851,0.0617,51.6,51.6%,99/192
+Tutti (Sani+MCI+Demenza),192,Solo Perseveration,Lasso Regression (L1),0.1348,0.062314635515773105,0.227,0.0978,-0.0788,49.5,49.5%,95/192
+Tutti (Sani+MCI+Demenza),192,Solo Perseveration,Ridge Regression (L2),0.1036,0.15257117028619405,0.2307,0.1073,-0.1838,43.8,43.8%,84/192
+Tutti (Sani+MCI+Demenza),192,Solo Perseveration,Linear Regression,0.1018,0.16019614504828059,0.231,0.1078,-0.1892,43.8,43.8%,84/192
+Tutti (Sani+MCI+Demenza),192,Solo Perseveration,AdaBoost Regressor,0.1348,0.06236334300545058,0.246,0.101,-0.1136,40.1,40.1%,77/192
+Tutti (Sani+MCI+Demenza),192,Solo Reversal,Support Vector Regressor (SVR - RBF),0.4338,3.2610544702221015e-10,0.1971,0.074,0.1839,57.3,57.3%,110/192
+Tutti (Sani+MCI+Demenza),192,Solo Reversal,K-Neighbors Regressor (KNN),0.1794,0.012803907997655432,0.2147,0.0959,-0.0574,51.6,51.6%,99/192
+Tutti (Sani+MCI+Demenza),192,Solo Reversal,Random Forest,0.298,2.685266787354176e-05,0.2259,0.0885,0.0234,44.3,44.3%,85/192
+Tutti (Sani+MCI+Demenza),192,Solo Reversal,Neural Network (MLP),0.1744,0.01556859540662377,0.2275,0.1083,-0.1943,49.0,49.0%,94/192
+Tutti (Sani+MCI+Demenza),192,Solo Reversal,Hist Gradient Boosting,0.2328,0.0011533092430233661,0.2279,0.0957,-0.0551,47.9,47.9%,92/192
+Tutti (Sani+MCI+Demenza),192,Solo Reversal,Gradient Boosting,0.2267,0.0015645646322852062,0.2309,0.1002,-0.1049,45.3,45.3%,87/192
+Tutti (Sani+MCI+Demenza),192,Solo Reversal,Lasso Regression (L1),0.0507,0.4846966773323605,0.2364,0.1046,-0.1535,34.4,34.4%,66/192
+Tutti (Sani+MCI+Demenza),192,Solo Reversal,Ridge Regression (L2),0.0477,0.5109059316590716,0.2374,0.1141,-0.2581,46.4,46.4%,89/192
+Tutti (Sani+MCI+Demenza),192,Solo Reversal,Linear Regression,0.0466,0.5207969128460316,0.2377,0.1146,-0.2644,46.4,46.4%,89/192
+Tutti (Sani+MCI+Demenza),192,Solo Reversal,AdaBoost Regressor,0.0871,0.22939987147792998,0.259,0.1056,-0.1652,33.9,33.9%,65/192
+Tutti (Sani+MCI+Demenza),192,Solo Anticipation Omission,Support Vector Regressor (SVR - RBF),0.3869,2.953477289467743e-08,0.2031,0.0781,0.1388,58.9,58.9%,113/192
+Tutti (Sani+MCI+Demenza),192,Solo Anticipation Omission,Random Forest,0.3294,3.0705398681221306e-06,0.2183,0.0852,0.0608,46.4,46.4%,89/192
+Tutti (Sani+MCI+Demenza),192,Solo Anticipation Omission,Gradient Boosting,0.2547,0.0003626647012152639,0.2201,0.0993,-0.095,53.6,53.6%,103/192
+Tutti (Sani+MCI+Demenza),192,Solo Anticipation Omission,Neural Network (MLP),0.2062,0.00410994168451035,0.2279,0.1053,-0.1613,48.4,48.4%,93/192
+Tutti (Sani+MCI+Demenza),192,Solo Anticipation Omission,K-Neighbors Regressor (KNN),0.1366,0.058886310342171434,0.2289,0.0985,-0.086,45.8,45.8%,88/192
+Tutti (Sani+MCI+Demenza),192,Solo Anticipation Omission,AdaBoost Regressor,0.2892,4.739847282956696e-05,0.2366,0.0894,0.0142,37.0,37.0%,71/192
+Tutti (Sani+MCI+Demenza),192,Solo Anticipation Omission,Lasso Regression (L1),0.0656,0.3658098496477224,0.2372,0.103,-0.1358,33.3,33.3%,64/192
+Tutti (Sani+MCI+Demenza),192,Solo Anticipation Omission,Ridge Regression (L2),0.0586,0.4197865394465118,0.2387,0.1118,-0.2328,38.0,38.0%,73/192
+Tutti (Sani+MCI+Demenza),192,Solo Anticipation Omission,Linear Regression,0.057,0.432529552271044,0.2389,0.1123,-0.2388,38.0,38.0%,73/192
+Tutti (Sani+MCI+Demenza),192,Solo Anticipation Omission,Hist Gradient Boosting,0.2002,0.005372753926189098,0.2395,0.0991,-0.0929,38.5,38.5%,74/192
+Tutti (Sani+MCI+Demenza),192,Solo Tool Omission,Support Vector Regressor (SVR - RBF),0.3715,1.1303985084198037e-07,0.2037,0.0802,0.1153,55.7,55.7%,107/192
+Tutti (Sani+MCI+Demenza),192,Solo Tool Omission,K-Neighbors Regressor (KNN),0.2654,0.00019834715059023628,0.2079,0.0896,0.0118,55.7,55.7%,107/192
+Tutti (Sani+MCI+Demenza),192,Solo Tool Omission,Gradient Boosting,0.3159,8.052189352305134e-06,0.2109,0.089,0.0183,49.5,49.5%,95/192
+Tutti (Sani+MCI+Demenza),192,Solo Tool Omission,Random Forest,0.3573,3.622195125127995e-07,0.2117,0.0826,0.0887,52.1,52.1%,100/192
+Tutti (Sani+MCI+Demenza),192,Solo Tool Omission,Neural Network (MLP),0.2599,0.00027200884664888817,0.2226,0.1001,-0.1044,47.9,47.9%,92/192
+Tutti (Sani+MCI+Demenza),192,Solo Tool Omission,Hist Gradient Boosting,0.2741,0.00011948889849998266,0.2261,0.0923,-0.0185,42.2,42.2%,81/192
+Tutti (Sani+MCI+Demenza),192,Solo Tool Omission,Lasso Regression (L1),0.0651,0.36941104989572376,0.2368,0.1028,-0.1344,29.7,29.7%,57/192
+Tutti (Sani+MCI+Demenza),192,Solo Tool Omission,Ridge Regression (L2),0.055,0.448577801152514,0.2377,0.1118,-0.2331,37.0,37.0%,71/192
+Tutti (Sani+MCI+Demenza),192,Solo Tool Omission,Linear Regression,0.0533,0.46281189198129297,0.238,0.1124,-0.2393,36.5,36.5%,70/192
+Tutti (Sani+MCI+Demenza),192,Solo Tool Omission,AdaBoost Regressor,0.2209,0.0020802591747882643,0.2436,0.0948,-0.0453,37.0,37.0%,71/192
+Tutti (Sani+MCI+Demenza),192,Solo Omission,Support Vector Regressor (SVR - RBF),0.3381,1.6200988359951643e-06,0.2086,0.0823,0.0923,54.2,54.2%,104/192
+Tutti (Sani+MCI+Demenza),192,Solo Omission,K-Neighbors Regressor (KNN),0.1769,0.014080996673347718,0.2188,0.0946,-0.0431,46.9,46.9%,90/192
+Tutti (Sani+MCI+Demenza),192,Solo Omission,Random Forest,0.3134,9.585763143595645e-06,0.2234,0.0874,0.0362,43.8,43.8%,84/192
+Tutti (Sani+MCI+Demenza),192,Solo Omission,Neural Network (MLP),0.1427,0.04825559154367162,0.2323,0.1115,-0.2296,45.3,45.3%,87/192
+Tutti (Sani+MCI+Demenza),192,Solo Omission,Gradient Boosting,0.1988,0.005692903707634767,0.233,0.1079,-0.1896,48.4,48.4%,93/192
+Tutti (Sani+MCI+Demenza),192,Solo Omission,Lasso Regression (L1),0.093,0.19928918608258397,0.2338,0.1011,-0.1149,37.5,37.5%,72/192
+Tutti (Sani+MCI+Demenza),192,Solo Omission,Hist Gradient Boosting,0.2011,0.0051596369619510505,0.2353,0.0987,-0.0887,42.2,42.2%,81/192
+Tutti (Sani+MCI+Demenza),192,Solo Omission,Ridge Regression (L2),0.0691,0.34095574484487257,0.2355,0.1111,-0.2255,40.1,40.1%,77/192
+Tutti (Sani+MCI+Demenza),192,Solo Omission,Linear Regression,0.0673,0.3536169230903125,0.2357,0.1117,-0.2316,41.1,41.1%,79/192
+Tutti (Sani+MCI+Demenza),192,Solo Omission,AdaBoost Regressor,0.0844,0.24450185787874018,0.2646,0.1065,-0.1752,32.3,32.3%,62/192
+Sani vs MCI,173,Tutte le Anomalie (5),Gradient Boosting,0.2776,0.0002174689751197875,0.1118,0.0188,0.0273,68.8,68.8%,119/173
+Sani vs MCI,173,Tutte le Anomalie (5),Random Forest,0.2044,0.006997348516426813,0.1185,0.0195,-0.0107,65.9,65.9%,114/173
+Sani vs MCI,173,Tutte le Anomalie (5),K-Neighbors Regressor (KNN),0.063,0.4099317357513598,0.1217,0.0221,-0.1426,67.1,67.1%,116/173
+Sani vs MCI,173,Tutte le Anomalie (5),Ridge Regression (L2),0.0993,0.19364913405250886,0.1255,0.0217,-0.1244,67.6,67.6%,117/173
+Sani vs MCI,173,Tutte le Anomalie (5),Linear Regression,0.0982,0.19882629807522936,0.1255,0.0218,-0.1279,67.6,67.6%,117/173
+Sani vs MCI,173,Tutte le Anomalie (5),Lasso Regression (L1),0.1106,0.14740604414130623,0.1262,0.0192,0.0064,69.9,69.9%,121/173
+Sani vs MCI,173,Tutte le Anomalie (5),AdaBoost Regressor,0.1834,0.01569906594513041,0.1265,0.0195,-0.0077,64.7,64.7%,112/173
+Sani vs MCI,173,Tutte le Anomalie (5),Support Vector Regressor (SVR - RBF),0.1746,0.02157428724747393,0.1322,0.02,-0.0337,67.6,67.6%,117/173
+Sani vs MCI,173,Tutte le Anomalie (5),Hist Gradient Boosting,-0.0138,0.8569851099917747,0.1323,0.0239,-0.2383,60.7,60.7%,105/173
+Sani vs MCI,173,Tutte le Anomalie (5),Neural Network (MLP),0.2154,0.0044281911762389095,0.1436,0.0377,-0.9508,67.1,67.1%,116/173
+Sani vs MCI,173,Senza Perseveration,Gradient Boosting,0.1875,0.013482855928650745,0.1179,0.0206,-0.0686,65.9,65.9%,114/173
+Sani vs MCI,173,Senza Perseveration,Random Forest,0.0336,0.6608267976727823,0.1283,0.0216,-0.1178,62.4,62.4%,108/173
+Sani vs MCI,173,Senza Perseveration,Lasso Regression (L1),-0.0071,0.9259436320123116,0.1294,0.02,-0.0344,69.4,69.4%,120/173
+Sani vs MCI,173,Senza Perseveration,Hist Gradient Boosting,0.0151,0.8441473509457051,0.1299,0.0232,-0.1994,61.3,61.3%,106/173
+Sani vs MCI,173,Senza Perseveration,K-Neighbors Regressor (KNN),-0.0843,0.2700576665830839,0.1301,0.0245,-0.2696,64.7,64.7%,112/173
+Sani vs MCI,173,Senza Perseveration,Ridge Regression (L2),0.0032,0.9666463144607067,0.1314,0.0233,-0.2047,67.1,67.1%,116/173
+Sani vs MCI,173,Senza Perseveration,Linear Regression,0.0014,0.9849337772436605,0.1315,0.0234,-0.2094,67.1,67.1%,116/173
+Sani vs MCI,173,Senza Perseveration,AdaBoost Regressor,-0.0148,0.8470681060699962,0.1382,0.0212,-0.097,62.4,62.4%,108/173
+Sani vs MCI,173,Senza Perseveration,Support Vector Regressor (SVR - RBF),0.0272,0.7226666036108952,0.1384,0.0216,-0.1193,62.4,62.4%,108/173
+Sani vs MCI,173,Senza Perseveration,Neural Network (MLP),-0.0893,0.24251578614317665,0.164,0.0627,-2.2441,57.8,57.8%,100/173
+Sani vs MCI,173,Senza Reversal,Gradient Boosting,0.2481,0.0009982463511610802,0.1136,0.0198,-0.023,68.2,68.2%,118/173
+Sani vs MCI,173,Senza Reversal,Random Forest,0.1778,0.019251403060139456,0.1202,0.0198,-0.0261,66.5,66.5%,115/173
+Sani vs MCI,173,Senza Reversal,K-Neighbors Regressor (KNN),0.0187,0.8074568784611558,0.1231,0.0235,-0.2158,63.0,63.0%,109/173
+Sani vs MCI,173,Senza Reversal,Ridge Regression (L2),0.1055,0.16709000957608616,0.1251,0.0213,-0.1016,68.2,68.2%,118/173
+Sani vs MCI,173,Senza Reversal,Linear Regression,0.1042,0.172519383708051,0.1251,0.0213,-0.1047,68.2,68.2%,118/173
+Sani vs MCI,173,Senza Reversal,Lasso Regression (L1),0.1148,0.13256409565789182,0.1261,0.0192,0.0079,70.5,70.5%,122/173
+Sani vs MCI,173,Senza Reversal,AdaBoost Regressor,0.1807,0.017366603501205315,0.1272,0.0191,0.0101,67.1,67.1%,116/173
+Sani vs MCI,173,Senza Reversal,Hist Gradient Boosting,0.0528,0.4905449470397522,0.1288,0.0229,-0.1853,61.8,61.8%,107/173
+Sani vs MCI,173,Senza Reversal,Support Vector Regressor (SVR - RBF),0.2047,0.006898312705347731,0.1302,0.0194,-0.0028,69.4,69.4%,120/173
+Sani vs MCI,173,Senza Reversal,Neural Network (MLP),-0.0038,0.9603798222461175,0.1597,0.0767,-2.9681,63.6,63.6%,110/173
+Sani vs MCI,173,Senza Anticipation Omission,Gradient Boosting,0.2558,0.0006804591774788316,0.1136,0.0201,-0.0402,67.6,67.6%,117/173
+Sani vs MCI,173,Senza Anticipation Omission,K-Neighbors Regressor (KNN),0.1385,0.06924891682416258,0.1165,0.021,-0.0876,69.4,69.4%,120/173
+Sani vs MCI,173,Senza Anticipation Omission,Random Forest,0.2293,0.0024128000938865982,0.1165,0.0194,-0.0023,67.6,67.6%,117/173
+Sani vs MCI,173,Senza Anticipation Omission,Ridge Regression (L2),0.091,0.2340156247644069,0.1264,0.0217,-0.1216,68.8,68.8%,119/173
+Sani vs MCI,173,Senza Anticipation Omission,Linear Regression,0.0905,0.2361377765263715,0.1265,0.0217,-0.1244,68.8,68.8%,119/173
+Sani vs MCI,173,Senza Anticipation Omission,Lasso Regression (L1),0.0157,0.8380655909354514,0.1286,0.0197,-0.0218,69.9,69.9%,121/173
+Sani vs MCI,173,Senza Anticipation Omission,AdaBoost Regressor,0.1135,0.13715741801923548,0.1304,0.0202,-0.0479,65.9,65.9%,114/173
+Sani vs MCI,173,Senza Anticipation Omission,Hist Gradient Boosting,-0.0168,0.8259554868847218,0.1337,0.0245,-0.2677,62.4,62.4%,108/173
+Sani vs MCI,173,Senza Anticipation Omission,Support Vector Regressor (SVR - RBF),0.0958,0.2100815890749736,0.1341,0.0209,-0.0803,65.3,65.3%,113/173
+Sani vs MCI,173,Senza Anticipation Omission,Neural Network (MLP),-0.0388,0.6118318095633425,0.1708,0.0675,-2.4946,57.2,57.2%,99/173
+Sani vs MCI,173,Senza Tool Omission,K-Neighbors Regressor (KNN),0.0999,0.19086815994173545,0.12,0.022,-0.1393,67.1,67.1%,116/173
+Sani vs MCI,173,Senza Tool Omission,Random Forest,0.1591,0.036525347648561524,0.1217,0.0204,-0.057,65.9,65.9%,114/173
+Sani vs MCI,173,Senza Tool Omission,Gradient Boosting,0.1331,0.08075581097572833,0.1217,0.0222,-0.1483,65.3,65.3%,113/173
+Sani vs MCI,173,Senza Tool Omission,Ridge Regression (L2),0.1004,0.18864124796004705,0.1248,0.0217,-0.1227,69.4,69.4%,120/173
+Sani vs MCI,173,Senza Tool Omission,Linear Regression,0.0997,0.19168590833417093,0.1248,0.0218,-0.1258,69.4,69.4%,120/173
+Sani vs MCI,173,Senza Tool Omission,Lasso Regression (L1),0.1091,0.15307494861421445,0.1261,0.0192,0.0052,69.9,69.9%,121/173
+Sani vs MCI,173,Senza Tool Omission,Support Vector Regressor (SVR - RBF),0.1833,0.015762448836208066,0.1319,0.0197,-0.0171,68.2,68.2%,118/173
+Sani vs MCI,173,Senza Tool Omission,AdaBoost Regressor,0.0458,0.5496377968662511,0.1324,0.0207,-0.0735,68.8,68.8%,119/173
+Sani vs MCI,173,Senza Tool Omission,Hist Gradient Boosting,-0.1164,0.12720624820602344,0.1395,0.0265,-0.3738,56.6,56.6%,98/173
+Sani vs MCI,173,Senza Tool Omission,Neural Network (MLP),-0.0038,0.9604359493410749,0.1558,0.0674,-2.4904,61.3,61.3%,106/173
+Sani vs MCI,173,Senza Omission,Gradient Boosting,0.2691,0.0003437142913693686,0.1116,0.0192,0.0045,66.5,66.5%,115/173
+Sani vs MCI,173,Senza Omission,K-Neighbors Regressor (KNN),0.1297,0.08887328307800105,0.1169,0.0212,-0.0973,68.8,68.8%,119/173
+Sani vs MCI,173,Senza Omission,Random Forest,0.1828,0.01606507175130843,0.119,0.0201,-0.0405,64.2,64.2%,111/173
+Sani vs MCI,173,Senza Omission,Lasso Regression (L1),0.116,0.12849199743606518,0.1259,0.0192,0.0079,69.9,69.9%,121/173
+Sani vs MCI,173,Senza Omission,Ridge Regression (L2),0.0772,0.31282869501848254,0.1264,0.0222,-0.1509,69.4,69.4%,120/173
+Sani vs MCI,173,Senza Omission,Linear Regression,0.0763,0.31824445855788364,0.1265,0.0223,-0.1545,69.4,69.4%,120/173
+Sani vs MCI,173,Senza Omission,AdaBoost Regressor,0.1054,0.16754061047115704,0.1287,0.0204,-0.0558,68.8,68.8%,119/173
+Sani vs MCI,173,Senza Omission,Hist Gradient Boosting,0.0466,0.5430113658289528,0.1298,0.0231,-0.1968,62.4,62.4%,108/173
+Sani vs MCI,173,Senza Omission,Support Vector Regressor (SVR - RBF),0.1274,0.09496641703456818,0.1328,0.0205,-0.061,66.5,66.5%,115/173
+Sani vs MCI,173,Senza Omission,Neural Network (MLP),-0.0875,0.25220899554283044,0.164,0.0737,-2.8128,63.6,63.6%,110/173
+Sani vs MCI,173,Solo Perseveration,AdaBoost Regressor,0.2165,0.0042164612225764975,0.1148,0.019,0.0147,71.1,71.1%,123/173
+Sani vs MCI,173,Solo Perseveration,K-Neighbors Regressor (KNN),0.1421,0.06217222299510137,0.1183,0.021,-0.0887,68.8,68.8%,119/173
+Sani vs MCI,173,Solo Perseveration,Gradient Boosting,0.1692,0.026080446917625465,0.1191,0.0213,-0.1031,69.4,69.4%,120/173
+Sani vs MCI,173,Solo Perseveration,Random Forest,0.1565,0.03978519324943558,0.1212,0.0207,-0.0692,69.4,69.4%,120/173
+Sani vs MCI,173,Solo Perseveration,Lasso Regression (L1),0.064,0.40300619903904833,0.1275,0.0194,-0.0062,69.9,69.9%,121/173
+Sani vs MCI,173,Solo Perseveration,Ridge Regression (L2),0.0536,0.48342584091385077,0.1277,0.0217,-0.1215,69.4,69.4%,120/173
+Sani vs MCI,173,Solo Perseveration,Linear Regression,0.0528,0.4899852601700372,0.1277,0.0217,-0.124,69.4,69.4%,120/173
+Sani vs MCI,173,Solo Perseveration,Neural Network (MLP),0.1767,0.020022389005021315,0.1293,0.0257,-0.3284,64.7,64.7%,112/173
+Sani vs MCI,173,Solo Perseveration,Support Vector Regressor (SVR - RBF),0.1455,0.05605549811744888,0.1321,0.0195,-0.0111,68.2,68.2%,118/173
+Sani vs MCI,173,Solo Perseveration,Hist Gradient Boosting,-0.1564,0.03993488479817448,0.1399,0.0256,-0.3224,57.2,57.2%,99/173
+Sani vs MCI,173,Solo Reversal,K-Neighbors Regressor (KNN),0.0657,0.3903316625502827,0.1252,0.022,-0.1383,62.4,62.4%,108/173
+Sani vs MCI,173,Solo Reversal,Lasso Regression (L1),-0.048,0.5303152969804483,0.1302,0.0201,-0.0408,68.8,68.8%,119/173
+Sani vs MCI,173,Solo Reversal,Support Vector Regressor (SVR - RBF),0.1468,0.05393705053132657,0.1324,0.0195,-0.0111,68.8,68.8%,119/173
+Sani vs MCI,173,Solo Reversal,Random Forest,-0.0748,0.32794878889680745,0.1329,0.0227,-0.1762,62.4,62.4%,108/173
+Sani vs MCI,173,Solo Reversal,Ridge Regression (L2),-0.0519,0.4977151957821793,0.1344,0.0239,-0.2386,68.2,68.2%,118/173
+Sani vs MCI,173,Solo Reversal,Linear Regression,-0.0534,0.48566347752756567,0.1345,0.024,-0.2433,68.2,68.2%,118/173
+Sani vs MCI,173,Solo Reversal,Gradient Boosting,-0.066,0.3882578589598046,0.1355,0.0254,-0.3151,58.4,58.4%,101/173
+Sani vs MCI,173,Solo Reversal,AdaBoost Regressor,-0.0504,0.5101782498369507,0.1358,0.0218,-0.1275,68.2,68.2%,118/173
+Sani vs MCI,173,Solo Reversal,Hist Gradient Boosting,-0.2019,0.007724075011766557,0.1418,0.0268,-0.3855,53.2,53.2%,92/173
+Sani vs MCI,173,Solo Reversal,Neural Network (MLP),-0.0864,0.25839887800650957,0.1483,0.0401,-1.0765,60.7,60.7%,105/173
+Sani vs MCI,173,Solo Anticipation Omission,Gradient Boosting,0.0121,0.874599957160761,0.1282,0.0245,-0.2663,61.8,61.8%,107/173
+Sani vs MCI,173,Solo Anticipation Omission,Lasso Regression (L1),-0.0051,0.9466053310681706,0.1293,0.02,-0.0358,69.4,69.4%,120/173
+Sani vs MCI,173,Solo Anticipation Omission,K-Neighbors Regressor (KNN),-0.0617,0.42032788881354655,0.1301,0.024,-0.2438,63.6,63.6%,110/173
+Sani vs MCI,173,Solo Anticipation Omission,Support Vector Regressor (SVR - RBF),0.1479,0.05208290175571344,0.1318,0.0197,-0.0176,71.7,71.7%,124/173
+Sani vs MCI,173,Solo Anticipation Omission,Ridge Regression (L2),-0.0174,0.8205982132286643,0.1319,0.0236,-0.2205,68.2,68.2%,118/173
+Sani vs MCI,173,Solo Anticipation Omission,Linear Regression,-0.0193,0.8006856247713954,0.1321,0.0237,-0.2253,68.2,68.2%,118/173
+Sani vs MCI,173,Solo Anticipation Omission,Neural Network (MLP),0.0009,0.9901251231006134,0.1327,0.0273,-0.4111,64.7,64.7%,112/173
+Sani vs MCI,173,Solo Anticipation Omission,Random Forest,-0.0962,0.20800914875326224,0.1341,0.0233,-0.2068,59.5,59.5%,103/173
+Sani vs MCI,173,Solo Anticipation Omission,AdaBoost Regressor,-0.0992,0.1941490745570087,0.1386,0.0221,-0.1446,65.9,65.9%,114/173
+Sani vs MCI,173,Solo Anticipation Omission,Hist Gradient Boosting,-0.1411,0.06398350601136721,0.1399,0.0261,-0.3518,54.9,54.9%,95/173
+Sani vs MCI,173,Solo Tool Omission,K-Neighbors Regressor (KNN),0.0161,0.8331024347457702,0.1231,0.0227,-0.1749,67.6,67.6%,117/173
+Sani vs MCI,173,Solo Tool Omission,Random Forest,0.1211,0.1124537850762587,0.1232,0.0209,-0.0801,63.0,63.0%,109/173
+Sani vs MCI,173,Solo Tool Omission,Gradient Boosting,0.1198,0.1164271870773262,0.1232,0.0226,-0.171,63.6,63.6%,110/173
+Sani vs MCI,173,Solo Tool Omission,Neural Network (MLP),0.0447,0.5594499403959515,0.1286,0.0252,-0.3044,64.2,64.2%,111/173
+Sani vs MCI,173,Solo Tool Omission,Hist Gradient Boosting,0.0328,0.6687770102587054,0.1297,0.0232,-0.2022,59.5,59.5%,103/173
+Sani vs MCI,173,Solo Tool Omission,Lasso Regression (L1),-0.0786,0.30424119424971274,0.1308,0.0203,-0.0507,68.8,68.8%,119/173
+Sani vs MCI,173,Solo Tool Omission,Ridge Regression (L2),-0.052,0.49663467591959326,0.1341,0.0237,-0.229,68.8,68.8%,119/173
+Sani vs MCI,173,Solo Tool Omission,Linear Regression,-0.0539,0.48099495050035646,0.1342,0.0238,-0.2337,68.8,68.8%,119/173
+Sani vs MCI,173,Solo Tool Omission,AdaBoost Regressor,-0.0554,0.46910442546144165,0.1372,0.0215,-0.1137,67.6,67.6%,117/173
+Sani vs MCI,173,Solo Tool Omission,Support Vector Regressor (SVR - RBF),0.0205,0.7885239959839324,0.1377,0.0216,-0.1163,59.5,59.5%,103/173
+Sani vs MCI,173,Solo Omission,K-Neighbors Regressor (KNN),-0.041,0.5919554517332141,0.1276,0.0234,-0.2104,63.0,63.0%,109/173
+Sani vs MCI,173,Solo Omission,AdaBoost Regressor,0.0459,0.5485060127128588,0.1301,0.0205,-0.0605,67.6,67.6%,117/173
+Sani vs MCI,173,Solo Omission,Lasso Regression (L1),-0.048,0.5303152969804483,0.1302,0.0201,-0.0408,68.8,68.8%,119/173
+Sani vs MCI,173,Solo Omission,Random Forest,-0.0396,0.6046459715969852,0.1322,0.0224,-0.1568,63.0,63.0%,109/173
+Sani vs MCI,173,Solo Omission,Ridge Regression (L2),-0.0612,0.42351319729942444,0.1339,0.0235,-0.2155,68.8,68.8%,119/173
+Sani vs MCI,173,Solo Omission,Linear Regression,-0.0628,0.41153939814774704,0.1341,0.0236,-0.2195,68.8,68.8%,119/173
+Sani vs MCI,173,Solo Omission,Support Vector Regressor (SVR - RBF),0.0402,0.5996213706659208,0.1356,0.0206,-0.0655,66.5,66.5%,115/173
+Sani vs MCI,173,Solo Omission,Gradient Boosting,-0.1079,0.15773948996726062,0.1369,0.0263,-0.36,59.0,59.0%,102/173
+Sani vs MCI,173,Solo Omission,Hist Gradient Boosting,-0.1266,0.09702975675761573,0.1385,0.0253,-0.3114,59.5,59.5%,103/173
+Sani vs MCI,173,Solo Omission,Neural Network (MLP),-0.0817,0.2853163030421389,0.1412,0.0304,-0.5739,61.3,61.3%,106/173

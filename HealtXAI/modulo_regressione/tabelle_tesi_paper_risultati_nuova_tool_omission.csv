@@ -1,0 +1,51 @@
+Coorte,N_Pazienti,Combinazione,Regressore,Pearson_r,P_Value,MAE,RMSE,MSE,R2,Accuratezza_%,Predizioni_Corrette
+1. Sani Giovani (60-74 anni) vs Demenza,99,Tutte le Anomalie (5),Random Forest,0.6341,1.8496354704525245e-12,0.1736,0.30495901363953815,0.093,0.4004,73.7,73/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Tutte le Anomalie (5),Gradient Boosting,0.5661,1.0157810128616683e-09,0.1794,0.34088121098118623,0.1162,0.251,79.8,79/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Tutte le Anomalie (5),Support Vector Regressor (SVR - RBF),0.5432,6.300794470347881e-09,0.2224,0.33166247903553997,0.11,0.2906,59.6,59/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Tutte le Anomalie (5),AdaBoost Regressor,0.3603,0.0002492595725157,0.2675,0.377094152699296,0.1422,0.0832,45.5,45/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Tutte le Anomalie (5),K-Neighbors Regressor (KNN),0.3355,0.0006877027926962,0.2141,0.38249182997810555,0.1463,0.0569,58.6,58/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Tutte le Anomalie (5),Neural Network (MLP),0.3241,0.0010652016773573,0.2834,0.452990066116245,0.2052,-0.3231,62.6,62/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Tutte le Anomalie (5),Hist Gradient Boosting,0.2344,0.0195185768967326,0.2948,0.40074929819027755,0.1606,-0.0354,45.5,45/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Tutte le Anomalie (5),Lasso Regression (L1),0.1831,0.0697231034332839,0.2904,0.4455333881989093,0.1985,-0.2797,47.5,47/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Tutte le Anomalie (5),Ridge Regression (L2),0.1621,0.1088826774997535,0.2995,0.47275786614291254,0.2235,-0.4411,49.5,49/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Tutte le Anomalie (5),Linear Regression,0.1557,0.1237608473011563,0.3013,0.47770283649984746,0.2282,-0.4713,49.5,49/99
+2. MCI vs Demenza,73,Tutte le Anomalie (5),Random Forest,0.6246,3.523608493891894e-09,0.1654,0.23979157616563598,0.0575,0.3901,83.6,61/73
+2. MCI vs Demenza,73,Tutte le Anomalie (5),Gradient Boosting,0.5393,8.528225808639571e-07,0.1764,0.2664582518894845,0.071,0.2476,82.2,60/73
+2. MCI vs Demenza,73,Tutte le Anomalie (5),Support Vector Regressor (SVR - RBF),0.5263,1.7303462010897266e-06,0.2,0.2615339366124404,0.0684,0.2754,76.7,56/73
+2. MCI vs Demenza,73,Tutte le Anomalie (5),AdaBoost Regressor,0.4226,0.0001958829085692,0.187,0.29103264421710495,0.0847,0.1018,75.3,55/73
+2. MCI vs Demenza,73,Tutte le Anomalie (5),K-Neighbors Regressor (KNN),0.3568,0.0019429226880986,0.1975,0.2944486372867091,0.0867,0.0807,76.7,56/73
+2. MCI vs Demenza,73,Tutte le Anomalie (5),Lasso Regression (L1),0.3353,0.0037308723832742,0.2227,0.30347981810987035,0.0921,0.0241,79.5,58/73
+2. MCI vs Demenza,73,Tutte le Anomalie (5),Neural Network (MLP),0.3002,0.0098773764218754,0.2694,0.3729611239794303,0.1391,-0.4744,71.2,52/73
+2. MCI vs Demenza,73,Tutte le Anomalie (5),Ridge Regression (L2),0.2911,0.0124608595627613,0.2395,0.32109188716004644,0.1031,-0.0931,75.3,55/73
+2. MCI vs Demenza,73,Tutte le Anomalie (5),Linear Regression,0.2793,0.0167203128835504,0.2441,0.3269556544854363,0.1069,-0.1337,74.0,54/73
+2. MCI vs Demenza,73,Tutte le Anomalie (5),Hist Gradient Boosting,0.2421,0.0390270921774126,0.2499,0.3124099870362662,0.0976,-0.0346,67.1,49/73
+3. Sani (60+) vs Demenza,138,Tutte le Anomalie (5),Random Forest,0.5403,7.934025235330087e-12,0.1465,0.2918903903865285,0.0852,0.2822,79.0,109/138
+3. Sani (60+) vs Demenza,138,Tutte le Anomalie (5),Support Vector Regressor (SVR - RBF),0.5003,4.1702790524832177e-10,0.1834,0.2988310559496787,0.0893,0.2478,69.6,96/138
+3. Sani (60+) vs Demenza,138,Tutte le Anomalie (5),Gradient Boosting,0.4219,2.543423461470727e-07,0.1616,0.33376638536557274,0.1114,0.0618,79.7,110/138
+3. Sani (60+) vs Demenza,138,Tutte le Anomalie (5),AdaBoost Regressor,0.2422,0.0042046801083254,0.2613,0.354400902933387,0.1256,-0.0583,42.8,59/138
+3. Sani (60+) vs Demenza,138,Tutte le Anomalie (5),K-Neighbors Regressor (KNN),0.2357,0.0053879863843446,0.1754,0.3468429039204925,0.1203,-0.0132,63.8,88/138
+3. Sani (60+) vs Demenza,138,Tutte le Anomalie (5),Neural Network (MLP),0.2294,0.0067902240745313,0.261,0.42941821107167777,0.1844,-0.5535,64.5,89/138
+3. Sani (60+) vs Demenza,138,Tutte le Anomalie (5),Lasso Regression (L1),0.1675,0.0495422781336259,0.2298,0.37682887362833545,0.142,-0.1957,58.7,81/138
+3. Sani (60+) vs Demenza,138,Tutte le Anomalie (5),Ridge Regression (L2),0.131,0.125635585612268,0.2414,0.40162171256046403,0.1613,-0.3585,60.1,83/138
+3. Sani (60+) vs Demenza,138,Tutte le Anomalie (5),Linear Regression,0.1264,0.1395692473085637,0.2422,0.4039801975344831,0.1632,-0.3742,60.1,83/138
+3. Sani (60+) vs Demenza,138,Tutte le Anomalie (5),Hist Gradient Boosting,0.0931,0.2773001062645379,0.2565,0.3744329045369811,0.1402,-0.1806,53.6,74/138
+4. Globale: Tutti i Pazienti,192,Tutte le Anomalie (5),Random Forest,0.4595,2.017040721994458e-11,0.194,0.2694438717061496,0.0726,0.1987,55.7,107/192
+4. Globale: Tutti i Pazienti,192,Tutte le Anomalie (5),Gradient Boosting,0.4262,7.10902615820206e-10,0.1934,0.2796426290821913,0.0782,0.1376,58.3,112/192
+4. Globale: Tutti i Pazienti,192,Tutte le Anomalie (5),Support Vector Regressor (SVR - RBF),0.414,2.390564560221733e-09,0.2016,0.27477263328068174,0.0755,0.1677,56.8,109/192
+4. Globale: Tutti i Pazienti,192,Tutte le Anomalie (5),AdaBoost Regressor,0.2504,0.0004595305374887,0.2326,0.29966648127543394,0.0898,0.0096,40.1,77/192
+4. Globale: Tutti i Pazienti,192,Tutte le Anomalie (5),Hist Gradient Boosting,0.2459,0.0005875856621215,0.224,0.31,0.0961,-0.0599,49.0,94/192
+4. Globale: Tutti i Pazienti,192,Tutte le Anomalie (5),Lasso Regression (L1),0.144,0.0462414079905049,0.2285,0.31304951684997057,0.098,-0.0805,42.2,81/192
+4. Globale: Tutti i Pazienti,192,Tutte le Anomalie (5),K-Neighbors Regressor (KNN),0.1204,0.0961853979004499,0.2173,0.3160696125855822,0.0999,-0.1023,50.5,97/192
+4. Globale: Tutti i Pazienti,192,Tutte le Anomalie (5),Neural Network (MLP),0.103,0.154926285219327,0.2727,0.3938273733503043,0.1551,-0.7105,48.4,93/192
+4. Globale: Tutti i Pazienti,192,Tutte le Anomalie (5),Ridge Regression (L2),0.1013,0.1622557101356639,0.2342,0.332264954516723,0.1104,-0.2176,47.4,91/192
+4. Globale: Tutti i Pazienti,192,Tutte le Anomalie (5),Linear Regression,0.0992,0.1711897729162282,0.2346,0.3331666249791536,0.111,-0.2243,47.4,91/192
+5. Sani (60+) vs MCI,173,Tutte le Anomalie (5),Gradient Boosting,0.2776,0.0002174689751197,0.1118,0.13711309200802088,0.0188,0.0273,68.8,119/173
+5. Sani (60+) vs MCI,173,Tutte le Anomalie (5),Neural Network (MLP),0.2154,0.0044281911762389,0.1436,0.194164878389476,0.0377,-0.9508,67.1,116/173
+5. Sani (60+) vs MCI,173,Tutte le Anomalie (5),Random Forest,0.2044,0.0069973485164268,0.1185,0.1396424004376894,0.0195,-0.0107,65.9,114/173
+5. Sani (60+) vs MCI,173,Tutte le Anomalie (5),AdaBoost Regressor,0.1834,0.0156990659451304,0.1265,0.1396424004376894,0.0195,-0.0077,64.7,112/173
+5. Sani (60+) vs MCI,173,Tutte le Anomalie (5),Support Vector Regressor (SVR - RBF),0.1746,0.0215742872474739,0.1322,0.1414213562373095,0.02,-0.0337,67.6,117/173
+5. Sani (60+) vs MCI,173,Tutte le Anomalie (5),Lasso Regression (L1),0.1106,0.1474060441413062,0.1262,0.13856406460551018,0.0192,0.0064,69.9,121/173
+5. Sani (60+) vs MCI,173,Tutte le Anomalie (5),Ridge Regression (L2),0.0993,0.1936491340525088,0.1255,0.14730919862656236,0.0217,-0.1244,67.6,117/173
+5. Sani (60+) vs MCI,173,Tutte le Anomalie (5),Linear Regression,0.0982,0.1988262980752293,0.1255,0.147648230602334,0.0218,-0.1279,67.6,117/173
+5. Sani (60+) vs MCI,173,Tutte le Anomalie (5),K-Neighbors Regressor (KNN),0.063,0.4099317357513598,0.1217,0.14866068747318506,0.0221,-0.1426,67.1,116/173
+5. Sani (60+) vs MCI,173,Tutte le Anomalie (5),Hist Gradient Boosting,-0.0138,0.8569851099917747,0.1323,0.15459624833740307,0.0239,-0.2383,60.7,105/173

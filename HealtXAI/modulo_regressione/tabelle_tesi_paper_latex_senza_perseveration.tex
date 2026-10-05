@@ -1,0 +1,132 @@
+% ===========================================================
+% TABELLE PRESTAZIONI REGRESSIONE HEALTHXAI — SENZA PERSEVERATION
+% Pacchetti necessari nel preambolo LaTeX:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+% \usepackage{amsmath}
+% ===========================================================
+
+% --- Tabella: Sani Giovani (60-74) vs Demenza (N = 99) [Senza Perseveration] ---
+\begin{table}[htbp]
+\centering
+\caption{Coorte: Sani Giovani (60--74) vs Demenza ($N = 99$) -- Combinazione Senza Perseveration. Corrisponde alla \textbf{Table 12 (pag. 184)} del paper originale HealthXAI.}
+\label{tab:coorte1_sani_giovani_demenza_senza_pers}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{clccccccc}
+\toprule
+\textbf{Rank} & \textbf{Regressore ML} & \textbf{Pearson $r$} & \textbf{$p$-value} & \textbf{MAE} & \textbf{RMSE} & \textbf{$R^2$} & \textbf{Accuratezza (\%)} & \textbf{Esito Diagnosi} \\
+\midrule
+1 & \textbf{Random Forest} & \textbf{0.6711} & $< 0.0001$ & \textbf{0.1640} & 0.2921 & 0.4499 & \textbf{74.7\%} & 74/99 \\
+2 & Gradient Boosting & 0.6459 & $< 0.0001$ & 0.1542 & 0.3076 & 0.3903 & 80.8\% & 80/99 \\
+3 & Support Vector Regressor (SVR - RBF) & 0.5482 & $< 0.0001$ & 0.2188 & 0.3305 & 0.2957 & 59.6\% & 59/99 \\
+4 & AdaBoost Regressor & 0.4543 & $< 0.0001$ & 0.2473 & 0.3533 & 0.1952 & 48.5\% & 48/99 \\
+5 & K-Neighbors Regressor (KNN) & 0.3324 & 0.0008 & 0.2263 & 0.3792 & 0.0725 & 49.5\% & 49/99 \\
+6 & Neural Network (MLP) & 0.1887 & 0.0615 & 0.2953 & 0.5563 & -0.9958 & 63.6\% & 63/99 \\
+7 & Lasso Regression (L1) & 0.1488 & 0.1417 & 0.2931 & 0.4569 & -0.3462 & 45.5\% & 45/99 \\
+8 & Ridge Regression (L2) & 0.1434 & 0.1568 & 0.2999 & 0.4822 & -0.4989 & 45.5\% & 45/99 \\
+9 & Linear Regression & 0.1385 & 0.1715 & 0.3017 & 0.4870 & -0.5295 & 45.5\% & 45/99 \\
+10 & Hist Gradient Boosting & 0.0007 & 0.9942 & 0.3220 & 0.4328 & -0.2080 & 41.4\% & 41/99 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+% --- Tabella: MCI vs Demenza (N = 73) [Senza Perseveration] ---
+\begin{table}[htbp]
+\centering
+\caption{Coorte: MCI vs Demenza ($N = 73$) -- Combinazione Senza Perseveration. Corrisponde alla \textbf{Table 10 (pag. 183)} del paper originale HealthXAI.}
+\label{tab:coorte2_mci_demenza_senza_pers}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{clccccccc}
+\toprule
+\textbf{Rank} & \textbf{Regressore ML} & \textbf{Pearson $r$} & \textbf{$p$-value} & \textbf{MAE} & \textbf{RMSE} & \textbf{$R^2$} & \textbf{Accuratezza (\%)} & \textbf{Esito Diagnosi} \\
+\midrule
+1 & \textbf{Random Forest} & \textbf{0.6367} & $< 0.0001$ & \textbf{0.1648} & 0.2369 & 0.4050 & \textbf{86.3\%} & 63/73 \\
+2 & Gradient Boosting & 0.5782 & $< 0.0001$ & 0.1669 & 0.2577 & 0.2958 & 82.2\% & 60/73 \\
+3 & Support Vector Regressor (SVR - RBF) & 0.5669 & $< 0.0001$ & 0.1925 & 0.2532 & 0.3203 & 78.1\% & 57/73 \\
+4 & AdaBoost Regressor & 0.4829 & $< 0.0001$ & 0.1778 & 0.2760 & 0.1926 & 79.5\% & 58/73 \\
+5 & K-Neighbors Regressor (KNN) & 0.3891 & 0.0007 & 0.1918 & 0.2903 & 0.1064 & 78.1\% & 57/73 \\
+6 & Neural Network (MLP) & 0.3671 & 0.0014 & 0.2700 & 0.3838 & -0.5617 & 78.1\% & 57/73 \\
+7 & Lasso Regression (L1) & 0.3340 & 0.0039 & 0.2228 & 0.3036 & 0.0223 & 79.5\% & 58/73 \\
+8 & Ridge Regression (L2) & 0.3114 & 0.0073 & 0.2358 & 0.3158 & -0.0572 & 75.3\% & 55/73 \\
+9 & Linear Regression & 0.3020 & 0.0094 & 0.2400 & 0.3205 & -0.0890 & 71.2\% & 52/73 \\
+10 & Hist Gradient Boosting & 0.2372 & 0.0433 & 0.2519 & 0.3098 & -0.0177 & 68.5\% & 50/73 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+% --- Tabella: Sani (60+) vs Demenza (N = 138) [Senza Perseveration] ---
+\begin{table}[htbp]
+\centering
+\caption{Coorte: Sani (60+) vs Demenza ($N = 138$) -- Combinazione Senza Perseveration. Corrisponde alla \textbf{Table 11 (pag. 183)} del paper originale HealthXAI.}
+\label{tab:coorte3_sani_demenza_senza_pers}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{clccccccc}
+\toprule
+\textbf{Rank} & \textbf{Regressore ML} & \textbf{Pearson $r$} & \textbf{$p$-value} & \textbf{MAE} & \textbf{RMSE} & \textbf{$R^2$} & \textbf{Accuratezza (\%)} & \textbf{Esito Diagnosi} \\
+\midrule
+1 & \textbf{Random Forest} & \textbf{0.5850} & $< 0.0001$ & \textbf{0.1414} & 0.2805 & 0.3375 & \textbf{77.5\%} & 107/138 \\
+2 & Gradient Boosting & 0.5285 & $< 0.0001$ & 0.1441 & 0.3030 & 0.2266 & 81.9\% & 113/138 \\
+3 & Support Vector Regressor (SVR - RBF) & 0.5280 & $< 0.0001$ & 0.1795 & 0.2931 & 0.2766 & 68.8\% & 95/138 \\
+4 & AdaBoost Regressor & 0.2367 & 0.0052 & 0.2626 & 0.3543 & -0.0570 & 39.1\% & 54/138 \\
+5 & K-Neighbors Regressor (KNN) & 0.2284 & 0.0070 & 0.1855 & 0.3464 & -0.0107 & 58.0\% & 80/138 \\
+6 & Lasso Regression (L1) & 0.1274 & 0.1365 & 0.2322 & 0.3850 & -0.2486 & 61.6\% & 85/138 \\
+7 & Ridge Regression (L2) & 0.0842 & 0.3259 & 0.2437 & 0.4144 & -0.4464 & 62.3\% & 86/138 \\
+8 & Linear Regression & 0.0801 & 0.3501 & 0.2444 & 0.4170 & -0.4644 & 62.3\% & 86/138 \\
+9 & Neural Network (MLP) & 0.0757 & 0.3775 & 0.2579 & 0.4812 & -0.9504 & 68.1\% & 94/138 \\
+10 & Hist Gradient Boosting & 0.0341 & 0.6909 & 0.2545 & 0.3791 & -0.2102 & 50.7\% & 70/138 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+% --- Tabella: Sani (60+) vs MCI vs Demenza (Tutti i Pazienti) (N = 192) [Senza Perseveration] ---
+\begin{table}[htbp]
+\centering
+\caption{Coorte: Sani (60+) vs MCI vs Demenza ($N = 192$) -- Combinazione Senza Perseveration. Corrisponde alla \textbf{Table 8 (pag. 183)} del paper originale HealthXAI.}
+\label{tab:coorte4_globale_senza_pers}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{clccccccc}
+\toprule
+\textbf{Rank} & \textbf{Regressore ML} & \textbf{Pearson $r$} & \textbf{$p$-value} & \textbf{MAE} & \textbf{RMSE} & \textbf{$R^2$} & \textbf{Accuratezza (\%)} & \textbf{Esito Diagnosi} \\
+\midrule
+1 & \textbf{Random Forest} & \textbf{0.4640} & $< 0.0001$ & \textbf{0.2016} & 0.2693 & 0.2001 & \textbf{53.6\%} & 103/192 \\
+2 & Gradient Boosting & 0.4219 & $< 0.0001$ & 0.2035 & 0.2867 & 0.0928 & 55.2\% & 106/192 \\
+3 & Support Vector Regressor (SVR - RBF) & 0.3894 & $< 0.0001$ & 0.2094 & 0.2787 & 0.1435 & 49.0\% & 94/192 \\
+4 & AdaBoost Regressor & 0.3330 & $< 0.0001$ & 0.2304 & 0.2893 & 0.0769 & 34.9\% & 67/192 \\
+5 & Hist Gradient Boosting & 0.2648 & 0.0002 & 0.2249 & 0.3055 & -0.0290 & 48.4\% & 93/192 \\
+6 & K-Neighbors Regressor (KNN) & 0.1686 & 0.0194 & 0.2222 & 0.3098 & -0.0594 & 50.0\% & 96/192 \\
+7 & Lasso Regression (L1) & 0.0666 & 0.3589 & 0.2371 & 0.3222 & -0.1445 & 35.4\% & 68/192 \\
+8 & Ridge Regression (L2) & 0.0506 & 0.4862 & 0.2388 & 0.3400 & -0.2753 & 42.7\% & 82/192 \\
+9 & Linear Regression & 0.0489 & 0.5006 & 0.2391 & 0.3410 & -0.2827 & 42.7\% & 82/192 \\
+10 & Neural Network (MLP) & 0.0382 & 0.5984 & 0.2614 & 0.4035 & -0.7954 & 44.8\% & 86/192 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+% --- Tabella: Sani (60+) vs MCI (N = 173) [Senza Perseveration] ---
+\begin{table}[htbp]
+\centering
+\caption{Coorte: Sani (60+) vs MCI ($N = 173$) -- Combinazione Senza Perseveration. Corrisponde alla \textbf{Table 9 (pag. 183)} del paper originale HealthXAI.}
+\label{tab:coorte5_sani_mci_senza_pers}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{clccccccc}
+\toprule
+\textbf{Rank} & \textbf{Regressore ML} & \textbf{Pearson $r$} & \textbf{$p$-value} & \textbf{MAE} & \textbf{RMSE} & \textbf{$R^2$} & \textbf{Accuratezza (\%)} & \textbf{Esito Diagnosi} \\
+\midrule
+1 & \textbf{Gradient Boosting} & \textbf{0.1875} & 0.0135 & \textbf{0.1179} & 0.1435 & -0.0686 & \textbf{65.9\%} & 114/173 \\
+2 & Random Forest & 0.0336 & 0.6608 & 0.1283 & 0.1470 & -0.1178 & 62.4\% & 108/173 \\
+3 & Support Vector Regressor (SVR - RBF) & 0.0272 & 0.7227 & 0.1384 & 0.1470 & -0.1193 & 62.4\% & 108/173 \\
+4 & Hist Gradient Boosting & 0.0151 & 0.8441 & 0.1299 & 0.1523 & -0.1994 & 61.3\% & 106/173 \\
+5 & Ridge Regression (L2) & 0.0032 & 0.9666 & 0.1314 & 0.1526 & -0.2047 & 67.1\% & 116/173 \\
+6 & Linear Regression & 0.0014 & 0.9849 & 0.1315 & 0.1530 & -0.2094 & 67.1\% & 116/173 \\
+7 & Lasso Regression (L1) & -0.0071 & 0.9259 & 0.1294 & 0.1414 & -0.0344 & 69.4\% & 120/173 \\
+8 & AdaBoost Regressor & -0.0148 & 0.8471 & 0.1382 & 0.1456 & -0.0970 & 62.4\% & 108/173 \\
+9 & K-Neighbors Regressor (KNN) & -0.0843 & 0.2701 & 0.1301 & 0.1565 & -0.2696 & 64.7\% & 112/173 \\
+10 & Neural Network (MLP) & -0.0893 & 0.2425 & 0.1640 & 0.2504 & -2.2441 & 57.8\% & 100/173 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

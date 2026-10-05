@@ -221,7 +221,7 @@ def load_and_train_all_models(use_stratify: bool = True, dataset_path=None, sele
             if col == 'N_Attivita_Svolte': keep = True
             elif 'ToolOmission' in col: keep = 'Tool Omission' in selected_anomalies
             elif 'Omission' in col and 'Anticipation' not in col: keep = 'Omission' in selected_anomalies
-            elif 'Perseveration' in col: keep = 'Perseveration' in selected_anomalies
+            elif 'Persevera' in col: keep = 'Perseveration' in selected_anomalies
             elif 'AnticipationOmission' in col: keep = 'Anticipation Omission' in selected_anomalies
             elif 'Reversal' in col and 'Anticipation' not in col: keep = 'Reversal' in selected_anomalies
             elif 'ReachTouch' in col: keep = 'Reach Touch' in selected_anomalies
@@ -235,7 +235,7 @@ def load_and_train_all_models(use_stratify: bool = True, dataset_path=None, sele
             if keep: cols_to_keep.append(col)
         if len(cols_to_keep) > 0:
             X = X[cols_to_keep].copy()
-            anom_cols_active = [c for c in cols_to_keep if any(k in c for k in ['Omission', 'Reversal', 'Perseveration', 'ReachTouch', 'ActionAdditions'])]
+            anom_cols_active = [c for c in cols_to_keep if any(k in c for k in ['Omission', 'Reversal', 'Persevera', 'ReachTouch', 'ActionAdditions'])]
             if len(anom_cols_active) > 0:
                 X['Media_Anomalie_Globale'] = X[anom_cols_active].mean(axis=1)
             
@@ -369,7 +369,7 @@ def load_and_eval_kfold(k_splits: int = 192, dataset_path=None, selected_anomali
             if col == 'N_Attivita_Svolte': keep = True
             elif 'ToolOmission' in col: keep = 'Tool Omission' in selected_anomalies
             elif 'Omission' in col and 'Anticipation' not in col: keep = 'Omission' in selected_anomalies
-            elif 'Perseveration' in col: keep = 'Perseveration' in selected_anomalies
+            elif 'Persevera' in col: keep = 'Perseveration' in selected_anomalies
             elif 'AnticipationOmission' in col: keep = 'Anticipation Omission' in selected_anomalies
             elif 'Reversal' in col and 'Anticipation' not in col: keep = 'Reversal' in selected_anomalies
             elif 'ReachTouch' in col: keep = 'Reach Touch' in selected_anomalies
@@ -383,7 +383,7 @@ def load_and_eval_kfold(k_splits: int = 192, dataset_path=None, selected_anomali
             if keep: cols_to_keep.append(col)
         if len(cols_to_keep) > 0:
             X = X[cols_to_keep].copy()
-            anom_cols_active = [c for c in cols_to_keep if any(k in c for k in ['Omission', 'Reversal', 'Perseveration', 'ReachTouch', 'ActionAdditions'])]
+            anom_cols_active = [c for c in cols_to_keep if any(k in c for k in ['Omission', 'Reversal', 'Persevera', 'ReachTouch', 'ActionAdditions'])]
             if len(anom_cols_active) > 0:
                 X['Media_Anomalie_Globale'] = X[anom_cols_active].mean(axis=1)
 
@@ -488,7 +488,7 @@ def load_and_eval_kfold(k_splits: int = 192, dataset_path=None, selected_anomali
 # ==========================================
 # SIDEBAR CONTROLS 
 # ==========================================
-st.sidebar.markdown("<h2 style='color:#f8fafc; margin-bottom: 0px;'>💡 HealtXAI</h2>", unsafe_allow_html=True)
+st.sidebar.markdown("<h2 style='color:#f8fafc; margin-bottom: 0px;'>💡 HealthXAI</h2>", unsafe_allow_html=True)
 st.sidebar.markdown("<p style='color:#94a3b8; font-size: 0.9rem; margin-top: 0px;'>Progetto Tirocinio Declino Cognitivo</p>", unsafe_allow_html=True)
 st.sidebar.markdown("---")
 
@@ -551,7 +551,6 @@ selected_patient_ids_tuple = tuple(selected_patients) if len(selected_patients) 
 st.sidebar.markdown("---")
 
 with st.sidebar.form(key="training_options_form"):
-    db_password_input = st.text_input("🔑 Password DB PostgreSQL:", type="password", value="", help="Inserisci la password per connetterti al DB PostgreSQL locale (CASAS400)")
     use_stratification = st.checkbox("Usa Divisione Stratificata (Stratify)", value=True)
 
     st.markdown("<p style='color:#cbd5e1; font-weight:600; margin-bottom: 8px;'>🧬 Features del Modello</p>", unsafe_allow_html=True)
@@ -599,7 +598,7 @@ if btn_submit:
         original_cwd = os.getcwd()
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
         
-        df_new = create_feature_vectors(db_password=db_password_input)
+        df_new = create_feature_vectors()
         os.chdir(original_cwd)
         
         if df_new is not None:
@@ -609,7 +608,7 @@ if btn_submit:
                 if col in ['patient_id', 'diagnosis', 'Target_StatoCognitivo', 'N_Attivita_Svolte']: keep = True
                 elif 'ToolOmission' in col: keep = 'Tool Omission' in selected_anomalies
                 elif 'Omission' in col and 'Anticipation' not in col: keep = 'Omission' in selected_anomalies
-                elif 'Perseveration' in col: keep = 'Perseveration' in selected_anomalies
+                elif 'Persevera' in col: keep = 'Perseveration' in selected_anomalies
                 elif 'AnticipationOmission' in col: keep = 'Anticipation Omission' in selected_anomalies
                 elif 'Reversal' in col and 'Anticipation' not in col: keep = 'Reversal' in selected_anomalies
                 elif 'ReachTouch' in col: keep = 'Reach Touch' in selected_anomalies
@@ -632,7 +631,7 @@ if btn_submit:
             st.cache_data.clear()
             st.session_state['show_sync_success'] = True
         else:
-            st.session_state['sync_error_msg'] = "Autenticazione DB fallita o nessun dato. Inserire la password corretta nel campo sopra."
+            st.session_state['sync_error_msg'] = "Autenticazione DB fallita o nessun dato. Verificare i parametri nel file di configurazione."
     except Exception as err:
         st.session_state['sync_error_msg'] = f"Errore di connessione: {err}"
 
@@ -661,7 +660,7 @@ effective_patients = selected_patients if len(selected_patients) > 0 else sorted
 st.markdown("""
 <div class="glass-header">
     <div class="header-text">
-        <h1>HealtXAI Clinical Pipeline</h1>
+        <h1>HealthXAI Clinical Pipeline</h1>
         <p>Inferenza diagnostica assistita per il declino cognitivo. Basata su biomarcatori digitali estratti tramite NLP e Computer Vision.</p>
     </div>
     <div class="stepper-container-inner">

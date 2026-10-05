@@ -1,0 +1,132 @@
+% ===========================================================
+% TABELLE PRESTAZIONI REGRESSIONE HEALTHXAI PER PAPER E TESI
+% Pacchetti necessari nel preambolo LaTeX:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+% \usepackage{amsmath}
+% ===========================================================
+
+% --- Tabella 1: Sani Giovani (60-74 anni) vs Demenza (N = 99) ---
+\begin{table}[htbp]
+\centering
+\caption{Coorte 1: Sani Giovani (60--74) vs. Demenza ($N = 99$). Corrisponde alla \textbf{Table 12 (pag. 184)} del paper originale HealthXAI.}
+\label{tab:coorte1_sani_giovani_demenza}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{clccccccc}
+\toprule
+\textbf{Rank} & \textbf{Regressore ML} & \textbf{Pearson $r$} & \textbf{$p$-value} & \textbf{MAE} & \textbf{RMSE} & \textbf{$R^2$} & \textbf{Accuratezza (\%)} & \textbf{Esito Diagnosi} \\
+\midrule
+1 & \textbf{Gradient Boosting} & \textbf{0.6311} & $< 0.0001$ & \textbf{0.1590} & 0.3154 & 0.3584 & \textbf{80.8\%} & 80/99 \\
+2 & Random Forest & 0.6139 & $< 0.0001$ & 0.1721 & 0.3121 & 0.3721 & 73.7\% & 73/99 \\
+3 & Support Vector Regressor (SVR - RBF) & 0.5266 & $< 0.0001$ & 0.2242 & 0.3366 & 0.2695 & 61.6\% & 61/99 \\
+4 & K-Neighbors Regressor (KNN) & 0.3766 & 0.0001 & 0.2242 & 0.3701 & 0.1168 & 49.5\% & 49/99 \\
+5 & AdaBoost Regressor & 0.3631 & 0.0002 & 0.2489 & 0.3785 & 0.0764 & 54.5\% & 54/99 \\
+6 & Neural Network (MLP) & 0.1836 & 0.0689 & 0.2968 & 0.5547 & -0.9840 & 65.7\% & 65/99 \\
+7 & Lasso Regression (L1) & 0.1493 & 0.1402 & 0.2944 & 0.4576 & -0.3504 & 45.5\% & 45/99 \\
+8 & Ridge Regression (L2) & 0.1490 & 0.1412 & 0.3008 & 0.4809 & -0.4910 & 44.4\% & 44/99 \\
+9 & Linear Regression & 0.1436 & 0.1561 & 0.3027 & 0.4860 & -0.5232 & 45.5\% & 45/99 \\
+10 & Hist Gradient Boosting & -0.0182 & 0.8585 & 0.3265 & 0.4391 & -0.2430 & 38.4\% & 38/99 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+% --- Tabella 2: MCI vs Demenza (N = 73) ---
+\begin{table}[htbp]
+\centering
+\caption{Coorte 2: MCI vs. Demenza ($N = 73$). Corrisponde alla \textbf{Table 10 (pag. 183)} del paper originale HealthXAI.}
+\label{tab:coorte2_mci_demenza}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{clccccccc}
+\toprule
+\textbf{Rank} & \textbf{Regressore ML} & \textbf{Pearson $r$} & \textbf{$p$-value} & \textbf{MAE} & \textbf{RMSE} & \textbf{$R^2$} & \textbf{Accuratezza (\%)} & \textbf{Esito Diagnosi} \\
+\midrule
+1 & \textbf{Random Forest} & \textbf{0.6010} & $< 0.0001$ & \textbf{0.1738} & 0.2455 & 0.3610 & \textbf{86.3\%} & 63/73 \\
+2 & Support Vector Regressor (SVR - RBF) & 0.5434 & $< 0.0001$ & 0.1961 & 0.2579 & 0.2949 & 79.5\% & 58/73 \\
+3 & AdaBoost Regressor & 0.5236 & $< 0.0001$ & 0.1685 & 0.2686 & 0.2354 & 79.5\% & 58/73 \\
+4 & Gradient Boosting & 0.5051 & $< 0.0001$ & 0.1837 & 0.2771 & 0.1859 & 79.5\% & 58/73 \\
+5 & Neural Network (MLP) & 0.3754 & 0.0011 & 0.2560 & 0.3692 & -0.4450 & 75.3\% & 55/73 \\
+6 & K-Neighbors Regressor (KNN) & 0.3709 & 0.0012 & 0.1918 & 0.2940 & 0.0836 & 78.1\% & 57/73 \\
+7 & Lasso Regression (L1) & 0.3291 & 0.0045 & 0.2236 & 0.3044 & 0.0176 & 79.5\% & 58/73 \\
+8 & Ridge Regression (L2) & 0.3173 & 0.0062 & 0.2344 & 0.3142 & -0.0467 & 72.6\% & 53/73 \\
+9 & Linear Regression & 0.3066 & 0.0083 & 0.2386 & 0.3192 & -0.0802 & 71.2\% & 52/73 \\
+10 & Hist Gradient Boosting & 0.1564 & 0.1864 & 0.2606 & 0.3242 & -0.1141 & 67.1\% & 49/73 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table>
+
+% --- Tabella 3: Sani (60+) vs Demenza (N = 138) ---
+\begin{table}[htbp]
+\centering
+\caption{Coorte 3: Sani (60+) vs. Demenza ($N = 138$). Corrisponde alla \textbf{Table 11 (pag. 183)} del paper originale HealthXAI.}
+\label{tab:coorte3_sani_demenza}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{clccccccc}
+\toprule
+\textbf{Rank} & \textbf{Regressore ML} & \textbf{Pearson $r$} & \textbf{$p$-value} & \textbf{MAE} & \textbf{RMSE} & \textbf{$R^2$} & \textbf{Accuratezza (\%)} & \textbf{Esito Diagnosi} \\
+\midrule
+1 & \textbf{Random Forest} & \textbf{0.5446} & $< 0.0001$ & \textbf{0.1478} & 0.2906 & 0.2887 & \textbf{77.5\%} & 107/138 \\
+2 & Support Vector Regressor (SVR - RBF) & 0.5108 & $< 0.0001$ & 0.1853 & 0.2971 & 0.2567 & 70.3\% & 97/138 \\
+3 & Gradient Boosting & 0.4980 & $< 0.0001$ & 0.1563 & 0.3229 & 0.1217 & 78.3\% & 108/138 \\
+4 & K-Neighbors Regressor (KNN) & 0.2984 & 0.0004 & 0.1783 & 0.3358 & 0.0503 & 59.4\% & 82/138 \\
+5 & AdaBoost Regressor & 0.2171 & 0.0105 & 0.2440 & 0.3554 & -0.0637 & 44.9\% & 62/138 \\
+6 & Lasso Regression (L1) & 0.1337 & 0.1179 & 0.2319 & 0.3841 & -0.2429 & 60.9\% & 84/138 \\
+7 & Ridge Regression (L2) & 0.0904 & 0.2917 & 0.2440 & 0.4130 & -0.4365 & 60.9\% & 84/138 \\
+8 & Linear Regression & 0.0861 & 0.3153 & 0.2448 & 0.4156 & -0.4549 & 61.6\% & 85/138 \\
+9 & Neural Network (MLP) & 0.0854 & 0.3196 & 0.2522 & 0.4705 & -0.8647 & 67.4\% & 93/138 \\
+10 & Hist Gradient Boosting & -0.0487 & 0.5707 & 0.2582 & 0.3902 & -0.2821 & 52.9\% & 73/138 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+% --- Tabella 4: Coorte Globale (Sani + MCI + Demenza) (N = 192) ---
+\begin{table}[htbp]
+\centering
+\caption{Coorte 4: Globale -- Tutti i Pazienti ($N = 192$). Corrisponde alla \textbf{Table 8 (pag. 183)} del paper originale HealthXAI.}
+\label{tab:coorte4_globale}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{clccccccc}
+\toprule
+\textbf{Rank} & \textbf{Regressore ML} & \textbf{Pearson $r$} & \textbf{$p$-value} & \textbf{MAE} & \textbf{RMSE} & \textbf{$R^2$} & \textbf{Accuratezza (\%)} & \textbf{Esito Diagnosi} \\
+\midrule
+1 & \textbf{Random Forest} & \textbf{0.4045} & $< 0.0001$ & \textbf{0.2043} & 0.2790 & 0.1414 & \textbf{51.0\%} & 98/192 \\
+2 & Support Vector Regressor (SVR - RBF) & 0.4022 & $< 0.0001$ & 0.2080 & 0.2767 & 0.1558 & 50.0\% & 96/192 \\
+3 & Gradient Boosting & 0.3467 & $< 0.0001$ & 0.2116 & 0.3004 & 0.0046 & 54.2\% & 104/192 \\
+4 & AdaBoost Regressor & 0.2826 & $< 0.0001$ & 0.2322 & 0.2948 & 0.0412 & 35.9\% & 69/192 \\
+5 & K-Neighbors Regressor (KNN) & 0.2109 & 0.0033 & 0.2213 & 0.3036 & -0.0169 & 47.9\% & 92/192 \\
+6 & Hist Gradient Boosting & 0.1988 & 0.0057 & 0.2348 & 0.3176 & -0.1123 & 45.3\% & 87/192 \\
+7 & Lasso Regression (L1) & 0.0771 & 0.2876 & 0.2362 & 0.3209 & -0.1357 & 35.9\% & 69/192 \\
+8 & Ridge Regression (L2) & 0.0537 & 0.4592 & 0.2385 & 0.3395 & -0.2713 & 43.2\% & 83/192 \\
+9 & Linear Regression & 0.0519 & 0.4745 & 0.2387 & 0.3405 & -0.2787 & 43.8\% & 84/192 \\
+10 & Neural Network (MLP) & 0.0517 & 0.4768 & 0.2580 & 0.4098 & -0.8528 & 46.9\% & 90/192 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+% --- Tabella 5: Sani (60+) vs MCI (N = 173) ---
+\begin{table}[htbp]
+\centering
+\caption{Coorte 5: Sani (60+) vs. MCI ($N = 173$). Corrisponde alla \textbf{Table 9 (pag. 183)} del paper originale HealthXAI.}
+\label{tab:coorte5_sani_mci}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{clccccccc}
+\toprule
+\textbf{Rank} & \textbf{Regressore ML} & \textbf{Pearson $r$} & \textbf{$p$-value} & \textbf{MAE} & \textbf{RMSE} & \textbf{$R^2$} & \textbf{Accuratezza (\%)} & \textbf{Esito Diagnosi} \\
+\midrule
+1 & \textbf{Support Vector Regressor (SVR - RBF)} & \textbf{0.0228} & 0.7656 & \textbf{0.1385} & 0.1470 & -0.1178 & \textbf{64.2\%} & 111/173 \\
+2 & Hist Gradient Boosting & 0.0066 & 0.9313 & 0.1310 & 0.1538 & -0.2241 & 61.8\% & 107/173 \\
+3 & Ridge Regression (L2) & -0.0013 & 0.9862 & 0.1314 & 0.1530 & -0.2118 & 67.1\% & 116/173 \\
+4 & Linear Regression & -0.0032 & 0.9669 & 0.1315 & 0.1533 & -0.2166 & 67.1\% & 116/173 \\
+5 & Random Forest & -0.0043 & 0.9556 & 0.1295 & 0.1476 & -0.1275 & 61.3\% & 106/173 \\
+6 & Lasso Regression (L1) & -0.0044 & 0.9547 & 0.1293 & 0.1413 & -0.0336 & 69.4\% & 120/173 \\
+7 & Gradient Boosting & -0.0221 & 0.7725 & 0.1316 & 0.1570 & -0.2748 & 60.7\% & 105/173 \\
+8 & K-Neighbors Regressor (KNN) & -0.0296 & 0.6987 & 0.1262 & 0.1525 & -0.2039 & 64.7\% & 112/173 \\
+9 & AdaBoost Regressor & -0.0599 & 0.4334 & 0.1393 & 0.1480 & -0.1334 & 65.9\% & 114/173 \\
+10 & Neural Network (MLP) & -0.0885 & 0.2468 & 0.1640 & 0.2534 & -2.3226 & 59.0\% & 102/173 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

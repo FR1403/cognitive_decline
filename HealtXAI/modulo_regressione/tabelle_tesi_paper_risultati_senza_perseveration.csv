@@ -1,0 +1,51 @@
+Coorte,N_Pazienti,Combinazione,Regressore,Pearson_r,P_Value,MAE,RMSE,MSE,R2,Accuratezza_%,Predizioni_Corrette
+1. Sani Giovani (60-74 anni) vs Demenza,99,Senza Perseveration,Gradient Boosting,0.6459,5.261892304700281e-13,0.1542,0.30757112998459396,0.0946,0.3903,80.8,80/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Senza Perseveration,Random Forest,0.6711,2.950853313732133e-14,0.164,0.2920616373302047,0.0853,0.4499,74.7,74/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Senza Perseveration,Support Vector Regressor (SVR - RBF),0.5482,4.258814474776318e-09,0.2188,0.33045423283716613,0.1092,0.2957,59.6,59/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Senza Perseveration,K-Neighbors Regressor (KNN),0.3324,0.0007767264667501,0.2263,0.37920970451717084,0.1438,0.0725,49.5,49/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Senza Perseveration,AdaBoost Regressor,0.4543,2.3192286775825743e-06,0.2473,0.35327043465311386,0.1248,0.1952,48.5,48/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Senza Perseveration,Lasso Regression (L1),0.1488,0.14166387385379,0.2931,0.4569463863518345,0.2088,-0.3462,45.5,45/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Senza Perseveration,Neural Network (MLP),0.1887,0.0614760085319969,0.2953,0.5563272418280449,0.3095,-0.9958,63.6,63/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Senza Perseveration,Ridge Regression (L2),0.1434,0.1567759045482797,0.2999,0.4821825380496478,0.2325,-0.4989,45.5,45/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Senza Perseveration,Linear Regression,0.1385,0.1715162488960646,0.3017,0.4870318264754368,0.2372,-0.5295,45.5,45/99
+1. Sani Giovani (60-74 anni) vs Demenza,99,Senza Perseveration,Hist Gradient Boosting,0.0007,0.9942059606595376,0.322,0.432781700167648,0.1873,-0.208,41.4,41/99
+2. MCI vs Demenza,73,Senza Perseveration,Random Forest,0.6367,1.402601900633529e-09,0.1648,0.2368543856465402,0.0561,0.405,86.3,63/73
+2. MCI vs Demenza,73,Senza Perseveration,Gradient Boosting,0.5782,8.488937676257766e-08,0.1669,0.25768197453450253,0.0664,0.2958,82.2,60/73
+2. MCI vs Demenza,73,Senza Perseveration,AdaBoost Regressor,0.4829,1.5137694040823167e-05,0.1778,0.2760434748368452,0.0762,0.1926,79.5,58/73
+2. MCI vs Demenza,73,Senza Perseveration,K-Neighbors Regressor (KNN),0.3891,0.0006676885335564,0.1918,0.2903446228191595,0.0843,0.1064,78.1,57/73
+2. MCI vs Demenza,73,Senza Perseveration,Support Vector Regressor (SVR - RBF),0.5669,1.7099587805554798e-07,0.1925,0.25317977802344327,0.0641,0.3203,78.1,57/73
+2. MCI vs Demenza,73,Senza Perseveration,Lasso Regression (L1),0.334,0.0038734392378256,0.2228,0.30364452901377953,0.0922,0.0223,79.5,58/73
+2. MCI vs Demenza,73,Senza Perseveration,Ridge Regression (L2),0.3114,0.007325893688968,0.2358,0.31575306807693887,0.0997,-0.0572,75.3,55/73
+2. MCI vs Demenza,73,Senza Perseveration,Linear Regression,0.302,0.0094036765181615,0.24,0.3204684071792413,0.1027,-0.089,71.2,52/73
+2. MCI vs Demenza,73,Senza Perseveration,Hist Gradient Boosting,0.2372,0.043320766150052,0.2519,0.30983866769659335,0.096,-0.0177,68.5,50/73
+2. MCI vs Demenza,73,Senza Perseveration,Neural Network (MLP),0.3671,0.0013978731473128,0.27,0.38379682124790976,0.1473,-0.5617,78.1,57/73
+3. Sani (60+) vs Demenza,138,Senza Perseveration,Random Forest,0.585,4.9300331069393916e-14,0.1414,0.28053520278211075,0.0787,0.3375,77.5,107/138
+3. Sani (60+) vs Demenza,138,Senza Perseveration,Gradient Boosting,0.5285,2.698843769838287e-11,0.1441,0.30298514815086236,0.0918,0.2266,81.9,113/138
+3. Sani (60+) vs Demenza,138,Senza Perseveration,Support Vector Regressor (SVR - RBF),0.528,2.8283358180666028e-11,0.1795,0.2930870177950569,0.0859,0.2766,68.8,95/138
+3. Sani (60+) vs Demenza,138,Senza Perseveration,K-Neighbors Regressor (KNN),0.2284,0.0070402953495973,0.1855,0.34641016151377546,0.12,-0.0107,58.0,80/138
+3. Sani (60+) vs Demenza,138,Senza Perseveration,Lasso Regression (L1),0.1274,0.1365440232833038,0.2322,0.38496753109840315,0.1482,-0.2486,61.6,85/138
+3. Sani (60+) vs Demenza,138,Senza Perseveration,Ridge Regression (L2),0.0842,0.3258768127322313,0.2437,0.4143669871020132,0.1717,-0.4464,62.3,86/138
+3. Sani (60+) vs Demenza,138,Senza Perseveration,Linear Regression,0.0801,0.3500747774380363,0.2444,0.41701318923986086,0.1739,-0.4644,62.3,86/138
+3. Sani (60+) vs Demenza,138,Senza Perseveration,Hist Gradient Boosting,0.0341,0.6909144158995026,0.2545,0.3790778284204973,0.1437,-0.2102,50.7,70/138
+3. Sani (60+) vs Demenza,138,Senza Perseveration,Neural Network (MLP),0.0757,0.3774918262496918,0.2579,0.4812483766206386,0.2316,-0.9504,68.1,94/138
+3. Sani (60+) vs Demenza,138,Senza Perseveration,AdaBoost Regressor,0.2367,0.0051947980564638,0.2626,0.354259791678367,0.1255,-0.057,39.1,54/138
+4. Globale: Tutti i Pazienti,192,Senza Perseveration,Random Forest,0.464,1.2215582178252168e-11,0.2016,0.2692582403567252,0.0725,0.2001,53.6,103/192
+4. Globale: Tutti i Pazienti,192,Senza Perseveration,Gradient Boosting,0.4219,1.0959218108806267e-09,0.2035,0.286705423736629,0.0822,0.0928,55.2,106/192
+4. Globale: Tutti i Pazienti,192,Senza Perseveration,Support Vector Regressor (SVR - RBF),0.3894,2.3665956925465595e-08,0.2094,0.2787471972953271,0.0777,0.1435,49.0,94/192
+4. Globale: Tutti i Pazienti,192,Senza Perseveration,K-Neighbors Regressor (KNN),0.1686,0.0194304955864006,0.2222,0.30983866769659335,0.096,-0.0594,50.0,96/192
+4. Globale: Tutti i Pazienti,192,Senza Perseveration,Hist Gradient Boosting,0.2648,0.0002059194395938,0.2249,0.3054504869860253,0.0933,-0.029,48.4,93/192
+4. Globale: Tutti i Pazienti,192,Senza Perseveration,AdaBoost Regressor,0.333,2.3642504221589096e-06,0.2304,0.28930952282978867,0.0837,0.0769,34.9,67/192
+4. Globale: Tutti i Pazienti,192,Senza Perseveration,Lasso Regression (L1),0.0666,0.3588893093405567,0.2371,0.32218007387174025,0.1038,-0.1445,35.4,68/192
+4. Globale: Tutti i Pazienti,192,Senza Perseveration,Ridge Regression (L2),0.0506,0.4862263461369503,0.2388,0.33999999999999997,0.1156,-0.2753,42.7,82/192
+4. Globale: Tutti i Pazienti,192,Senza Perseveration,Linear Regression,0.0489,0.5006479860518245,0.2391,0.3410278580995987,0.1163,-0.2827,42.7,82/192
+4. Globale: Tutti i Pazienti,192,Senza Perseveration,Neural Network (MLP),0.0382,0.5983872563273314,0.2614,0.40348482003664027,0.1628,-0.7954,44.8,86/192
+5. Sani (60+) vs MCI,173,Senza Perseveration,Gradient Boosting,0.1875,0.0134828559286507,0.1179,0.14352700094407325,0.0206,-0.0686,65.9,114/173
+5. Sani (60+) vs MCI,173,Senza Perseveration,Random Forest,0.0336,0.6608267976727823,0.1283,0.14696938456699069,0.0216,-0.1178,62.4,108/173
+5. Sani (60+) vs MCI,173,Senza Perseveration,Lasso Regression (L1),-0.0071,0.9259436320123116,0.1294,0.1414213562373095,0.02,-0.0344,69.4,120/173
+5. Sani (60+) vs MCI,173,Senza Perseveration,Hist Gradient Boosting,0.0151,0.8441473509457051,0.1299,0.15231546211727817,0.0232,-0.1994,61.3,106/173
+5. Sani (60+) vs MCI,173,Senza Perseveration,K-Neighbors Regressor (KNN),-0.0843,0.2700576665830839,0.1301,0.15652475842498528,0.0245,-0.2696,64.7,112/173
+5. Sani (60+) vs MCI,173,Senza Perseveration,Ridge Regression (L2),0.0032,0.9666463144607068,0.1314,0.15264337522473748,0.0233,-0.2047,67.1,116/173
+5. Sani (60+) vs MCI,173,Senza Perseveration,Linear Regression,0.0014,0.9849337772436604,0.1315,0.15297058540778355,0.0234,-0.2094,67.1,116/173
+5. Sani (60+) vs MCI,173,Senza Perseveration,AdaBoost Regressor,-0.0148,0.8470681060699962,0.1382,0.14560219778561037,0.0212,-0.097,62.4,108/173
+5. Sani (60+) vs MCI,173,Senza Perseveration,Support Vector Regressor (SVR - RBF),0.0272,0.7226666036108952,0.1384,0.14696938456699069,0.0216,-0.1193,62.4,108/173
+5. Sani (60+) vs MCI,173,Senza Perseveration,Neural Network (MLP),-0.0893,0.2425157861431766,0.164,0.2503996805109783,0.0627,-2.2441,57.8,100/173
